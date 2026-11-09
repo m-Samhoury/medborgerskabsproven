@@ -356,7 +356,11 @@
       var card = MBP.ui.questionCard(q, {
         feedback: false,
         chosen: answers.get(q.id) || null,
-        onChange: function (key) { answers.set(q.id, key); }
+        onChange: function (key) {
+          answers.set(q.id, key);
+          var old = content.querySelector(".qmap");
+          if (old) old.replaceWith(questionMap());
+        }
       });
       content.appendChild(card.el);
       content.appendChild(questionMap());
