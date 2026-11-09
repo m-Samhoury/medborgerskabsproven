@@ -830,6 +830,7 @@ kbd {
   gap: 10px;
 }
 .quick .btn { width: 100%; }
+.quick > :only-child { grid-column: 1 / -1; }
 .quick .btn svg { width: 22px; height: 22px; flex: 0 0 auto; }
 
 /* Album (§5.2, point 3) */
@@ -1198,6 +1199,82 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 }
 
 /* ---------- Page: Øv ---------- */
+
+.today h2 { margin: 0 0 var(--s-2); font-size: var(--fs-xl); color: var(--on-panel); }
+.today .btn-stack.cta { width: 100%; }
+
+/* Explanation stage (§5.5.2) */
+.session { max-width: var(--read-max); margin: 0 auto; }
+.lesson-head { margin: 0 0 var(--s-4); font-size: var(--fs-l); }
+.lesson-head .en { font-size: var(--fs-body); }
+.lesson-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+  padding: 20px;
+  border-top: 6px solid var(--c);
+  border-radius: var(--r-l);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+.lesson-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.lesson-tags { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.lesson-card .fact { font: 400 var(--fs-l)/1.4 var(--f-body); }
+.lesson-card .fact .en { font-size: 0.88em; }
+.lesson-card .rule { height: 1px; background: var(--line); margin: 14px 0; }
+.lesson-card .note { margin-top: 12px; }
+
+/* Session summary (§5.5.3) */
+.summary-card {
+  padding: 20px;
+  border-radius: var(--r-l);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  text-align: center;
+}
+.summary-card .bi .da { font: 400 var(--fs-2xl)/1.1 var(--f-display); }
+.summary-card .bi .en { font-size: var(--fs-body); }
+.dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
+.dots .dot { width: 10px; height: 10px; border-radius: 50%; }
+.dots .dot.ok { background: var(--go); }
+.dots .dot.no { background: var(--stop); }
+.new-section { margin-top: var(--s-5); }
+.new-stamps { display: flex; flex-wrap: wrap; gap: 12px; }
+.new-stamp { position: relative; width: 52px; }
+.new-stamp .new-pm {
+  position: absolute;
+  right: -8px;
+  bottom: -8px;
+  width: 24px;
+  height: 24px;
+  color: var(--go);
+  background: var(--surface);
+  border-radius: 50%;
+}
+.done-stamp { width: 120px; margin-top: var(--s-4); }
+.week-section { margin-top: var(--s-5); }
+.week-section .meta { margin: 8px 0 0; font-size: var(--fs-s); color: var(--ink-2); }
+.recap { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.recap li {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border-radius: var(--r-m);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+}
+.recap p { margin: 0; }
+.summary-actions { margin-top: var(--s-6); }
+
+/* Picker (§5.5.1) */
+.pick-cell { display: grid; gap: 6px; }
+.pick-cell p { margin: 0; font-size: var(--fs-xs); color: var(--ink-2); }
 
 /* ---------- Page: Test ---------- */
 
