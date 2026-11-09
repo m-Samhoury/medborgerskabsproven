@@ -1,0 +1,1897 @@
+[
+ {
+  "id": "fg-farvande",
+  "topic_ids": [
+   "geografi"
+  ],
+  "title_da": "Farvandene mellem landsdelene",
+  "title_en": "The waters between the parts of Denmark",
+  "columns_da": [
+   "Farvand",
+   "Mellem",
+   "Bro"
+  ],
+  "columns_en": [
+   "Water",
+   "Between",
+   "Bridge"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Lillebælt",
+     "Jylland – Fyn",
+     "Lillebæltsbroen"
+    ],
+    "cells_en": [
+     "Lillebælt (Little Belt)",
+     "Jutland – Funen",
+     "Little Belt Bridge"
+    ]
+   },
+   {
+    "cells_da": [
+     "Storebælt",
+     "Fyn – Sjælland",
+     "Storebæltsbroen (1998)"
+    ],
+    "cells_en": [
+     "Storebælt (Great Belt)",
+     "Funen – Zealand",
+     "Great Belt Bridge (1998)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Øresund",
+     "Sjælland (København) – Sverige",
+     "Øresundsbroen (2000)"
+    ],
+    "cells_en": [
+     "Øresund (the Sound)",
+     "Zealand (Copenhagen) – Sweden",
+     "Øresund Bridge (2000)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Kattegat",
+     "Jylland – Sverige (nord for Sjælland)",
+     "–"
+    ],
+    "cells_en": [
+     "Kattegat",
+     "Jutland – Sweden (north of Zealand)",
+     "–"
+    ]
+   }
+  ],
+  "mnemonic_da": "Fra vest mod øst: LILLE før STORE før ØRE. Jylland → (Lille) → Fyn → (Store) → Sjælland → (Øre) → Sverige. Kattegat er kun en distraktor.",
+  "mnemonic_en": "West to east: LITTLE before GREAT before the SOUND. Jutland → (Little) → Funen → (Great) → Zealand → (Sound) → Sweden. Kattegat is only a distractor.",
+  "cluster_ids": [
+   "geo-lillebaelt",
+   "geo-storebaelt",
+   "geo-oresund",
+   "geo-lillebaeltsbro"
+  ]
+ },
+ {
+  "id": "fg-aarstal",
+  "topic_ids": [
+   "historie",
+   "demokrati",
+   "verden"
+  ],
+  "title_da": "Vigtige årstal",
+  "title_en": "Key years",
+  "columns_da": [
+   "År",
+   "Hvad skete der?"
+  ],
+  "columns_en": [
+   "Year",
+   "What happened?"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "1536",
+     "Reformationen – Danmark bliver protestantisk"
+    ],
+    "cells_en": [
+     "1536",
+     "The Reformation – Denmark becomes Protestant"
+    ]
+   },
+   {
+    "cells_da": [
+     "1658",
+     "Danmark mister Skåne, Halland og Blekinge til Sverige"
+    ],
+    "cells_en": [
+     "1658",
+     "Denmark loses Skåne, Halland and Blekinge to Sweden"
+    ]
+   },
+   {
+    "cells_da": [
+     "1700-tallet (1788)",
+     "Landboreformerne – stavnsbåndet ophæves 1788"
+    ],
+    "cells_en": [
+     "1700s (1788)",
+     "The agricultural reforms – stavnsbåndet abolished in 1788"
+    ]
+   },
+   {
+    "cells_da": [
+     "1814",
+     "Unionen med Norge (over 400 år) slutter"
+    ],
+    "cells_en": [
+     "1814",
+     "The union with Norway (over 400 years) ends"
+    ]
+   },
+   {
+    "cells_da": [
+     "1840'erne (1847)",
+     "De første jernbaner"
+    ],
+    "cells_en": [
+     "1840s (1847)",
+     "The first railways"
+    ]
+   },
+   {
+    "cells_da": [
+     "1849",
+     "Første grundlov (5. juni) – kvinder får IKKE stemmeret"
+    ],
+    "cells_en": [
+     "1849",
+     "First Constitution (5 June) – women do NOT get the vote"
+    ]
+   },
+   {
+    "cells_da": [
+     "1864",
+     "Danmark mister Slesvig og Holsten"
+    ],
+    "cells_en": [
+     "1864",
+     "Denmark loses Slesvig and Holsten"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 1870",
+     "Venstre dannes"
+    ],
+    "cells_en": [
+     "about 1870",
+     "Venstre is founded"
+    ]
+   },
+   {
+    "cells_da": [
+     "1915",
+     "Kvinder får stemmeret"
+    ],
+    "cells_en": [
+     "1915",
+     "Women get the vote"
+    ]
+   },
+   {
+    "cells_da": [
+     "1940",
+     "9. april: Tyskland besætter Danmark (2. verdenskrig)"
+    ],
+    "cells_en": [
+     "1940",
+     "9 April: Germany occupies Denmark (Second World War)"
+    ]
+   },
+   {
+    "cells_da": [
+     "1945",
+     "5. maj: befrielsen. Danmark med i FN"
+    ],
+    "cells_en": [
+     "1945",
+     "5 May: liberation. Denmark joins the UN"
+    ]
+   },
+   {
+    "cells_da": [
+     "1949",
+     "Danmark med i NATO"
+    ],
+    "cells_en": [
+     "1949",
+     "Denmark joins NATO"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 1950",
+     "Marshall-planen: hjælp fra USA"
+    ],
+    "cells_en": [
+     "about 1950",
+     "The Marshall Plan: aid from the USA"
+    ]
+   },
+   {
+    "cells_da": [
+     "1953",
+     "Grundloven sidst ændret"
+    ],
+    "cells_en": [
+     "1953",
+     "The Constitution last changed"
+    ]
+   },
+   {
+    "cells_da": [
+     "1960'erne",
+     "Høj økonomisk vækst; gæstearbejdere fra bl.a. Tyrkiet"
+    ],
+    "cells_en": [
+     "1960s",
+     "High economic growth; guest workers from Turkey, among others"
+    ]
+   },
+   {
+    "cells_da": [
+     "1973",
+     "Danmark med i EF (i dag EU)"
+    ],
+    "cells_en": [
+     "1973",
+     "Denmark joins the EC (today the EU)"
+    ]
+   },
+   {
+    "cells_da": [
+     "1970'erne",
+     "Rødstrømpebevægelsen (kvindebevægelsen)"
+    ],
+    "cells_en": [
+     "1970s",
+     "The Redstocking movement (women's movement)"
+    ]
+   },
+   {
+    "cells_da": [
+     "1990'erne",
+     "Danske FN-soldater i Bosnien"
+    ],
+    "cells_en": [
+     "1990s",
+     "Danish UN soldiers in Bosnia"
+    ]
+   },
+   {
+    "cells_da": [
+     "2003",
+     "Danske soldater til Irak"
+    ],
+    "cells_en": [
+     "2003",
+     "Danish soldiers to Iraq"
+    ]
+   },
+   {
+    "cells_da": [
+     "2011",
+     "Første kvindelige statsminister: Helle Thorning-Schmidt"
+    ],
+    "cells_en": [
+     "2011",
+     "First female prime minister: Helle Thorning-Schmidt"
+    ]
+   },
+   {
+    "cells_da": [
+     "2015",
+     "Terrorangreb ved Københavns Synagoge"
+    ],
+    "cells_en": [
+     "2015",
+     "Terrorist attack at Copenhagen Synagogue"
+    ]
+   },
+   {
+    "cells_da": [
+     "2024",
+     "Frederik 10. bliver konge (14. januar)"
+    ],
+    "cells_en": [
+     "2024",
+     "Frederik 10. becomes king (14 January)"
+    ]
+   }
+  ],
+  "mnemonic_da": "Tab: 1658 Skåne, 1814 Norge, 1864 Slesvig. Grundlov: 1849 start, 1915 kvinder, 1953 sidst. Krig: 40 ind, 45 ud. Alliancer: FN 45, NATO 49, EF 73.",
+  "mnemonic_en": "Losses: 1658 Skåne, 1814 Norway, 1864 Slesvig. Constitution: 1849 start, 1915 women, 1953 last. War: '40 in, '45 out. Alliances: UN '45, NATO '49, EC '73.",
+  "cluster_ids": [
+   "his-reformation",
+   "his-1658",
+   "his-1814-norge",
+   "his-1864",
+   "dem-grundlov-1849",
+   "dem-1915",
+   "dem-grundlov-1953",
+   "his-besat-aar",
+   "his-befrielse",
+   "ver-fn-1945",
+   "ver-nato-1949"
+  ]
+ },
+ {
+  "id": "fg-hvem-styrer",
+  "topic_ids": [
+   "demokrati",
+   "uddannelse",
+   "velfaerd"
+  ],
+  "title_da": "Hvem står for hvad? Kommune, region, stat",
+  "title_en": "Who runs what? Municipality, region, state",
+  "columns_da": [
+   "Niveau",
+   "Antal",
+   "Leder",
+   "Ansvar (eksempler)"
+  ],
+  "columns_en": [
+   "Level",
+   "Number",
+   "Leader",
+   "Responsible for (examples)"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Kommune",
+     "98",
+     "Borgmester (kommunalbestyrelse)",
+     "Vuggestuer, børnehaver, dagpleje, folkeskoler, biblioteker"
+    ],
+    "cells_en": [
+     "Municipality (kommune)",
+     "98",
+     "Mayor (municipal council)",
+     "Nurseries, kindergartens, childminders, folkeskoler, libraries"
+    ]
+   },
+   {
+    "cells_da": [
+     "Region",
+     "5",
+     "Regionsrådsformand (regionsråd)",
+     "Sygehuse (hospitaler)"
+    ],
+    "cells_en": [
+     "Region",
+     "5",
+     "Chair of the regional council",
+     "Hospitals"
+    ]
+   },
+   {
+    "cells_da": [
+     "Stat",
+     "1",
+     "Regeringen og Folketinget",
+     "Politiet, forsvaret, love, gymnasier, universiteter"
+    ],
+    "cells_en": [
+     "State",
+     "1",
+     "The government and the Folketing",
+     "Police, defence, laws, gymnasier, universities"
+    ]
+   }
+  ],
+  "mnemonic_da": "Kommunen = de små børn og skolen (tæt på dig). Regionen = sygehuset. Staten = politi og forsvar. Valg til kommune og region: hvert 4. år.",
+  "mnemonic_en": "The municipality = small children and school (close to you). The region = the hospital. The state = police and defence. Municipal and regional elections: every 4 years.",
+  "cluster_ids": [
+   "dem-kommunerne-boern",
+   "dem-regionerne-sygehuse",
+   "dem-kommuner-98",
+   "dem-regioner-5",
+   "dem-borgmester",
+   "dem-kommunalvalg"
+  ]
+ },
+ {
+  "id": "fg-magt",
+  "topic_ids": [
+   "demokrati"
+  ],
+  "title_da": "Magtens tredeling og domstolene",
+  "title_en": "Separation of powers and the courts",
+  "columns_da": [
+   "Magt",
+   "Hvem"
+  ],
+  "columns_en": [
+   "Power",
+   "Who"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Lovgivende magt",
+     "Regeringen og Folketinget"
+    ],
+    "cells_en": [
+     "Legislative power",
+     "The government and the Folketing"
+    ]
+   },
+   {
+    "cells_da": [
+     "Udøvende magt",
+     "Regeringen"
+    ],
+    "cells_en": [
+     "Executive power",
+     "The government"
+    ]
+   },
+   {
+    "cells_da": [
+     "Dømmende magt",
+     "Domstolene (uafhængige af politikerne)"
+    ],
+    "cells_en": [
+     "Judicial power",
+     "The courts (independent of the politicians)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Domstolene",
+     "Byret → Landsret → Højesteret"
+    ],
+    "cells_en": [
+     "The courts",
+     "District Court → High Court → Supreme Court"
+    ]
+   },
+   {
+    "cells_da": [
+     "Anholdt",
+     "Skal for en dommer inden 24 timer"
+    ],
+    "cells_en": [
+     "Arrested",
+     "Must be brought before a judge within 24 hours"
+    ]
+   }
+  ],
+  "mnemonic_da": "Love laves af Folketinget og regeringen – domstolene dømmer. Anke: ét trin op (byret → landsret).",
+  "mnemonic_en": "Laws are made by the Folketing and the government – the courts judge. Appeal: one step up (District Court → High Court).",
+  "cluster_ids": [
+   "dem-lovgivende",
+   "dem-doemmende",
+   "dem-anke",
+   "dem-domstole-uafhaengige",
+   "dem-anholdt-24t"
+  ]
+ },
+ {
+  "id": "fg-aldre",
+  "topic_ids": [
+   "velfaerd",
+   "uddannelse"
+  ],
+  "title_da": "Aldersgrænser",
+  "title_en": "Age limits",
+  "columns_da": [
+   "Alder",
+   "Hvad"
+  ],
+  "columns_en": [
+   "Age",
+   "What"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "0-3 år",
+     "Vuggestue (eller dagpleje)"
+    ],
+    "cells_en": [
+     "0–3",
+     "Nursery (or childminder)"
+    ]
+   },
+   {
+    "cells_da": [
+     "3-6 år",
+     "Børnehave"
+    ],
+    "cells_en": [
+     "3–6",
+     "Kindergarten"
+    ]
+   },
+   {
+    "cells_da": [
+     "5-6 år",
+     "Skolestart (0. klasse)"
+    ],
+    "cells_en": [
+     "5–6",
+     "Start school (year 0)"
+    ]
+   },
+   {
+    "cells_da": [
+     "16 år",
+     "Købe øl og vin"
+    ],
+    "cells_en": [
+     "16",
+     "Buy beer and wine"
+    ]
+   },
+   {
+    "cells_da": [
+     "17 år",
+     "Kørekort til bil (med ledsager til 18 år)"
+    ],
+    "cells_en": [
+     "17",
+     "Driving licence for a car (with an accompanying adult until 18)"
+    ]
+   },
+   {
+    "cells_da": [
+     "18 år",
+     "Myndig, gift, SU, cigaretter, stemmeret"
+    ],
+    "cells_en": [
+     "18",
+     "Legal adult, marriage, SU, cigarettes, right to vote"
+    ]
+   },
+   {
+    "cells_da": [
+     "Under 22 år",
+     "Gratis tandlæge (per 2026)"
+    ],
+    "cells_en": [
+     "Under 22",
+     "Free dentist (per 2026)"
+    ]
+   }
+  ],
+  "mnemonic_da": "Næsten alt er 18. Undtagelser: øl/vin 16, kørekort 17.",
+  "mnemonic_en": "Almost everything is 18. Exceptions: beer/wine 16, driving licence 17.",
+  "cluster_ids": [
+   "vel-myndig-18",
+   "vel-gift-18",
+   "udd-su-18",
+   "vel-cigaretter-18",
+   "vel-oel-vin-16",
+   "vel-koerekort-17",
+   "udd-skolestart",
+   "udd-boernehave-vuggestue"
+  ]
+ },
+ {
+  "id": "fg-tal",
+  "topic_ids": [
+   "demokrati",
+   "geografi",
+   "arbejde",
+   "uddannelse",
+   "verden"
+  ],
+  "title_da": "Tal, du skal kunne",
+  "title_en": "Numbers you must know",
+  "columns_da": [
+   "Tal",
+   "Hvad"
+  ],
+  "columns_en": [
+   "Number",
+   "What"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "179",
+     "Medlemmer af Folketinget (175 + 2 Færøerne + 2 Grønland)"
+    ],
+    "cells_en": [
+     "179",
+     "Members of the Folketing (175 + 2 Faroe Islands + 2 Greenland)"
+    ]
+   },
+   {
+    "cells_da": [
+     "2 + 2",
+     "Folketingsmedlemmer fra Færøerne og fra Grønland"
+    ],
+    "cells_en": [
+     "2 + 2",
+     "Folketing members from the Faroe Islands and from Greenland"
+    ]
+   },
+   {
+    "cells_da": [
+     "15",
+     "Danske medlemmer af Europa-Parlamentet (per 2026; gamle prøver: 13)"
+    ],
+    "cells_en": [
+     "15",
+     "Danish members of the European Parliament (per 2026; old exams: 13)"
+    ]
+   },
+   {
+    "cells_da": [
+     "98",
+     "Kommuner"
+    ],
+    "cells_en": [
+     "98",
+     "Municipalities"
+    ]
+   },
+   {
+    "cells_da": [
+     "5",
+     "Regioner"
+    ],
+    "cells_en": [
+     "5",
+     "Regions"
+    ]
+   },
+   {
+    "cells_da": [
+     "4 år",
+     "Folketingsvalg (mindst), kommunal- og regionsvalg"
+    ],
+    "cells_en": [
+     "4 years",
+     "General elections (at least), municipal and regional elections"
+    ]
+   },
+   {
+    "cells_da": [
+     "5 år",
+     "Valg til Europa-Parlamentet"
+    ],
+    "cells_en": [
+     "5 years",
+     "European Parliament elections"
+    ]
+   },
+   {
+    "cells_da": [
+     "10 år",
+     "Undervisningspligt"
+    ],
+    "cells_en": [
+     "10 years",
+     "Compulsory education"
+    ]
+   },
+   {
+    "cells_da": [
+     "12",
+     "Højeste karakter (7-trinsskalaen)"
+    ],
+    "cells_en": [
+     "12",
+     "Highest grade (7-point scale)"
+    ]
+   },
+   {
+    "cells_da": [
+     "37 timer",
+     "Normal arbejdsuge"
+    ],
+    "cells_en": [
+     "37 hours",
+     "Normal working week"
+    ]
+   },
+   {
+    "cells_da": [
+     "5-6 uger",
+     "Ferie om året"
+    ],
+    "cells_en": [
+     "5–6 weeks",
+     "Holiday per year"
+    ]
+   },
+   {
+    "cells_da": [
+     "24 timer",
+     "Anholdt → for en dommer"
+    ],
+    "cells_en": [
+     "24 hours",
+     "Arrested → before a judge"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 170 m",
+     "Højeste punkt (Møllehøj)"
+    ],
+    "cells_en": [
+     "about 170 m",
+     "Highest point (Møllehøj)"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 43.000 km²",
+     "Danmarks areal"
+    ],
+    "cells_en": [
+     "about 43,000 km²",
+     "Denmark's area"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 6 mio.",
+     "Indbyggere"
+    ],
+    "cells_en": [
+     "about 6 million",
+     "Inhabitants"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 60 %",
+     "Landbrugsjord af arealet"
+    ],
+    "cells_en": [
+     "about 60%",
+     "Farmland as a share of the area"
+    ]
+   },
+   {
+    "cells_da": [
+     "80-90 %",
+     "Valgdeltagelse ved folketingsvalg"
+    ],
+    "cells_en": [
+     "80–90%",
+     "Turnout in general elections"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 70 %",
+     "Lønmodtagere i a-kasse"
+    ],
+    "cells_en": [
+     "about 70%",
+     "Employees in an a-kasse"
+    ]
+   },
+   {
+    "cells_da": [
+     "3 ud af 4",
+     "15-64-årige med arbejde"
+    ],
+    "cells_en": [
+     "3 out of 4",
+     "15–64-year-olds with a job"
+    ]
+   },
+   {
+    "cells_da": [
+     "ca. 80 år",
+     "Middellevetid for mænd (2024)"
+    ],
+    "cells_en": [
+     "about 80 years",
+     "Life expectancy for men (2024)"
+    ]
+   },
+   {
+    "cells_da": [
+     "18 uger",
+     "Grænse for fri abort (siden 1. juni 2025)"
+    ],
+    "cells_en": [
+     "18 weeks",
+     "Limit for abortion on request (since 1 June 2025)"
+    ]
+   }
+  ],
+  "mnemonic_da": "179 i Folketinget, 98 kommuner, 5 regioner, 10 års skole, 37 timers arbejde, 170 meter højt.",
+  "mnemonic_en": "179 in the Folketing, 98 municipalities, 5 regions, 10 years of school, 37 hours of work, 170 metres high.",
+  "cluster_ids": [
+   "dem-179",
+   "dem-2-og-2",
+   "ver-mep-antal",
+   "dem-kommuner-98",
+   "dem-regioner-5",
+   "udd-undervisningspligt",
+   "arb-37-timer",
+   "arb-ferie",
+   "geo-hoejeste-punkt"
+  ]
+ },
+ {
+  "id": "fg-valg",
+  "topic_ids": [
+   "demokrati",
+   "verden"
+  ],
+  "title_da": "Valg: hvor tit og hvem må stemme",
+  "title_en": "Elections: how often and who may vote",
+  "columns_da": [
+   "Valg",
+   "Hvor tit",
+   "Hvem stemmer",
+   "Stemmeprocent"
+  ],
+  "columns_en": [
+   "Election",
+   "How often",
+   "Who votes",
+   "Turnout"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Folketingsvalg",
+     "Mindst hvert 4. år (statsministeren udskriver)",
+     "Kun danske statsborgere (18+)",
+     "80-90 % (højt)"
+    ],
+    "cells_en": [
+     "General election",
+     "At least every 4 years (the PM calls it)",
+     "Only Danish citizens (18+)",
+     "80–90% (high)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Kommunal- og regionsvalg",
+     "Hvert 4. år",
+     "Også udlændinge på visse betingelser",
+     "–"
+    ],
+    "cells_en": [
+     "Municipal and regional",
+     "Every 4 years",
+     "Also foreigners under certain conditions",
+     "–"
+    ]
+   },
+   {
+    "cells_da": [
+     "Europa-Parlamentet",
+     "Hvert 5. år",
+     "Befolkningerne i EU-landene",
+     "Lavere end folketingsvalg"
+    ],
+    "cells_en": [
+     "European Parliament",
+     "Every 5 years",
+     "The populations of the EU countries",
+     "Lower than general elections"
+    ]
+   }
+  ],
+  "mnemonic_da": "Folketing og kommune: 4. EU: 5. Afstemningen er altid hemmelig.",
+  "mnemonic_en": "Folketing and municipality: 4. EU: 5. Voting is always secret.",
+  "cluster_ids": [
+   "dem-folketingsvalg",
+   "dem-kommunalvalg",
+   "ver-ep-valg-5-aar",
+   "dem-statsborger-stemme",
+   "dem-valgdeltagelse",
+   "ver-ep-stemmeprocent",
+   "dem-hemmelig-stemme",
+   "dem-udskriver-valg"
+  ]
+ },
+ {
+  "id": "fg-byer",
+  "topic_ids": [
+   "geografi"
+  ],
+  "title_da": "De største byer og verdenshjørnerne",
+  "title_en": "The largest cities and the extreme points",
+  "columns_da": [
+   "Nr.",
+   "By / punkt",
+   "Hvor"
+  ],
+  "columns_en": [
+   "No.",
+   "City / point",
+   "Where"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "1",
+     "København",
+     "Sjælland (hovedstaden)"
+    ],
+    "cells_en": [
+     "1",
+     "Copenhagen",
+     "Zealand (the capital)"
+    ]
+   },
+   {
+    "cells_da": [
+     "2",
+     "Aarhus",
+     "Østjylland"
+    ],
+    "cells_en": [
+     "2",
+     "Aarhus",
+     "East Jutland"
+    ]
+   },
+   {
+    "cells_da": [
+     "3",
+     "Odense",
+     "Fyn"
+    ],
+    "cells_en": [
+     "3",
+     "Odense",
+     "Funen"
+    ]
+   },
+   {
+    "cells_da": [
+     "4",
+     "Aalborg",
+     "Nordjylland"
+    ],
+    "cells_en": [
+     "4",
+     "Aalborg",
+     "North Jutland"
+    ]
+   },
+   {
+    "cells_da": [
+     "5",
+     "Esbjerg",
+     "Vestjylland"
+    ],
+    "cells_en": [
+     "5",
+     "Esbjerg",
+     "West Jutland"
+    ]
+   },
+   {
+    "cells_da": [
+     "Nord",
+     "Grenen",
+     "Ved Skagen"
+    ],
+    "cells_en": [
+     "North",
+     "Grenen",
+     "Near Skagen"
+    ]
+   },
+   {
+    "cells_da": [
+     "Syd",
+     "Gedser Odde",
+     "Falster"
+    ],
+    "cells_en": [
+     "South",
+     "Gedser Odde",
+     "Falster"
+    ]
+   }
+  ],
+  "mnemonic_da": "K-A-O-A-E: 'Kongen Arver Og Alle Elsker' = København, Aarhus, Odense, Aalborg, Esbjerg. Nord = Skagen, syd = Gedser.",
+  "mnemonic_en": "K-A-O-A-E: 'Kongen Arver Og Alle Elsker' (the King inherits and everyone loves him) = Copenhagen (København), Aarhus, Odense, Aalborg, Esbjerg. North = Skagen, south = Gedser.",
+  "cluster_ids": [
+   "geo-aarhus",
+   "geo-odense",
+   "geo-aalborg",
+   "geo-esbjerg",
+   "geo-grenen",
+   "geo-sydligste"
+  ]
+ },
+ {
+  "id": "fg-kendte",
+  "topic_ids": [
+   "kultur"
+  ],
+  "title_da": "Kendte danskere",
+  "title_en": "Famous Danes",
+  "columns_da": [
+   "Person",
+   "Kendt for"
+  ],
+  "columns_en": [
+   "Person",
+   "Known for"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "H.C. Andersen (1805-1875)",
+     "Forfatter – eventyr, fx Den Grimme Ælling"
+    ],
+    "cells_en": [
+     "H.C. Andersen (1805–1875)",
+     "Author – fairy tales, e.g. The Ugly Duckling"
+    ]
+   },
+   {
+    "cells_da": [
+     "Karen Blixen",
+     "Forfatter – skrev bøger (Den afrikanske farm)"
+    ],
+    "cells_en": [
+     "Karen Blixen",
+     "Author – wrote books (Out of Africa)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Ludvig Holberg",
+     "Forfatter – komedier (1700-tallet)"
+    ],
+    "cells_en": [
+     "Ludvig Holberg",
+     "Author – comedies (1700s)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Søren Kierkegaard (1813-1855)",
+     "Filosof"
+    ],
+    "cells_en": [
+     "Søren Kierkegaard (1813–1855)",
+     "Philosopher"
+    ]
+   },
+   {
+    "cells_da": [
+     "N.F.S. Grundtvig",
+     "Højskolerne (1800-tallet)"
+    ],
+    "cells_en": [
+     "N.F.S. Grundtvig",
+     "The folk high schools (1800s)"
+    ]
+   },
+   {
+    "cells_da": [
+     "P.S. Krøyer",
+     "Kunstmaler (Skagensmaler)"
+    ],
+    "cells_en": [
+     "P.S. Krøyer",
+     "Painter (Skagen Painter)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Carl Nielsen",
+     "Komponist (musik)"
+    ],
+    "cells_en": [
+     "Carl Nielsen",
+     "Composer (music)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Arne Jacobsen",
+     "Arkitekt/designer – Nationalbanken, stolen Ægget"
+    ],
+    "cells_en": [
+     "Arne Jacobsen",
+     "Architect/designer – the National Bank, the Egg chair"
+    ]
+   },
+   {
+    "cells_da": [
+     "Yahya Hassan (1995-2020)",
+     "Digter"
+    ],
+    "cells_en": [
+     "Yahya Hassan (1995–2020)",
+     "Poet"
+    ]
+   },
+   {
+    "cells_da": [
+     "Thomas Vinterberg",
+     "Filminstruktør – Oscar 2021 for Druk"
+    ],
+    "cells_en": [
+     "Thomas Vinterberg",
+     "Film director – Oscar 2021 for Druk"
+    ]
+   },
+   {
+    "cells_da": [
+     "Susanne Bier",
+     "Filminstruktør – Oscar for Hævnen"
+    ],
+    "cells_en": [
+     "Susanne Bier",
+     "Film director – Oscar for Hævnen (In a Better World)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Aqua",
+     "Popgruppe – Barbie Girl (1990'erne)"
+    ],
+    "cells_en": [
+     "Aqua",
+     "Pop group – Barbie Girl (1990s)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Helle Thorning-Schmidt",
+     "Første kvindelige statsminister (2011)"
+    ],
+    "cells_en": [
+     "Helle Thorning-Schmidt",
+     "First female prime minister (2011)"
+    ]
+   }
+  ],
+  "mnemonic_da": "Skrev: Andersen, Blixen, Holberg (+ digteren Yahya Hassan). Tænkte: Kierkegaard. Skolede: Grundtvig. Malede: Krøyer. Komponerede: Nielsen. Tegnede: Jacobsen. Filmede: Vinterberg og Bier.",
+  "mnemonic_en": "Wrote: Andersen, Blixen, Holberg (+ the poet Yahya Hassan). Thought: Kierkegaard. Schooled: Grundtvig. Painted: Krøyer. Composed: Nielsen. Designed: Jacobsen. Filmed: Vinterberg and Bier.",
+  "cluster_ids": [
+   "kul-hca-levede",
+   "kul-grimme-aelling",
+   "kul-blixen",
+   "kul-holberg",
+   "kul-kierkegaard",
+   "kul-grundtvig",
+   "kul-kroeyer",
+   "kul-carl-nielsen",
+   "kul-arne-jacobsen",
+   "kul-yahya-hassan",
+   "kul-druk",
+   "kul-bier-vinterberg",
+   "kul-aqua"
+  ]
+ },
+ {
+  "id": "fg-virksomheder",
+  "topic_ids": [
+   "arbejde"
+  ],
+  "title_da": "Danske virksomheder og deres produkter",
+  "title_en": "Danish companies and their products",
+  "columns_da": [
+   "Virksomhed",
+   "Laver"
+  ],
+  "columns_en": [
+   "Company",
+   "Makes"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Vestas",
+     "Vindmøller"
+    ],
+    "cells_en": [
+     "Vestas",
+     "Wind turbines"
+    ]
+   },
+   {
+    "cells_da": [
+     "Novo Nordisk",
+     "Medicin (fx insulin)"
+    ],
+    "cells_en": [
+     "Novo Nordisk",
+     "Medicine (e.g. insulin)"
+    ]
+   },
+   {
+    "cells_da": [
+     "LEGO",
+     "Legetøj / byggeklodser"
+    ],
+    "cells_en": [
+     "LEGO",
+     "Toys / building bricks"
+    ]
+   },
+   {
+    "cells_da": [
+     "Arla",
+     "Mejeriprodukter (mælk, ost)"
+    ],
+    "cells_en": [
+     "Arla",
+     "Dairy products (milk, cheese)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Mærsk",
+     "Skibsfart (containerskibe)"
+    ],
+    "cells_en": [
+     "Mærsk",
+     "Shipping (container ships)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Velux",
+     "Ovenlysvinduer"
+    ],
+    "cells_en": [
+     "Velux",
+     "Roof windows"
+    ]
+   }
+  ],
+  "mnemonic_da": "VEStas = VEnt (vind). NOVO = medicin. LEGO = leg.",
+  "mnemonic_en": "VEStas = wind. NOVO = medicine. LEGO = play (leg godt = 'play well').",
+  "cluster_ids": [
+   "arb-vestas",
+   "arb-novo",
+   "arb-lego"
+  ]
+ },
+ {
+  "id": "fg-hoejtider",
+  "topic_ids": [
+   "traditioner",
+   "historie",
+   "demokrati"
+  ],
+  "title_da": "Højtider og mærkedage",
+  "title_en": "Holidays and special days",
+  "columns_da": [
+   "Dag",
+   "Hvornår",
+   "Hvad gør man / hvad markeres"
+  ],
+  "columns_en": [
+   "Day",
+   "When",
+   "What happens / what is marked"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Fastelavn",
+     "Februar/marts (før påske)",
+     "Børn klæder sig ud og slår katten af tønden"
+    ],
+    "cells_en": [
+     "Fastelavn",
+     "February/March (before Easter)",
+     "Children dress up and hit the cat out of the barrel"
+    ]
+   },
+   {
+    "cells_da": [
+     "Påske",
+     "Om foråret",
+     "Kristen højtid"
+    ],
+    "cells_en": [
+     "Easter",
+     "In spring",
+     "Christian holiday"
+    ]
+   },
+   {
+    "cells_da": [
+     "9. april",
+     "1940",
+     "Besættelsen"
+    ],
+    "cells_en": [
+     "9 April",
+     "1940",
+     "The occupation"
+    ]
+   },
+   {
+    "cells_da": [
+     "5. maj",
+     "1945",
+     "Befrielsen"
+    ],
+    "cells_en": [
+     "5 May",
+     "1945",
+     "The liberation"
+    ]
+   },
+   {
+    "cells_da": [
+     "Kristi himmelfart",
+     "En torsdag, 40. dag efter påske",
+     "Kristen helligdag"
+    ],
+    "cells_en": [
+     "Ascension Day",
+     "A Thursday, the 40th day after Easter",
+     "Christian holy day"
+    ]
+   },
+   {
+    "cells_da": [
+     "Pinse",
+     "7 uger efter påske",
+     "Kristen højtid"
+    ],
+    "cells_en": [
+     "Whitsun (Pinse)",
+     "7 weeks after Easter",
+     "Christian holiday"
+    ]
+   },
+   {
+    "cells_da": [
+     "Grundlovsdag",
+     "5. juni",
+     "Grundloven fra 1849"
+    ],
+    "cells_en": [
+     "Constitution Day",
+     "5 June",
+     "The 1849 Constitution"
+    ]
+   },
+   {
+    "cells_da": [
+     "Sankthans",
+     "23. juni (juni)",
+     "Bål om aftenen"
+    ],
+    "cells_en": [
+     "Sankthans (Midsummer)",
+     "23 June (June)",
+     "Bonfire in the evening"
+    ]
+   },
+   {
+    "cells_da": [
+     "Nytårsaften",
+     "31. december",
+     "Kongens nytårstale"
+    ],
+    "cells_en": [
+     "New Year's Eve",
+     "31 December",
+     "The King's New Year's speech"
+    ]
+   },
+   {
+    "cells_da": [
+     "Nytårsdag",
+     "1. januar",
+     "Statsministerens nytårstale"
+    ],
+    "cells_en": [
+     "New Year's Day",
+     "1 January",
+     "The prime minister's New Year's speech"
+    ]
+   },
+   {
+    "cells_da": [
+     "Store Bededag",
+     "–",
+     "Afskaffet som helligdag fra 2024"
+    ],
+    "cells_en": [
+     "Store Bededag",
+     "–",
+     "Abolished as a public holiday from 2024"
+    ]
+   }
+  ],
+  "mnemonic_da": "5. maj = fri (befrielsen). 5. juni = grundloven. Bål = juni. Tønde = fastelavn.",
+  "mnemonic_en": "5 May = freedom (liberation). 5 June = the Constitution. Bonfire = June. Barrel = Fastelavn.",
+  "cluster_ids": [
+   "tra-fastelavn",
+   "tra-paaske",
+   "tra-pinse",
+   "tra-grundlovsdag",
+   "tra-sankthans",
+   "his-befrielse",
+   "kon-nytaarstale"
+  ]
+ },
+ {
+  "id": "fg-gratis",
+  "topic_ids": [
+   "velfaerd",
+   "uddannelse",
+   "arbejde"
+  ],
+  "title_da": "Gratis eller betale?",
+  "title_en": "Free or pay?",
+  "columns_da": [
+   "Ydelse",
+   "Gratis?"
+  ],
+  "columns_en": [
+   "Service",
+   "Free?"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Læge (voksne)",
+     "Ja"
+    ],
+    "cells_en": [
+     "Doctor (adults)",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Hospital",
+     "Ja"
+    ],
+    "cells_en": [
+     "Hospital",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Tandlæge (voksne)",
+     "Nej – man betaler en del selv"
+    ],
+    "cells_en": [
+     "Dentist (adults)",
+     "No – you pay part yourself"
+    ]
+   },
+   {
+    "cells_da": [
+     "Tandlæge (børn og unge)",
+     "Ja (per 2026: til man fylder 22)"
+    ],
+    "cells_en": [
+     "Dentist (children and young people)",
+     "Yes (per 2026: until you turn 22)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Børnevacciner (MFR, HPV, stivkrampe)",
+     "Ja"
+    ],
+    "cells_en": [
+     "Child vaccines (MMR, HPV, tetanus)",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Folkebibliotek – låne bøger",
+     "Ja"
+    ],
+    "cells_en": [
+     "Public library – borrowing books",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Offentligt gymnasium",
+     "Ja"
+    ],
+    "cells_en": [
+     "Public gymnasium",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Friskole / privatskole",
+     "Nej – forældre betaler en del"
+    ],
+    "cells_en": [
+     "Free school / private school",
+     "No – parents pay part"
+    ]
+   },
+   {
+    "cells_da": [
+     "Fagforening",
+     "Nej – man betaler kontingent"
+    ],
+    "cells_en": [
+     "Trade union",
+     "No – you pay a fee"
+    ]
+   }
+  ],
+  "mnemonic_da": "Sundhed betales via skat – men tandlægen for voksne og fagforening/privatskole koster penge.",
+  "mnemonic_en": "Health is paid through taxes – but the dentist for adults and trade unions/private schools cost money.",
+  "cluster_ids": [
+   "vel-laege",
+   "vel-tandlaege",
+   "vel-vaccine",
+   "vel-bibliotek",
+   "udd-gymnasium-gratis",
+   "udd-friskole-betale",
+   "arb-fagforening-pris",
+   "vel-sundhed-skat"
+  ]
+ },
+ {
+  "id": "fg-ja-nej",
+  "topic_ids": [
+   "demokrati",
+   "arbejde"
+  ],
+  "title_da": "Ja/nej-fælder: ét ord ændrer svaret",
+  "title_en": "Yes/no traps: one word changes the answer",
+  "columns_da": [
+   "Spørgsmål",
+   "Svar"
+  ],
+  "columns_en": [
+   "Question",
+   "Answer"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Skal man UNDERRETTE politiet før en demonstration?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Must you NOTIFY the police before a demonstration?",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Skal politiet give TILLADELSE til en demonstration?",
+     "Nej"
+    ],
+    "cells_en": [
+     "Must the police give PERMISSION for a demonstration?",
+     "No"
+    ]
+   },
+   {
+    "cells_da": [
+     "Betinget straf: skal man DIREKTE i fængsel?",
+     "Nej"
+    ],
+    "cells_en": [
+     "Suspended sentence: do you go STRAIGHT to prison?",
+     "No"
+    ]
+   },
+   {
+    "cells_da": [
+     "Betinget straf: kan man UNDGÅ fængsel?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Suspended sentence: can you AVOID prison?",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Skal man være statsborger for at stemme til folketingsvalg?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Must you be a citizen to vote in general elections?",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Kan udlændinge stemme til folketingsvalg?",
+     "Nej"
+    ],
+    "cells_en": [
+     "Can foreigners vote in general elections?",
+     "No"
+    ]
+   },
+   {
+    "cells_da": [
+     "Er det FORBUDT at slå børn?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Is it FORBIDDEN to hit children?",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Fik kvinder stemmeret i 1849?",
+     "Nej (først 1915)"
+    ],
+    "cells_en": [
+     "Did women get the vote in 1849?",
+     "No (only in 1915)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Har medarbejderen altid krav på deltid?",
+     "Nej"
+    ],
+    "cells_en": [
+     "Does the employee always have a right to part-time?",
+     "No"
+    ]
+   },
+   {
+    "cells_da": [
+     "Kan arbejdsgiveren forlange deltid?",
+     "Nej"
+    ],
+    "cells_en": [
+     "Can the employer demand part-time?",
+     "No"
+    ]
+   },
+   {
+    "cells_da": [
+     "Hvem er IKKE med i rigsfællesskabet?",
+     "Island (eller Åland)"
+    ],
+    "cells_en": [
+     "Who is NOT part of the Danish Realm?",
+     "Iceland (or Åland)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Tandlæge over 21 år: betaler man en del?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Dentist over 21: do you pay part?",
+     "Yes"
+    ]
+   },
+   {
+    "cells_da": [
+     "Tandlæge under 20 år: gratis?",
+     "Ja"
+    ],
+    "cells_en": [
+     "Dentist under 20: free?",
+     "Yes"
+    ]
+   }
+  ],
+  "mnemonic_da": "Læs hvert ord: 'ikke', 'tilladelse', 'direkte', 'forbudt', 'altid'.",
+  "mnemonic_en": "Read every word: 'not', 'permission', 'straight', 'forbidden', 'always'.",
+  "cluster_ids": [
+   "dem-demonstration",
+   "dem-betinget",
+   "dem-statsborger-stemme",
+   "vel-slaa-boern",
+   "dem-1849-ikke-kvinder",
+   "arb-deltid",
+   "kon-rigsfaellesskab",
+   "vel-tandlaege"
+  ]
+ },
+ {
+  "id": "fg-organisationer",
+  "topic_ids": [
+   "verden"
+  ],
+  "title_da": "Internationale organisationer",
+  "title_en": "International organisations",
+  "columns_da": [
+   "Organisation",
+   "Med siden",
+   "Om hvad"
+  ],
+  "columns_en": [
+   "Organisation",
+   "Member since",
+   "About what"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "FN (De Forenede Nationer)",
+     "1945",
+     "Fred og samarbejde i hele verden; FN-soldater i Bosnien i 1990'erne"
+    ],
+    "cells_en": [
+     "UN (United Nations)",
+     "1945",
+     "Peace and cooperation worldwide; UN soldiers in Bosnia in the 1990s"
+    ]
+   },
+   {
+    "cells_da": [
+     "NATO",
+     "1949",
+     "Forsvarspolitik"
+    ],
+    "cells_en": [
+     "NATO",
+     "1949",
+     "Defence policy"
+    ]
+   },
+   {
+    "cells_da": [
+     "EF/EU",
+     "1973",
+     "Fri handel mellem medlemslandene; flest folkeafstemninger handler om EU"
+    ],
+    "cells_en": [
+     "EC/EU",
+     "1973",
+     "Free trade between member states; most referendums are about the EU"
+    ]
+   }
+  ],
+  "mnemonic_da": "4-5 = FN, 4-9 = NATO. FN kom først, så NATO.",
+  "mnemonic_en": "'45 = UN, '49 = NATO. The UN came first, then NATO.",
+  "cluster_ids": [
+   "ver-fn-1945",
+   "ver-nato-1949",
+   "ver-nato-forsvar",
+   "ver-eu-handel",
+   "ver-folkeafstemning-eu",
+   "ver-bosnien"
+  ]
+ },
+ {
+  "id": "fg-boernepasning",
+  "topic_ids": [
+   "uddannelse"
+  ],
+  "title_da": "Børn: pasning og skole",
+  "title_en": "Children: day care and school",
+  "columns_da": [
+   "Hvad",
+   "Alder / klasse"
+  ],
+  "columns_en": [
+   "What",
+   "Age / year"
+  ],
+  "rows": [
+   {
+    "cells_da": [
+     "Dagpleje (i et privat hjem)",
+     "0-3 år"
+    ],
+    "cells_en": [
+     "Childminder (in a private home)",
+     "0–3"
+    ]
+   },
+   {
+    "cells_da": [
+     "Vuggestue",
+     "0-3 år (fx 2 år)"
+    ],
+    "cells_en": [
+     "Nursery",
+     "0–3 (e.g. age 2)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Børnehave",
+     "3-6 år (fx 4 år)"
+    ],
+    "cells_en": [
+     "Kindergarten",
+     "3–6 (e.g. age 4)"
+    ]
+   },
+   {
+    "cells_da": [
+     "0. klasse (skolestart)",
+     "5-6 år"
+    ],
+    "cells_en": [
+     "Year 0 (start of school)",
+     "5–6"
+    ]
+   },
+   {
+    "cells_da": [
+     "Undervisningspligt",
+     "10 år (0.-9. klasse)"
+    ],
+    "cells_en": [
+     "Compulsory education",
+     "10 years (years 0–9)"
+    ]
+   },
+   {
+    "cells_da": [
+     "Karakterer (7-trinsskalaen, højest 12)",
+     "Fra 8. klasse"
+    ],
+    "cells_en": [
+     "Grades (7-point scale, highest 12)",
+     "From year 8"
+    ]
+   },
+   {
+    "cells_da": [
+     "Efterskole",
+     "8., 9. og 10. klasse"
+    ],
+    "cells_en": [
+     "Efterskole",
+     "Years 8, 9 and 10"
+    ]
+   },
+   {
+    "cells_da": [
+     "SU",
+     "Fra 18 år"
+    ],
+    "cells_en": [
+     "SU (education grant)",
+     "From 18"
+    ]
+   }
+  ],
+  "mnemonic_da": "Vugge = baby (vuggestue, 0-3). Børnehave = 3-6. Skole fra 6. Karakterer og efterskole fra 8. klasse.",
+  "mnemonic_en": "Vugge = cradle (nursery, 0–3). Kindergarten = 3–6. School from 6. Grades and efterskole from year 8.",
+  "cluster_ids": [
+   "udd-boernehave-vuggestue",
+   "udd-dagpleje",
+   "udd-skolestart",
+   "udd-undervisningspligt",
+   "udd-karakter-12",
+   "udd-karakterer-8-klasse",
+   "udd-efterskole",
+   "udd-su-18"
+  ]
+ }
+]
