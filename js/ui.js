@@ -476,6 +476,52 @@
         apply(on);
       });
     }
+
+    // Theme button: cycles Auto → Lys → Mørk → Auto. Label is bilingual; icon shows the current state.
+    var themeBtn = document.getElementById("theme-toggle");
+    var THEME_NEXT = { auto: "light", light: "dark", dark: "auto" };
+    var THEME_NAME = { auto: ["Auto", "auto"], light: ["Lys", "light"], dark: ["Mørk", "dark"] };
+    var THEME_ICON = { auto: "theme-auto", light: "theme-light", dark: "theme-dark" };
+    var THEME_COLOR = { light: "#F3F5F9", dark: "#0B1430" };
+
+    // The page's two theme-color metas are media-scoped; an explicit choice replaces them with one fixed colour.
+    function syncThemeColor(t) {
+      var metas = document.querySelectorAll('meta[name="theme-color"]');
+      if (metas.length < 2) return;
+      var light = metas[0];
+      var dark = metas[1];
+      if (t === "auto") {
+        light.setAttribute("media", "(prefers-color-scheme: light)");
+        light.setAttribute("content", THEME_COLOR.light);
+        dark.setAttribute("media", "(prefers-color-scheme: dark)");
+        dark.setAttribute("content", THEME_COLOR.dark);
+      } else {
+        light.removeAttribute("media");
+        light.setAttribute("content", THEME_COLOR[t]);
+        dark.setAttribute("media", "not all");
+      }
+    }
+
+    function applyTheme(t) {
+      if (t === "auto") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", t);
+      if (themeBtn) {
+        var label = "Tema: " + THEME_NAME[t][0] + " – Theme: " + THEME_NAME[t][1];
+        themeBtn.setAttribute("aria-label", label);
+        themeBtn.setAttribute("title", label);
+        themeBtn.replaceChildren(MBP.icon(THEME_ICON[t], 20));
+      }
+      syncThemeColor(t);
+    }
+
+    applyTheme(MBP.store.theme());
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function () {
+        var next = THEME_NEXT[MBP.store.theme()];
+        MBP.store.setTheme(next);
+        applyTheme(next);
+      });
+    }
   }
 
   // Load the data, then run the page script. On failure, <main> shows the fixed error text.

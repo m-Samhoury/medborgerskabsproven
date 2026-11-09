@@ -3,7 +3,7 @@
 /* ---------- 2. Tokens ---------- */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Ground */
   --paper:   #F3F5F9;
@@ -53,8 +53,10 @@
   --ink-mix:   100%;
 }
 
+/* Dark tokens: from the OS setting unless the reader chose light, or chose dark explicitly below. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --paper:   #0B1430;
     --surface: #121D3D;
     --wash:    #1B2850;
@@ -76,6 +78,31 @@
     --tint-base: #121D3D;
     --ink-mix:   55%;
   }
+}
+
+/* The reader chose dark: same tokens, whatever the OS says. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper:   #0B1430;
+  --surface: #121D3D;
+  --wash:    #1B2850;
+  --wash-2:  #2A3A6B;
+  --ink:   #E8ECF5;
+  --ink-2: #A5AFC8;
+  --line:  #2A3A6B;
+  --accent:    #8FA8E8;
+  --on-accent: #0B1430;
+  --go:      #6FD39C;
+  --go-bg:   #10301F;
+  --stop:    #FF9389;
+  --stop-bg: #3A1A19;
+  --caution-bg: #33290C;
+  --keyerr-bg:  #401D3C;
+  --keyerr-ink: #F2C4D9;
+  --focus: #8FA8E8;
+  --tint-mix:  30%;
+  --tint-base: #121D3D;
+  --ink-mix:   55%;
 }
 
 :root {
@@ -113,11 +140,16 @@
 }
 @media (min-width: 760px) { :root { --gutter: 32px; } }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --shadow-1: 0 1px 2px rgba(0,0,0,.35);
     --shadow-2: 0 2px 4px rgba(0,0,0,.30), 0 10px 24px rgba(0,0,0,.35);
     --stamp-shadow: drop-shadow(0 1px 1.5px rgba(0,0,0,.5));
   }
+}
+:root[data-theme="dark"] {
+  --shadow-1: 0 1px 2px rgba(0,0,0,.35);
+  --shadow-2: 0 2px 4px rgba(0,0,0,.30), 0 10px 24px rgba(0,0,0,.35);
+  --stamp-shadow: drop-shadow(0 1px 1.5px rgba(0,0,0,.5));
 }
 
 :root {
@@ -243,6 +275,22 @@ html.hide-en .en { display: none; }
   cursor: pointer;
 }
 .en-toggle.off { text-decoration: line-through; }
+
+/* Theme button: round, same border and size as the EN toggle. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+}
 
 /* ---------- Shell: navigation (phone: bottom tab bar) ---------- */
 

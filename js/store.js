@@ -5,6 +5,7 @@
   var MBP = (window.MBP = window.MBP || {});
   var KEY = "mbp.v1.progress";
   var LANG_KEY = "mbp.v1.showEnglish";
+  var THEME_KEY = "mbp.v1.theme";
   var ACTIVITY_KEY = "mbp.v1.activity";
   var SEEN_KEY = "mbp.v1.seenMastered";
   var GOAL = 25;
@@ -233,6 +234,18 @@
 
     setShowEnglish: function (on) {
       writeStorage(LANG_KEY, on ? "1" : "0");
+    },
+
+    // "light" or "dark" when the reader chose one; anything else means auto (follow the OS).
+    theme: function () {
+      var t = readStorage(THEME_KEY);
+      return t === "light" || t === "dark" ? t : "auto";
+    },
+
+    // Auto removes the key, so the page follows the OS again.
+    setTheme: function (t) {
+      if (t === "light" || t === "dark") writeStorage(THEME_KEY, t);
+      else removeStorage(THEME_KEY);
     },
 
     reset: function () {
