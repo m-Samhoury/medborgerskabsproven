@@ -58,8 +58,8 @@
       label = bi("Prøven er overstået.", "The exam is over.", "h1");
     }
 
-    var summaryDa = (streak === 1 ? "1 dag i træk" : streak + " dage i træk") + ", " + today.answers + " af 25 svar i dag";
-    var summaryEn = (streak === 1 ? "1 day in a row" : streak + " days in a row") + ", " + today.answers + " of 25 answers today";
+    var summaryDa = (streak === 1 ? "1 dag i træk" : streak + " dage i træk") + ", " + (today.answers >= 25 ? today.answers + " svar i dag – dagens mål er nået" : today.answers + " af 25 svar i dag");
+    var summaryEn = (streak === 1 ? "1 day in a row" : streak + " days in a row") + ", " + (today.answers >= 25 ? today.answers + " answers today – daily goal reached" : today.answers + " of 25 answers today");
     var summaryTail = today.answers >= 25 ? MBP.icon("check", 18) : null;
 
     var cta;

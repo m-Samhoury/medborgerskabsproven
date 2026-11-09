@@ -186,7 +186,7 @@
 
   // Face value: how often a question was asked (§5.1.4).
   function faceValue(n) {
-    return h("span", { class: "value", title: "Stillet i " + n + " prøver – Asked in " + n + " exams" }, n + "×");
+    return h("span", { class: "value", title: "Stillet i " + n + (n === 1 ? " prøve" : " prøver") + " – Asked in " + n + (n === 1 ? " exam" : " exams") }, n + "×");
   }
 
   // Week strip of day-stamps, Monday to Sunday of this week (§5.1.9).
@@ -311,8 +311,8 @@
         "The official 2017 answer key wrongly says B (Skåne, Halland and Blekinge). The correct answer is Slesvig and Holsten – Skåne was lost in 1658."));
     }
     kids.push(h("p", { class: "freq" }, bi(
-      "Stillet i " + c.times_asked + " prøver: " + c.exams.join(", "),
-      "Asked in " + c.times_asked + " exams: " + c.exams.join(", "),
+      "Stillet i " + c.times_asked + (c.times_asked === 1 ? " prøve: " : " prøver: ") + c.exams.join(", "),
+      "Asked in " + c.times_asked + (c.times_asked === 1 ? " exam: " : " exams: ") + c.exams.join(", "),
       "span")));
     if (next) {
       kids.push(h("button", { type: "button", class: "btn btn-primary next", title: next.en, onclick: next.onNext }, next.da));
