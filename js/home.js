@@ -1,4 +1,4 @@
-// Home: countdown, daily target, progress, last quiz results, shortcuts and the 15 most-asked questions.
+// Home: the countdown with today's stamps, the album of topic stamps, latest results and the 15 most-asked questions.
 (function () {
   "use strict";
   var MBP = window.MBP;
@@ -23,109 +23,180 @@
   function init(D) {
     var main = document.getElementById("main");
     main.textContent = "";
-    main.appendChild(bi("Hjem", "Home", "h1"));
 
     var days = daysToExam(new Date());
-
-    // 1. Countdown
-    var countdown = h("section", { class: "panel countdown" });
-    if (days > 0) {
-      countdown.appendChild(h("div", { class: "big-number" }, String(days)));
-      countdown.appendChild(bi("dage til prøven", "days to the exam", "p"));
-    } else if (days === 0) {
-      countdown.appendChild(h("div", { class: "big-number" }, "0"));
-      countdown.appendChild(bi("I dag! Held og lykke!", "Today! Good luck!", "p"));
-    } else {
-      countdown.appendChild(bi("Prøven er overstået.", "The exam is over.", "p"));
-    }
-    countdown.appendChild(bi(
-      "Prøven: onsdag 25. november 2026",
-      "The exam: Wednesday 25 November 2026",
-      "p"));
-    main.appendChild(countdown);
-
-    // 2. Daily target
+    var total = D.clusters.length;
     var mastered = D.clusters.filter(function (c) { return MBP.store.isMastered(c.id); }).length;
-    var open = D.clusters.length - mastered;
+    var open = total - mastered;
     var perDay = days > 0 ? Math.ceil(open / days) : open;
-    main.appendChild(h("section", { class: "panel" },
-      bi("Mål i dag: lær " + perDay + " emner", "Today's goal: learn " + perDay + " items", "p"),
-      h("div", { class: "btn-row" },
-        h("a", { class: "btn btn-primary", href: "learn.html?topic=all" }, bi("Start", "Start", "span")))));
+    var today = MBP.store.today();
+    var streak = MBP.store.streak();
+    var allMastered = mastered >= total;
 
-    // 3. Progress
-    var progressSection = h("section", { class: "panel" });
-    progressSection.appendChild(bi(
-      mastered + " af " + D.clusters.length + " emner mestret",
-      mastered + " of " + D.clusters.length + " items mastered",
-      "p"));
-    progressSection.appendChild(h("progress", { max: String(D.clusters.length), value: String(mastered), "aria-label": "Mestret / Mastered" }));
-    var topicList = h("div", { class: "topic-list" });
-    D.topics.forEach(function (t) {
-      var clusters = t.cluster_ids.map(function (id) { return D.cById.get(id); }).filter(Boolean);
-      var done = clusters.filter(function (c) { return MBP.store.isMastered(c.id); }).length;
-      topicList.appendChild(h("a", { class: "topic-row", href: "study.html#" + t.id },
-        h("span", { class: "icon", "aria-hidden": "true" }, t.icon),
-        h("span", { class: "label" }, bi(t.title_da, t.title_en, "span")),
-        h("progress", { max: String(clusters.length), value: String(done), "aria-label": t.title_da })));
-    });
-    progressSection.appendChild(topicList);
-    main.appendChild(progressSection);
+    main.appendChild(h("div", { class: "home" },
+      todayPanel(days, streak, today, allMastered, perDay, total),
+      quickActions(),
+      album(D, mastered, total),
+      latestResults(),
+      top15(D),
+      resetButton()));
+  }
 
-    // 4. Last quiz results (newest first)
-    var quizzes = MBP.store.progress().quizzes.slice(-5).reverse();
-    var quizSection = h("section", { class: "panel" });
-    quizSection.appendChild(bi("Seneste quizresultater", "Latest quiz results", "h2"));
-    if (quizzes.length === 0) {
-      quizSection.appendChild(bi("Ingen quizzer endnu.", "No quizzes yet.", "p"));
+  // The blue "today" panel: countdown, week strip, summary and the main button.
+  function todayPanel(days, streak, today, allMastered, perDay, total) {
+    var label;
+    var number = null;
+    if (days > 1) {
+      number = String(days);
+      label = bi("dage til prøven", "days to the test", "h1");
+    } else if (days === 1) {
+      number = "1";
+      label = bi("dag til prøven", "day to the test", "h1");
+    } else if (days === 0) {
+      label = bi("I dag! Held og lykke!", "Today! Good luck!", "h1");
     } else {
-      var list = h("ul", { class: "row-list" });
-      quizzes.forEach(function (qz) {
-        var d = new Date(qz.date);
-        var passed = qz.score / qz.total >= 0.8;
-        list.appendChild(h("li", null,
-          d.getDate() + "." + (d.getMonth() + 1) + ". · " + qz.score + "/" + qz.total + " · ",
-          passed ? bi("Bestået", "Passed", "span") : bi("Ikke bestået", "Not passed", "span")));
-      });
-      quizSection.appendChild(list);
+      label = bi("Prøven er overstået.", "The exam is over.", "h1");
     }
-    main.appendChild(quizSection);
 
-    // 5. Link cards
-    main.appendChild(h("div", { class: "card-grid" },
-      cardLink("study.html", "📖 Læs stoffet", "Study the material"),
-      cardLink("learn.html", "🧠 Lær med hjælp", "Assisted learning"),
-      cardLink("quiz.html", "✅ Tag en quiz", "Take a quiz"),
-      cardLink("quiz.html?mode=exam", "🎯 Prøv en rigtig prøve (25 spm.)", "Try a real exam (25 qs)")));
+    var summaryDa = (streak === 1 ? "1 dag i træk" : streak + " dage i træk") + ", " + (today.answers >= 25 ? today.answers + " svar i dag – dagens mål er nået" : today.answers + " af 25 svar i dag");
+    var summaryEn = (streak === 1 ? "1 day in a row" : streak + " days in a row") + ", " + (today.answers >= 25 ? today.answers + " answers today – daily goal reached" : today.answers + " of 25 answers today");
+    var summaryTail = today.answers >= 25 ? MBP.icon("check", 18) : null;
 
-    // 6. Top 15
-    var top = h("section", { class: "panel" });
-    top.appendChild(bi("⭐ De 15 mest stillede spørgsmål", "The 15 most-asked questions", "h2"));
+    var cta;
+    if (allMastered) {
+      cta = h("a", { class: "btn btn-stack cta", href: "quiz.html?mode=exam" },
+        bi("Tag en prøvesimulering", "Take an exam simulation", "span"));
+    } else if (!MBP.store.hasAnyProgress()) {
+      cta = h("a", { class: "btn btn-stack cta", href: "learn.html?topic=all" },
+        bi("Start med dagens mærker", "Start with today's stamps", "span"));
+    } else {
+      cta = h("a", { class: "btn btn-stack cta", href: "learn.html?topic=all" },
+        bi("Saml dagens mærker", "Collect today's stamps", "span"));
+    }
+
+    var courseNote = null;
+    if (days > 0 && !allMastered) {
+      courseNote = bi(
+        "Dagens kurs er 10 emner. For at nå alle " + total + " inden prøven: ca. " + perDay + " om dagen.",
+        "Today's course is 10 items. To cover all " + total + " before the test: about " + perDay + " a day.",
+        "p");
+    }
+
+    var waves = '<svg class="waves" viewBox="0 0 180 60" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M0 10c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 30c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 50c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/></svg>';
+    var wavesEl = document.createElement("div");
+    wavesEl.innerHTML = waves;
+
+    return h("section", { class: "today" },
+      wavesEl.firstChild,
+      number ? h("div", { class: "days" }, number) : null,
+      label,
+      bi(
+        "Onsdag 25. november 2026",
+        "Wednesday 25 November 2026",
+        "p"),
+      MBP.ui.weekStamps(),
+      h("p", { class: "summary" }, bi(summaryDa, summaryEn, "span"), summaryTail),
+      cta,
+      courseNote ? h("p", { class: "cta-note" }, courseNote) : null);
+  }
+
+  // Two secondary actions under the panel.
+  function quickActions() {
+    return h("div", { class: "quick" },
+      h("a", { class: "btn btn-secondary", href: "quiz.html?mode=exam", title: "Exam simulation – 25 questions" },
+        MBP.icon("test", 22), bi("Prøvesimulering", "Exam simulation", "span")),
+      h("a", { class: "btn btn-secondary", href: "study.html", title: "Read the material" },
+        MBP.icon("read", 22), bi("Læs stoffet", "Read the material", "span")));
+  }
+
+  // The album: one stamp per topic, in topic order, with a legend.
+  function album(D, mastered, total) {
+    var stamps = h("div", { class: "album" });
+    D.topics.forEach(function (t) {
+      stamps.appendChild(MBP.ui.stamp(t, MBP.ui.topicProgress(D, t), { href: "study.html#" + t.id }));
+    });
+    return h("section", { class: "album-sec" },
+      bi("Dit album", "Your album", "h2"),
+      bi(mastered + " af " + total + " mærker samlet", mastered + " of " + total + " stamps collected", "p"),
+      stamps,
+      h("div", { class: "legend" },
+        h("span", { class: "swatches", "aria-hidden": "true" },
+          h("span", { class: "sw sw-0" }),
+          h("span", { class: "sw sw-1" }),
+          h("span", { class: "sw sw-4" })),
+        bi(
+          "Tom: ikke startet. Farvet: i gang. Trykt med stempel: mestret.",
+          "Blank: not started. Tinted: in progress. Printed with postmark: mastered.",
+          "p")));
+  }
+
+  // The five newest quiz results as chips.
+  function latestResults() {
+    var quizzes = MBP.store.progress().quizzes.slice(-5).reverse();
+    var section = h("section", { class: "latest" }, bi("Seneste resultater", "Latest results", "h2"));
+    if (quizzes.length === 0) {
+      section.appendChild(bi(
+        "Ingen resultater endnu. Tag en prøvesimulering, når du har øvet lidt.",
+        "No results yet. Take an exam simulation once you have practised a little.",
+        "p"));
+      return section;
+    }
+    var row = h("div", { class: "result-row" });
+    quizzes.forEach(function (qz) {
+      var d = new Date(qz.date);
+      var passed = qz.score / qz.total >= 0.8;
+      var when = qz.mode === "exam" ? "Prøve" : "Quiz";
+      row.appendChild(h("div", { class: "result-chip" },
+        h("span", { class: "score" }, qz.score + "/" + qz.total),
+        h("span", { class: passed ? "dot pass" : "dot fail", "aria-hidden": "true" }),
+        h("span", { class: "meta" }, when + ", " + d.getDate() + "." + two(d.getMonth() + 1) + ".")));
+    });
+    section.appendChild(row);
+    return section;
+  }
+
+  // The 15 most-asked questions, closed on phones and open from 760px.
+  function top15(D) {
+    var section = h("section", { class: "top15-sec" },
+      h("h2", null, MBP.icon("star", 22), bi("De 15 mest stillede spørgsmål", "The 15 most-asked questions", "span")));
+    var details = h("details", { class: "top15" }, h("summary", null, bi("Vis listen", "Show the list", "span")));
     var ol = h("ol", { class: "top-list" });
     D.clusters.slice(0, 15).forEach(function (c) {
-      ol.appendChild(h("li", null, biQA(
-        c.canonical_question_da, c.canonical_question_en,
-        c.answer_da, c.answer_en,
-        "div",
-        " (×" + c.times_asked + ")", " (×" + c.times_asked + ")")));
+      var topic = D.tById.get(c.topic_id);
+      var style = topic ? "--c: var(--t-" + topic.id + ")" : null;
+      ol.appendChild(h("li", { class: "topic-scope", style: style },
+        h("div", { class: "face" }, MBP.ui.faceValue(c.times_asked)),
+        h("div", { class: "body" },
+          topic ? MBP.ui.topicChip(topic) : null,
+          biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"))));
     });
-    top.appendChild(ol);
-    main.appendChild(top);
+    details.appendChild(ol);
+    if (window.matchMedia && window.matchMedia("(min-width: 760px)").matches) details.open = true;
+    section.appendChild(details);
+    return section;
+  }
 
-    // 7. Reset
-    main.appendChild(h("div", { class: "btn-row" },
-      h("button", {
-        type: "button",
-        class: "btn btn-sm",
-        onclick: function () {
-          if (!confirm("Nulstil al fremgang? / Reset all progress?")) return;
+  // Reset progress, behind an inline confirm.
+  function resetButton() {
+    var btn = h("button", {
+      type: "button",
+      class: "btn btn-quiet reset",
+      title: "Reset progress"
+    }, "Nulstil fremgang");
+    btn.addEventListener("click", function () {
+      MBP.ui.confirmInline(btn, {
+        da: "Nulstil al fremgang? Det kan ikke fortrydes.",
+        en: "Reset all progress? This cannot be undone.",
+        actionDa: "Nulstil",
+        actionEn: "Reset",
+        cancelDa: "Annullér",
+        cancelEn: "Cancel",
+        onAction: function () {
           MBP.store.reset();
           location.reload();
         }
-      }, bi("Nulstil fremgang", "Reset progress", "span"))));
-  }
-
-  function cardLink(href, da, en) {
-    return h("a", { class: "link-card", href: href }, bi(da, en, "span"));
+      });
+    });
+    return h("div", { class: "reset-row" }, btn);
   }
 })();

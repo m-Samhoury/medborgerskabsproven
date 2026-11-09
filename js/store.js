@@ -5,9 +5,67 @@
   var MBP = (window.MBP = window.MBP || {});
   var KEY = "mbp.v1.progress";
   var LANG_KEY = "mbp.v1.showEnglish";
+  var ACTIVITY_KEY = "mbp.v1.activity";
+  var SEEN_KEY = "mbp.v1.seenMastered";
+  var GOAL = 25;
+  var KEEP_DAYS = 60;
   var INTERVALS = [0, 10 * 60 * 1000, 24 * 3600 * 1000, 3 * 24 * 3600 * 1000, 7 * 24 * 3600 * 1000, 14 * 24 * 3600 * 1000];
 
   var cache = null;
+
+  // Local date key YYYY-MM-DD for a Date.
+  function dayKey(d) {
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (day < 10 ? "0" : "") + day;
+  }
+
+  // Parses a JSON object from storage; anything broken reads as empty.
+  function readJson(key) {
+    try {
+      var parsed = JSON.parse(readStorage(key) || "null");
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  // Daily activity map, keyed by local date. Only the last KEEP_DAYS days are kept.
+  function activity() {
+    return readJson(ACTIVITY_KEY);
+  }
+
+  // Adds one answer to today's activity. Returns true once, when the daily goal is reached.
+  function recordActivity(isCorrect) {
+    var act = activity();
+    var today = new Date();
+    var key = dayKey(today);
+    var day = act[key] || { answers: 0, right: 0, goalShown: false };
+    day.answers++;
+    if (isCorrect) day.right++;
+    act[key] = day;
+
+    var cutoff = new Date(today.getFullYear(), today.getMonth(), today.getDate() - (KEEP_DAYS - 1));
+    var cutKey = dayKey(cutoff);
+    Object.keys(act).forEach(function (k) {
+      if (k < cutKey) delete act[k];
+    });
+
+    var reached = day.answers >= GOAL && !day.goalShown;
+    if (reached) day.goalShown = true;
+    writeStorage(ACTIVITY_KEY, JSON.stringify(act));
+    return reached;
+  }
+
+  // Reads a list of ids from storage; anything broken reads as empty.
+  function readList(key) {
+    try {
+      var parsed = JSON.parse(readStorage(key) || "null");
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (e) {
+      return [];
+    }
+  }
 
   function emptyProgress() {
     return { clusters: {}, questions: {}, quizzes: [], studied: {} };
@@ -101,6 +159,56 @@
       if (isCorrect) p.questions[questionId].right++;
       else p.questions[questionId].wrong++;
       save();
+      return recordActivity(isCorrect);
+    },
+
+    // Today's answers and right answers.
+    today: function () {
+      var day = activity()[dayKey(new Date())] || {};
+      return { answers: day.answers || 0, right: day.right || 0 };
+    },
+
+    // The whole activity map, for the week strip.
+    activity: activity,
+
+    // Days in a row with answers, counting back from today (or from yesterday if today is still empty).
+    streak: function () {
+      var act = activity();
+      var d = new Date();
+      var n = 0;
+      function active(day) {
+        var e = act[dayKey(day)];
+        return !!e && e.answers > 0;
+      }
+      if (!active(d)) d.setDate(d.getDate() - 1);
+      while (active(d)) {
+        n++;
+        d.setDate(d.getDate() - 1);
+      }
+      return n;
+    },
+
+    hasAnyProgress: function () {
+      return Object.keys(progress().questions).length > 0;
+    },
+
+    isMasteredSeen: function (topicId) {
+      return readList(SEEN_KEY).indexOf(topicId) !== -1;
+    },
+
+    markMasteredSeen: function (topicId) {
+      var list = readList(SEEN_KEY);
+      if (list.indexOf(topicId) === -1) list.push(topicId);
+      writeStorage(SEEN_KEY, JSON.stringify(list));
+    },
+
+    // Best score among the saved runs of one past exam, or null if it was never run.
+    bestScore: function (examId) {
+      var best = null;
+      progress().quizzes.forEach(function (q) {
+        if (q.examId === examId && (best === null || q.score > best)) best = q.score;
+      });
+      return best;
     },
 
     addQuiz: function (entry) {
@@ -130,6 +238,8 @@
     reset: function () {
       cache = emptyProgress();
       removeStorage(KEY);
+      removeStorage(ACTIVITY_KEY);
+      removeStorage(SEEN_KEY);
     }
   };
 })();
