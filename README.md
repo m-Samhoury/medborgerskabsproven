@@ -1,5 +1,7 @@
 # Mærket – studieside til medborgerskabsprøven
 
+**🌐 Open the study site: [m-samhoury.github.io/medborgerskabsproven](https://m-samhoury.github.io/medborgerskabsproven/)**
+
 The site is called **Mærket** ("the stamp"): each topic is a stamp in a stamp album, and progress is the stamps you collect.
 
 Study site for the Danish citizenship test (medborgerskabsprøven), built from all 20 official exams (Dec 2016 – Jun 2026, 500 questions).
