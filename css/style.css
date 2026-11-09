@@ -1473,3 +1473,39 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .review-no { margin: 0 0 8px; font: 700 var(--fs-s)/1.2 var(--f-body); color: var(--ink-2); }
 
 /* ---------- Page: Prøver ---------- */
+
+.exam-year { margin-top: var(--s-7); }
+.exam-year h2 { margin: 0 0 var(--s-2); font: 400 var(--fs-xl)/1.2 var(--f-display); }
+.exam-row {
+  display: grid;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 760px) {
+  .exam-row { grid-template-columns: 1fr auto; align-items: center; }
+  .exam-row .btn-row { justify-content: flex-end; }
+}
+.exam-info { display: grid; justify-items: start; }
+.exam-name { margin: 0; font: 400 var(--fs-l)/1.2 var(--f-display); }
+.exam-best {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 0;
+  font-size: var(--fs-xs);
+  color: var(--ink-2);
+}
+.exam-pm { width: 22px; height: 22px; color: var(--go); flex: 0 0 auto; }
+.pill-keyerr {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: var(--r-pill);
+  background: var(--keyerr-bg);
+  color: var(--keyerr-ink);
+  font: 700 var(--fs-xs)/1 var(--f-body);
+}
+.pill-keyerr svg { width: 13px; height: 13px; }
