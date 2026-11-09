@@ -813,7 +813,9 @@ kbd {
 
 .home {
   display: grid;
-  gap: var(--s-6);
+  gap: var(--s-4);
+  max-width: 640px;
+  margin-inline: auto;
 }
 .home h2 { margin-top: 0; }
 .home .btn-row { display: flex; }
@@ -886,6 +888,11 @@ kbd {
 .quick .btn { width: 100%; }
 .quick > :only-child { grid-column: 1 / -1; }
 .quick .btn svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.quick .btn { min-height: 72px; justify-content: flex-start; align-items: flex-start; padding-top: 14px; }
+.quick .btn svg { margin-top: 2px; }
+@media (min-width: 560px) { .quick .btn { min-height: 88px; padding-inline: 20px; } }
+.quick .btn-text { display: grid; text-align: left; }
+.quick .hint { display: block; font-size: var(--fs-xs); font-weight: 400; color: var(--ink-2); }
 
 /* Album (§5.2, point 3) */
 .album {
@@ -896,20 +903,6 @@ kbd {
 }
 @media (min-width: 560px) { .album { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 900px) { .album { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
-.legend {
-  display: grid;
-  gap: 6px;
-  margin-top: var(--s-3);
-  font-size: var(--fs-xs);
-  color: var(--ink-2);
-}
-.legend p { margin: 0; }
-.swatches { display: flex; gap: 6px; }
-.sw { display: inline-block; width: 14px; height: 18px; }
-.sw-0 { background: var(--surface); outline: 1.5px dashed var(--line); outline-offset: -3px; }
-.sw-1 { background: color-mix(in srgb, var(--accent) 14%, var(--surface)); }
-.sw-4 { background: var(--accent); }
-
 /* Latest results (§5.2, point 4) */
 .result-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: var(--s-3); }
 .result-chip {
@@ -928,17 +921,10 @@ kbd {
 .result-chip .dot.fail { background: var(--stop); }
 .result-chip .meta { grid-column: 1 / -1; font-size: var(--fs-xs); color: var(--ink-2); }
 
-/* The 15 most-asked questions (§5.2, point 5) */
-.top15-sec h2 { display: flex; align-items: center; gap: 8px; }
-.top15-sec h2 svg { width: 22px; height: 22px; color: var(--caution); flex: 0 0 auto; }
-.top15 summary {
-  display: flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--accent);
-  font: 700 1rem/1.2 var(--f-body);
-  cursor: pointer;
-}
+/* The 15 most-asked questions: link on I dag, then their own page (§5.2, point 5) */
+.top15-link { width: 100%; justify-content: center; gap: 8px; }
+.top15-link svg { width: 20px; height: 20px; color: var(--caution); flex: 0 0 auto; }
+.top15 .btn-row { margin-top: var(--s-4); }
 .top-list { list-style: none; margin: var(--s-2) 0 0; padding: 0; }
 .top-list li {
   display: grid;
@@ -962,17 +948,6 @@ kbd {
 .reset-row .confirm { width: 100%; }
 
 @media (min-width: 1000px) {
-  .home {
-    grid-template-columns: 4fr 7fr;
-    column-gap: 32px;
-    align-items: start;
-  }
-  .today { grid-column: 1; grid-row: 1; }
-  .quick { grid-column: 1; grid-row: 2; }
-  .latest { grid-column: 1; grid-row: 3; }
-  .album-sec { grid-column: 2; grid-row: 1 / span 3; }
-  .top15-sec, .reset-row { grid-column: 1 / -1; }
-  .album { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .top-list { columns: 2; column-gap: 40px; }
   .top-list li { break-inside: avoid; }
 }

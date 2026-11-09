@@ -10,10 +10,10 @@ The content is built from all 20 official exams, December 2016 to June 2026. All
 
 The nav has five sections, in this order:
 
-- **I dag / Today** – the countdown to the exam (25 Nov 2026), today's stamps, your album and your latest results.
+- **I dag / Today** – the countdown to the exam (25 Nov 2026) and today's stamps, then two buttons: **Lær / Learn** (choose a topic) and **Test** (choose a topic or all), and a link to the 15 most-asked questions.
 - **Læs / Read** – the facts topic by topic, most-asked first (⭐ = asked in 4+ exams), with overview tables of easily confused facts.
 - **Øv / Practise** – short explanation cards, then practice with spaced repetition (Leitner boxes).
-- **Test** – a quiz by topic, "most-asked only", or a real 25-question exam simulation (pass at 20/25).
+- **Test** – a quiz by topic, "most-asked only", or a real 25-question exam simulation (pass at 20/25). Your latest results are shown at the bottom of the page.
 - **Prøver / Past exams** – the 20 original exams and their answer keys as PDFs, with your best score for each.
 
 ## Display options
@@ -70,6 +70,7 @@ Editing the JSON files alone does nothing until the bundle is rebuilt.
 
 ```
 index.html        I dag (today)
+top15.html        The 15 most-asked questions (from I dag)
 study.html        Læs (read)
 learn.html        Øv (practise)
 quiz.html         Test
@@ -80,6 +81,7 @@ js/store.js       Progress, EN and theme settings, all in localStorage
 js/ui.js          Shared rendering and the header (EN and theme buttons)
 js/icons.js       Inline SVG icons and topic illustrations
 js/home.js        Page script: I dag
+js/top15.js       Page script: the 15 most-asked questions
 js/study.js       Page script: Læs
 js/learn.js       Page script: Øv
 js/quiz.js        Page script: Test

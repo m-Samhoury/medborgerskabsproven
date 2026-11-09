@@ -126,8 +126,9 @@
     // Mode: exam simulation (default) or quiz with answers. ?topics= preselects the quiz.
     var examInput = h("input", { type: "radio", name: "mode", value: "exam", class: "sr" });
     var quizInput = h("input", { type: "radio", name: "mode", value: "quiz", class: "sr" });
-    examInput.checked = !preset;
-    quizInput.checked = !!preset;
+    var wantQuiz = !!preset || params.get("mode") === "quiz";
+    examInput.checked = !wantQuiz;
+    quizInput.checked = wantQuiz;
 
     // Topic toggles: a mini stamp per topic. Checked = printed, unchecked = blank.
     var stampBoxes = D.topics.map(function (t) {
@@ -147,6 +148,7 @@
     lenInputs[0].checked = true;
 
     var freqBox = h("input", { type: "checkbox", class: "switch", id: "frequent" });
+    freqBox.checked = params.get("frequent") === "1";
     var quizOpts = h("div", { class: "quiz-opts" });
     var count = h("p", { class: "live-count", "aria-live": "polite" });
     var start = h("button", { type: "submit", class: "btn btn-primary", title: "Start quiz" }, "Start quiz");
@@ -263,7 +265,33 @@
     main.appendChild(h("p", { class: "quiet-row" },
       h("a", { class: "btn btn-quiet", href: "exams.html" },
         bi("Øv en bestemt prøve fra arkivet", "Practise a specific exam from the archive", "span"))));
+    main.appendChild(latestResults());
     refresh();
+  }
+
+  // The five newest quiz results as chips.
+  function latestResults() {
+    var quizzes = MBP.store.progress().quizzes.slice(-5).reverse();
+    var section = h("section", { class: "latest" }, bi("Seneste resultater", "Latest results", "h2"));
+    if (quizzes.length === 0) {
+      section.appendChild(bi(
+        "Ingen resultater endnu. Tag en prøvesimulering, når du har øvet lidt.",
+        "No results yet. Take an exam simulation once you have practised a little.",
+        "p"));
+      return section;
+    }
+    var row = h("div", { class: "result-row" });
+    quizzes.forEach(function (qz) {
+      var d = new Date(qz.date);
+      var passed = qz.score / qz.total >= 0.8;
+      var when = qz.mode === "exam" ? "Prøve" : "Quiz";
+      row.appendChild(h("div", { class: "result-chip" },
+        h("span", { class: "score" }, qz.score + "/" + qz.total),
+        h("span", { class: passed ? "dot pass" : "dot fail", "aria-hidden": "true" }),
+        h("span", { class: "meta" }, when + ", " + d.getDate() + "." + two(d.getMonth() + 1) + ".")));
+    });
+    section.appendChild(row);
+    return section;
   }
 
   // ---- Running a quiz -----------------------------------------------------

@@ -1,10 +1,9 @@
-// Home: the countdown with today's stamps, the album of topic stamps, latest results and the 15 most-asked questions.
+// Home (I dag): the countdown panel, the two main buttons (Lær and Test), the link to the 15 most-asked questions and reset.
 (function () {
   "use strict";
   var MBP = window.MBP;
   var h = MBP.ui.h;
   var bi = MBP.ui.bi;
-  var biQA = MBP.ui.biQA;
 
   MBP.ui.initShell();
   MBP.ui.start(init);
@@ -14,10 +13,6 @@
     var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
     var exam = Date.UTC(2026, 10, 25);
     return Math.round((exam - today) / 86400000);
-  }
-
-  function two(n) {
-    return n < 10 ? "0" + n : String(n);
   }
 
   function init(D) {
@@ -35,10 +30,8 @@
 
     main.appendChild(h("div", { class: "home" },
       todayPanel(days, streak, today, allMastered, perDay, total),
-      quickActions(),
-      album(D, mastered, total),
-      latestResults(),
-      top15(D),
+      mainActions(),
+      top15Link(),
       resetButton()));
   }
 
@@ -100,80 +93,25 @@
       courseNote ? h("p", { class: "cta-note" }, courseNote) : null);
   }
 
-  // Two secondary actions under the panel.
-  function quickActions() {
+  // The two main buttons under the panel: learn and test.
+  function mainActions() {
     return h("div", { class: "quick" },
-      h("a", { class: "btn btn-secondary", href: "quiz.html?mode=exam", title: "Exam simulation – 25 questions" },
-        MBP.icon("test", 22), bi("Prøvesimulering", "Exam simulation", "span")),
-      h("a", { class: "btn btn-secondary", href: "study.html", title: "Read the material" },
-        MBP.icon("read", 22), bi("Læs stoffet", "Read the material", "span")));
+      h("a", { class: "btn btn-secondary", href: "learn.html", title: "Learn – choose a topic" },
+        MBP.icon("practise", 22),
+        h("span", { class: "btn-text" },
+          bi("Lær", "Learn", "span"),
+          h("span", { class: "hint" }, bi("Vælg et emne", "Choose a topic", "span")))),
+      h("a", { class: "btn btn-secondary", href: "quiz.html?mode=quiz", title: "Test – choose a topic or all" },
+        MBP.icon("test", 22),
+        h("span", { class: "btn-text" },
+          bi("Test", "Test", "span"),
+          h("span", { class: "hint" }, bi("Vælg emne eller alle", "Choose a topic or all", "span")))));
   }
 
-  // The album: one stamp per topic, in topic order, with a legend.
-  function album(D, mastered, total) {
-    var stamps = h("div", { class: "album" });
-    D.topics.forEach(function (t) {
-      stamps.appendChild(MBP.ui.stamp(t, MBP.ui.topicProgress(D, t), { href: "study.html#" + t.id }));
-    });
-    return h("section", { class: "album-sec" },
-      bi("Dit album", "Your album", "h2"),
-      bi(mastered + " af " + total + " mærker samlet", mastered + " of " + total + " stamps collected", "p"),
-      stamps,
-      h("div", { class: "legend" },
-        h("span", { class: "swatches", "aria-hidden": "true" },
-          h("span", { class: "sw sw-0" }),
-          h("span", { class: "sw sw-1" }),
-          h("span", { class: "sw sw-4" })),
-        bi(
-          "Tom: ikke startet. Farvet: i gang. Trykt med stempel: mestret.",
-          "Blank: not started. Tinted: in progress. Printed with postmark: mastered.",
-          "p")));
-  }
-
-  // The five newest quiz results as chips.
-  function latestResults() {
-    var quizzes = MBP.store.progress().quizzes.slice(-5).reverse();
-    var section = h("section", { class: "latest" }, bi("Seneste resultater", "Latest results", "h2"));
-    if (quizzes.length === 0) {
-      section.appendChild(bi(
-        "Ingen resultater endnu. Tag en prøvesimulering, når du har øvet lidt.",
-        "No results yet. Take an exam simulation once you have practised a little.",
-        "p"));
-      return section;
-    }
-    var row = h("div", { class: "result-row" });
-    quizzes.forEach(function (qz) {
-      var d = new Date(qz.date);
-      var passed = qz.score / qz.total >= 0.8;
-      var when = qz.mode === "exam" ? "Prøve" : "Quiz";
-      row.appendChild(h("div", { class: "result-chip" },
-        h("span", { class: "score" }, qz.score + "/" + qz.total),
-        h("span", { class: passed ? "dot pass" : "dot fail", "aria-hidden": "true" }),
-        h("span", { class: "meta" }, when + ", " + d.getDate() + "." + two(d.getMonth() + 1) + ".")));
-    });
-    section.appendChild(row);
-    return section;
-  }
-
-  // The 15 most-asked questions, closed on phones and open from 760px.
-  function top15(D) {
-    var section = h("section", { class: "top15-sec" },
-      h("h2", null, MBP.icon("star", 22), bi("De 15 mest stillede spørgsmål", "The 15 most-asked questions", "span")));
-    var details = h("details", { class: "top15" }, h("summary", null, bi("Vis listen", "Show the list", "span")));
-    var ol = h("ol", { class: "top-list" });
-    D.clusters.slice(0, 15).forEach(function (c) {
-      var topic = D.tById.get(c.topic_id);
-      var style = topic ? "--c: var(--t-" + topic.id + ")" : null;
-      ol.appendChild(h("li", { class: "topic-scope", style: style },
-        h("div", { class: "face" }, MBP.ui.faceValue(c.times_asked)),
-        h("div", { class: "body" },
-          topic ? MBP.ui.topicChip(topic) : null,
-          biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"))));
-    });
-    details.appendChild(ol);
-    if (window.matchMedia && window.matchMedia("(min-width: 760px)").matches) details.open = true;
-    section.appendChild(details);
-    return section;
+  // Quiet link to the 15 most-asked questions, on their own page.
+  function top15Link() {
+    return h("a", { class: "btn btn-quiet top15-link", href: "top15.html", title: "The 15 most-asked questions" },
+      MBP.icon("star", 20), bi("De 15 mest stillede spørgsmål", "The 15 most-asked questions", "span"));
   }
 
   // Reset progress, behind an inline confirm.
