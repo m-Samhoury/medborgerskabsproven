@@ -924,6 +924,279 @@ kbd {
 
 /* ---------- Page: Læs ---------- */
 
+main > p.bi { color: var(--ink-2); margin: 0 0 var(--s-3); }
+
+/* Chip bar on phones: sticky, horizontal scroll (§5.3, point 2) */
+.chips {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  padding: 10px 0;
+  background: var(--paper);
+}
+.chips::-webkit-scrollbar { display: none; }
+.chip-link {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 8px 0;
+  scroll-snap-align: start;
+  text-decoration: none;
+}
+.chip-link .tchip { padding-right: 12px; }
+.chip-link.active .tchip { background: var(--c); color: #fff; }
+.chip-neutral {
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  background: var(--wash);
+  color: var(--ink);
+  font: 700 var(--fs-xs)/1.2 var(--f-body);
+}
+
+/* Filter switch (§5.3, point 3) */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin: var(--s-3) 0;
+  font: 700 var(--fs-s)/1.2 var(--f-body);
+  cursor: pointer;
+}
+.filter svg { width: 16px; height: 16px; color: var(--caution); flex: 0 0 auto; }
+.switch {
+  appearance: none;
+  flex: 0 0 auto;
+  position: relative;
+  width: 44px;
+  height: 26px;
+  margin: 0;
+  border-radius: 13px;
+  background: var(--wash-2);
+  cursor: pointer;
+  transition: background var(--d-fast);
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  transition: transform var(--d-fast) var(--ease-out);
+}
+.switch:checked { background: var(--accent); }
+.switch:checked::after { transform: translateX(18px); }
+
+.study { display: block; }
+.side { display: none; }
+.study-content { min-width: 0; }
+.study-content > .filter { display: flex; }
+
+/* Topic section (§5.3) */
+.topic { scroll-margin-top: 80px; margin-top: var(--s-7); }
+.topic-head {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border-radius: var(--r-l);
+  background: var(--c-tint);
+}
+.topic-head .stamp { width: 96px; }
+.topic-head .nm { font-size: 0.8rem; }
+.topic-head h2 { margin: 0 0 var(--s-2); color: var(--c-ink); }
+.topic-head p { margin: 0; color: var(--ink-2); font-size: var(--fs-s); }
+.topic > p { max-width: 68ch; margin: var(--s-4) 0 0; }
+.topic h3 { color: var(--c-ink); }
+.topic > .note { margin-top: var(--s-3); }
+
+/* Fact rows (§5.3, point 5) */
+.facts { list-style: none; margin: 0; padding: 0; }
+.fact-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+main.only-frequent .fact-row:not(.freq) { display: none; }
+.fact-side { display: grid; justify-items: start; gap: 8px; }
+.fact-side .value { font-size: var(--fs-l); }
+.fact-mastered { display: inline-block; }
+.fact-check { width: 22px; height: 22px; color: var(--go); }
+.fact-body { display: grid; gap: 8px; align-content: start; }
+.fact-body .pill-freq { justify-self: start; }
+.fact-body > p { margin: 0; max-width: 68ch; }
+.fact-body > .note { margin-top: 10px; }
+.qa summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--c-ink);
+  font: 700 var(--fs-s)/1.2 var(--f-body);
+  cursor: pointer;
+  list-style: none;
+}
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary svg { transition: transform var(--d-fast) var(--ease-out); }
+.qa[open] summary svg { transform: rotate(90deg); }
+.qa-body { display: grid; gap: 10px; padding-top: 6px; }
+.qa-item { display: grid; gap: 4px; }
+.qa-item p { margin: 0; }
+.ids { font-size: var(--fs-xs); color: var(--ink-2); }
+
+/* End of topic bar (§5.3, point 7) */
+.topic-end {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 18px;
+  border-radius: var(--r-l);
+  background: var(--c-tint);
+}
+
+/* Fact groups (§5.3.1) */
+.fg {
+  margin: 16px 0 24px;
+  padding: 18px;
+  border-top: 6px solid var(--c);
+  border-radius: var(--r-l);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  scroll-margin-top: 80px;
+}
+.fg-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.fg-title {
+  margin: 0;
+  font: 400 var(--fs-l)/1.2 var(--f-display);
+  color: var(--c-ink);
+}
+.fg .table-wrap { overflow-x: auto; }
+.fg-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.95rem; }
+.fg-table th, .fg-table td { text-align: left; vertical-align: top; }
+.fg-table thead th {
+  padding: 0 12px 8px;
+  border-bottom: 1.5px solid var(--line);
+  font: 700 var(--fs-s)/1.3 var(--f-body);
+  color: var(--ink-2);
+}
+.fg-table tbody th,
+.fg-table tbody td { padding: 12px; border-top: 1px solid var(--line); }
+.fg-table tbody th {
+  font: 400 1.05rem/1.25 var(--f-display);
+  color: var(--c-ink);
+}
+.fg-table tbody tr:nth-child(even) { background: var(--c-tint); }
+.fg-table .bi { font-size: 1em; }
+.fg-table .en { font-size: 0.9em; }
+.fg-table tbody td .bi, .fg-table tbody th .bi { display: block; }
+@media (max-width: 599px) {
+  .fg-table.fg-stack thead { display: block; }
+  .fg-table.fg-stack tr { display: block; padding: 12px 0; border-top: 1px solid var(--line); }
+  .fg-table.fg-stack tr:nth-child(even) { background: none; }
+  .fg-table.fg-stack th[scope="row"] { display: block; padding: 0 0 6px; border: 0; font-size: var(--fs-l); }
+  .fg-table.fg-stack td {
+    display: grid;
+    grid-template-columns: 7.5em 1fr;
+    gap: 8px;
+    padding: 4px 0;
+    border: 0;
+  }
+  .fg-table.fg-stack td::before {
+    content: attr(data-label);
+    font: 700 var(--fs-xs)/1.4 var(--f-body);
+    color: var(--ink-2);
+  }
+}
+.fg .note-remember { margin-top: 14px; }
+
+/* Strait strip, Farvandene only (§5.3.2) */
+.strait { list-style: none; display: flex; margin: 0 0 12px; padding: 0; }
+.strait li { text-align: center; }
+.strait-land {
+  flex: 1.2;
+  padding: 10px 8px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  font: 700 0.95rem/1.2 var(--f-body);
+}
+.strait-water {
+  flex: 1;
+  padding: 10px 6px;
+  background: color-mix(in srgb, var(--t-geografi) 22%, var(--tint-base));
+  color: var(--ink);
+  border-bottom: 3px solid var(--t-geografi);
+  font: 700 var(--fs-s)/1.2 var(--f-body);
+}
+.strait-note { font-size: var(--fs-xs); color: var(--ink-2); margin: 0 0 12px; }
+@media (max-width: 599px) {
+  .strait { flex-direction: column; }
+  .strait-water { flex: none; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center; }
+}
+
+/* Desktop: sidebar with the ten topics (§5.3, desktop) */
+@media (min-width: 1000px) {
+  .study {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+  .chips { display: none; }
+  .side {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: sticky;
+    top: 88px;
+    align-self: start;
+    max-height: calc(100vh - 100px);
+    overflow: auto;
+  }
+  .side-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: var(--r-m);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .side-row.active { background: var(--c-tint); }
+  .side-row .stamp.mini { width: 40px; flex: 0 0 auto; }
+  .side-text { display: grid; }
+  .side-name { font: 700 var(--fs-s)/1.2 var(--f-body); }
+  .side-count { font-size: var(--fs-xs); color: var(--ink-2); }
+  .side-link { font: 700 var(--fs-s)/1.2 var(--f-body); color: var(--accent); min-height: 44px; display: flex; align-items: center; }
+  .side .filter { margin: var(--s-2) 0 0; }
+  .study-content { max-width: var(--read-max); }
+  .study-content > .filter { display: none; }
+  .topic { scroll-margin-top: 96px; }
+  .topic-head { grid-template-columns: 130px 1fr; }
+  .topic-head .stamp { width: 130px; }
+  .fg { scroll-margin-top: 96px; }
+}
+
 /* ---------- Page: Øv ---------- */
 
 /* ---------- Page: Test ---------- */
