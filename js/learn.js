@@ -209,7 +209,9 @@
     // Records the answer and queues a return for a wrong one (up to MAX_RETURNS per cluster).
     function onAnswer(item, ok) {
       var c = D.cById.get(item.cid);
-      MBP.store.record(item.qid, item.cid, ok);
+      if (MBP.store.record(item.qid, item.cid, ok)) {
+        MBP.ui.toast("Dagens mål er nået: 25 svar", "Today's goal reached: 25 answers");
+      }
       S.answered++;
       S.results.push(ok);
       if (ok) {
