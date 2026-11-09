@@ -3,7 +3,7 @@
   "use strict";
   var MBP = (window.MBP = window.MBP || {});
 
-  var LOAD_ERROR = "Kunne ikke indlæse data. Åbn siden via en webserver. / Could not load data. Open the page through a web server.";
+  var LOAD_ERROR = "Kunne ikke indlæse data. Prøv at genindlæse siden. / Could not load data. Try reloading the page.";
 
   // h(tag, attrs, ...children): build an element. Strings become text nodes.
   // Attribute values of null/false are skipped; "on*" keys with a function become listeners.
