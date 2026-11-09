@@ -1302,7 +1302,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .summary-actions { margin-top: var(--s-6); }
 
 /* Picker (§5.5.1) */
-.pick-cell { display: grid; gap: 6px; }
+.pick-cell { display: grid; gap: 6px; align-content: start; }
 .pick-cell p { margin: 0; font-size: var(--fs-xs); color: var(--ink-2); }
 
 /* ---------- Page: Test ---------- */
