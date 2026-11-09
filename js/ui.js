@@ -482,7 +482,10 @@
   function start(init) {
     MBP.load().then(init, function () {
       var main = document.getElementById("main");
-      if (main) main.textContent = LOAD_ERROR;
+      if (main) {
+        main.textContent = "";
+        main.appendChild(h("div", { class: "note note-trap" }, LOAD_ERROR));
+      }
     });
   }
 
