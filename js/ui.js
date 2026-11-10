@@ -780,8 +780,11 @@
   }
 
   // Load the data, then run the page script. On failure, <main> shows the fixed error text.
+  // The first sync runs alongside the data load, so the page shows the synced progress.
   function start(init) {
-    MBP.load().then(init, function () {
+    Promise.all([MBP.load(), MBP.sync ? MBP.sync.beforeRender() : null]).then(function (r) {
+      return init(r[0]);
+    }, function () {
       var main = document.getElementById("main");
       if (main) {
         main.textContent = "";

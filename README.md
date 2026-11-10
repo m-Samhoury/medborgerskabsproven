@@ -23,15 +23,20 @@ The nav has five sections, in this order:
 
 ## Progress and storage
 
-Your progress is stored only in your browser, in `localStorage`. Nothing is sent to a server, and there are no accounts. The keys are:
+Your progress is stored in your browser, in `localStorage`. There are no accounts. If you turn on **sync between devices** (on I dag), the same progress is also saved in the site owner's S3 bucket, under a random sync code. Nothing else leaves the browser, and the theme and EN settings are never synced. The keys are:
 
 - `mbp.v1.progress` – the spaced-repetition boxes and the stamp progress
 - `mbp.v1.activity` – the daily activity and the latest results
 - `mbp.v1.seenMastered` – which "mastered" stamps you have already seen
+- `mbp.v1.resetAt` – when progress was last reset (used by sync)
+- `mbp.v1.syncCode` – the sync code on this device, if sync is on
+- `mbp.v1.syncLast` – when this device last synced
 - `mbp.v1.showEnglish` – the EN toggle
 - `mbp.v1.theme` – the theme button (missing = Auto)
 
-Progress is per browser and per device. Clearing site data removes it. **Nulstil fremgang** (on I dag) resets progress, activity and mastered stamps. It keeps the EN and theme settings.
+You can share a sync code as text or as a QR code. A phone camera opens the QR code as a link to the site, which offers to restore the progress there.
+
+Progress is per browser and per device unless sync is on. Clearing site data removes it from this device; with sync on, the copy in the bucket stays. **Nulstil fremgang** (on I dag) resets progress, activity and mastered stamps, on every synced device. It keeps the EN and theme settings. How the sync server is set up is in [sync/README.md](sync/README.md).
 
 ## Data
 
@@ -78,6 +83,8 @@ exams.html        Prøver (past exams)
 css/style.css     All styles. Colour tokens are at the top, with the light and dark values.
 js/data.js        Loads the data (from data/bundle.js; fetches the JSON only as a fallback)
 js/store.js       Progress, EN and theme settings, all in localStorage
+js/sync.js        Sync between devices (off while SYNC_URL is empty; see sync/README.md)
+sync/             The sync server: AWS Lambda code (sync/lambda) and the owner's setup steps (sync/README.md)
 js/ui.js          Shared rendering and the header (EN and theme buttons)
 js/icons.js       Inline SVG icons and topic illustrations
 js/home.js        Page script: I dag

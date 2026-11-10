@@ -947,6 +947,49 @@ kbd {
 }
 .reset-row .confirm { width: 100%; }
 
+/* Sync between devices (SYNC_PLAN.md): sits above the reset row */
+.sync-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-6);
+  width: 100%;
+  text-align: center;
+}
+.sync-row .confirm { width: 100%; }
+.sync-form { display: grid; gap: var(--s-3); width: 100%; max-width: 420px; }
+.sync-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-m);
+  background: var(--surface);
+  color: var(--ink);
+  font: 700 1.1rem/1.2 ui-monospace, Menlo, Consolas, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.sync-input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sync-code {
+  font: 700 var(--fs-l)/1.2 ui-monospace, Menlo, Consolas, monospace;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+.sync-help, .sync-msg, .sync-status { margin: 0; color: var(--ink-2); font-size: var(--fs-s); }
+.sync-status .bi { margin: 0; }
+.sync-msg { color: var(--ink); min-height: 1.2em; }
+.sync-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); }
+.sync-choices { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); }
+/* QR code: black on white always (phone cameras need it), so the card keeps its own colours in dark mode */
+.sync-qr { display: grid; justify-items: center; gap: var(--s-2); max-width: 100%; }
+.sync-qr[hidden] { display: none; }
+.sync-qr-card { background: #ffffff; padding: var(--s-3); border-radius: var(--r-m); line-height: 0; max-width: 100%; }
+.sync-qr-card svg { display: block; width: 200px; max-width: 100%; height: auto; }
+
 @media (min-width: 1000px) {
   .top-list { columns: 2; column-gap: 40px; }
   .top-list li { break-inside: avoid; }

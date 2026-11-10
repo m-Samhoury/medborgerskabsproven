@@ -9,11 +9,14 @@
   var ACTIVITY_KEY = "mbp.v1.activity";
   var SEEN_KEY = "mbp.v1.seenMastered";
   var BOOK_MORE_KEY = "mbp.v1.bookMoreOpen";
+  var RESET_KEY = "mbp.v1.resetAt";
   var GOAL = 25;
   var KEEP_DAYS = 60;
   var INTERVALS = [0, 10 * 60 * 1000, 24 * 3600 * 1000, 3 * 24 * 3600 * 1000, 7 * 24 * 3600 * 1000, 14 * 24 * 3600 * 1000];
 
   var cache = null;
+  // Counts local data writes. Sync uses it to tell whether anything changed while a request was in flight.
+  var dataVersion = 0;
 
   // Local date key YYYY-MM-DD for a Date.
   function dayKey(d) {
@@ -56,6 +59,7 @@
     var reached = day.answers >= GOAL && !day.goalShown;
     if (reached) day.goalShown = true;
     writeStorage(ACTIVITY_KEY, JSON.stringify(act));
+    changed();
     return reached;
   }
 
@@ -114,8 +118,21 @@
     return cache;
   }
 
+  // Every local data write goes through here, so sync (when it is on) can send the change.
+  function changed() {
+    dataVersion++;
+    if (MBP.sync) MBP.sync.changed();
+  }
+
   function save() {
     writeStorage(KEY, JSON.stringify(progress()));
+    changed();
+  }
+
+  // Milliseconds of the last reset on any device, or 0 if never reset.
+  function resetAt() {
+    var n = Number(readStorage(RESET_KEY));
+    return isFinite(n) && n > 0 ? n : 0;
   }
 
   function clusterState(id) {
@@ -202,6 +219,7 @@
       var list = readList(SEEN_KEY);
       if (list.indexOf(topicId) === -1) list.push(topicId);
       writeStorage(SEEN_KEY, JSON.stringify(list));
+      changed();
     },
 
     // Best score among the saved runs of one past exam, or null if it was never run.
@@ -263,6 +281,34 @@
       removeStorage(KEY);
       removeStorage(ACTIVITY_KEY);
       removeStorage(SEEN_KEY);
+      // The reset time lets other devices see that old data must go too.
+      writeStorage(RESET_KEY, String(Date.now()));
+      changed();
+    },
+
+    // Local data version, for sync.
+    version: function () {
+      return dataVersion;
+    },
+
+    // The whole synced state, in the shape the server stores (see SYNC_PLAN.md).
+    snapshot: function () {
+      return {
+        v: 1,
+        resetAt: resetAt(),
+        progress: progress(),
+        activity: activity(),
+        seenMastered: readList(SEEN_KEY)
+      };
+    },
+
+    // Replaces the synced state with a server snapshot. Does not count as a local change.
+    apply: function (snap) {
+      writeStorage(KEY, JSON.stringify(snap.progress));
+      writeStorage(ACTIVITY_KEY, JSON.stringify(snap.activity));
+      writeStorage(SEEN_KEY, JSON.stringify(snap.seenMastered));
+      writeStorage(RESET_KEY, String(snap.resetAt));
+      cache = null;
     }
   };
 })();
