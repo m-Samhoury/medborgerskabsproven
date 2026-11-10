@@ -31,6 +31,10 @@
       "Alle officielle prøver fra december 2016 til juni 2026, med rettenøgle. Du kan også øve hver prøve her på siden.",
       "All official exams from December 2016 to June 2026, with answer keys. You can also practise each exam here on the site.",
       "p"));
+    main.appendChild(bi(
+      "Nogle svar i de gamle rettenøgler er ændret siden (fx Dronningen → Kongen). Spørgsmålene her på siden bruger de svar, der gælder i dag.",
+      "Some answers in the old keys have changed since (e.g. the Queen → the King). The questions on this site use today's answers.",
+      "p"));
 
     main.appendChild(h("section", {
       class: "note note-keyerror"

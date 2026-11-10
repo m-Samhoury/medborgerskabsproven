@@ -1222,7 +1222,7 @@
    }
   ],
   "correct": [
-   "A"
+   "B"
   ],
   "image_note": null,
   "answer_source": "image",
@@ -1230,9 +1230,39 @@
   "notes": "",
   "question_en": "How old must young people be before they may buy wine and beer?",
   "cluster_id": "vel-oel-vin-16",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: 16 år for almindelig øl, men 18 år for vin, spiritus og stærk øl (over 6 %). Facit '16 år' var rigtigt i 2017.",
-  "book_note_en": "The book (Aug 2026) now says: 16 for ordinary beer, but 18 for wine, spirits and strong beer (over 6%). The key '16' was right in 2017."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "16 år.",
+    "text_en": "16 years"
+   },
+   {
+    "key": "B",
+    "text_da": "18 år.",
+    "text_en": "18 years"
+   },
+   {
+    "key": "C",
+    "text_da": "20 år.",
+    "text_en": "20 years"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 44,
+     "lines": "45-47"
+    },
+    {
+     "page": 55,
+     "lines": "52-55"
+    }
+   ],
+   "reason": "Wine now requires 18 (16 only for ordinary beer); the 2017 key said 16."
+  }
  },
  {
   "id": "2017-06-q15",
@@ -1398,6 +1428,35 @@
    },
    {
     "key": "B",
+    "text_da": "15.",
+    "text_en": "15"
+   },
+   {
+    "key": "C",
+    "text_da": "23.",
+    "text_en": "23"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "How many members does Denmark elect to the European Parliament?",
+  "cluster_id": "ver-mep-antal",
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "13.",
+    "text_en": "13"
+   },
+   {
+    "key": "B",
     "text_da": "23.",
     "text_en": "23"
    },
@@ -1407,18 +1466,19 @@
     "text_en": "33"
    }
   ],
-  "correct": [
-   "A"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "How many members does Denmark elect to the European Parliament?",
-  "cluster_id": "ver-mep-antal",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
+  "changed": {
+   "book": [
+    {
+     "page": 83,
+     "lines": "61-62"
+    },
+    {
+     "page": 100,
+     "lines": "20-21"
+    }
+   ],
+   "reason": "Denmark elects 15 MEPs (since 2024); the key said 13. 15 was not an option, so it replaces 33."
+  }
  },
  {
   "id": "2017-06-q21",
@@ -1744,6 +1804,35 @@
    },
    {
     "key": "B",
+    "text_da": "15",
+    "text_en": "15"
+   },
+   {
+    "key": "C",
+    "text_da": "23",
+    "text_en": "23"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "How many members does Denmark have in the European Parliament?",
+  "cluster_id": "ver-mep-antal",
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "13",
+    "text_en": "13"
+   },
+   {
+    "key": "B",
     "text_da": "23",
     "text_en": "23"
    },
@@ -1753,18 +1842,19 @@
     "text_en": "33"
    }
   ],
-  "correct": [
-   "A"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "How many members does Denmark have in the European Parliament?",
-  "cluster_id": "ver-mep-antal",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
+  "changed": {
+   "book": [
+    {
+     "page": 83,
+     "lines": "61-62"
+    },
+    {
+     "page": 100,
+     "lines": "20-21"
+    }
+   ],
+   "reason": "Denmark elects 15 MEPs (since 2024); the key said 13. 15 was not an option, so it replaces 33."
+  }
  },
  {
   "id": "2017-11-q7",
@@ -2584,12 +2674,12 @@
    },
    {
     "key": "B",
-    "text_da": "Statsministeren",
-    "text_en": "The prime minister"
+    "text_da": "Kongen",
+    "text_en": "The King"
    }
   ],
   "correct": [
-   "A"
+   "B"
   ],
   "image_note": null,
   "answer_source": "text",
@@ -2597,9 +2687,34 @@
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
   "cluster_id": "kon-nytaarstale",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Dronningen",
+    "text_en": "The Queen"
+   },
+   {
+    "key": "B",
+    "text_da": "Statsministeren",
+    "text_en": "The prime minister"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "39-41"
+    },
+    {
+     "page": 130,
+     "lines": "38-41"
+    }
+   ],
+   "reason": "The King (Frederik 10.) gives the 31 December speech; the key said the Queen. 'Kongen' was not an option, so it replaces the only distractor (the old key stays as the wrong option)."
+  }
  },
  {
   "id": "2018-06-q8",
@@ -3184,13 +3299,13 @@
   "options": [
    {
     "key": "A",
-    "text_da": "5-6 %",
-    "text_en": "5–6%"
+    "text_da": "12-13 %",
+    "text_en": "12–13%"
    },
    {
     "key": "B",
-    "text_da": "12-13 %",
-    "text_en": "12–13%"
+    "text_da": "16-17 %",
+    "text_en": "16–17%"
    },
    {
     "key": "C",
@@ -3207,9 +3322,35 @@
   "notes": "",
   "question_en": "What share of the population in Denmark are immigrants and their descendants?",
   "cluster_id": "geo-indvandrere",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: ca. 17 % (ca. 1 million) er indvandrere eller efterkommere. Facit 12-13 % var rigtigt i 2018.",
-  "book_note_en": "The book (Aug 2026) now says: about 17% (about 1 million) are immigrants or descendants. The key 12–13% was right in 2018."
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "5-6 %",
+    "text_en": "5–6%"
+   },
+   {
+    "key": "B",
+    "text_da": "12-13 %",
+    "text_en": "12–13%"
+   },
+   {
+    "key": "C",
+    "text_da": "19-20 %",
+    "text_en": "19–20%"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 106,
+     "lines": "36-37"
+    }
+   ],
+   "reason": "About 17 % are immigrants or descendants; the key said 12-13 %. '16-17 %' replaces 5-6 %."
+  }
  },
  {
   "id": "2018-11-q2",
@@ -3322,6 +3463,35 @@
    },
    {
     "key": "B",
+    "text_da": "15",
+    "text_en": "15"
+   },
+   {
+    "key": "C",
+    "text_da": "23",
+    "text_en": "23"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "How many members does Denmark have in the European Parliament?",
+  "cluster_id": "ver-mep-antal",
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "13",
+    "text_en": "13"
+   },
+   {
+    "key": "B",
     "text_da": "23",
     "text_en": "23"
    },
@@ -3331,18 +3501,19 @@
     "text_en": "33"
    }
   ],
-  "correct": [
-   "A"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "How many members does Denmark have in the European Parliament?",
-  "cluster_id": "ver-mep-antal",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
+  "changed": {
+   "book": [
+    {
+     "page": 83,
+     "lines": "61-62"
+    },
+    {
+     "page": 100,
+     "lines": "20-21"
+    }
+   ],
+   "reason": "Denmark elects 15 MEPs (since 2024); the key said 13. 15 was not an option, so it replaces 33."
+  }
  },
  {
   "id": "2018-11-q6",
@@ -3443,8 +3614,37 @@
   "exam": "2018-11",
   "number": 9,
   "section": "",
-  "question_da": "Hvilken rolle har dronningen blandt andet?",
+  "question_da": "Hvilken rolle har kongen blandt andet?",
   "options": [
+   {
+    "key": "A",
+    "text_da": "Han repræsenterer den danske regering i EU",
+    "text_en": "He represents the Danish government in the EU"
+   },
+   {
+    "key": "B",
+    "text_da": "Han underskriver nye love sammen med en minister",
+    "text_en": "He signs new laws together with a minister"
+   },
+   {
+    "key": "C",
+    "text_da": "Han holder åbningstalen ved Folketingets åbning i oktober",
+    "text_en": "He gives the opening speech when the Folketing opens in October"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "Which role does the King have, among other things?",
+  "cluster_id": "kon-rolle",
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
    {
     "key": "A",
     "text_da": "Hun repræsenterer den danske regering i EU",
@@ -3461,18 +3661,17 @@
     "text_en": "She gives the opening speech when the Folketing opens in October"
    }
   ],
-  "correct": [
-   "B"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
-  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
+  "original_question_da": "Hvilken rolle har dronningen blandt andet?",
+  "original_question_en": "Which role does the Queen have, among other things?",
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "22-26"
+    }
+   ],
+   "reason": "The monarch is now a king (Frederik 10.), not the Queen; the question and options are rewritten for the King. The key (signs laws with a minister) is unchanged."
+  }
  },
  {
   "id": "2018-11-q10",
@@ -3549,13 +3748,13 @@
   "options": [
    {
     "key": "A",
-    "text_da": "Ca. 20 %",
-    "text_en": "About 20%"
+    "text_da": "Ca. 40 %",
+    "text_en": "About 40%"
    },
    {
     "key": "B",
-    "text_da": "Ca. 40 %",
-    "text_en": "About 40%"
+    "text_da": "Ca. 50 %",
+    "text_en": "About 50%"
    },
    {
     "key": "C",
@@ -3572,9 +3771,39 @@
   "notes": "",
   "question_en": "How many of the members of the Folketing are women?",
   "cluster_id": "dem-kvinder-folketing",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Ca. 20 %",
+    "text_en": "About 20%"
+   },
+   {
+    "key": "B",
+    "text_da": "Ca. 40 %",
+    "text_en": "About 40%"
+   },
+   {
+    "key": "C",
+    "text_da": "Ca. 60 %",
+    "text_en": "About 60%"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 59,
+     "lines": "45-46"
+    },
+    {
+     "page": 83,
+     "lines": "14-20"
+    }
+   ],
+   "reason": "48-49 % of the Folketing are women after the 2026 election; the key said about 40 %. 'About 50 %' replaces 20 %."
+  }
  },
  {
   "id": "2018-11-q13",
@@ -6281,12 +6510,12 @@
    },
    {
     "key": "B",
-    "text_da": "Statsministeren",
-    "text_en": "The prime minister"
+    "text_da": "Kongen",
+    "text_en": "The King"
    }
   ],
   "correct": [
-   "A"
+   "B"
   ],
   "image_note": null,
   "answer_source": "text",
@@ -6294,9 +6523,34 @@
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
   "cluster_id": "kon-nytaarstale",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Dronningen",
+    "text_en": "The Queen"
+   },
+   {
+    "key": "B",
+    "text_da": "Statsministeren",
+    "text_en": "The prime minister"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "39-41"
+    },
+    {
+     "page": 130,
+     "lines": "38-41"
+    }
+   ],
+   "reason": "The King (Frederik 10.) gives the 31 December speech; the key said the Queen. 'Kongen' was not an option, so it replaces the only distractor (the old key stays as the wrong option)."
+  }
  },
  {
   "id": "2020-06-q23",
@@ -6693,13 +6947,13 @@
   "options": [
    {
     "key": "A",
-    "text_da": "Ca. 20 %",
-    "text_en": "About 20%"
+    "text_da": "Ca. 40 %",
+    "text_en": "About 40%"
    },
    {
     "key": "B",
-    "text_da": "Ca. 40 %",
-    "text_en": "About 40%"
+    "text_da": "Ca. 50 %",
+    "text_en": "About 50%"
    },
    {
     "key": "C",
@@ -6716,9 +6970,39 @@
   "notes": "",
   "question_en": "What share of the members of the Folketing are women?",
   "cluster_id": "dem-kvinder-folketing",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Ca. 20 %",
+    "text_en": "About 20%"
+   },
+   {
+    "key": "B",
+    "text_da": "Ca. 40 %",
+    "text_en": "About 40%"
+   },
+   {
+    "key": "C",
+    "text_da": "Ca. 60 %",
+    "text_en": "About 60%"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 59,
+     "lines": "45-46"
+    },
+    {
+     "page": 83,
+     "lines": "14-20"
+    }
+   ],
+   "reason": "48-49 % of the Folketing are women after the 2026 election; the key said about 40 %. 'About 50 %' replaces 20 %."
+  }
  },
  {
   "id": "2020-11-q11",
@@ -6969,8 +7253,37 @@
   "exam": "2020-11",
   "number": 19,
   "section": "",
-  "question_da": "Hvilken rolle har dronningen blandt andet?",
+  "question_da": "Hvilken rolle har kongen blandt andet?",
   "options": [
+   {
+    "key": "A",
+    "text_da": "Han udpeger Folketingets formand",
+    "text_en": "He appoints the Speaker of the Folketing"
+   },
+   {
+    "key": "B",
+    "text_da": "Han underskriver nye love sammen med en minister",
+    "text_en": "He signs new laws together with a minister"
+   },
+   {
+    "key": "C",
+    "text_da": "Han holder åbningstalen ved Folketingets åbning i oktober",
+    "text_en": "He gives the opening speech when the Folketing opens in October"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "text",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "Which role does the King have, among other things?",
+  "cluster_id": "kon-rolle",
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
    {
     "key": "A",
     "text_da": "Hun udpeger Folketingets formand",
@@ -6987,18 +7300,17 @@
     "text_en": "She gives the opening speech when the Folketing opens in October"
    }
   ],
-  "correct": [
-   "B"
-  ],
-  "image_note": null,
-  "answer_source": "text",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
-  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
+  "original_question_da": "Hvilken rolle har dronningen blandt andet?",
+  "original_question_en": "Which role does the Queen have, among other things?",
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "22-26"
+    }
+   ],
+   "reason": "The monarch is now a king (Frederik 10.), not the Queen; the question and options are rewritten for the King. The key (signs laws with a minister) is unchanged."
+  }
  },
  {
   "id": "2020-11-q20",
@@ -8064,12 +8376,12 @@
    },
    {
     "key": "B",
-    "text_da": "Statsministeren",
-    "text_en": "The prime minister"
+    "text_da": "Kongen",
+    "text_en": "The King"
    }
   ],
   "correct": [
-   "A"
+   "B"
   ],
   "image_note": null,
   "answer_source": "text",
@@ -8077,9 +8389,34 @@
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
   "cluster_id": "kon-nytaarstale",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Dronningen",
+    "text_en": "The Queen"
+   },
+   {
+    "key": "B",
+    "text_da": "Statsministeren",
+    "text_en": "The prime minister"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "39-41"
+    },
+    {
+     "page": 130,
+     "lines": "38-41"
+    }
+   ],
+   "reason": "The King (Frederik 10.) gives the 31 December speech; the key said the Queen. 'Kongen' was not an option, so it replaces the only distractor (the old key stays as the wrong option)."
+  }
  },
  {
   "id": "2021-11-q5",
@@ -9290,8 +9627,37 @@
   "exam": "2022-06",
   "number": 18,
   "section": "",
-  "question_da": "Hvilken rolle har Dronningen blandt andet?",
+  "question_da": "Hvilken rolle har kongen blandt andet?",
   "options": [
+   {
+    "key": "A",
+    "text_da": "Han repræsenterer den danske regering i EU",
+    "text_en": "He represents the Danish government in the EU"
+   },
+   {
+    "key": "B",
+    "text_da": "Han underskriver nye love sammen med en minister",
+    "text_en": "He signs new laws together with a minister"
+   },
+   {
+    "key": "C",
+    "text_da": "Han holder åbningstalen ved Folketingets åbning i oktober",
+    "text_en": "He gives the opening speech when the Folketing opens in October"
+   }
+  ],
+  "correct": [
+   "B"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "Which role does the King have, among other things?",
+  "cluster_id": "kon-rolle",
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
    {
     "key": "A",
     "text_da": "Hun repræsenterer den danske regering i EU",
@@ -9308,18 +9674,17 @@
     "text_en": "She gives the opening speech when the Folketing opens in October"
    }
   ],
-  "correct": [
-   "B"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
-  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
+  "original_question_da": "Hvilken rolle har Dronningen blandt andet?",
+  "original_question_en": "Which role does the Queen have, among other things?",
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "22-26"
+    }
+   ],
+   "reason": "The monarch is now a king (Frederik 10.), not the Queen; the question and options are rewritten for the King. The key (signs laws with a minister) is unchanged."
+  }
  },
  {
   "id": "2022-06-q19",
@@ -9650,12 +10015,12 @@
    },
    {
     "key": "B",
-    "text_da": "Statsministeren",
-    "text_en": "The prime minister"
+    "text_da": "Kongen",
+    "text_en": "The King"
    }
   ],
   "correct": [
-   "A"
+   "B"
   ],
   "image_note": null,
   "answer_source": "text",
@@ -9663,9 +10028,34 @@
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
   "cluster_id": "kon-nytaarstale",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Dronningen",
+    "text_en": "The Queen"
+   },
+   {
+    "key": "B",
+    "text_da": "Statsministeren",
+    "text_en": "The prime minister"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 65,
+     "lines": "39-41"
+    },
+    {
+     "page": 130,
+     "lines": "38-41"
+    }
+   ],
+   "reason": "The King (Frederik 10.) gives the 31 December speech; the key said the Queen. 'Kongen' was not an option, so it replaces the only distractor (the old key stays as the wrong option)."
+  }
  },
  {
   "id": "2022-11-q5",
@@ -12539,6 +12929,35 @@
   "options": [
    {
     "key": "A",
+    "text_da": "Cirka 35 procent",
+    "text_en": "About 35 per cent"
+   },
+   {
+    "key": "B",
+    "text_da": "Cirka 45 procent",
+    "text_en": "About 45 per cent"
+   },
+   {
+    "key": "C",
+    "text_da": "Cirka 50 procent",
+    "text_en": "About 50 per cent"
+   }
+  ],
+  "correct": [
+   "C"
+  ],
+  "image_note": null,
+  "answer_source": "text",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "What share of the members of the Folketing are women?",
+  "cluster_id": "dem-kvinder-folketing",
+  "original_correct": [
+   "C"
+  ],
+  "original_options": [
+   {
+    "key": "A",
     "text_da": "Cirka 25 procent",
     "text_en": "About 25 per cent"
    },
@@ -12553,18 +12972,19 @@
     "text_en": "About 45 per cent"
    }
   ],
-  "correct": [
-   "C"
-  ],
-  "image_note": null,
-  "answer_source": "text",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "What share of the members of the Folketing are women?",
-  "cluster_id": "dem-kvinder-folketing",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
-  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
+  "changed": {
+   "book": [
+    {
+     "page": 59,
+     "lines": "45-46"
+    },
+    {
+     "page": 83,
+     "lines": "14-20"
+    }
+   ],
+   "reason": "48-49 % of the Folketing are women after the 2026 election; the key said about 45 %. 'About 50 %' replaces 25 %."
+  }
  },
  {
   "id": "2024-05-q21",
@@ -12951,6 +13371,35 @@
   "options": [
    {
     "key": "A",
+    "text_da": "Socialdemokratiet",
+    "text_en": "The Social Democrats (Socialdemokratiet)"
+   },
+   {
+    "key": "B",
+    "text_da": "Venstre",
+    "text_en": "Venstre (the Liberal Party)"
+   },
+   {
+    "key": "C",
+    "text_da": "Det Konservative Folkeparti",
+    "text_en": "The Conservative People's Party"
+   }
+  ],
+  "correct": [
+   "A"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "Key B (Venstre) is correct: SVM government (Socialdemokratiet, Venstre, Moderaterne) since Dec 2022. Verified.",
+  "question_en": "Which of the following parties has been in the government since 2022?",
+  "cluster_id": "dem-regering",
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
+   {
+    "key": "A",
     "text_da": "Dansk Folkeparti",
     "text_en": "The Danish People's Party (Dansk Folkeparti)"
    },
@@ -12965,18 +13414,19 @@
     "text_en": "The Conservative People's Party"
    }
   ],
-  "correct": [
-   "B"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "Key B (Venstre) is correct: SVM government (Socialdemokratiet, Venstre, Moderaterne) since Dec 2022. Verified.",
-  "question_en": "Which of the following parties has been in the government since 2022?",
-  "cluster_id": "dem-regering",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: Siden 3. juni 2026 består regeringen af Socialdemokratiet, SF, Moderaterne og Radikale Venstre. Venstre er ikke længere med. Facit 'Venstre' var rigtigt, da prøven blev holdt (SVM-regeringen 2022-2026).",
-  "book_note_en": "The book (Aug 2026) now says: Since 3 June 2026 the government has been the Social Democrats, SF, the Moderates and the Social Liberals. Venstre is no longer in it. The key 'Venstre' was right when the exam was held (the SVM government 2022–2026)."
+  "changed": {
+   "book": [
+    {
+     "page": 75,
+     "lines": "25-27"
+    },
+    {
+     "page": 75,
+     "lines": "36-45"
+    }
+   ],
+   "reason": "Since 3 June 2026 the government is S, SF, M and RV; Venstre (the key) left. Socialdemokratiet has been in government throughout and replaces Dansk Folkeparti."
+  }
  },
  {
   "id": "2024-11-q9",
@@ -15650,6 +16100,35 @@
   "options": [
    {
     "key": "A",
+    "text_da": "USA",
+    "text_en": "USA"
+   },
+   {
+    "key": "B",
+    "text_da": "Tyskland",
+    "text_en": "Germany"
+   },
+   {
+    "key": "C",
+    "text_da": "Storbritannien",
+    "text_en": "Great Britain"
+   }
+  ],
+  "correct": [
+   "A"
+  ],
+  "image_note": null,
+  "answer_source": "image",
+  "uncertain": false,
+  "notes": "",
+  "question_en": "Which of the following countries does Denmark trade most with (imports and exports)?",
+  "cluster_id": "ver-tyskland-handel",
+  "original_correct": [
+   "B"
+  ],
+  "original_options": [
+   {
+    "key": "A",
     "text_da": "Kina",
     "text_en": "China"
    },
@@ -15664,18 +16143,15 @@
     "text_en": "Great Britain"
    }
   ],
-  "correct": [
-   "B"
-  ],
-  "image_note": null,
-  "answer_source": "image",
-  "uncertain": false,
-  "notes": "",
-  "question_en": "Which of the following countries does Denmark trade most with (imports and exports)?",
-  "cluster_id": "ver-tyskland-handel",
-  "book_status": "outdated",
-  "book_note_da": "Bogen (aug. 2026) siger nu: USA er Danmarks største handelspartner samlet (14,1 % i 2025), Tyskland nr. 2 (12,7 %). USA er ikke en svarmulighed her, så Tyskland er stadig det rigtige valg.",
-  "book_note_en": "The book (Aug 2026) now says: the USA is Denmark's largest trading partner overall (14.1% in 2025), Germany second (12.7%). The USA is not an option here, so Germany is still the right choice."
+  "changed": {
+   "book": [
+    {
+     "page": 32,
+     "lines": "53-61"
+    }
+   ],
+   "reason": "The USA was Denmark's largest trading partner in 2025 (14.1 %, Germany 12.7 %); the key said Germany. USA replaces China (4.8 %, the smallest of the three in the book)."
+  }
  },
  {
   "id": "2026-06-q19",

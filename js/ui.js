@@ -126,9 +126,13 @@
   }
 
   // The trap, "changed since the exam" and "not in the book" notes for a cluster (all optional).
-  function noteBoxes(c) {
+  // inQuestion: leaves out the change note (the exam's old answer), which belongs to learning only.
+  function noteBoxes(c, inQuestion) {
     var out = [];
     if (c.trap_note_da) out.push(note("trap", "Pas på", "Watch out", c.trap_note_da, c.trap_note_en));
+    if (c.change_note_da && !inQuestion) {
+      out.push(note("changed", "Ændret siden prøven", "Changed since the exam", c.change_note_da, c.change_note_en, c.book));
+    }
     if (c.current_note_da) out.push(note("changed", "Ændret siden prøven", "Changed since the exam", c.current_note_da, c.current_note_en));
     if (c.nobook_note_da) out.push(nobookNote(c.nobook_note_da, c.nobook_note_en));
     return out;
@@ -466,13 +470,14 @@
       line,
       h("div", { class: "fact" }, withBook(bi(c.fact_da, c.fact_en, "p"), c.book))
     ];
-    // The exam's key stays as published; where the book now says something else, a note says so.
-    if (q.book_note_da) {
+    // Outdated keys are already switched to the current answer (q.changed), with no note here.
+    // Other questions keep their key; where the book words it differently, a note says so.
+    if (q.book_note_da && !q.changed) {
       kids.push(q.book_status === "nobook"
         ? nobookNote(q.book_note_da, q.book_note_en)
         : note("changed", "Bogen siger nu", "The book now says", q.book_note_da, q.book_note_en, c.book));
     }
-    kids = kids.concat(noteBoxes(c));
+    kids = kids.concat(noteBoxes(c, true));
     if (q.official_correct) {
       kids.push(note("keyerror", "Fejl i rettenøglen fra 2017", "Error in the 2017 answer key",
         "Den officielle rettenøgle fra 2017 siger fejlagtigt B (Skåne, Halland og Blekinge). Det rigtige svar er Slesvig og Holsten – Skåne blev mistet i 1658.",

@@ -3880,14 +3880,14 @@
   "frequent": true,
   "canonical_question_da": "Hvem holder sin nytårstale den 31. december?",
   "canonical_question_en": "Who gives their New Year's speech on 31 December?",
-  "answer_da": "Kongen (i ældre prøver: Dronningen)",
-  "answer_en": "The King (in older exams: the Queen)",
+  "answer_da": "Kongen",
+  "answer_en": "The King",
   "variants": [
    {
     "question_da": "Hvem holder sin nytårstale den 31. december?",
     "question_en": "Who gives their New Year's speech on 31 December?",
-    "answer_da": "Dronningen",
-    "answer_en": "The Queen",
+    "answer_da": "Kongen",
+    "answer_en": "The King",
     "question_ids": [
      "2018-06-q7",
      "2020-06-q22",
@@ -3896,10 +3896,8 @@
     ]
    }
   ],
-  "trap_note_da": "31. december = monarken (i dag Kongen). 1. januar = statsministeren. Står der 'Dronningen' som mulighed, er det det rigtige svar i den gamle prøve.",
-  "trap_note_en": "31 December = the monarch (today the King). 1 January = the prime minister. If 'the Queen' is an option, it is the right answer in the old exam.",
-  "current_note_da": "Per 2026 er Frederik 10. konge (siden 14. januar 2024). Ældre prøver siger 'Dronningen' – i dag er svaret 'Kongen'.",
-  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'.",
+  "trap_note_da": "31. december = kongen. 1. januar = statsministeren.",
+  "trap_note_en": "31 December = the King. 1 January = the prime minister.",
   "book": [
    {
     "page": 65,
@@ -3909,7 +3907,9 @@
     "page": 130,
     "lines": "32-42"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøverne i juni 2018, juni 2020, november 2021 og november 2022 var svaret Dronningen. Ifølge læremateriale 2026 er det nu Kongen (Frederik 10. har været konge siden 2024).",
+  "change_note_en": "Changed: in the June 2018, June 2020, November 2021 and November 2022 exams the answer was the Queen. According to the 2026 book it is now the King (Frederik 10 has been king since 2024)."
  },
  {
   "id": "tra-fastelavn",
@@ -4820,8 +4820,8 @@
  {
   "id": "dem-kvinder-folketing",
   "topic_id": "demokrati",
-  "fact_da": "Efter valget i 2026 er 48-49 % af Folketingets medlemmer kvinder (86 af 179). Prøverne sagde ca. 40 % (2018-2020) og ca. 45 % (2024).",
-  "fact_en": "After the 2026 election 48–49% of the members of the Folketing are women (86 of 179). The exams said about 40% (2018–2020) and about 45% (2024).",
+  "fact_da": "Efter valget i 2026 er 48-49 % af Folketingets medlemmer kvinder (86 af 179) – altså ca. halvdelen.",
+  "fact_en": "After the 2026 election, 48–49% of the members of the Folketing are women (86 of 179) – about half.",
   "question_ids": [
    "2018-11-q12",
    "2020-11-q10",
@@ -4837,14 +4837,14 @@
   "frequent": false,
   "canonical_question_da": "Hvor stor en andel af Folketingets medlemmer er kvinder?",
   "canonical_question_en": "What share of the members of the Folketing are women?",
-  "answer_da": "Ca. 40-45 % (prøvernes svar) – i dag 48-49 %",
-  "answer_en": "About 40–45% (the exam answers) – today 48–49%",
+  "answer_da": "Ca. 50 % (48-49 %)",
+  "answer_en": "About 50% (48–49%)",
   "variants": [
    {
     "question_da": "Hvor mange af medlemmerne af Folketinget er kvinder?",
     "question_en": "How many of the members of the Folketing are women?",
-    "answer_da": "Ca. 40 %",
-    "answer_en": "About 40%",
+    "answer_da": "Ca. 50 %",
+    "answer_en": "About 50%",
     "question_ids": [
      "2018-11-q12"
     ]
@@ -4852,8 +4852,8 @@
    {
     "question_da": "Hvor stor en andel af Folketingets medlemmer er kvinder?",
     "question_en": "What share of the members of the Folketing are women?",
-    "answer_da": "Ca. 40 %",
-    "answer_en": "About 40%",
+    "answer_da": "Ca. 50 %",
+    "answer_en": "About 50%",
     "question_ids": [
      "2020-11-q10"
     ]
@@ -4861,17 +4861,15 @@
    {
     "question_da": "Hvor stor en andel af Folketingets medlemmer er kvinder?",
     "question_en": "What share of the members of the Folketing are women?",
-    "answer_da": "Cirka 45 procent",
-    "answer_en": "About 45 per cent",
+    "answer_da": "Cirka 50 procent",
+    "answer_en": "About 50 per cent",
     "question_ids": [
      "2024-05-q20"
     ]
    }
   ],
-  "trap_note_da": "Vælg det tal, der ligger tættest på 40-50 %. Ældre prøver: 'ca. 40 %'. Prøven 2024: 'cirka 45 procent'. I dag: 48-49 %.",
-  "trap_note_en": "Pick the figure closest to 40–50%. Older exams: 'about 40%'. The 2024 exam: 'about 45 per cent'. Today: 48–49%.",
-  "current_note_da": "Læremateriale 2026: 86 af 179 medlemmer (48 %) er kvinder, og efter valget i 2026 er 49 % af de valgte kvinder. Ingen af prøvens forkerte svar (20 %, 25 %, 35 %, 60 %) er tæt på.",
-  "current_note_en": "Book 2026: 86 of 179 members (48%) are women, and after the 2026 election 49% of those elected are women. None of the exam's wrong answers (20%, 25%, 35%, 60%) is close.",
+  "trap_note_da": "Vælg det tal, der ligger tættest på 48-49 % – altså ca. 50 %.",
+  "trap_note_en": "Choose the figure closest to 48–49% – that is, about 50%.",
   "book": [
    {
     "page": 59,
@@ -4881,7 +4879,9 @@
     "page": 83,
     "lines": "14-20"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøverne i november 2018 og november 2020 var svaret ca. 40 %, og på prøven i maj 2024 ca. 45 %. Ifølge læremateriale 2026 er det nu 48-49 % (86 af 179 efter valget i 2026).",
+  "change_note_en": "Changed: in the November 2018 and November 2020 exams the answer was about 40%, and in the May 2024 exam about 45%. According to the 2026 book it is now 48–49% (86 of 179 after the 2026 election)."
  },
  {
   "id": "dem-regionerne-sygehuse",
@@ -5107,10 +5107,10 @@
   "answer_en": "Signs new laws together with a minister",
   "variants": [
    {
-    "question_da": "Hvilken rolle har dronningen blandt andet?",
-    "question_en": "Which role does the Queen have, among other things?",
-    "answer_da": "Hun underskriver nye love sammen med en minister",
-    "answer_en": "She signs new laws together with a minister",
+    "question_da": "Hvilken rolle har kongen blandt andet?",
+    "question_en": "Which role does the King have, among other things?",
+    "answer_da": "Han underskriver nye love sammen med en minister",
+    "answer_en": "He signs new laws together with a minister",
     "question_ids": [
      "2018-11-q9",
      "2020-11-q19",
@@ -5120,8 +5120,6 @@
   ],
   "trap_note_da": "Monarken holder IKKE åbningstalen i Folketinget i oktober – det gør statsministeren. Monarken repræsenterer ikke regeringen i EU.",
   "trap_note_en": "The monarch does NOT give the opening speech in the Folketing in October – the prime minister does. The monarch does not represent the government in the EU.",
-  "current_note_da": "Per 2026 er Frederik 10. konge (siden 14. januar 2024). Ældre prøver siger 'Dronningen' – i dag er svaret 'Kongen'.",
-  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'.",
   "book": [
    {
     "page": 65,
@@ -5131,7 +5129,9 @@
     "page": 66,
     "lines": "21-25"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøverne i november 2018, november 2020 og juni 2022 spurgte man om dronningen, og svaret var 'Hun underskriver nye love sammen med en minister'. Ifølge læremateriale 2026 er det nu kongen (Frederik 10.), der underskriver landets love sammen med ministrene.",
+  "change_note_en": "Changed: the November 2018, November 2020 and June 2022 exams asked about the Queen, and the answer was 'She signs new laws together with a minister'. According to the 2026 book it is now the King (Frederik 10) who signs the laws together with the ministers."
  },
  {
   "id": "vel-barsel-stoette",
@@ -5507,14 +5507,14 @@
   "frequent": false,
   "canonical_question_da": "Hvor mange medlemmer har Danmark i Europa-Parlamentet?",
   "canonical_question_en": "How many members does Denmark have in the European Parliament?",
-  "answer_da": "15 i dag (prøvens svar 2017-2018: 13)",
-  "answer_en": "15 today (the 2017–2018 exam answer: 13)",
+  "answer_da": "15",
+  "answer_en": "15",
   "variants": [
    {
     "question_da": "Hvor mange medlemmer vælger Danmark til Europa-Parlamentet?",
     "question_en": "How many members does Denmark elect to the European Parliament?",
-    "answer_da": "13",
-    "answer_en": "13",
+    "answer_da": "15",
+    "answer_en": "15",
     "question_ids": [
      "2017-06-q20"
     ]
@@ -5522,18 +5522,16 @@
    {
     "question_da": "Hvor mange medlemmer har Danmark i Europa-Parlamentet?",
     "question_en": "How many members does Denmark have in the European Parliament?",
-    "answer_da": "13",
-    "answer_en": "13",
+    "answer_da": "15",
+    "answer_en": "15",
     "question_ids": [
      "2017-11-q6",
      "2018-11-q5"
     ]
    }
   ],
-  "trap_note_da": "Hvis valgmulighederne er 13, 23 og 33, så vælg 13 (det gamle tal). Hvis 15 står der, så vælg 15.",
-  "trap_note_en": "If the options are 13, 23 and 33, choose 13 (the old figure). If 15 is offered, choose 15.",
-  "current_note_da": "Tallet har ændret sig: 13 (2009-2020), 14 (2020-2024 efter Brexit), 15 (siden 2024).",
-  "current_note_en": "The number has changed: 13 (2009–2020), 14 (2020–2024 after Brexit), 15 (since 2024).",
+  "trap_note_da": "Forveksl ikke med Folketingets 179 medlemmer. Europa-Parlamentet har i alt 720 medlemmer, og 15 af dem er valgt i Danmark.",
+  "trap_note_en": "Do not confuse this with the 179 members of the Folketing. The European Parliament has 720 members in all, and 15 of them are elected in Denmark.",
   "book": [
    {
     "page": 83,
@@ -5543,7 +5541,9 @@
     "page": 100,
     "lines": "20-21"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøverne i juni 2017, november 2017 og november 2018 var svaret 13. Ifølge læremateriale 2026 er det nu 15.",
+  "change_note_en": "Changed: in the June 2017, November 2017 and November 2018 exams the answer was 13. According to the 2026 book it is now 15."
  },
  {
   "id": "geo-landbrug",
@@ -6194,14 +6194,14 @@
   "frequent": false,
   "canonical_question_da": "Hvilket parti har været med i regeringen siden 2022?",
   "canonical_question_en": "Which party has been in the government since 2022?",
-  "answer_da": "Venstre (SVM-regeringen 2022–2026, prøvernes svar). I dag er Venstre ikke med. Konservative var IKKE med.",
-  "answer_en": "Venstre (the SVM government 2022–2026, the exam answer). Venstre is not in it today. The Conservatives were NOT in it.",
+  "answer_da": "Socialdemokratiet (og Moderaterne). Venstre og Konservative er ikke med.",
+  "answer_en": "The Social Democrats (and the Moderates). Venstre and the Conservatives are not in it.",
   "variants": [
    {
     "question_da": "Hvilket af følgende partier har været med i regeringen siden 2022?",
     "question_en": "Which of the following parties has been in the government since 2022?",
-    "answer_da": "Venstre",
-    "answer_en": "Venstre (the Liberal Party)",
+    "answer_da": "Socialdemokratiet",
+    "answer_en": "The Social Democrats (Socialdemokratiet)",
     "question_ids": [
      "2024-11-q8"
     ]
@@ -6216,10 +6216,8 @@
     ]
    }
   ],
-  "trap_note_da": "Prøverne fra 2024-2025 spørger om SVM-regeringen: Venstre = Ja, Konservative = Nej, Dansk Folkeparti = Nej.",
-  "trap_note_en": "The 2024–2025 exams ask about the SVM government: Venstre = Yes, the Conservatives = No, the Danish People's Party = No.",
-  "current_note_da": "Efter valget 24. marts 2026 dannede Mette Frederiksen en ny regering den 3. juni 2026: Socialdemokratiet, SF, Moderaterne og Radikale Venstre. Venstre er ikke længere med. Konservative er stadig ikke med. Tjek stm.dk før prøven.",
-  "current_note_en": "After the election on 24 March 2026, Mette Frederiksen formed a new government on 3 June 2026: the Social Democrats, SF, the Moderates and the Social Liberals. Venstre is no longer in it. The Conservatives are still not in it. Check stm.dk before the exam.",
+  "trap_note_da": "Regeringen er Socialdemokratiet, SF, Moderaterne og Radikale Venstre. Venstre, Konservative og Dansk Folkeparti er IKKE med.",
+  "trap_note_en": "The government is the Social Democrats, SF, the Moderates and the Social Liberals. Venstre, the Conservatives and the Danish People's Party are NOT in it.",
   "book": [
    {
     "page": 75,
@@ -6229,7 +6227,9 @@
     "page": 75,
     "lines": "36-45"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøven i november 2024 var svaret Venstre (SVM-regeringen 2022-2026). Ifølge læremateriale 2026 består regeringen nu af Socialdemokratiet, SF, Moderaterne og Radikale Venstre – Venstre er ikke længere med.",
+  "change_note_en": "Changed: in the November 2024 exam the answer was Venstre (the SVM government 2022–2026). According to the 2026 book the government now consists of the Social Democrats, SF, the Moderates and the Social Liberals – Venstre is no longer in it."
  },
  {
   "id": "dem-stoerste-parti-2022",
@@ -7629,29 +7629,29 @@
   "frequent": false,
   "canonical_question_da": "Hvilket land har Danmark størst samhandel med?",
   "canonical_question_en": "Which country does Denmark trade most with?",
-  "answer_da": "Tyskland (prøvens svar 2026) – læremateriale 2026: USA samlet, Tyskland størst for import",
-  "answer_en": "Germany (the 2026 exam answer) – book 2026: the USA overall, Germany largest for imports",
+  "answer_da": "USA (Tyskland er nr. 2 og størst for import)",
+  "answer_en": "The USA (Germany is second, and the largest for imports)",
   "variants": [
    {
     "question_da": "Hvilket af følgende lande har Danmark størst samhandel (import og eksport) med?",
     "question_en": "Which of the following countries does Denmark trade most with (imports and exports)?",
-    "answer_da": "Tyskland",
-    "answer_en": "Germany",
+    "answer_da": "USA",
+    "answer_en": "USA",
     "question_ids": [
      "2026-06-q18"
     ]
    }
   ],
-  "trap_note_da": "Står USA som mulighed, er USA rigtigt (samlet handel 2025). Prøven fra juni 2026 havde kun Kina, Tyskland og Storbritannien – dér er Tyskland rigtigt.",
-  "trap_note_en": "If the USA is an option, the USA is right (total trade 2025). The June 2026 exam only had China, Germany and the UK – there Germany is right.",
-  "current_note_da": "Læremateriale 2026: I 2025 var USA største handelspartner (14,1 %) foran Tyskland (12,7 %). Tyskland er stadig størst for import.",
-  "current_note_en": "Book 2026: In 2025 the USA was the largest trading partner (14.1%) ahead of Germany (12.7%). Germany is still largest for imports.",
+  "trap_note_da": "Samlet handel (import og eksport): USA. Import: Tyskland. Eksport: USA.",
+  "trap_note_en": "Total trade (imports and exports): the USA. Imports: Germany. Exports: the USA.",
   "book": [
    {
     "page": 32,
     "lines": "53-61"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøven i juni 2026 var svaret Tyskland. Ifølge læremateriale 2026 er det nu USA (14,1 % af samhandlen i 2025, Tyskland 12,7 %).",
+  "change_note_en": "Changed: in the June 2026 exam the answer was Germany. According to the 2026 book it is now the USA (14.1% of trade in 2025, Germany 12.7%)."
  },
  {
   "id": "ver-vaernepligt-koen",
@@ -8957,29 +8957,29 @@
   "frequent": false,
   "canonical_question_da": "Hvor stor en andel af befolkningen er indvandrere og efterkommere?",
   "canonical_question_en": "What share of the population are immigrants and descendants?",
-  "answer_da": "12-13 % (prøvens svar i 2018) – i dag ca. 17 %",
-  "answer_en": "12–13% (the 2018 exam answer) – today about 17%",
+  "answer_da": "Ca. 17 % (ca. 1 million)",
+  "answer_en": "About 17% (about 1 million)",
   "variants": [
    {
     "question_da": "Hvor stor en andel af befolkningen i Danmark er indvandrere og efterkommere?",
     "question_en": "What share of the population in Denmark are immigrants and their descendants?",
-    "answer_da": "12-13 %",
-    "answer_en": "12–13%",
+    "answer_da": "16-17 %",
+    "answer_en": "16–17%",
     "question_ids": [
      "2018-11-q1"
     ]
    }
   ],
-  "trap_note_da": "Hvis valgmulighederne er 5-6 %, 12-13 % og 19-20 %, så vælg 12-13 % (det var svaret i 2018). Hvis der står ca. 17 %, så vælg det.",
-  "trap_note_en": "If the options are 5–6%, 12–13% and 19–20%, choose 12–13% (the answer in 2018). If about 17% is offered, choose that.",
-  "current_note_da": "Andelen er steget: i 2018 ca. 12-13 %, i dag ca. 17 % (læremateriale 2026).",
-  "current_note_en": "The share has risen: about 12–13% in 2018, about 17% today (book 2026).",
+  "trap_note_da": "Ca. 1 million af ca. 6 millioner indbyggere – altså ca. 17 %.",
+  "trap_note_en": "About 1 million of about 6 million inhabitants – that is, about 17%.",
   "book": [
    {
     "page": 106,
     "lines": "36-37"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøven i november 2018 var svaret 12-13 %. Ifølge læremateriale 2026 er det nu ca. 17 % (ca. 1 million).",
+  "change_note_en": "Changed: in the November 2018 exam the answer was 12–13%. According to the 2026 book it is now about 17% (about 1 million)."
  },
  {
   "id": "geo-region-hovedstaden",
@@ -9255,23 +9255,21 @@
   "frequent": false,
   "canonical_question_da": "Hvor gamle skal unge være, før de må købe vin og øl?",
   "canonical_question_en": "How old must young people be before they may buy wine and beer?",
-  "answer_da": "16 år (prøvens svar i 2017) – i dag: almindelig øl 16 år, vin 18 år",
-  "answer_en": "16 (the 2017 exam answer) – today: ordinary beer 16, wine 18",
+  "answer_da": "18 år (kun almindelig øl: 16 år)",
+  "answer_en": "18 (ordinary beer only: 16)",
   "variants": [
    {
     "question_da": "Hvor gamle skal unge være, før de må købe vin og øl?",
     "question_en": "How old must young people be before they may buy wine and beer?",
-    "answer_da": "16 år",
-    "answer_en": "16 years",
+    "answer_da": "18 år",
+    "answer_en": "18 years",
     "question_ids": [
      "2017-06-q14"
     ]
    }
   ],
-  "trap_note_da": "Almindelig øl = 16. Vin, spiritus og stærk øl = 18. Cigaretter = 18. Kørekort = 17. Prøven fra 2017 spurgte om 'vin og øl' – dengang var svaret 16 år.",
-  "trap_note_en": "Ordinary beer = 16. Wine, spirits and strong beer = 18. Cigarettes = 18. Driving licence = 17. The 2017 exam asked about 'wine and beer' – then the answer was 16.",
-  "current_note_da": "Læremateriale 2026: 16 år gælder kun almindelig øl. Vin, spiritus og alt over 6 % alkohol kræver 18 år.",
-  "current_note_en": "Book 2026: 16 applies only to ordinary beer. Wine, spirits and anything over 6% alcohol require 18.",
+  "trap_note_da": "Almindelig øl = 16. Vin, spiritus og stærk øl (over 6 %) = 18. Cigaretter = 18. Kørekort = 17. Spørger man om 'vin og øl', er svaret 18 år.",
+  "trap_note_en": "Ordinary beer = 16. Wine, spirits and strong beer (over 6%) = 18. Cigarettes = 18. Driving licence = 17. If the question asks about 'wine and beer', the answer is 18.",
   "book": [
    {
     "page": 44,
@@ -9281,7 +9279,9 @@
     "page": 55,
     "lines": "52-55"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøven i juni 2017 var svaret 16 år. Ifølge læremateriale 2026 er det nu 18 år for vin (16 år gælder kun almindelig øl).",
+  "change_note_en": "Changed: in the June 2017 exam the answer was 16. According to the 2026 book it is now 18 for wine (16 applies only to ordinary beer)."
  },
  {
   "id": "ver-eu-handel",

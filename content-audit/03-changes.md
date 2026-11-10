@@ -145,3 +145,60 @@ Tabellen viser den danske tekst. De engelske linjer er rettet tilsvarende.
 | Q:2025-05-q19 | nobook | Hvilket parti fik flest stemmer ved folketingsvalget i 2022? | Læremateriale 2026 nævner ikke valget i 2022 – kun valget i 2026, hvor Socialdemokratiet også fik flest stemmer. | s. 85 l. 27–29 |
 | Q:2025-11-q3 | differs | Hvor mange borgere i Danmark mellem 15 og 64 år har et arbejde? | Bogen (aug. 2026) siger: ca. 73 % af de 16-66-årige har et lønmodtagerarbejde – altså stadig ca. tre ud af fire. | s. 22 l. 58–59; s. 120 l. 28–30 |
 | Q:2026-06-q18 | outdated | Hvilket af følgende lande har Danmark størst samhandel (import og eksport) med? | Bogen (aug. 2026) siger nu: USA er Danmarks største handelspartner samlet (14,1 % i 2025), Tyskland nr. 2 (12,7 %). USA er ikke en svarmulighed her, så Tyskland er stadig det rigtige valg. | s. 32 l. 53–61 |
+
+## Trin 4: Spørgsmål bruger nu det aktuelle svar
+
+Brugeren har ændret beslutningen ovenfor: en kursist må aldrig lære et forældet svar udenad. Hvor rettenøglens svar ikke længere er rigtigt ifølge læremateriale 2026, bruger sitet nu det aktuelle svar.
+
+- **Spørgsmål** (Test, prøve-gennemspilning, Øv-kort, Top 15): Det aktuelle svar er markeret som rigtigt, og der vises ingen note. Stod det aktuelle svar ikke blandt mulighederne, har det erstattet den svageste distraktor, så antallet af muligheder er det samme. Det gamle facit står tilbage som forkert mulighed. De oprindelige data ligger i JSON: `original_correct`, `original_options`, `original_question_da/en` (kun kongens rolle) og `changed: {book, reason}`. De gamle «Bogen siger nu»-noter er fjernet fra disse 17 spørgsmål. Feedback efter svar (`explainPanel`) viser hverken spørgsmålets note eller klyngens ændringsnote.
+- **Læring** (Læs, Øv-lektionskort, emnenoter): Klyngens fakta og svar er det aktuelle svar. Et nyt felt `change_note_da/en` vises som «Ændret siden prøven» med bogikonet: «Ændret: På prøven i <måned år> var svaret X. Ifølge læremateriale 2026 er det nu Y.» Emnenoterne for demokrati, kongehus, geografi og verden er omskrevet på samme måde, og der er tilføjet nye noter i verden (samhandel) og velfærd (vin og øl). Rækken i faktagruppen `fg-tal` om Europa-Parlamentet siger «ændret».
+- **Fjernet:** Trap-noter, der sagde, at det gamle facit var det rigtige valg i den gamle prøve (fx `C:ver-tyskland-handel`, `C:ver-mep-antal`, `C:kon-nytaarstale`, `C:geo-indvandrere`, `C:dem-regering`). Det samme gælder emnenoterne «det er den, prøverne fra 2024-2025 spørger om» og «Hvis kun 'Dronningen' står som mulighed …».
+- **Prøver-siden:** En linje under introen siger, at nogle svar i de gamle rettenøgler er ændret siden, og at spørgsmålene på sitet bruger de svar, der gælder i dag. PDF'erne i `exams/` og `bookdump/` er ikke rørt.
+- Lavet med `content-audit/apply_current_answers.py`, der kun kan køres én gang, fordi den tjekker den gamle tekst. Derefter er `tools/build_data.py` kørt.
+
+### Alle 500 spørgsmål er gennemgået igen
+
+Alle 500 spørgsmål er læst igen mod sidefilerne, ikke kun de poster, der står i rapporten. **17 spørgsmål er ændret.** Det er de 16 OUTDATED fra rapporten plus `Q:2026-06-q18` (samhandel). Rapporten havde ingen andre forældede facit, og gennemgangen fandt heller ingen.
+
+| ID | Spørgsmål | Gammelt facit → nyt rigtigt svar | Muligheder før (facit fed) | Muligheder efter (rigtigt fed) | Bogreference |
+|---|---|---|---|---|---|
+| `2017-06-q14` | Hvor gamle skal unge være, før de må købe vin og øl? | 16 år. → **18 år.** | **16 år.** / 18 år. / 20 år. | 16 år. / **18 år.** / 20 år. | s. 44 l. 45–47; s. 55 l. 52–55 |
+| `2017-06-q20` | Hvor mange medlemmer vælger Danmark til Europa-Parlamentet? | 13. → **15.** | **13.** / 23. / 33. | 13. / **15.** / 23. | s. 83 l. 61–62; s. 100 l. 20–21 |
+| `2017-11-q6` | Hvor mange medlemmer har Danmark i Europa-Parlamentet? | 13 → **15** | **13** / 23 / 33 | 13 / **15** / 23 | s. 83 l. 61–62; s. 100 l. 20–21 |
+| `2018-06-q7` | Hvem holder sin nytårstale den 31. december? | Dronningen → **Kongen** | **Dronningen** / Statsministeren | Dronningen / **Kongen** | s. 65 l. 39–41; s. 130 l. 38–41 |
+| `2018-11-q1` | Hvor stor en andel af befolkningen i Danmark er indvandrere og efterkommere? | 12-13 % → **16-17 %** | 5-6 % / **12-13 %** / 19-20 % | 12-13 % / **16-17 %** / 19-20 % | s. 106 l. 36–37 |
+| `2018-11-q5` | Hvor mange medlemmer har Danmark i Europa-Parlamentet? | 13 → **15** | **13** / 23 / 33 | 13 / **15** / 23 | s. 83 l. 61–62; s. 100 l. 20–21 |
+| `2018-11-q9` | Hvilken rolle har kongen blandt andet? (før: Hvilken rolle har dronningen blandt andet?) | Hun underskriver nye love sammen med en minister → **Han underskriver nye love sammen med en minister** | Hun repræsenterer den danske regering i EU / **Hun underskriver nye love sammen med en minister** / Hun holder åbningstalen ved Folketingets åbning i oktober | Han repræsenterer den danske regering i EU / **Han underskriver nye love sammen med en minister** / Han holder åbningstalen ved Folketingets åbning i oktober | s. 65 l. 22–26 |
+| `2018-11-q12` | Hvor mange af medlemmerne af Folketinget er kvinder? | Ca. 40 % → **Ca. 50 %** | Ca. 20 % / **Ca. 40 %** / Ca. 60 % | Ca. 40 % / **Ca. 50 %** / Ca. 60 % | s. 59 l. 45–46; s. 83 l. 14–20 |
+| `2020-06-q22` | Hvem holder sin nytårstale den 31. december? | Dronningen → **Kongen** | **Dronningen** / Statsministeren | Dronningen / **Kongen** | s. 65 l. 39–41; s. 130 l. 38–41 |
+| `2020-11-q10` | Hvor stor en andel af Folketingets medlemmer er kvinder? | Ca. 40 % → **Ca. 50 %** | Ca. 20 % / **Ca. 40 %** / Ca. 60 % | Ca. 40 % / **Ca. 50 %** / Ca. 60 % | s. 59 l. 45–46; s. 83 l. 14–20 |
+| `2020-11-q19` | Hvilken rolle har kongen blandt andet? (før: Hvilken rolle har dronningen blandt andet?) | Hun underskriver nye love sammen med en minister → **Han underskriver nye love sammen med en minister** | Hun udpeger Folketingets formand / **Hun underskriver nye love sammen med en minister** / Hun holder åbningstalen ved Folketingets åbning i oktober | Han udpeger Folketingets formand / **Han underskriver nye love sammen med en minister** / Han holder åbningstalen ved Folketingets åbning i oktober | s. 65 l. 22–26 |
+| `2021-11-q4` | Hvem holder sin nytårstale den 31. december? | Dronningen → **Kongen** | **Dronningen** / Statsministeren | Dronningen / **Kongen** | s. 65 l. 39–41; s. 130 l. 38–41 |
+| `2022-06-q18` | Hvilken rolle har kongen blandt andet? (før: Hvilken rolle har Dronningen blandt andet?) | Hun underskriver nye love sammen med en minister → **Han underskriver nye love sammen med en minister** | Hun repræsenterer den danske regering i EU / **Hun underskriver nye love sammen med en minister** / Hun holder åbningstalen ved Folketingets åbning i oktober | Han repræsenterer den danske regering i EU / **Han underskriver nye love sammen med en minister** / Han holder åbningstalen ved Folketingets åbning i oktober | s. 65 l. 22–26 |
+| `2022-11-q4` | Hvem holder sin nytårstale den 31. december? | Dronningen → **Kongen** | **Dronningen** / Statsministeren | Dronningen / **Kongen** | s. 65 l. 39–41; s. 130 l. 38–41 |
+| `2024-05-q20` | Hvor stor en andel af Folketingets medlemmer er kvinder? | Cirka 45 procent → **Cirka 50 procent** | Cirka 25 procent / Cirka 35 procent / **Cirka 45 procent** | Cirka 35 procent / Cirka 45 procent / **Cirka 50 procent** | s. 59 l. 45–46; s. 83 l. 14–20 |
+| `2024-11-q8` | Hvilket af følgende partier har været med i regeringen siden 2022? | Venstre → **Socialdemokratiet** | Dansk Folkeparti / **Venstre** / Det Konservative Folkeparti | **Socialdemokratiet** / Venstre / Det Konservative Folkeparti | s. 75 l. 25–27; s. 75 l. 36–45 |
+| `2026-06-q18` | Hvilket af følgende lande har Danmark størst samhandel (import og eksport) med? | Tyskland → **USA** | Kina / **Tyskland** / Storbritannien | **USA** / Tyskland / Storbritannien | s. 32 l. 53–61 |
+
+### Kontrolleret, men ikke ændret
+
+| Spørgsmål | Hvorfor uændret |
+|---|---|
+| `Q:2018-11-q2` Region Hovedstaden ca. 1,7 mio. | Bogen giver ikke regionens indbyggertal, kun «ca. to millioner i hovedstadsområdet» (s. 106 l. 38–41). Det faktiske tal er ca. 1,9 mio., men blandt 1,7, 2,8 og 3,9 mio. er 1,7 stadig klart det nærmeste. Læs-noten giver det aktuelle tal. |
+| `Q:2017-06-q4`, `Q:2020-06-q2`, `Q:2021-11-q20`, `Q:2023-11-q22` 5 regioner | Bogen siger fem regioner. Region Hovedstaden og Region Sjælland lægges sammen den 1. januar 2027 (s. 80). Svaret er rigtigt indtil da, men skal ændres til 4 efter 1. januar 2027. |
+| `Q:2018-11-q20`, `Q:2021-06-q18` skolestart 5-6 år | Bogen siger «omkring seks år» (s. 6 l. 29–31). 5-6 år er stadig den eneste mulighed, der passer. Noten bliver. |
+| `Q:2019-11-q13` «Næsten alle» børn 3-5 år passes ude | Bogen siger «de fleste» (s. 18 l. 12–14), og det modsiger ikke «næsten alle». Noten bliver. |
+| `Q:2025-11-q3` tre ud af fire i arbejde | Bogen siger 73 % af de 16-66-årige (s. 22 l. 58–59), og det er stadig ca. tre ud af fire. |
+| `Q:2017-11-q11`, `Q:2018-11-q19` a-kasse ca. 70 % | Tallet står ikke i bogen, så det kan hverken be- eller afkræftes. |
+| `Q:2017-11-q19` 2 ugers fædreorlov | Tallet står ikke i bogen. Det er stadig rigtigt: faren har 2 uger omkring fødslen. |
+| `Q:2023-11-q7`, `Q:2025-05-q19` største parti 2022 | Spørgsmålet handler om et bestemt år, så svaret er stadig rigtigt. |
+| `Q:2025-05-q18` Konservative i regeringen? Nej | Svaret er stadig Nej med regeringen fra 2026 (s. 75 l. 25–27). |
+| `Q:2016-12-q3` m.fl. tillidsrepræsentant: Medarbejderne | Bogen siger, at fagforeningens medlemmer vælger blandt medarbejderne (s. 25). Blandt mulighederne er «Medarbejderne» stadig det rigtige svar. |
+| Tandlæge (`Q:2023-05-q18`, `Q:2024-11-q18`), demonstration (`Q:2016-12-q7`, `Q:2023-11-q23`), valgdeltagelse, EP-stemmeprocent, værnepligt, abort 18 uger, konge og kronprins | Alle stemmer med bogen: gratis tandpleje til og med 21 år, besked til politiet men ingen tilladelse, 84 % i 2026, 58 % i 2024, kvinder fra 1. juli 2025. |
+
+### Skøn, du bør kende
+
+- **Nytårstalen (4 spørgsmål):** De to muligheder var Dronningen og Statsministeren. Reglen siger, at det gamle facit skal blive stående, så «Kongen» har erstattet «Statsministeren». Spørgsmålet tester nu Dronningen mod Kongen. Fælden med statsministeren (1. januar) står stadig i trap-noten.
+- **Kongens rolle (3 spørgsmål):** Facit (underskriver love med en minister) er uændret, men spørgsmål og muligheder er skrevet om fra «dronningen/Hun» til «kongen/Han». Den oprindelige tekst ligger i `original_question_*` og `original_options`.
+- **Kvinder i Folketinget, `Q:2024-05-q20`:** Svaret er nu «Cirka 50 procent», og «Cirka 45 procent» står tilbage som forkert mulighed. 86 af 179 er 48,0 %, og bogen siger 48 % (s. 59) og 49 % (s. 83). 50 er tættest på, men forskellen til 45 er kun 3 procentpoint.
+- **Regeringen, `Q:2024-11-q8`** («… har været med i regeringen siden 2022?»): Bogen nævner kun den nuværende regering (S, SF, M, RV). Socialdemokratiet har været med hele tiden og har erstattet Dansk Folkeparti.

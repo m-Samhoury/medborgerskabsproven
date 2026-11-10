@@ -171,8 +171,8 @@
   ],
   "current_facts": [
    {
-    "da": "Per 2026: Der var folketingsvalg 24. marts 2026. Socialdemokratiet blev igen største parti. Siden 3. juni 2026 er regeringen Socialdemokratiet, SF, Moderaterne og Radikale Venstre (Mette Frederiksen III). Fra 2022 til 2026 var det SVM-regeringen (S, Venstre, Moderaterne) – det er den, prøverne fra 2024-2025 spørger om.",
-    "en": "Per 2026: There was a general election on 24 March 2026. The Social Democrats were again the largest party. Since 3 June 2026 the government has been the Social Democrats, SF, the Moderates and the Social Liberals (Mette Frederiksen III). From 2022 to 2026 it was the SVM government (S, Venstre, the Moderates) – that is the one the 2024–2025 exams ask about.",
+    "da": "Ændret: På prøven i november 2024 var svaret Venstre (SVM-regeringen 2022-2026). Ifølge læremateriale 2026 er regeringen nu Socialdemokratiet, SF, Moderaterne og Radikale Venstre (siden 3. juni 2026) – Venstre er ikke længere med. Ved folketingsvalget 24. marts 2026 blev Socialdemokratiet igen største parti.",
+    "en": "Changed: in the November 2024 exam the answer was Venstre (the SVM government 2022–2026). According to the 2026 book the government is now the Social Democrats, SF, the Moderates and the Social Liberals (since 3 June 2026) – Venstre is no longer in it. At the general election on 24 March 2026 the Social Democrats were again the largest party.",
     "book": [
      {
       "page": 75,
@@ -185,8 +185,8 @@
     ]
    },
    {
-    "da": "Kvinder i Folketinget: ca. 40 % i 2018-2020 og ca. 45 % efter valget i 2022 (prøvernes svar). Læremateriale 2026: 48-49 % efter valget i 2026 (86 af 179).",
-    "en": "Women in the Folketing: about 40% in 2018–2020 and about 45% after the 2022 election (the exam answers). Book 2026: 48–49% after the 2026 election (86 of 179).",
+    "da": "Ændret: Kvinder i Folketinget – på prøverne i november 2018 og november 2020 var svaret ca. 40 %, og i maj 2024 ca. 45 %. Ifølge læremateriale 2026 er det nu 48-49 % (86 af 179).",
+    "en": "Changed: women in the Folketing – in the November 2018 and November 2020 exams the answer was about 40%, and in May 2024 about 45%. According to the 2026 book it is now 48–49% (86 of 179).",
     "book": [
      {
       "page": 59,
@@ -307,8 +307,8 @@
   ],
   "current_facts": [
    {
-    "da": "Prøver fra 2018-2022 siger 'Dronningen' (Margrethe 2.). I dag er svaret 'Kongen' (Frederik 10.). Hvis kun 'Dronningen' står som mulighed i en gammel prøve, er det det rigtige svar dér.",
-    "en": "Exams from 2018–2022 say 'the Queen' (Margrethe 2.). Today the answer is 'the King' (Frederik 10.). If only 'the Queen' is offered in an old exam, that is the right answer there.",
+    "da": "Ændret: På prøverne fra 2018-2022 var svaret 'Dronningen' (Margrethe 2.). Ifølge læremateriale 2026 er det nu Kongen (Frederik 10.), der holder nytårstale den 31. december og underskriver lovene sammen med ministrene.",
+    "en": "Changed: in the 2018–2022 exams the answer was 'the Queen' (Margrethe II). According to the 2026 book it is now the King (Frederik 10) who gives the New Year's speech on 31 December and signs the laws together with the ministers.",
     "book": [
      {
       "page": 65,
@@ -529,8 +529,8 @@
   ],
   "current_facts": [
    {
-    "da": "Region Hovedstaden: prøven i 2018 sagde ca. 1,7 millioner – i dag ca. 1,9 millioner. Region Hovedstaden og Region Sjælland lægges sammen til Region Østdanmark den 1. januar 2027. Indvandrere og efterkommere: prøven i 2018 sagde 12-13 % – i dag ca. 17 % (læremateriale 2026).",
-    "en": "Capital Region: the 2018 exam said about 1.7 million – today about 1.9 million. The Capital Region and Region Zealand merge into Region Østdanmark on 1 January 2027. Immigrants and descendants: the 2018 exam said 12–13% – today about 17% (book 2026).",
+    "da": "Ændret: Indvandrere og efterkommere – på prøven i november 2018 var svaret 12-13 %. Ifølge læremateriale 2026 er det nu ca. 17 %. Region Hovedstaden: prøven i 2018 sagde ca. 1,7 millioner – i dag ca. 1,9 millioner. Region Hovedstaden og Region Sjælland lægges sammen til Region Østdanmark den 1. januar 2027.",
+    "en": "Changed: immigrants and descendants – in the November 2018 exam the answer was 12–13%. According to the 2026 book it is now about 17%. Capital Region: the 2018 exam said about 1.7 million – today about 1.9 million. The Capital Region and Region Zealand merge into Region East Denmark on 1 January 2027.",
     "nobook_da": "Indbyggertallet 1,9 millioner står ikke i læremateriale 2026 (bogen: ca. 2 millioner i hovedstadsområdet).",
     "nobook_en": "The 1.9 million figure is not in book 2026 (the book: about 2 million in the capital area).",
     "book": [
@@ -817,6 +817,20 @@
      {
       "page": 55,
       "lines": "9-20"
+     }
+    ]
+   },
+   {
+    "da": "Ændret: Vin og øl – på prøven i juni 2017 var svaret 16 år. Ifølge læremateriale 2026 er det nu 18 år for vin (16 år gælder kun almindelig øl).",
+    "en": "Changed: wine and beer – in the June 2017 exam the answer was 16. According to the 2026 book it is now 18 for wine (16 applies only to ordinary beer).",
+    "book": [
+     {
+      "page": 44,
+      "lines": "45-47"
+     },
+     {
+      "page": 55,
+      "lines": "52-55"
      }
     ]
    }
@@ -1207,8 +1221,8 @@
   ],
   "current_facts": [
    {
-    "da": "Europa-Parlamentet: Danmark har 15 medlemmer siden valget i 2024. Prøverne fra 2017-2018 sagde 13 (det var rigtigt dengang).",
-    "en": "European Parliament: Denmark has had 15 members since the 2024 election. The 2017–2018 exams said 13 (correct at the time).",
+    "da": "Ændret: Europa-Parlamentet – på prøverne fra 2017-2018 var svaret 13. Ifølge læremateriale 2026 er det nu 15.",
+    "en": "Changed: European Parliament – in the 2017–2018 exams the answer was 13. According to the 2026 book it is now 15.",
     "book": [
      {
       "page": 83,
@@ -1217,6 +1231,16 @@
      {
       "page": 100,
       "lines": "20-21"
+     }
+    ]
+   },
+   {
+    "da": "Ændret: Samhandel – på prøven i juni 2026 var svaret Tyskland. Ifølge læremateriale 2026 er det nu USA (14,1 % af samhandlen i 2025, Tyskland 12,7 %).",
+    "en": "Changed: trade – in the June 2026 exam the answer was Germany. According to the 2026 book it is now the USA (14.1% of trade in 2025, Germany 12.7%).",
+    "book": [
+     {
+      "page": 32,
+      "lines": "53-61"
      }
     ]
    }
