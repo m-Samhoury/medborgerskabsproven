@@ -257,13 +257,13 @@
       writeStorage(LANG_KEY, on ? "1" : "0");
     },
 
-    // "light" or "dark" when the reader chose one; anything else means auto (follow the OS).
+    // "light" or "dark" when the reader chose one; null when nothing is saved (or an old "auto" value).
     theme: function () {
       var t = readStorage(THEME_KEY);
-      return t === "light" || t === "dark" ? t : "auto";
+      return t === "light" || t === "dark" ? t : null;
     },
 
-    // Auto removes the key, so the page follows the OS again.
+    // Only "light" or "dark" are saved; anything else removes the key.
     setTheme: function (t) {
       if (t === "light" || t === "dark") writeStorage(THEME_KEY, t);
       else removeStorage(THEME_KEY);

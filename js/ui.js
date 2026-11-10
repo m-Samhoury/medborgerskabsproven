@@ -929,47 +929,46 @@
       });
     }
 
-    // Theme button: cycles Auto → Lys → Mørk → Auto. Label is bilingual; icon shows the current state.
+    // Theme button: switches between Lys and Mørk. With nothing saved, starts from the device's setting, without saving it.
     var themeBtn = document.getElementById("theme-toggle");
-    var THEME_NEXT = { auto: "light", light: "dark", dark: "auto" };
-    var THEME_NAME = { auto: ["Auto", "auto"], light: ["Lys", "light"], dark: ["Mørk", "dark"] };
-    var THEME_ICON = { auto: "theme-auto", light: "theme-light", dark: "theme-dark" };
+    var THEME_LABEL = { light: "Skift til mørkt tema – Switch to dark theme", dark: "Skift til lyst tema – Switch to light theme" };
+    var THEME_ICON = { light: "theme-dark", dark: "theme-light" };
     var THEME_COLOR = { light: "#F3F5F9", dark: "#0B1430" };
 
-    // The page's two theme-color metas are media-scoped; an explicit choice replaces them with one fixed colour.
+    // The saved choice, else the device's setting (checked once, not saved).
+    function currentTheme() {
+      var saved = MBP.store.theme();
+      if (saved) return saved;
+      return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    // The page's two theme-color metas are media-scoped; the shown theme replaces them with one fixed colour.
     function syncThemeColor(t) {
       var metas = document.querySelectorAll('meta[name="theme-color"]');
       if (metas.length < 2) return;
       var light = metas[0];
       var dark = metas[1];
-      if (t === "auto") {
-        light.setAttribute("media", "(prefers-color-scheme: light)");
-        light.setAttribute("content", THEME_COLOR.light);
-        dark.setAttribute("media", "(prefers-color-scheme: dark)");
-        dark.setAttribute("content", THEME_COLOR.dark);
-      } else {
-        light.removeAttribute("media");
-        light.setAttribute("content", THEME_COLOR[t]);
-        dark.setAttribute("media", "not all");
-      }
+      light.removeAttribute("media");
+      light.setAttribute("content", THEME_COLOR[t]);
+      dark.setAttribute("media", "not all");
     }
 
+    // The button shows the other theme: the dark icon on a light page, and the light icon on a dark page.
     function applyTheme(t) {
-      if (t === "auto") document.documentElement.removeAttribute("data-theme");
-      else document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.setAttribute("data-theme", t);
       if (themeBtn) {
-        var label = "Tema: " + THEME_NAME[t][0] + " – Theme: " + THEME_NAME[t][1];
-        themeBtn.setAttribute("aria-label", label);
-        themeBtn.setAttribute("title", label);
+        themeBtn.setAttribute("aria-label", THEME_LABEL[t]);
+        themeBtn.setAttribute("title", THEME_LABEL[t]);
+        themeBtn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
         themeBtn.replaceChildren(MBP.icon(THEME_ICON[t], 20));
       }
       syncThemeColor(t);
     }
 
-    applyTheme(MBP.store.theme());
+    applyTheme(currentTheme());
     if (themeBtn) {
       themeBtn.addEventListener("click", function () {
-        var next = THEME_NEXT[MBP.store.theme()];
+        var next = currentTheme() === "dark" ? "light" : "dark";
         MBP.store.setTheme(next);
         applyTheme(next);
       });

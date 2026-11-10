@@ -18,7 +18,7 @@ The nav has five sections, in this order:
 
 ## Display options
 
-- **Theme button** (the round icon in the header, next to EN): cycles **Auto → Lys (light) → Mørk (dark)**. Auto follows your device's light or dark setting. Your choice is remembered in this browser only.
+- **Theme button** (the round icon in the header, next to EN): switches between **Lys (light)** and **Mørk (dark)**. On your first visit it starts from your device's light or dark setting, without saving it. Your first click saves your choice, and it is remembered in this browser only.
 - **EN toggle**: shows or hides the English line under each Danish text. The choice is remembered in this browser only.
 
 ## Progress and storage
@@ -32,9 +32,9 @@ Your progress is stored in your browser, in `localStorage`. There are no account
 - `mbp.v1.syncCode` – the sync code on this device, if sync is on
 - `mbp.v1.syncLast` – when this device last synced
 - `mbp.v1.showEnglish` – the EN toggle
-- `mbp.v1.theme` – the theme button (missing = Auto)
+- `mbp.v1.theme` – the theme button: `light` or `dark` (missing = the device's setting at first visit)
 
-You can share a sync code as text or as a QR code. A phone camera opens the QR code as a link to the site, which offers to restore the progress there.
+You can share a sync code as text or as a QR code. A phone camera opens the QR code as a link to the site, which offers to restore the progress there. Sync lives in a **share/scan button** in the header, next to the theme button, on every page. It opens a popup with two tabs: **Del** shows this device's code and QR code, and **Scan** opens the camera (the back camera on a phone, the webcam on a laptop) to read another device's QR code, or takes a typed code.
 
 Progress is per browser and per device unless sync is on. Clearing site data removes it from this device; with sync on, the copy in the bucket stays. **Nulstil fremgang** (on I dag) resets progress, activity and mastered stamps, on every synced device. It keeps the EN and theme settings. How the sync server is set up is in [sync/README.md](sync/README.md).
 
@@ -86,6 +86,7 @@ js/store.js       Progress, EN and theme settings, all in localStorage
 js/sync.js        Sync between devices (off while SYNC_URL is empty; see sync/README.md)
 sync/             The sync server: AWS Lambda code (sync/lambda) and the owner's setup steps (sync/README.md)
 js/ui.js          Shared rendering and the header (EN and theme buttons)
+js/syncui.js     The share/scan button and popup in the header (on every page)
 js/icons.js       Inline SVG icons and topic illustrations
 js/home.js        Page script: I dag
 js/top15.js       Page script: the 15 most-asked questions
