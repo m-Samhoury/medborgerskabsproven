@@ -5430,8 +5430,8 @@
   "options": [
    {
     "key": "A",
-    "text_da": "Næsten alle",
-    "text_en": "Almost all"
+    "text_da": "De fleste",
+    "text_en": "Most"
    },
    {
     "key": "B",
@@ -5453,9 +5453,35 @@
   "notes": "",
   "question_en": "How many children aged three to five are looked after outside the home?",
   "cluster_id": "udd-boern-passes",
-  "book_status": "differs",
-  "book_note_da": "Bogen (aug. 2026) siger: 'De fleste' børn mellem tre og fem år passes uden for hjemmet. Prøvens facit er 'Næsten alle'.",
-  "book_note_en": "The book (Aug 2026) says: 'most' children aged three to five are looked after outside the home. The exam key is 'Almost all'."
+  "original_correct": [
+   "A"
+  ],
+  "original_options": [
+   {
+    "key": "A",
+    "text_da": "Næsten alle",
+    "text_en": "Almost all"
+   },
+   {
+    "key": "B",
+    "text_da": "Ca. tre fjerdedele",
+    "text_en": "About three quarters"
+   },
+   {
+    "key": "C",
+    "text_da": "Ca. halvdelen",
+    "text_en": "About half"
+   }
+  ],
+  "changed": {
+   "book": [
+    {
+     "page": 18,
+     "lines": "12-14"
+    }
+   ],
+   "reason": "The book says 'de fleste' (most) children aged 3-5 are looked after outside the home; the key said 'Næsten alle'. 'De fleste' replaces 'Næsten alle'."
+  }
  },
  {
   "id": "2019-11-q14",

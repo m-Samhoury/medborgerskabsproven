@@ -8673,14 +8673,14 @@
   "frequent": false,
   "canonical_question_da": "Hvor mange børn mellem tre og fem år passes uden for hjemmet?",
   "canonical_question_en": "How many children aged three to five are looked after outside the home?",
-  "answer_da": "Næsten alle",
-  "answer_en": "Almost all",
+  "answer_da": "De fleste",
+  "answer_en": "Most",
   "variants": [
    {
     "question_da": "Hvor mange børn mellem tre og fem år passes uden for hjemmet?",
     "question_en": "How many children aged three to five are looked after outside the home?",
-    "answer_da": "Næsten alle",
-    "answer_en": "Almost all",
+    "answer_da": "De fleste",
+    "answer_en": "Most",
     "question_ids": [
      "2019-11-q13"
     ]
@@ -8688,14 +8688,16 @@
   ],
   "trap_note_da": "",
   "trap_note_en": "",
-  "current_note_da": "Læremateriale 2026 siger 'de fleste'. Prøven fra 2019 havde svaret 'Næsten alle' – det er facit dér.",
-  "current_note_en": "Book 2026 says 'most'. The 2019 exam had the answer 'Almost all' – that is the key there.",
+  "current_note_da": "",
+  "current_note_en": "",
   "book": [
    {
     "page": 18,
     "lines": "12-14"
    }
-  ]
+  ],
+  "change_note_da": "Ændret: På prøven i november 2019 var svaret 'Næsten alle'. Ifølge læremateriale 2026 er det nu 'de fleste' børn mellem tre og fem år, der passes uden for hjemmet.",
+  "change_note_en": "Changed: in the November 2019 exam the answer was 'Almost all'. According to the 2026 book it is now 'most' children aged three to five who are looked after outside the home."
  },
  {
   "id": "udd-dagpleje",
