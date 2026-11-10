@@ -1662,3 +1662,54 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .book-links .en { font-weight: 400; }
 .book-official { margin-top: 12px; padding-top: 4px; border-top: 1px solid var(--line); }
 .book-official a { color: var(--ink-2); }
+
+/* ---------- Mere fra bogen: extra excerpts in the popover, after an answer and at the end of a topic ---------- */
+
+/* A dot on book buttons that have extra excerpts (::before is the touch target). */
+.book-btn.has-more::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 1.5px var(--surface);
+}
+
+/* Popover section 2 */
+.book-more-pop { margin-top: 14px; padding-top: 2px; border-top: 2px solid var(--line); }
+.book-more-head { margin: 12px 0 0; font: 700 0.95rem/1.3 var(--f-body); color: var(--ink); }
+.book-more-head .en { margin-top: 0.15em; font-size: 0.88em; font-weight: 400; }
+
+/* One excerpt (popover and inline block) */
+.book-more-title { margin: 0 0 4px; font: 700 var(--fs-s)/1.3 var(--f-body); color: var(--ink); }
+.book-more-item .book-cite { margin: 0 0 8px; }
+.book-more-item .book-links { margin: 8px 0 0; }
+.book-quote .book-more-list { display: grid; gap: 4px; margin: 0; padding-left: 1.2em; }
+.book-more-pop .book-more-star,
+.book-more .book-more-star { margin: 12px 0 0; font-size: var(--fs-xs); color: var(--ink-2); }
+
+/* Inline block: in the feedback after an answer, and at the end of a topic in Læs */
+.book-more { border-top: 1px solid var(--line); }
+.book-more > summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--accent);
+  font: 700 var(--fs-s)/1.2 var(--f-body);
+  cursor: pointer;
+  list-style: none;
+}
+.book-more > summary::-webkit-details-marker { display: none; }
+.book-more > summary .en { font-weight: 400; }
+.book-more > summary .book-more-chev { flex: 0 0 auto; transition: transform var(--d-fast) var(--ease-out); }
+.book-more[open] > summary .book-more-chev { transform: rotate(90deg); }
+.book-more-body { max-width: 68ch; padding-bottom: 4px; }
+.book-more-body > .book-ref:first-child { padding-top: 4px; }
+.topic > .book-more { margin-top: var(--s-5); }
+@media (prefers-reduced-motion: reduce) {
+  .book-more > summary .book-more-chev { transition: none; }
+}

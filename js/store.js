@@ -8,6 +8,7 @@
   var THEME_KEY = "mbp.v1.theme";
   var ACTIVITY_KEY = "mbp.v1.activity";
   var SEEN_KEY = "mbp.v1.seenMastered";
+  var BOOK_MORE_KEY = "mbp.v1.bookMoreOpen";
   var GOAL = 25;
   var KEEP_DAYS = 60;
   var INTERVALS = [0, 10 * 60 * 1000, 24 * 3600 * 1000, 3 * 24 * 3600 * 1000, 7 * 24 * 3600 * 1000, 14 * 24 * 3600 * 1000];
@@ -246,6 +247,15 @@
     setTheme: function (t) {
       if (t === "light" || t === "dark") writeStorage(THEME_KEY, t);
       else removeStorage(THEME_KEY);
+    },
+
+    // Whether "Mere fra bogen" in the feedback after an answer is open. Open unless the reader closed it.
+    bookMoreOpen: function () {
+      return readStorage(BOOK_MORE_KEY) !== "0";
+    },
+
+    setBookMoreOpen: function (on) {
+      writeStorage(BOOK_MORE_KEY, on ? "1" : "0");
     },
 
     reset: function () {

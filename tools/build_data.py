@@ -4,6 +4,9 @@
 Also copies the book excerpts that the "read more" icons point to (the "book" fields)
 from bookdump/pages/page-NNN.txt into the bundle, so the popover can quote the book.
 
+Also adds data/book_more.json ("Mere fra bogen": extra verbatim book excerpts per cluster,
+fact group or topic id) to the bundle as "more", unchanged.
+
 Run after every change to data/*.json:  python3 tools/build_data.py
 """
 import json
@@ -62,11 +65,25 @@ def excerpt(page, lines):
     return "\n".join(paras)
 
 
+def check_more(raw, more):
+    """data/book_more.json: every key is a cluster, fact-group or topic id; every item has the four fields."""
+    ids = {c["id"] for c in raw["clusters"]} | {g["id"] for g in raw["fact_groups"]} | {t["id"] for t in raw["topics"]}
+    for key, items in more.items():
+        if key not in ids:
+            raise SystemExit(f"book_more.json: unknown id {key}")
+        for x in items:
+            if set(x) != {"title_da", "page", "lines", "excerpt_da"}:
+                raise SystemExit(f"book_more.json: bad item under {key}: {sorted(x)}")
+
+
 def main():
     raw = {}
     for name in PARTS:
         with open(DATA / f"{name}.json", encoding="utf-8") as f:
             raw[name] = json.load(f)
+    with open(DATA / "book_more.json", encoding="utf-8") as f:
+        more = json.load(f)
+    check_more(raw, more)
     book = {}
     for ref in book_refs(raw):
         key = f"{ref['page']}:{ref['lines']}"
@@ -79,6 +96,7 @@ def main():
             "topics": raw["topics"],
             "groups": raw["fact_groups"],
             "book": dict(sorted(book.items(), key=lambda kv: [int(x) for x in re.findall(r"\d+", kv[0])])),
+            "more": more,
         },
         ensure_ascii=False,
         separators=(",", ":"),
@@ -89,7 +107,8 @@ def main():
         f.write(f"window.MBP_RAW = {payload};\n")
     print(f"wrote {out.relative_to(ROOT)} ({len(raw['questions'])} questions, "
           f"{len(raw['clusters'])} clusters, {len(raw['topics'])} topics, "
-          f"{len(raw['fact_groups'])} groups, {len(book)} book excerpts)")
+          f"{len(raw['fact_groups'])} groups, {len(book)} book excerpts, "
+          f"{sum(len(v) for v in more.values())} more-from-the-book excerpts)")
 
 
 if __name__ == "__main__":

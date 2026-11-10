@@ -156,6 +156,10 @@
       });
     }
 
+    // Topic-level "Mere fra bogen": book text no single fact covers (closed by default).
+    var topicMore = MBP.ui.moreBlock(MBP.ui.moreFor(t.id));
+    if (topicMore) section.appendChild(topicMore);
+
     section.appendChild(endBar(t));
     return section;
   }
@@ -180,7 +184,7 @@
 
     var body = h("div", { class: "fact-body" },
       c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null,
-      withBook(bi(c.fact_da, c.fact_en, "p"), c.book),
+      withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id)),
       qa,
       MBP.ui.noteBoxes(c));
 
@@ -202,7 +206,7 @@
       h("div", { class: "fg-head" },
         first ? MBP.ui.topicChip(first) : null,
         h("h4", { class: "fg-title", id: titleId }, g.title_da, h("span", { class: "en", lang: "en" }, g.title_en)),
-        MBP.ui.withBook(h("span", { class: "fg-book" }, h("span", { class: "da" })), g.book))
+        MBP.ui.withBook(h("span", { class: "fg-book" }, h("span", { class: "da" })), g.book, MBP.ui.moreFor(g.id)))
     ];
 
     if (g.id === "fg-farvande") {

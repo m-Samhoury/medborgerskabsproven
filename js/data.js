@@ -13,7 +13,8 @@
   }
 
   // book: the book excerpts by "page:lines" (only in the bundle; without it the popover shows just the reference).
-  function index(questions, clusters, topicsRaw, groups, book) {
+  // more: the "Mere fra bogen" excerpts by cluster, fact-group or topic id (data/book_more.json).
+  function index(questions, clusters, topicsRaw, groups, book, more) {
     var topics = topicsRaw.slice().sort(function (a, b) { return a.order - b.order; });
     return {
       questions: questions,
@@ -21,6 +22,7 @@
       topics: topics,
       groups: groups,
       book: book || {},
+      more: more || {},
       qById: new Map(questions.map(function (q) { return [q.id, q]; })),
       cById: new Map(clusters.map(function (c) { return [c.id, c]; })),
       tById: new Map(topics.map(function (t) { return [t.id, t]; })),
@@ -33,16 +35,17 @@
     if (MBP.data) return Promise.resolve(MBP.data);
     var raw = window.MBP_RAW;
     if (raw) {
-      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups, raw.book);
+      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups, raw.book, raw.more);
       return Promise.resolve(MBP.data);
     }
     return Promise.all([
       getJson("data/questions.json"),
       getJson("data/clusters.json"),
       getJson("data/topics.json"),
-      getJson("data/fact_groups.json")
+      getJson("data/fact_groups.json"),
+      getJson("data/book_more.json").catch(function () { return {}; })
     ]).then(function (parts) {
-      MBP.data = index(parts[0], parts[1], parts[2], parts[3]);
+      MBP.data = index(parts[0], parts[1], parts[2], parts[3], null, parts[4]);
       return MBP.data;
     });
   };

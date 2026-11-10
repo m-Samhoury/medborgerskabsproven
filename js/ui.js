@@ -201,9 +201,77 @@
       text ? h("blockquote", { class: "book-quote", lang: "da" }, text.split("\n").map(function (para) {
         return h("p", null, para);
       })) : null,
-      h("p", { class: "book-links" },
-        h("a", { href: BOOK_PDF + "#page=" + r.page, target: "_blank", rel: "noopener" },
-          MBP.icon("open", 16), bi("Åbn side " + r.page + " i bogen", "Open page " + r.page + " in the book (PDF)", "span"))));
+      pageLink(r.page));
+  }
+
+  // "Åbn side N i bogen": the link to the page in the PDF served with the site.
+  function pageLink(page) {
+    return h("p", { class: "book-links" },
+      h("a", { href: BOOK_PDF + "#page=" + page, target: "_blank", rel: "noopener" },
+        MBP.icon("open", 16), bi("Åbn side " + page + " i bogen", "Open page " + page + " in the book (PDF)", "span")));
+  }
+
+  // ---------- "Mere fra bogen": extra book excerpts (data/book_more.json) ----------
+
+  // The extra excerpts for a cluster, fact-group or topic id, in display order ([] when there are none).
+  function moreFor(id) {
+    return (MBP.data && MBP.data.more && MBP.data.more[id]) || [];
+  }
+
+  // The excerpt text, word for word: the text before the first "•" is a paragraph, each "•" item a list item.
+  function moreText(text) {
+    var parts = text.split("•").map(function (s) { return s.trim(); });
+    var intro = parts.shift();
+    var items = parts.filter(Boolean);
+    return [
+      intro ? h("p", null, intro) : null,
+      items.length ? h("ul", { class: "book-more-list" }, items.map(function (s) { return h("li", null, s); })) : null
+    ];
+  }
+
+  // One extra excerpt: its heading, the citation, the quote and the link to the page.
+  function moreItem(x) {
+    return h("section", { class: "book-ref book-more-item" },
+      h("h4", { class: "book-more-title", lang: "da" }, x.title_da),
+      h("p", { class: "book-cite" }, "Læremateriale 2026 · " + refLabel(x)),
+      h("blockquote", { class: "book-quote", lang: "da" }, moreText(x.excerpt_da)),
+      pageLink(x.page));
+  }
+
+  // "* = explained in the glossary", once, when one of the excerpts has a "*".
+  function starNote(items) {
+    var any = items.some(function (x) { return x.excerpt_da.indexOf("*") !== -1; });
+    return any ? h("p", { class: "book-more-star" },
+      bi("* = forklaret i bogens ordliste, s. 147–155", "* = explained in the book's glossary", "span")) : null;
+  }
+
+  // Section 2 of the book popover.
+  function moreSection(more) {
+    return h("div", { class: "book-more-pop" },
+      h("h3", { class: "book-more-head" }, bi("Mere fra bogen", "More from the book", "span")),
+      more.map(moreItem),
+      starNote(more));
+  }
+
+  // "Mere fra bogen (N)" as an inline block. Returns null when there are no excerpts.
+  // opts.feedback: the block in the feedback after an answer (open unless the reader closed it; the choice is kept).
+  // Without it: the closed block at the end of a topic in Læs.
+  function moreBlock(items, opts) {
+    if (!items || !items.length) return null;
+    var feedback = !!(opts && opts.feedback);
+    var chev = MBP.icon("next", 16);
+    chev.classList.add("book-more-chev");
+    var block = h("details", {
+      class: feedback ? "book-more book-more-feedback" : "book-more",
+      open: feedback && MBP.store.bookMoreOpen()
+    },
+      h("summary", null, chev,
+        bi("Mere fra bogen (" + items.length + ")", "More from the book (" + items.length + ")", "span")),
+      h("div", { class: "book-more-body" }, items.map(moreItem), starNote(items)));
+    if (feedback) {
+      block.addEventListener("toggle", function () { MBP.store.setBookMoreOpen(block.open); });
+    }
+    return block;
   }
 
   // One link to the official copy of the book (danskogproever.dk), at the first page referenced.
@@ -235,7 +303,7 @@
     pop.style.top = (top + window.scrollY) + "px";
   }
 
-  function openBook(btn, refs) {
+  function openBook(btn, refs, more) {
     if (!pop) buildPop();
     if (popOwner === btn && !pop.hidden) {
       closeBook(true);
@@ -248,7 +316,11 @@
         bi("Læs mere i bogen", "Read more in the book", "span")),
       h("button", { type: "button", class: "book-pop-close", "aria-label": "Luk – Close", title: "Luk – Close",
         onclick: function () { closeBook(true); } }, MBP.icon("close", 18))));
-    pop.appendChild(h("div", { class: "book-pop-body" }, refs.map(refBlock), officialLink(refs)));
+    // Section 1: the fact's own references. Section 2 ("Mere fra bogen"): the extra excerpts, when there are any.
+    pop.appendChild(h("div", { class: "book-pop-body" },
+      refs.map(refBlock),
+      more.length ? moreSection(more) : null,
+      officialLink(refs.length ? refs : more)));
     pop.hidden = false;
     popOwner = btn;
     btn.setAttribute("aria-expanded", "true");
@@ -256,13 +328,18 @@
     pop.focus({ preventScroll: true });
   }
 
-  // The small book button. refs: [{page, lines}]. Returns null when there are no references.
-  function bookButton(refs) {
-    if (!refs || !refs.length) return null;
-    var label = "Læs mere i bogen: " + refs.map(refLabel).join("; ");
+  // The small book button. refs: [{page, lines}]; more (optional): the extra excerpts for popover section 2.
+  // Returns null when there is nothing to show. A dot (.has-more) marks a button with extra excerpts.
+  function bookButton(refs, more) {
+    refs = refs || [];
+    more = more || [];
+    if (!refs.length && !more.length) return null;
+    var label = "Læs mere i bogen";
+    if (refs.length) label += ": " + refs.map(refLabel).join("; ");
+    if (more.length) label += " – og " + more.length + " afsnit mere fra bogen";
     var btn = h("button", {
       type: "button",
-      class: "book-btn",
+      class: more.length ? "book-btn has-more" : "book-btn",
       "aria-haspopup": "dialog",
       "aria-expanded": "false",
       "aria-controls": "book-pop",
@@ -272,14 +349,15 @@
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      openBook(btn, refs);
+      openBook(btn, refs, more);
     });
     return btn;
   }
 
   // Adds the book button at the end of the Danish line of a bi()/biQA() element. Returns el.
-  function withBook(el, refs) {
-    var btn = bookButton(refs);
+  // more (optional): extra excerpts for the popover's "Mere fra bogen" section.
+  function withBook(el, refs, more) {
+    var btn = bookButton(refs, more);
     if (!btn) return el;
     var da = el.querySelector(".answer.da") || el.querySelector(".da");
     if (da && da.classList.contains("answer")) da.after(" ", btn);
@@ -484,6 +562,9 @@
         "The official 2017 answer key wrongly says B (Skåne, Halland and Blekinge). The correct answer is Slesvig and Holsten – Skåne was lost in 1658.",
         KEYERROR_REFS));
     }
+    // "Mere fra bogen" for this question's cluster, after every answer (right, wrong or not answered).
+    // The book button in the fact above gets no extra excerpts, so nothing is shown twice.
+    kids.push(moreBlock(moreFor(q.cluster_id), { feedback: true }));
     kids.push(h("p", { class: "freq" }, bi(
       "Stillet i " + c.times_asked + (c.times_asked === 1 ? " prøve: " : " prøver: ") + c.exams.join(", "),
       "Asked in " + c.times_asked + (c.times_asked === 1 ? " exam: " : " exams: ") + c.exams.join(", "),
@@ -718,6 +799,8 @@
     nobookNote: nobookNote,
     noteBoxes: noteBoxes,
     withBook: withBook,
+    moreFor: moreFor,
+    moreBlock: moreBlock,
     SHORT: SHORT,
     topicProgress: topicProgress,
     stampLevel: stampLevel,

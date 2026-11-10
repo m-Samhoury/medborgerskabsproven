@@ -1,0 +1,480 @@
+book-expansion excerpt check
+excerpts: 372   targets: 193   failures: 0
+by target kind: {'cluster': 298, 'group': 26, 'topic': 48}
+clusters with an expansion: 168/168   deliberately none: []   missing: []
+questions with expansion content (via cluster_id): 500/500   without: []
+
+OK   | dem-rettigheder | p64 l13-20 | 27 w | Boligens ukrænkelighed
+       left out (margin/caption/header): ['DEMOKRATI OG GRUNDLOVEN']
+OK   | dem-rettigheder | p64 l27-33 | 79 w | Religionsfrihed og folkekirkens særstilling
+OK   | dem-rettigheder | p139 l20-26 | 80 w | Frihed under ansvar
+OK   | dem-kommunerne-boern | p77 l57-67 | 75 w | Kommunernes andre opgaver
+       left out (margin/caption/header): ['Københavns Rådhus.']
+OK   | dem-kommunerne-boern | p18 l19-24 | 77 w | Ret til en plads i dagtilbud
+OK   | dem-kommunerne-boern | p79 l43-46 | 34 w | Kommunalbestyrelsen bestemmer
+OK   | dem-2-og-2 | p105 l12-24 | 54 w | Hjemmestyre og selvstyre
+       left out (margin/caption/header): ['DANMARKS GEOGRAFI OG BEFOLKNING']
+OK   | dem-2-og-2 | p85 l42-53 | 29 w | Partierne fra Færøerne og Grønland
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | dem-forening | p63 l53-56 | 45 w | Foreningsfriheden
+OK   | dem-forening | p64 l6-11 | 31 w | Foreninger med voldeligt formål
+       left out (margin/caption/header): ['FAKTA-ARK 11:']
+OK   | dem-forening | p86 l17-23 | 32 w | Frihed til at melde sig ind i et parti
+OK   | dem-179 | p72 l39-45 | 57 w | Folketingets opgaver
+       left out (margin/caption/header): ['Folketingssalen.']
+OK   | dem-179 | p73 l40-48 | 81 w | Folketingets udvalg
+OK   | dem-grundlov-1953 | p63 l19-23 | 69 w | Valgretsalderen er sat ned
+OK   | dem-grundlov-1953 | p75 l50-55 | 70 w | 16 folkeafstemninger siden 1953
+OK   | dem-kommuner-98 | p79 l25-30 | 58 w | Kommunalbestyrelsens størrelse
+OK   | dem-kommuner-98 | p79 l48-51 | 45 w | Kommunerne udskriver skat
+OK   | dem-statsborger-stemme | p83 l6-10 | 19 w | Valgbar
+       left out (margin/caption/header): ['FAKTA-ARK 15:']
+OK   | dem-statsborger-stemme | p83 l57-62 | 44 w | Valg til Europa-Parlamentet
+OK   | dem-anke | p69 l42-46 | 59 w | Offentlig adgang til retssalen
+OK   | dem-anke | p148 l29 | 5 w | Ordet 'anke'
+OK   | dem-betinget | p70 l9-10 | 22 w | Ingen dødsstraf
+OK   | dem-betinget | p70 l18-24 | 58 w | Betingelser og samfundstjeneste
+OK   | dem-straffeattest | p70 l43-50 | 74 w | Hvad står på straffeattesten
+OK   | dem-straffeattest | p70 l52-55 | 45 w | Arbejdsgivere og straffeattest
+OK   | dem-folketingsvalg | p84 l9-20 | 80 w | Valgkortet
+       left out (margin/caption/header): ['FOLKESTYRET I PRAKSIS – VALG OG PARTIER']
+OK   | dem-folketingsvalg | p84 l31-34 | 46 w | Brevstemme
+OK   | dem-grundlov-1849 | p112 l26-31 | 59 w | Fra enevælde til grundlov
+OK   | dem-grundlov-1849 | p112 l42-47 | 71 w | Frederik 7. og Rigsdagen
+OK   | dem-valgdeltagelse | p82 l27-43 | 84 w | Fire valg - fire niveauer
+OK   | dem-borgmester | p80 l29-34 | 68 w | Regionsrådsformand
+OK   | dem-borgmester | p77 l14-22 | 50 w | Borgerservice
+       left out (margin/caption/header): ['DET LOKALE SELVSTYRE']
+OK   | dem-regioner-5 | p80 l9-23 | 64 w | De fem regioner - og Region Østdanmark
+       left out (margin/caption/header): ['DET LOKALE SELVSTYRE']
+OK   | dem-regioner-5 | p83 l46-49 | 44 w | Regionsrådet
+OK   | dem-1915 | p112 l49-53 | 58 w | Hvem kunne ikke stemme i 1849
+OK   | dem-1915 | p59 l53-55 | 25 w | Første kvindelige minister
+OK   | dem-doemmende | p68 l6-12 | 50 w | Politi og domstole
+       left out (margin/caption/header): ['FAKTA-ARK 12:']
+OK   | dem-doemmende | p69 l9-20 | 88 w | Børn under 15 kan ikke straffes
+       left out (margin/caption/header): ['DET DANSKE RETSSAMFUND']
+OK   | dem-kommunalvalg | p83 l29-35 | 83 w | Udlændinge kan stemme til kommunalvalg
+OK   | dem-kommunalvalg | p83 l41-44 | 21 w | Lokale partier
+OK   | dem-lovgivende | p66 l18-25 | 33 w | Fra lovforslag til lov
+OK   | dem-lovgivende | p73 l45-48 | 45 w | Tre behandlinger
+OK   | dem-kvinder-folketing | p83 l41-42 | 28 w | Kvinder i kommunalbestyrelser
+OK   | dem-kvinder-folketing | p83 l46-48 | 36 w | Kvinder i regionsråd
+OK   | dem-kvinder-folketing | p59 l48-51 | 43 w | Samme politiske rettigheder
+OK   | dem-regionerne-sygehuse | p54 l35-41 | 77 w | Frit sygehusvalg
+OK   | dem-regionerne-sygehuse | p80 l29-31 | 26 w | Regionernes økonomi
+OK   | dem-parti | p85 l18-21 | 35 w | Enhver kan melde sig ind
+OK   | dem-parti | p86 l29-38 | 50 w | Partierne vælger kandidater
+OK   | dem-domstole-uafhaengige | p66 l42-54 | 42 w | Idéen med magtens tredeling
+       left out (margin/caption/header): ['Retten på Frederiksberg.', 'LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | dem-folkeafstemning-grundlov | p82 l40-43 | 39 w | Folkeafstemninger om suverænitet
+OK   | dem-folkeafstemning-grundlov | p75 l50-55 | 41 w | Repræsentativt demokrati
+OK   | dem-moms | p39 l20-26 | 83 w | Skat efter indkomst
+OK   | dem-moms | p39 l31-36 | 32 w | Afgifter og andre skatter
+OK   | dem-1849-ikke-kvinder | p112 l42-47 | 35 w | Rigsdagen i 1849
+OK   | dem-1849-ikke-kvinder | p59 l29-31 | 38 w | Et centralt princip i dag
+OK   | dem-regering | p74 l40-46 | 86 w | Statsministeren og ministrene
+OK   | dem-regering | p75 l6-23 | 88 w | Koalitions- og mindretalsregering
+       left out (margin/caption/header): ['FAKTA-ARK 13:', 'FOLKETING OG REGERING']
+OK   | dem-stoerste-parti-2022 | p85 l27-40 | 49 w | Partierne i Folketinget efter valget i 2026
+OK   | dem-demonstration | p87 l23-29 | 54 w | Politiet kan stille krav
+OK   | dem-demonstration | p87 l17-19 | 25 w | Underskrifter og protester
+OK   | dem-anholdt-24t | p68 l40-47 | 48 w | Politiets regler ved anholdelse
+OK   | dem-forfatning | p62 l30-32 | 26 w | Grundloven er den øverste lov
+OK   | dem-forfatning | p150 l17-18 | 23 w | Ordet 'forfatning'
+OK   | dem-hemmelig-stemme | p84 l22-29 | 96 w | Stemmesedlen
+OK   | dem-hemmelig-stemme | p151 l11-12 | 23 w | Frie og hemmelige valg
+OK   | dem-udskriver-valg | p72 l47-57 | 68 w | Parlamentarisme
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | dem-regeringsdannelse | p72 l47-57 | 68 w | Parlamentarisme
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | dem-regeringsdannelse | p75 l36-45 | 43 w | Regeringen præsenteres for kongen
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | kon-rigsfaellesskab | p105 l12-20 | 29 w | Hjemmestyre og selvstyre
+       left out (margin/caption/header): ['DANMARKS GEOGRAFI OG BEFOLKNING']
+OK   | kon-rigsfaellesskab | p153 l35-38 | 53 w | Fælles og ikke fælles
+OK   | kon-rigsfaellesskab | p137 l21-23 | 36 w | Grønland og USA
+OK   | kon-nytaarstale | p65 l28-33 | 71 w | Kongen rejser og repræsenterer Danmark
+OK   | kon-arv | p65 l9-10 | 19 w | Et monarki
+OK   | kon-arv | p65 l43-47 | 53 w | Enevælden 1660-1849
+OK   | kon-rolle | p65 l28-33 | 71 w | Statsbesøg
+OK   | kon-rolle | p74 l30-34 | 51 w | Ministrene gennemfører loven
+OK   | kon-konge | p65 l35-37 | 32 w | Kongefamilien
+OK   | kon-kronprins | p65 l20 | 11 w | Det ældste barn arver
+OK   | kon-thule | p136 l9-18 | 63 w | Grønlands strategiske betydning
+       left out (margin/caption/header): ['DANMARKS FORSVARS- OG SIKKERHEDSPOLITIK']
+OK   | kon-thule | p137 l14-19 | 71 w | Arktis i fokus
+OK   | kon-thule | p137 l25-28 | 53 w | Mere forsvar omkring Grønland
+OK   | his-foerste-kvindelige-sm | p119 l16-19 | 31 w | Statsministre siden 1982
+OK   | his-foerste-kvindelige-sm | p59 l45-46 | 24 w | Kvinder i politik i dag
+OK   | his-foerste-kvindelige-sm-aar | p119 l16-19 | 31 w | Statsministre siden 1982
+OK   | his-foerste-kvindelige-sm-aar | p59 l45-46 | 24 w | Kvinder i politik i dag
+OK   | his-reformation | p109 l40-46 | 82 w | Kristendommen kommer til Danmark
+OK   | his-reformation | p110 l44-60 | 58 w | Kongen overtager kirkens jord
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | his-reformation | p93 l37-41 | 57 w | Stat og kirke er ikke adskilt
+OK   | his-besat-aar | p114 l21-30 | 87 w | Samarbejde og modstand 1940-45
+OK   | his-besat-krig | p114 l21-30 | 87 w | Samarbejde og modstand 1940-45
+OK   | his-besat-krig | p116 l17-19 | 31 w | Fra neutralitet til NATO
+OK   | his-besat-land | p114 l21-30 | 87 w | Samarbejde og modstand 1940-45
+OK   | his-besat-land | p148 l41-48 | 33 w | Ordet 'besættelse'
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | his-1864 | p113 l11-20 | 65 w | Et lille land
+       left out (margin/caption/header): ['DANMARKS HISTORIE FØR 1945']
+OK   | his-1864 | p108 l12-22 | 62 w | Engang en stormagt
+       left out (margin/caption/header): ['DANMARKS HISTORIE FØR 1945']
+OK   | his-tyrkiet | p119 l26-39 | 103 w | Indvandring fra 1980'erne
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | his-tyrkiet | p119 l39-48 | 93 w | Stramninger af udlændingepolitikken
+OK   | his-jernbaner | p113 l28-38 | 57 w | Industrialisering og arbejderklassen
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | his-venstre-1870 | p113 l40-46 | 80 w | De gamle partier
+OK   | his-1814-norge | p108 l12-22 | 62 w | Engang en stormagt
+       left out (margin/caption/header): ['DANMARKS HISTORIE FØR 1945']
+OK   | his-1814-norge | p102 l31-35 | 53 w | Norden i dag
+OK   | his-befrielse | p129 l38-42 | 42 w | Lys i vinduerne
+OK   | his-befrielse | p114 l27-30 | 42 w | Modstandsbevægelsen
+OK   | his-terror-2015 | p139 l58-62 | 48 w | Hadforbrydelser
+OK   | his-terror-2015 | p140 l20-25 | 68 w | Den jødiske minoritet
+OK   | his-aeldste-parti | p113 l40-46 | 80 w | De gamle partier
+OK   | his-aeldste-parti | p116 l32-34 | 27 w | SF dannes
+OK   | his-1658 | p111 l24-31 | 49 w | Christian 4.
+OK   | his-1658 | p111 l37-53 | 104 w | Enevælden indføres
+       left out (margin/caption/header): ['Børsen, Rundetårn og slottet Rosenborg', '– alle tre i København – hører til Christian', '4.s mest kendte bygningsværker.', 'LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | his-marshall | p116 l31-39 | 90 w | Marshall-planen og landbruget
+OK   | his-roedstroemper | p117 l40-45 | 70 w | Ungdomsoprøret
+OK   | his-roedstroemper | p118 l25-34 | 122 w | Fri abort og ligeløn
+OK   | his-1960erne | p117 l21-27 | 79 w | Velfærdsstaten bygges
+OK   | his-1960erne | p117 l29-35 | 79 w | Kvinder på arbejdsmarkedet
+OK   | his-s-regering-1929-82 | p118 l60-65 | 57 w | Borgerlig regering fra 1982
+OK   | his-s-regering-1929-82 | p119 l16-19 | 31 w | Statsministre siden 1982
+OK   | his-landboreformer | p112 l6-21 | 89 w | Gårdene flyttes ud
+       left out (margin/caption/header): ['FAKTA-ARK 20:', 'DANMARKS HISTORIE FØR 1945']
+OK   | geo-hoejeste-punkt | p106 l25-27 | 30 w | Et fladt land
+OK   | geo-hoejeste-punkt | p105 l39-41 | 32 w | Jylland og over 400 øer
+OK   | geo-lillebaelt | p105 l43-45 | 36 w | Danmarks andre farvande
+OK   | geo-lillebaelt | p105 l55-61 | 43 w | Broerne
+OK   | geo-storebaelt | p105 l43-45 | 36 w | Danmarks andre farvande
+OK   | geo-storebaelt | p39 l9-10 | 25 w | Betaling på broerne
+OK   | geo-oresund | p105 l43-45 | 36 w | Danmarks andre farvande
+OK   | geo-oresund | p39 l9-10 | 25 w | Betaling på broerne
+OK   | geo-lillebaeltsbro | p105 l55-61 | 43 w | Broerne
+OK   | geo-aarhus | p109 l26-28 | 22 w | Byer fra vikingetiden
+OK   | geo-aarhus | p126 l6-12 | 49 w | ARoS i Aarhus
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | geo-odense | p123 l36-37 | 21 w | H.C. Andersen fra Odense
+OK   | geo-odense | p109 l26-28 | 22 w | Byer fra vikingetiden
+OK   | geo-aalborg | p109 l26-28 | 22 w | Byer fra vikingetiden
+OK   | geo-esbjerg | p106 l18-19 | 18 w | Vestligste punkt
+OK   | geo-sydligste | p106 l18-22 | 34 w | Vestligste og østligste punkt
+OK   | geo-grenen | p106 l18-22 | 34 w | Vestligste og østligste punkt
+OK   | geo-grenen | p123 l56-64 | 43 w | Skagensmalerne
+       left out (margin/caption/header): ['Hip, hip, hurra! Malet af P.S. Krøyer i 1888.']
+OK   | geo-landbrug | p146 l14-22 | 94 w | Grøn trepart
+OK   | geo-landbrug | p146 l24-26 | 41 w | CO2-afgift på landbruget
+OK   | geo-indbyggere | p106 l37-41 | 45 w | Byer og hovedstadsområdet
+OK   | geo-indbyggere | p120 l28-32 | 67 w | Flere ældre
+OK   | geo-areal | p105 l39-41 | 32 w | Jylland og over 400 øer
+OK   | geo-areal | p108 l12-22 | 62 w | Engang en stormagt
+       left out (margin/caption/header): ['DANMARKS HISTORIE FØR 1945']
+OK   | geo-indvandrere | p119 l26-31 | 68 w | Indvandring fra 1980'erne
+OK   | geo-indvandrere | p139 l45-56 | 77 w | Oplevet diskrimination
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | geo-region-hovedstaden | p80 l25-27 | 14 w | Hvad regionerne laver
+OK   | arb-tillidsrepraesentant | p25 l48-57 | 59 w | Tillidsrepræsentantens rolle
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | arb-tillidsrepraesentant | p28 l35-39 | 59 w | Fyring og tillidsrepræsentant
+OK   | arb-vestas | p32 l36-38 | 32 w | Vindmølleindustrien
+OK   | arb-vestas | p32 l40-42 | 19 w | Grøn produktion
+OK   | arb-novo | p32 l31-34 | 46 w | Høreapparater og vedvarende energi
+OK   | arb-novo | p32 l44-45 | 15 w | Andre internationale virksomheder
+OK   | arb-37-timer | p27 l13-23 | 23 w | Skifteholdsarbejde og overenskomst
+       left out (margin/caption/header): ['DET DANSKE ARBEJDSMARKED']
+OK   | arb-37-timer | p23 l49-51 | 32 w | Ingen lovbestemt mindsteløn
+OK   | arb-akasse-dagpenge | p29 l10-14 | 60 w | A-kassen og staten
+OK   | arb-akasse-dagpenge | p29 l20-27 | 64 w | Pligter som ledig
+OK   | arb-akasse-dagpenge | p29 l37-43 | 88 w | Uden a-kasse: kontanthjælp
+OK   | arb-overenskomst | p22 l28-33 | 59 w | Den danske model
+OK   | arb-overenskomst | p22 l39-56 | 131 w | Fredspligt, strejke og lockout
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | arb-overenskomst | p24 l14-38 | 110 w | Når staten griber ind
+       left out (margin/caption/header): ['DET DANSKE ARBEJDSMARKED']
+OK   | arb-ferie | p27 l53-58 | 58 w | Hvornår man holder ferie
+OK   | arb-ferie | p24 l14-20 | 19 w | Ferie er bestemt ved lov
+       left out (margin/caption/header): ['DET DANSKE ARBEJDSMARKED']
+OK   | arb-lego | p32 l9-23 | 63 w | Små og mellemstore virksomheder
+       left out (margin/caption/header): ['DANSK ERHVERVSLIV']
+OK   | arb-lego | p32 l44-45 | 15 w | Andre internationale virksomheder
+OK   | arb-gravid | p26 l43-55 | 97 w | Ved jobsamtalen
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | arb-gravid | p58 l41-44 | 45 w | Forbud mod forskelsbehandling
+OK   | arb-fagforening-pris | p24 l60-63 | 54 w | Hvor mange er medlem
+OK   | arb-fagforening-pris | p25 l23-34 | 60 w | Tre store fagforeninger
+OK   | arb-samarbejdsudvalg | p28 l12-25 | 65 w | Arbejdsmiljørepræsentanten
+       left out (margin/caption/header): ['DET DANSKE ARBEJDSMARKED']
+OK   | arb-samarbejdsudvalg | p28 l27-30 | 40 w | Uformel medbestemmelse
+OK   | arb-deltid | p27 l25-32 | 44 w | Hvad er deltid
+OK   | arb-landmaend | p31 l35-44 | 81 w | Andelsbevægelsen, Arla og Danish Crown
+OK   | arb-landmaend | p146 l9-12 | 47 w | Landbruget fylder
+OK   | arb-vindenergi | p144 l50-52 | 16 w | Vedvarende energi
+OK   | arb-vindenergi | p144 l59-62 | 44 w | Energiøer
+OK   | arb-fagforening-fyre | p25 l6-11 | 39 w | Medlemskab er frivilligt
+       left out (margin/caption/header): ['FAKTA-ARK 4:']
+OK   | arb-fagforening-fyre | p28 l47-55 | 33 w | Heller ikke en bestemt fagforening
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | arb-akasse-procent | p29 l10-14 | 60 w | A-kassen og staten
+OK   | arb-beskaeftigelse | p120 l37-43 | 87 w | Reformer for flere i arbejde
+OK   | arb-ligeloen | p118 l30-34 | 67 w | Før ligelønsloven
+OK   | arb-ligeloen | p58 l46-55 | 57 w | Ligebehandling efter ansættelse
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | vel-bibliotek | p51 l18-30 | 89 w | Lånerkort og online-tjenester
+OK   | vel-bibliotek | p51 l37-39 | 30 w | Lektiecaféer og arrangementer
+OK   | vel-gift-18 | p41 l45-63 | 89 w | Regler om ægteskab
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | vel-gift-18 | p42 l12-17 | 50 w | Hvor man kan blive gift
+       left out (margin/caption/header): ['FAMILIELIV']
+OK   | vel-vaccine | p55 l25-31 | 70 w | Sundhedsplejerske og børneundersøgelser
+OK   | vel-tandlaege | p36 l12-14 | 24 w | Hjælp til tandlægeregningen
+OK   | vel-myndig-18 | p150 l26-27 | 26 w | Ordet 'forældremyndighed'
+OK   | vel-myndig-18 | p45 l12-13 | 22 w | At flytte hjemmefra
+OK   | vel-slaa-boern | p45 l23-27 | 68 w | Pligt til at anmelde
+OK   | vel-slaa-boern | p44 l32-37 | 58 w | Børns ret til at sige deres mening
+OK   | vel-barsel-stoette | p43 l28-40 | 138 w | Graviditet og fødsel
+OK   | vel-faedreorlov | p42 l19-20 | 21 w | Begge arbejder
+OK   | vel-faedreorlov | p43 l42-44 | 34 w | Sundhedsplejersken kommer
+OK   | vel-sundhed-skat | p35 l6-13 | 52 w | Velfærdssamfundets aftale
+       left out (margin/caption/header): ['FAKTA-ARK 6:']
+OK   | vel-sundhed-skat | p35 l33-35 | 36 w | Princippet
+OK   | vel-cigaretter-18 | p55 l58-59 | 21 w | Legitimation
+OK   | vel-cigaretter-18 | p55 l61-62 | 25 w | Rygeloven
+OK   | vel-samme-koen | p60 l16-23 | 100 w | Ægteskabet er ligeværdigt
+OK   | vel-samme-koen | p60 l42-43 | 26 w | Adoption
+OK   | vel-laege | p38 l24-28 | 50 w | Det gule sundhedskort
+OK   | vel-laege | p53 l58-60 | 37 w | Recept og håndkøbsmedicin
+OK   | vel-abort | p44 l19-27 | 102 w | Kvinden bestemmer
+OK   | vel-koerekort-17 | p77 l20-22 | 17 w | Kørekort hos borgerservice
+OK   | vel-levetid | p120 l28-37 | 119 w | Flere ældre, færre børn
+OK   | vel-boligstoette | p38 l10-18 | 32 w | Hvad boligstøtten afhænger af
+       left out (margin/caption/header): ['DET DANSKE VELFÆRDSSAMFUND']
+OK   | vel-foraeldremyndighed | p42 l31-39 | 88 w | Hvad fælles forældremyndighed betyder
+OK   | vel-foraeldremyndighed | p43 l6-18 | 98 w | Efter en skilsmisse
+       left out (margin/caption/header): ['FAKTA-ARK 7:', 'FAMILIELIV']
+OK   | vel-oel-vin-16 | p55 l55-56 | 16 w | Nattelivszoner
+OK   | vel-oel-vin-16 | p55 l43-46 | 40 w | Livsstilssygdomme
+OK   | udd-undervisningspligt | p7 l14-22 | 104 w | Folkeskolens trin og 10. klasse
+       left out (margin/caption/header): ['SKOLE']
+OK   | udd-undervisningspligt | p6 l33-43 | 100 w | Fag og formål
+OK   | udd-karakter-12 | p8 l39-44 | 74 w | Karakterer og prøver
+OK   | udd-gymnasium-gratis | p12 l53-61 | 54 w | De fire gymnasiale uddannelser
+OK   | udd-gymnasium-gratis | p13 l6-12 | 38 w | Varighed og adgang
+       left out (margin/caption/header): ['FAKTA-ARK 2:']
+OK   | udd-gymnasium-gratis | p14 l34-36 | 33 w | Videregående uddannelse er gratis
+OK   | udd-friskole-betale | p10 l16-21 | 68 w | Frie grundskoler
+OK   | udd-friskole-betale | p10 l23-25 | 28 w | Offentlig støtte
+OK   | udd-boernehave-vuggestue | p18 l38-46 | 111 w | Vuggestuen
+OK   | udd-boernehave-vuggestue | p19 l9-20 | 121 w | Børnehaven
+       left out (margin/caption/header): ['DAGTILBUD']
+OK   | udd-su-18 | p15 l41-47 | 85 w | Betingelser for SU
+OK   | udd-efterskole | p10 l33-42 | 105 w | Livet på en efterskole
+OK   | udd-skolestart | p19 l27-31 | 59 w | SFO
+OK   | udd-folkeskole-flest | p7 l54-57 | 42 w | Demokrati i folkeskolen
+OK   | udd-karakterer-8-klasse | p8 l24-29 | 62 w | Meddelelsesbogen
+OK   | udd-karakterer-8-klasse | p8 l41-44 | 44 w | Standpunktskarakterer
+OK   | udd-boern-passes | p18 l6-12 | 45 w | Et politisk mål siden 1960'erne
+       left out (margin/caption/header): ['FAKTA-ARK 3:']
+OK   | udd-boern-passes | p18 l19-24 | 77 w | Ret til en plads
+OK   | udd-dagpleje | p18 l56-61 | 61 w | Krav til dagplejere
+OK   | udd-laege-universitet | p15 l29-36 | 22 w | Bachelor og kandidat
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | udd-laege-universitet | p15 l9-18 | 61 w | Professionshøjskoler
+       left out (margin/caption/header): ['UDDANNELSE']
+OK   | udd-elektriker | p14 l6-11 | 25 w | Erhvervsuddannelser
+       left out (margin/caption/header): ['FAKTA-ARK 2:']
+OK   | udd-elektriker | p14 l13-23 | 92 w | Grundforløb og hovedforløb
+       left out (margin/caption/header): ['UDDANNELSE']
+OK   | udd-skolebestyrelse | p9 l52-55 | 22 w | Skolebestyrelsens opgaver
+OK   | udd-skolebestyrelse | p153 l50-55 | 62 w | Ordet 'skolebestyrelse'
+OK   | kul-hca-levede | p123 l36-38 | 37 w | H.C. Andersens liv
+OK   | kul-grimme-aelling | p123 l39-41 | 27 w | Dyr og planter med menneskestemmer
+OK   | kul-druk | p125 l10-17 | 40 w | Handlingen i 'Druk'
+       left out (margin/caption/header): ['DANSK KULTUR']
+OK   | kul-druk | p125 l19-22 | 38 w | Andre film af Vinterberg
+OK   | kul-yahya-hassan | p126 l27-30 | 34 w | Debatten om digtene
+OK   | kul-kroeyer | p123 l56-64 | 50 w | Skagensmalerne
+       left out (margin/caption/header): ['Hip, hip, hurra! Malet af P.S. Krøyer i 1888.']
+OK   | kul-aqua | p125 l37-38 | 18 w | 28 millioner cd'er
+OK   | kul-aqua | p125 l28-34 | 82 w | Eurovision
+OK   | kul-kierkegaard | p123 l44-51 | 31 w | Retten og pligten til at vælge
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | kul-grundtvig | p50 l42-46 | 59 w | Grundtvigs tanker om læring
+OK   | kul-grundtvig | p50 l9-12 | 53 w | Højskolerne i dag
+OK   | kul-blixen | p124 l32-33 | 22 w | Noveller
+OK   | kul-bier-vinterberg | p125 l24-26 | 38 w | Susanne Biers Oscar
+OK   | kul-bier-vinterberg | p125 l19-22 | 38 w | Andre film af Vinterberg
+OK   | kul-carl-nielsen | p124 l9-19 | 46 w | Symfonier og sange
+       left out (margin/caption/header): ['DANSK KULTUR']
+OK   | kul-holberg | p123 l6-10 | 15 w | Dansk kultur i det hele taget
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | kul-holberg | p124 l35-40 | 73 w | En anden kendt forfatter: Tove Ditlevsen
+OK   | kul-arne-jacobsen | p123 l6-10 | 15 w | Dansk kultur i det hele taget
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | kul-arne-jacobsen | p126 l6-12 | 49 w | En anden kunstner: Olafur Eliasson
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | tra-grundlovsdag | p112 l42-44 | 36 w | Frederik 7. og grundloven
+OK   | tra-sankthans | p149 l24-27 | 42 w | Johannes Døberen
+OK   | tra-sankthans | p152 l6-9 | 16 w | Midsommervisen
+       left out (margin/caption/header): ['ORDLISTE']
+OK   | tra-fastelavn | p149 l59-60 | 31 w | Fastetid
+OK   | tra-folkekirke-flertal | p93 l43-46 | 26 w | Dåb, konfirmation, bryllup og begravelse
+OK   | tra-folkekirke-flertal | p94 l6-13 | 63 w | Medlemskab
+       left out (margin/caption/header): ['FAKTA-ARK 17:']
+OK   | tra-folkekirke-flertal | p94 l19-23 | 52 w | Kirkeskat
+OK   | tra-pinse | p131 l27-31 | 60 w | Jødisk påske og pinse
+OK   | tra-pinse | p151 l6-10 | 29 w | Helligånden
+       left out (margin/caption/header): ['ORDLISTE']
+OK   | tra-paaske | p128 l48-66 | 81 w | Påskedagene
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | tra-paaske | p129 l6-11 | 40 w | Påskeæg
+       left out (margin/caption/header): ['FAKTA-ARK 23:']
+OK   | tra-begravet | p94 l29-36 | 64 w | Kirkelig eller borgerlig begravelse
+OK   | tra-gift-kirke | p94 l45-54 | 53 w | Vielse i andre trossamfund
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | tra-gift-kirke | p42 l12-17 | 50 w | Hvor man kan blive gift
+       left out (margin/caption/header): ['FAMILIELIV']
+OK   | ver-bosnien | p133 l22-30 | 81 w | Fra fredsbevarende til aktivistisk
+OK   | ver-bosnien | p133 l42-45 | 44 w | Kosovo 1999
+OK   | ver-fn-1945 | p101 l10-18 | 47 w | Hvad FN arbejder for
+       left out (margin/caption/header): ['DANMARK OG OMVERDENEN']
+OK   | ver-fn-1945 | p150 l9-11 | 32 w | Ordet 'FN'
+OK   | ver-nato-medlem | p116 l17-26 | 122 w | Den Kolde Krig
+OK   | ver-nato-medlem | p135 l13-26 | 99 w | Rusland og Ukraine
+       left out (margin/caption/header): ['DANMARKS FORSVARS- OG SIKKERHEDSPOLITIK']
+OK   | ver-vaernepligt | p90 l31-40 | 90 w | Forsvarets Dag
+OK   | ver-vaernepligt | p90 l42-45 | 42 w | Militærnægter
+OK   | ver-vaernepligt | p90 l51-53 | 29 w | Hvor længe
+OK   | ver-nato-1949 | p116 l18-26 | 107 w | Den Kolde Krig
+OK   | ver-mep-antal | p99 l34-45 | 65 w | Det Europæiske Råd og Kommissionen
+OK   | ver-mep-antal | p100 l6-12 | 45 w | EU-formandskabet
+       left out (margin/caption/header): ['FAKTA-ARK 18:']
+OK   | ver-fn-medlem | p101 l34-40 | 60 w | Sikkerhedsrådet
+OK   | ver-fn-medlem | p102 l9-21 | 80 w | FN's 17 verdensmål
+       left out (margin/caption/header): ['DANMARK OG OMVERDENEN']
+OK   | ver-ep-stemmeprocent | p83 l57-62 | 65 w | Hvem kan stemme til Europa-Parlamentet
+OK   | ver-ep-valgt-af | p100 l20-21 | 18 w | 720 medlemmer
+OK   | ver-ep-valgt-af | p100 l26-29 | 38 w | EU-Domstolen
+OK   | ver-tyskland-handel | p118 l39-45 | 87 w | EF-medlemskabet 1973
+OK   | ver-vaernepligt-koen | p91 l7-9 | 43 w | Tal for 2024
+OK   | ver-bistand-afrika | p103 l22-28 | 85 w | Hvorfor Afrika
+OK   | ver-bistand-afrika | p102 l43-47 | 49 w | 0,7 procent af BNI
+OK   | ver-folkeafstemning-eu | p98 l55-65 | 107 w | Maastricht og forbeholdene
+OK   | ver-folkeafstemning-eu | p99 l24-28 | 60 w | Forsvarsforbeholdet ophævet 2022
+OK   | ver-folkeafstemning-eu | p118 l39-41 | 35 w | Ja til EF i 1973
+OK   | ver-vaernepligt-flere | p91 l10-19 | 72 w | Flere værnepligtige
+       left out (margin/caption/header): ['BORGERNES RETTIGHEDER OG PLIGTER']
+OK   | ver-irak | p134 l10-24 | 118 w | Afghanistan
+       left out (margin/caption/header): ['DANMARKS FORSVARS- OG SIKKERHEDSPOLITIK']
+OK   | ver-irak | p141 l26-31 | 54 w | Angreb med maling i Folketinget
+OK   | ver-nato-forsvar | p133 l53-57 | 50 w | Efter 11. september 2001
+OK   | ver-ep-valg-5-aar | p83 l57-62 | 65 w | Hvem kan stemme til Europa-Parlamentet
+OK   | ver-eu-handel | p98 l24-26 | 28 w | Euroen og kronen
+OK   | ver-eu-handel | p98 l39-46 | 68 w | EU's indflydelse
+OK   | fg-farvande | p105 l63-64 | 26 w | Hvor Skagerrak og Kattegat mødes
+OK   | fg-farvande | p39 l9-10 | 25 w | Betaling på broerne
+OK   | fg-aarstal | p110 l30-34 | 72 w | Kalmarunionen
+OK   | fg-aarstal | p65 l43-47 | 53 w | Enevælden 1660-1849
+OK   | fg-aarstal | p118 l39-41 | 35 w | Ja til EF i 1973
+OK   | fg-hvem-styrer | p77 l6-12 | 47 w | Tanken med lokalt selvstyre
+       left out (margin/caption/header): ['FAKTA-ARK 14:']
+OK   | fg-hvem-styrer | p79 l32-41 | 39 w | Aftalen med KL
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | fg-magt | p74 l22-28 | 71 w | Regeringen har den udøvende magt
+OK   | fg-aldre | p44 l39-53 | 89 w | Regler for børn og unge
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | fg-tal | p105 l39-41 | 32 w | Jylland og over 400 øer
+OK   | fg-tal | p100 l20-21 | 18 w | 720 medlemmer
+OK   | fg-valg | p82 l27-43 | 84 w | Fire valg - fire niveauer
+OK   | fg-byer | p106 l18-22 | 34 w | Vestligste og østligste punkt
+OK   | fg-kendte | p124 l35-40 | 73 w | Tove Ditlevsen
+OK   | fg-kendte | p126 l6-12 | 49 w | Olafur Eliasson
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | fg-virksomheder | p31 l40-44 | 44 w | Arla og Danish Crown
+OK   | fg-virksomheder | p32 l31-34 | 46 w | Høreapparater
+OK   | fg-virksomheder | p33 l27-31 | 43 w | ISS og serviceydelser
+OK   | fg-hoejtider | p129 l30-33 | 38 w | 1. maj
+OK   | fg-hoejtider | p130 l17-23 | 88 w | Jul
+OK   | fg-gratis | p36 l6-14 | 67 w | Lige adgang til ydelser
+       left out (margin/caption/header): ['FAKTA-ARK 6:']
+OK   | fg-gratis | p54 l46-55 | 61 w | Gratis på sygehuset
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | fg-ja-nej | p84 l19-20 | 19 w | Glemt valgkort
+OK   | fg-organisationer | p100 l44-51 | 65 w | Europarådet
+OK   | fg-organisationer | p102 l31-35 | 53 w | Nordisk samarbejde
+OK   | fg-boernepasning | p19 l27-31 | 59 w | SFO og klub
+OK   | demokrati | p62 l6-27 | 139 w | Et demokrati i hverdagen
+       left out (margin/caption/header): ['FAKTA-ARK 11:', 'DEMOKRATI OG GRUNDLOVEN']
+OK   | demokrati | p73 l20-29 | 51 w | Spørgetid
+OK   | demokrati | p86 l43-58 | 112 w | Interesseorganisationer
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | demokrati | p87 l34-44 | 104 w | Medier og politik
+OK   | demokrati | p139 l36-43 | 99 w | Love mod diskrimination
+OK   | demokrati | p141 l31-34 | 40 w | Trusler mod politikere
+OK   | kongehus | p137 l21-23 | 36 w | Grønland og USA
+OK   | historie | p108 l42-57 | 69 w | Vikingetiden og Jellingestenen
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | historie | p109 l12-22 | 78 w | Vikingerne
+       left out (margin/caption/header): ['DANMARKS HISTORIE FØR 1945']
+OK   | historie | p110 l24-33 | 117 w | Pesten og Kalmarunionen
+OK   | historie | p116 l17-26 | 122 w | Den Kolde Krig
+OK   | historie | p118 l47-56 | 59 w | Oliekrisen
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | historie | p119 l21-24 | 35 w | Nej til atomkraft
+OK   | historie | p120 l18-26 | 114 w | Finanskrisen 2008
+OK   | historie | p121 l31-35 | 52 w | Corona
+OK   | geografi | p105 l6-10 | 26 w | Danmarks naboer
+       left out (margin/caption/header): ['FAKTA-ARK 19:']
+OK   | geografi | p144 l33-38 | 78 w | Klimaloven
+OK   | arbejde | p23 l9-23 | 117 w | Flexicurity
+       left out (margin/caption/header): ['DET DANSKE ARBEJDSMARKED']
+OK   | arbejde | p26 l31-41 | 91 w | Ansættelsesbevis
+OK   | arbejde | p29 l48-62 | 104 w | At blive selvstændig
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | arbejde | p33 l33-43 | 67 w | Danske medarbejdere tager ansvar
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | velfaerd | p37 l30-34 | 56 w | Folkepension
+OK   | velfaerd | p37 l36-43 | 97 w | Ret til pension
+OK   | velfaerd | p37 l23-28 | 82 w | Sygedagpenge, fleksjob og førtidspension
+OK   | velfaerd | p36 l26-29 | 39 w | Børnecheck
+OK   | velfaerd | p42 l44-62 | 108 w | Skilsmisse
+       left out (margin/caption/header): ['LÆREMATERIALE TIL MEDBORGERSKABSPRØVEN']
+OK   | velfaerd | p54 l29-33 | 61 w | Akutmodtagelse
+OK   | velfaerd | p54 l57-59 | 48 w | Tolk hos lægen
+OK   | velfaerd | p59 l18-19 | 26 w | Klage over forskelsbehandling
+OK   | uddannelse | p12 l6-13 | 58 w | Et videnssamfund
+       left out (margin/caption/header): ['FAKTA-ARK 2:']
+OK   | uddannelse | p12 l35-45 | 119 w | FGU og STU
+OK   | uddannelse | p16 l9-25 | 131 w | Livslang læring og AMU
+       left out (margin/caption/header): ['UDDANNELSE']
+OK   | uddannelse | p9 l9-21 | 89 w | Skole-hjem-samtaler
+       left out (margin/caption/header): ['SKOLE']
+OK   | kultur | p124 l35-40 | 73 w | Tove Ditlevsen
+OK   | kultur | p126 l6-12 | 49 w | Olafur Eliasson
+       left out (margin/caption/header): ['FAKTA-ARK 22:']
+OK   | kultur | p125 l28-34 | 82 w | Eurovision
+OK   | traditioner | p93 l6-12 | 53 w | Religionsfrihed
+       left out (margin/caption/header): ['FAKTA-ARK 17:']
+OK   | traditioner | p95 l6-12 | 36 w | 435 anerkendte trossamfund
+       left out (margin/caption/header): ['FAKTA-ARK 17:']
+OK   | traditioner | p131 l11-22 | 78 w | Ramadan og Eid
+       left out (margin/caption/header): ['TRADITIONER OG MÆRKEDAGE']
+OK   | traditioner | p131 l36-40 | 49 w | Kinesisk nytår
+OK   | traditioner | p130 l9-23 | 116 w | Jul
+       left out (margin/caption/header): ['TRADITIONER OG MÆRKEDAGE']
+OK   | verden | p98 l6-12 | 44 w | EU-medlemskabet 1973
+       left out (margin/caption/header): ['FAKTA-ARK 18:']
+OK   | verden | p99 l6-22 | 78 w | De danske forbehold i dag
+       left out (margin/caption/header): ['FAKTA-ARK 18:', 'DANMARK OG OMVERDENEN']
+OK   | verden | p100 l44-51 | 65 w | Europarådet
+OK   | verden | p143 l43-47 | 60 w | Global opvarmning
+OK   | verden | p144 l16-22 | 84 w | Paris-aftalen
+OK   | verden | p137 l14-19 | 71 w | Arktis og Grønland
+OK   | verden | p135 l28-32 | 60 w | Støtte til Ukraine
