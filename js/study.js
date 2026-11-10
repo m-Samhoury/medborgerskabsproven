@@ -17,6 +17,8 @@
 
   var chipLinks = {};
   var sideRows = {};
+  var chipBar = null;
+  var activeId = null;
 
   MBP.ui.initShell();
   MBP.ui.start(init);
@@ -36,6 +38,7 @@
     });
     chips.appendChild(h("a", { class: "chip-link chip-neutral", href: "#tabeller" }, "Alle tabeller"));
     main.appendChild(chips);
+    chipBar = chips;
 
     var side = h("aside", { class: "side", "aria-label": "Emner – Topics" });
     D.topics.forEach(function (t) {
@@ -94,26 +97,41 @@
 
   // Highlights the topic in view in the chip bar and the sidebar.
   function setActive(id) {
+    if (id === activeId) return;
+    activeId = id;
     Object.keys(chipLinks).forEach(function (key) {
       var on = key === id;
       chipLinks[key].classList.toggle("active", on);
       sideRows[key].classList.toggle("active", on);
     });
-    if (chipLinks[id]) chipLinks[id].scrollIntoView({ inline: "center", block: "nearest" });
+    // Scroll only the chip bar sideways. scrollIntoView would also scroll the page.
+    var link = chipLinks[id];
+    if (link && chipBar) {
+      var left = link.offsetLeft - (chipBar.clientWidth - link.offsetWidth) / 2;
+      chipBar.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+    }
   }
 
+  // Highlights the topic whose section has reached 40% down the screen.
   function watchTopics(D) {
-    if (!("IntersectionObserver" in window)) return;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) setActive(e.target.parentNode.id);
+    var sections = D.topics
+      .map(function (t) { return document.getElementById(t.id); })
+      .filter(Boolean);
+    var queued = false;
+    function update() {
+      queued = false;
+      var line = window.innerHeight * 0.4;
+      var current = sections[0];
+      sections.forEach(function (s) {
+        if (s.getBoundingClientRect().top <= line) current = s;
       });
-    }, { rootMargin: "-40% 0px -55% 0px" });
-    // Watch each topic's header band, so only one topic is in the band at a time.
-    D.topics.forEach(function (t) {
-      var head = document.querySelector("#" + t.id + " .topic-head");
-      if (head) observer.observe(head);
-    });
+      if (current) setActive(current.id);
+    }
+    window.addEventListener("scroll", function () {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   }
 
   // One topic: header band, intro, changes, the facts, the fact groups and the end bar.
