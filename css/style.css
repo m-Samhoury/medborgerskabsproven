@@ -1532,3 +1532,133 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
   font: 700 var(--fs-xs)/1 var(--f-body);
 }
 .pill-keyerr svg { width: 13px; height: 13px; }
+
+/* ---------- Læs mere i bogen: book button, popover, "not in the book" note ---------- */
+
+.book-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: -4px 0 -4px 2px;
+  padding: 0;
+  vertical-align: middle;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background var(--d-fast);
+}
+/* 44px touch target around the 28px button. */
+.book-btn::before { content: ""; position: absolute; inset: -8px; }
+.book-btn svg { width: 18px; height: 18px; }
+.book-btn:hover, .book-btn[aria-expanded="true"] { background: var(--wash); }
+.fg-book { margin-left: auto; }
+
+.note-nobook {
+  background: transparent;
+  color: var(--ink-2);
+  border: 1.5px dashed var(--line);
+}
+.note-nobook .note-title { color: var(--ink-2); }
+
+.book-pop {
+  --book-pop-max: 360px;
+  position: absolute;
+  z-index: 60;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  max-height: var(--book-pop-max);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  box-shadow: var(--shadow-2);
+  animation: book-pop-in var(--d-fast) var(--ease-out);
+}
+.book-pop:focus { outline: none; }
+.book-pop:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+@keyframes book-pop-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+.book-pop-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 8px 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.book-pop-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  margin: 0;
+  padding-top: 8px;
+  font: 700 0.95rem/1.3 var(--f-body);
+}
+.book-pop-title svg { width: 18px; height: 18px; flex: 0 0 auto; color: var(--accent); }
+.book-pop-title .en { font-weight: 400; }
+.book-pop-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.book-pop-close:hover { background: var(--wash); }
+.book-pop-body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 4px 14px 14px;
+}
+.book-ref { padding-top: 12px; }
+.book-ref + .book-ref { margin-top: 12px; border-top: 1px solid var(--line); }
+.book-cite {
+  margin: 0 0 8px;
+  font: 700 var(--fs-xs)/1.3 var(--f-body);
+  color: var(--ink-2);
+  letter-spacing: 0.02em;
+}
+.book-quote {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--r-s) var(--r-s) 0;
+  background: var(--paper);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.book-quote p { margin: 0; }
+.book-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 8px 0 0;
+  font-size: var(--fs-s);
+}
+.book-links a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.book-links a svg { width: 16px; height: 16px; flex: 0 0 auto; margin-top: 2px; }
+.book-links .en { font-weight: 400; }
+.book-official { margin-top: 12px; padding-top: 4px; border-top: 1px solid var(--line); }
+.book-official a { color: var(--ink-2); }

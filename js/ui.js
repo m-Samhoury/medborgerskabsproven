@@ -19,7 +19,13 @@
     verden: ["Verden", "The world"]
   };
 
-  var NOTE_ICON = { trap: "warn", changed: "changed", remember: "remember", keyerror: "flag" };
+  var NOTE_ICON = { trap: "warn", changed: "changed", remember: "remember", keyerror: "flag", nobook: "book" };
+
+  // The August 2026 book. The PDF is served with the site; the official copy is the fallback link.
+  var BOOK_PDF = "bookdump/laeremateriale-til-medborgerskabsproeven.pdf";
+  var BOOK_URL = "https://danskogproever.dk/media/4vbfd0ac/laeremateriale-til-medborgerskabsproeven.pdf";
+  // The 2017-11 answer-key error: 1864 = Slesvig og Holsten, 1658 = Skåne.
+  var KEYERROR_REFS = [{ page: 113, lines: "9-11" }, { page: 111, lines: "20-22" }];
   var DAYS = ["M", "T", "O", "T", "F", "L", "S"];
 
   // Constant SVG markup (never data text).
@@ -106,19 +112,175 @@
     return el;
   }
 
-  // A note box (§5.1.5). kind: "trap", "changed", "remember" or "keyerror".
-  function note(kind, titleDa, titleEn, bodyDa, bodyEn) {
+  // A note box (§5.1.5). kind: "trap", "changed", "remember", "keyerror" or "nobook".
+  // refs (optional): book references; the "read more" button goes at the end of the body.
+  function note(kind, titleDa, titleEn, bodyDa, bodyEn, refs) {
     return h("div", { class: "note note-" + kind },
       h("p", { class: "note-title" }, MBP.icon(NOTE_ICON[kind], 16), bi(titleDa, titleEn, "span")),
-      bi(bodyDa, bodyEn, "p"));
+      withBook(bi(bodyDa, bodyEn, "p"), refs));
   }
 
-  // The trap and "changed since the exam" notes for a cluster (both optional).
+  // "Not in the 2026 book" note, for site facts the book does not cover.
+  function nobookNote(da, en) {
+    return note("nobook", "Ikke i læremateriale 2026", "Not in the 2026 book", da, en);
+  }
+
+  // The trap, "changed since the exam" and "not in the book" notes for a cluster (all optional).
   function noteBoxes(c) {
     var out = [];
     if (c.trap_note_da) out.push(note("trap", "Pas på", "Watch out", c.trap_note_da, c.trap_note_en));
     if (c.current_note_da) out.push(note("changed", "Ændret siden prøven", "Changed since the exam", c.current_note_da, c.current_note_en));
+    if (c.nobook_note_da) out.push(nobookNote(c.nobook_note_da, c.nobook_note_en));
     return out;
+  }
+
+  // ---------- "Læs mere i bogen": the book button and its popover ----------
+
+  function lineLabel(lines) {
+    return lines.replace("-", "–");
+  }
+
+  function refLabel(r) {
+    return "side " + r.page + ", linje " + lineLabel(r.lines);
+  }
+
+  var POP_MAX = 360;   // px; the content scrolls inside (matches --book-pop-max)
+  var pop = null;      // the one shared popover
+  var popOwner = null; // the button that opened it
+
+  function closeBook(refocus) {
+    if (!pop || pop.hidden) return;
+    pop.hidden = true;
+    if (popOwner) {
+      popOwner.setAttribute("aria-expanded", "false");
+      if (refocus) popOwner.focus();
+    }
+    popOwner = null;
+  }
+
+  function buildPop() {
+    pop = h("div", {
+      id: "book-pop",
+      class: "book-pop",
+      role: "dialog",
+      "aria-labelledby": "book-pop-title",
+      tabindex: "-1",
+      hidden: true
+    });
+    pop.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeBook(true);
+      }
+    });
+    // Focus moving out of the popover (Tab past the end, or a click elsewhere) closes it.
+    pop.addEventListener("focusout", function (e) {
+      var to = e.relatedTarget;
+      if (to && !pop.contains(to) && to !== popOwner) closeBook(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (pop.hidden) return;
+      if (pop.contains(e.target) || (popOwner && popOwner.contains(e.target))) return;
+      closeBook(false);
+    });
+    // Phones resize the viewport when the address bar hides, so follow the button instead of closing.
+    window.addEventListener("resize", function () {
+      if (!pop.hidden && popOwner) placePop(popOwner);
+    });
+    document.body.appendChild(pop);
+  }
+
+  function refBlock(r) {
+    var text = (MBP.data && MBP.data.book && MBP.data.book[r.page + ":" + r.lines]) || "";
+    return h("section", { class: "book-ref" },
+      h("p", { class: "book-cite" }, "Læremateriale 2026 · " + refLabel(r)),
+      text ? h("blockquote", { class: "book-quote", lang: "da" }, text.split("\n").map(function (para) {
+        return h("p", null, para);
+      })) : null,
+      h("p", { class: "book-links" },
+        h("a", { href: BOOK_PDF + "#page=" + r.page, target: "_blank", rel: "noopener" },
+          MBP.icon("open", 16), bi("Åbn side " + r.page + " i bogen", "Open page " + r.page + " in the book (PDF)", "span"))));
+  }
+
+  // One link to the official copy of the book (danskogproever.dk), at the first page referenced.
+  function officialLink(refs) {
+    return h("p", { class: "book-links book-official" },
+      h("a", { href: BOOK_URL + "#page=" + refs[0].page, target: "_blank", rel: "noopener" },
+        MBP.icon("open", 16), bi("Officiel kilde: danskogproever.dk", "Official source", "span")));
+  }
+
+  // Places the popover under the button, or above it when there is more room there,
+  // inside the page gutters. Its height is capped to the room on that side, so it never covers the button.
+  function placePop(btn) {
+    var gutter = 16;
+    var vw = document.documentElement.clientWidth;
+    var width = Math.min(440, vw - 2 * gutter);
+    pop.style.width = width + "px";
+    pop.style.maxHeight = "";
+    var r = btn.getBoundingClientRect();
+    var left = Math.max(gutter, Math.min(r.left + r.width / 2 - width / 2, vw - width - gutter));
+    pop.style.left = (left + window.scrollX) + "px";
+    var below = window.innerHeight - r.bottom - 16;
+    var above = r.top - 16;
+    var natural = pop.offsetHeight;
+    var under = below >= natural || below >= above;
+    var room = Math.min(POP_MAX, Math.max(160, under ? below : above));
+    if (natural > room) pop.style.maxHeight = room + "px";
+    var height = Math.min(natural, room);
+    var top = under ? r.bottom + 8 : r.top - height - 8;
+    pop.style.top = (top + window.scrollY) + "px";
+  }
+
+  function openBook(btn, refs) {
+    if (!pop) buildPop();
+    if (popOwner === btn && !pop.hidden) {
+      closeBook(true);
+      return;
+    }
+    closeBook(false);
+    pop.textContent = "";
+    pop.appendChild(h("div", { class: "book-pop-head" },
+      h("p", { class: "book-pop-title", id: "book-pop-title" }, MBP.icon("book", 18),
+        bi("Læs mere i bogen", "Read more in the book", "span")),
+      h("button", { type: "button", class: "book-pop-close", "aria-label": "Luk – Close", title: "Luk – Close",
+        onclick: function () { closeBook(true); } }, MBP.icon("close", 18))));
+    pop.appendChild(h("div", { class: "book-pop-body" }, refs.map(refBlock), officialLink(refs)));
+    pop.hidden = false;
+    popOwner = btn;
+    btn.setAttribute("aria-expanded", "true");
+    placePop(btn);
+    pop.focus({ preventScroll: true });
+  }
+
+  // The small book button. refs: [{page, lines}]. Returns null when there are no references.
+  function bookButton(refs) {
+    if (!refs || !refs.length) return null;
+    var label = "Læs mere i bogen: " + refs.map(refLabel).join("; ");
+    var btn = h("button", {
+      type: "button",
+      class: "book-btn",
+      "aria-haspopup": "dialog",
+      "aria-expanded": "false",
+      "aria-controls": "book-pop",
+      "aria-label": label,
+      title: "Læs mere i bogen – Read more in the book"
+    }, MBP.icon("book", 18));
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      openBook(btn, refs);
+    });
+    return btn;
+  }
+
+  // Adds the book button at the end of the Danish line of a bi()/biQA() element. Returns el.
+  function withBook(el, refs) {
+    var btn = bookButton(refs);
+    if (!btn) return el;
+    var da = el.querySelector(".answer.da") || el.querySelector(".da");
+    if (da && da.classList.contains("answer")) da.after(" ", btn);
+    else (da || el).append(" ", btn);
+    return el;
   }
 
   // Counts for a topic: seen and mastered clusters, the total, and the ones due for review.
@@ -302,13 +464,20 @@
     }
     var kids = [
       line,
-      h("div", { class: "fact" }, bi(c.fact_da, c.fact_en, "p"))
+      h("div", { class: "fact" }, withBook(bi(c.fact_da, c.fact_en, "p"), c.book))
     ];
+    // The exam's key stays as published; where the book now says something else, a note says so.
+    if (q.book_note_da) {
+      kids.push(q.book_status === "nobook"
+        ? nobookNote(q.book_note_da, q.book_note_en)
+        : note("changed", "Bogen siger nu", "The book now says", q.book_note_da, q.book_note_en, c.book));
+    }
     kids = kids.concat(noteBoxes(c));
     if (q.official_correct) {
       kids.push(note("keyerror", "Fejl i rettenøglen fra 2017", "Error in the 2017 answer key",
         "Den officielle rettenøgle fra 2017 siger fejlagtigt B (Skåne, Halland og Blekinge). Det rigtige svar er Slesvig og Holsten – Skåne blev mistet i 1658.",
-        "The official 2017 answer key wrongly says B (Skåne, Halland and Blekinge). The correct answer is Slesvig and Holsten – Skåne was lost in 1658."));
+        "The official 2017 answer key wrongly says B (Skåne, Halland and Blekinge). The correct answer is Slesvig and Holsten – Skåne was lost in 1658.",
+        KEYERROR_REFS));
     }
     kids.push(h("p", { class: "freq" }, bi(
       "Stillet i " + c.times_asked + (c.times_asked === 1 ? " prøve: " : " prøver: ") + c.exams.join(", "),
@@ -541,7 +710,9 @@
     biQA: biQA,
     shuffle: shuffle,
     note: note,
+    nobookNote: nobookNote,
     noteBoxes: noteBoxes,
+    withBook: withBook,
     SHORT: SHORT,
     topicProgress: topicProgress,
     stampLevel: stampLevel,

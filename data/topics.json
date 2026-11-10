@@ -8,41 +8,195 @@
   "intro": [
    {
     "da": "Danmark er et demokrati og et konstitutionelt monarki. Grundloven er Danmarks forfatning. Den første grundlov er fra 5. juni 1849, og den blev sidst ændret i 1953. Hvis grundloven skal ændres, skal der være en folkeafstemning.",
-    "en": "Denmark is a democracy and a constitutional monarchy. Grundloven (the Constitution) is Denmark's constitution. The first Constitution is from 5 June 1849, and it was last changed in 1953. If the Constitution is to be changed, there must be a referendum."
+    "en": "Denmark is a democracy and a constitutional monarchy. Grundloven (the Constitution) is Denmark's constitution. The first Constitution is from 5 June 1849, and it was last changed in 1953. If the Constitution is to be changed, there must be a referendum.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "29-49"
+     },
+     {
+      "page": 63,
+      "lines": "6-13"
+     },
+     {
+      "page": 112,
+      "lines": "42-45"
+     },
+     {
+      "page": 153,
+      "lines": "34-37"
+     }
+    ]
    },
    {
     "da": "Grundloven sikrer frihedsrettigheder: ytringsfrihed (sige hvad man mener), forsamlingsfrihed (mødes og demonstrere), foreningsfrihed og religionsfrihed. Retten til våben, arbejde, ferie eller at stifte familie står IKKE i grundloven. Alle – også udlændinge – må danne en forening. Før en demonstration giver man politiet besked, men man skal ikke have tilladelse.",
-    "en": "The Constitution guarantees civil liberties: freedom of expression (saying what you think), freedom of assembly (meeting and demonstrating), freedom of association and freedom of religion. The right to weapons, a job, holidays or to start a family is NOT in the Constitution. Everyone – foreigners too – may form an association. Before a demonstration you notify the police, but you do not need permission."
+    "en": "The Constitution guarantees civil liberties: freedom of expression (saying what you think), freedom of assembly (meeting and demonstrating), freedom of association and freedom of religion. The right to weapons, a job, holidays or to start a family is NOT in the Constitution. Everyone – foreigners too – may form an association. Before a demonstration you notify the police, but you do not need permission.",
+    "book": [
+     {
+      "page": 63,
+      "lines": "24-56"
+     },
+     {
+      "page": 47,
+      "lines": "33-40"
+     },
+     {
+      "page": 87,
+      "lines": "21-23"
+     },
+     {
+      "page": 89,
+      "lines": "39-49"
+     }
+    ]
    },
    {
-    "da": "Magten er delt i tre: Folketinget og regeringen laver lovene (lovgivende magt), regeringen styrer landet (udøvende magt), og domstolene dømmer (dømmende magt). Domstolene er uafhængige – politikerne kan ikke bestemme, hvordan en dommer dømmer. En dom fra byretten kan ankes til landsretten og derefter til Højesteret.",
-    "en": "Power is divided in three: the Folketing and the government make the laws (legislative power), the government runs the country (executive power), and the courts judge (judicial power). The courts are independent – politicians cannot decide how a judge rules. A ruling from the District Court can be appealed to the High Court and then to the Supreme Court."
+    "da": "Magten er delt i tre: Folketinget og regeringen laver lovene (lovgivende magt), regeringen styrer landet (udøvende magt), og domstolene dømmer (dømmende magt). Domstolene er uafhængige – politikerne kan ikke bestemme, hvordan en dommer dømmer. En dom fra byretten kan normalt ankes til landsretten. En sag, der er anket til landsretten, kan som regel ikke ankes videre til Højesteret – kun sager, der starter i landsretten, kan som regel ankes til Højesteret.",
+    "en": "Power is divided in three: the Folketing and the government make the laws (legislative power), the government runs the country (executive power), and the courts judge (judicial power). The courts are independent – politicians cannot decide how a judge rules. A ruling from the District Court can normally be appealed to the High Court. A case appealed to the High Court can usually not be appealed further to the Supreme Court – only cases that start in the High Court can usually be appealed to the Supreme Court.",
+    "book": [
+     {
+      "page": 66,
+      "lines": "9-40"
+     },
+     {
+      "page": 69,
+      "lines": "32-40"
+     }
+    ]
    },
    {
     "da": "Folketinget har 179 medlemmer: 175 fra Danmark, 2 fra Færøerne og 2 fra Grønland. Medlemmerne behøver ikke være med i et parti. Der skal være valg mindst hvert 4. år, og statsministeren bestemmer, hvornår valget skal være. Kun danske statsborgere kan stemme til folketingsvalg, og afstemningen er hemmelig. Ca. 80-90 % stemmer. Efter et valg bestemmer Folketinget, hvem der danner regering.",
-    "en": "The Folketing has 179 members: 175 from Denmark, 2 from the Faroe Islands and 2 from Greenland. Members do not have to belong to a party. There must be an election at least every 4 years, and the prime minister decides when it is held. Only Danish citizens can vote in general elections, and voting is secret. About 80–90% vote. After an election the Folketing decides who forms the government."
+    "en": "The Folketing has 179 members: 175 from Denmark, 2 from the Faroe Islands and 2 from Greenland. Members do not have to belong to a party. There must be an election at least every 4 years, and the prime minister decides when it is held. Only Danish citizens can vote in general elections, and voting is secret. About 80–90% vote. After an election the Folketing decides who forms the government.",
+    "book": [
+     {
+      "page": 72,
+      "lines": "29-32"
+     },
+     {
+      "page": 82,
+      "lines": "59-66"
+     },
+     {
+      "page": 83,
+      "lines": "12-14"
+     },
+     {
+      "page": 84,
+      "lines": "6-10"
+     },
+     {
+      "page": 85,
+      "lines": "23-25"
+     },
+     {
+      "page": 72,
+      "lines": "42-43"
+     }
+    ]
    },
    {
     "da": "Kvinder fik stemmeret i 1915 – ikke i 1849. I 2011 fik Danmark sin første kvindelige statsminister, Helle Thorning-Schmidt.",
-    "en": "Women got the vote in 1915 – not in 1849. In 2011 Denmark got its first female prime minister, Helle Thorning-Schmidt."
+    "en": "Women got the vote in 1915 – not in 1849. In 2011 Denmark got its first female prime minister, Helle Thorning-Schmidt.",
+    "book": [
+     {
+      "page": 59,
+      "lines": "37-43"
+     },
+     {
+      "page": 59,
+      "lines": "53-55"
+     },
+     {
+      "page": 63,
+      "lines": "19-21"
+     }
+    ]
    },
    {
     "da": "Danmark har 98 kommuner og 5 regioner. Borgmesteren er den øverste politiske leder i kommunen. Kommunerne står for vuggestuer, børnehaver og folkeskoler. Regionerne står for sygehusene. Der er valg til kommuner og regioner hvert 4. år.",
-    "en": "Denmark has 98 municipalities and 5 regions. The mayor is the top political leader of the municipality. The municipalities run nurseries, kindergartens and folkeskoler. The regions run the hospitals. There are municipal and regional elections every 4 years."
+    "en": "Denmark has 98 municipalities and 5 regions. The mayor is the top political leader of the municipality. The municipalities run nurseries, kindergartens and folkeskoler. The regions run the hospitals. There are municipal and regional elections every 4 years.",
+    "book": [
+     {
+      "page": 77,
+      "lines": "40"
+     },
+     {
+      "page": 77,
+      "lines": "45-57"
+     },
+     {
+      "page": 79,
+      "lines": "10-12"
+     },
+     {
+      "page": 80,
+      "lines": "9"
+     },
+     {
+      "page": 80,
+      "lines": "25-27"
+     },
+     {
+      "page": 77,
+      "lines": "24-27"
+     }
+    ]
    },
    {
     "da": "Hvis politiet anholder en person, skal personen stilles for en dommer inden 24 timer. En betinget dom betyder, at man ikke skal i fængsel, hvis man overholder betingelserne. En straffeattest viser, om man har været straffet. Moms er en afgift på varer, man køber.",
-    "en": "If the police arrest someone, the person must be brought before a judge within 24 hours. A suspended sentence means you do not go to prison if you keep the conditions. A criminal record certificate shows whether you have been convicted. Moms (VAT) is a tax on goods you buy."
+    "en": "If the police arrest someone, the person must be brought before a judge within 24 hours. A suspended sentence means you do not go to prison if you keep the conditions. A criminal record certificate shows whether you have been convicted. Moms (VAT) is a tax on goods you buy.",
+    "book": [
+     {
+      "page": 64,
+      "lines": "22-25"
+     },
+     {
+      "page": 68,
+      "lines": "53-59"
+     },
+     {
+      "page": 70,
+      "lines": "10-18"
+     },
+     {
+      "page": 70,
+      "lines": "32-37"
+     },
+     {
+      "page": 39,
+      "lines": "28-31"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "Per 2026: Der var folketingsvalg 24. marts 2026. Socialdemokratiet blev igen største parti. Siden 3. juni 2026 er regeringen Socialdemokratiet, SF, Moderaterne og Radikale Venstre (Mette Frederiksen III). Fra 2022 til 2026 var det SVM-regeringen (S, Venstre, Moderaterne) – det er den, prøverne fra 2024-2025 spørger om.",
-    "en": "Per 2026: There was a general election on 24 March 2026. The Social Democrats were again the largest party. Since 3 June 2026 the government has been the Social Democrats, SF, the Moderates and the Social Liberals (Mette Frederiksen III). From 2022 to 2026 it was the SVM government (S, Venstre, the Moderates) – that is the one the 2024–2025 exams ask about."
+    "en": "Per 2026: There was a general election on 24 March 2026. The Social Democrats were again the largest party. Since 3 June 2026 the government has been the Social Democrats, SF, the Moderates and the Social Liberals (Mette Frederiksen III). From 2022 to 2026 it was the SVM government (S, Venstre, the Moderates) – that is the one the 2024–2025 exams ask about.",
+    "book": [
+     {
+      "page": 75,
+      "lines": "25-45"
+     },
+     {
+      "page": 85,
+      "lines": "27-29"
+     }
+    ]
    },
    {
-    "da": "Kvinder i Folketinget: ca. 40 % i 2018-2020 og ca. 45 % efter valget i 2022.",
-    "en": "Women in the Folketing: about 40% in 2018–2020 and about 45% after the 2022 election."
+    "da": "Kvinder i Folketinget: ca. 40 % i 2018-2020 og ca. 45 % efter valget i 2022 (prøvernes svar). Læremateriale 2026: 48-49 % efter valget i 2026 (86 af 179).",
+    "en": "Women in the Folketing: about 40% in 2018–2020 and about 45% after the 2022 election (the exam answers). Book 2026: 48–49% after the 2026 election (86 of 179).",
+    "book": [
+     {
+      "page": 59,
+      "lines": "45-46"
+     },
+     {
+      "page": 83,
+      "lines": "14-20"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -102,21 +256,65 @@
   "intro": [
    {
     "da": "Danmark er et arvemonarki: den nye konge eller dronning arver tronen. Ingen vælger monarken. Siden 14. januar 2024 er Frederik 10. konge. Kronprinsen hedder Christian.",
-    "en": "Denmark is a hereditary monarchy: the new king or queen inherits the throne. Nobody elects the monarch. Since 14 January 2024 Frederik 10. has been king. The crown prince is called Christian."
+    "en": "Denmark is a hereditary monarchy: the new king or queen inherits the throne. Nobody elects the monarch. Since 14 January 2024 Frederik 10. has been king. The crown prince is called Christian.",
+    "book": [
+     {
+      "page": 65,
+      "lines": "6-20"
+     },
+     {
+      "page": 65,
+      "lines": "35-37"
+     }
+    ]
    },
    {
     "da": "Kongen underskriver nye love sammen med en minister. Kongen holder nytårstale den 31. december. Statsministeren holder nytårstale den 1. januar og åbningstalen, når Folketinget åbner i oktober.",
-    "en": "The King signs new laws together with a minister. The King gives a New Year's speech on 31 December. The prime minister gives a New Year's speech on 1 January and the opening speech when the Folketing opens in October."
+    "en": "The King signs new laws together with a minister. The King gives a New Year's speech on 31 December. The prime minister gives a New Year's speech on 1 January and the opening speech when the Folketing opens in October.",
+    "book": [
+     {
+      "page": 65,
+      "lines": "22-26"
+     },
+     {
+      "page": 65,
+      "lines": "40-41"
+     },
+     {
+      "page": 130,
+      "lines": "32-42"
+     }
+    ]
    },
    {
     "da": "Rigsfællesskabet består af Danmark, Grønland og Færøerne. Island, Norge og Åland er ikke med. Grønland og Færøerne vælger hver 2 medlemmer til Folketinget. USA har en luftbase i Grønland (Thule, i dag Pituffik).",
-    "en": "The Danish Realm consists of Denmark, Greenland and the Faroe Islands. Iceland, Norway and Åland are not part of it. Greenland and the Faroe Islands each elect 2 members to the Folketing. The USA has an air base in Greenland (Thule, today Pituffik)."
+    "en": "The Danish Realm consists of Denmark, Greenland and the Faroe Islands. Iceland, Norway and Åland are not part of it. Greenland and the Faroe Islands each elect 2 members to the Folketing. The USA has an air base in Greenland (Thule, today Pituffik).",
+    "book": [
+     {
+      "page": 105,
+      "lines": "12-24"
+     },
+     {
+      "page": 102,
+      "lines": "31-33"
+     },
+     {
+      "page": 136,
+      "lines": "20-25"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "Prøver fra 2018-2022 siger 'Dronningen' (Margrethe 2.). I dag er svaret 'Kongen' (Frederik 10.). Hvis kun 'Dronningen' står som mulighed i en gammel prøve, er det det rigtige svar dér.",
-    "en": "Exams from 2018–2022 say 'the Queen' (Margrethe 2.). Today the answer is 'the King' (Frederik 10.). If only 'the Queen' is offered in an old exam, that is the right answer there."
+    "en": "Exams from 2018–2022 say 'the Queen' (Margrethe 2.). Today the answer is 'the King' (Frederik 10.). If only 'the Queen' is offered in an old exam, that is the right answer there.",
+    "book": [
+     {
+      "page": 65,
+      "lines": "12-19"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -140,25 +338,107 @@
   "intro": [
    {
     "da": "I 1536 kom reformationen til Danmark, og Danmark blev protestantisk. I 1658 mistede Danmark Skåne, Halland og Blekinge til Sverige. I 1700-tallet gav landboreformerne bønderne frihed til selv at vælge, hvor de ville bo og arbejde. I 1814 sluttede unionen med Norge efter over 400 år.",
-    "en": "In 1536 the Reformation came to Denmark, and Denmark became Protestant. In 1658 Denmark lost Skåne, Halland and Blekinge to Sweden. In the 1700s the agricultural reforms gave farmers the freedom to choose where to live and work. In 1814 the union with Norway ended after more than 400 years."
+    "en": "In 1536 the Reformation came to Denmark, and Denmark became Protestant. In 1658 Denmark lost Skåne, Halland and Blekinge to Sweden. In the 1700s the agricultural reforms gave farmers the freedom to choose where to live and work. In 1814 the union with Norway ended after more than 400 years.",
+    "book": [
+     {
+      "page": 110,
+      "lines": "34-42"
+     },
+     {
+      "page": 111,
+      "lines": "20-22"
+     },
+     {
+      "page": 111,
+      "lines": "55-62"
+     }
+    ]
    },
    {
     "da": "I 1840'erne kom de første jernbaner. I 1849 fik Danmark sin første grundlov. I 1864 mistede Danmark Slesvig og Holsten efter en krig. Partiet Venstre blev dannet omkring 1870.",
-    "en": "In the 1840s the first railways came. In 1849 Denmark got its first Constitution. In 1864 Denmark lost Slesvig and Holsten after a war. The party Venstre was founded around 1870."
+    "en": "In the 1840s the first railways came. In 1849 Denmark got its first Constitution. In 1864 Denmark lost Slesvig and Holsten after a war. The party Venstre was founded around 1870.",
+    "book": [
+     {
+      "page": 113,
+      "lines": "9-11"
+     },
+     {
+      "page": 113,
+      "lines": "27"
+     },
+     {
+      "page": 112,
+      "lines": "44"
+     },
+     {
+      "page": 113,
+      "lines": "41-42"
+     }
+    ]
    },
    {
     "da": "Under 2. verdenskrig blev Danmark besat af Tyskland den 9. april 1940. Danmark blev befriet den 5. maj 1945. Efter krigen fik Danmark hjælp fra USA gennem Marshall-planen. Socialdemokratiet sad i regering flest år mellem 1929 og 1982.",
-    "en": "During the Second World War Denmark was occupied by Germany on 9 April 1940. Denmark was liberated on 5 May 1945. After the war Denmark got aid from the USA through the Marshall Plan. The Social Democrats were in government for the most years between 1929 and 1982."
+    "en": "During the Second World War Denmark was occupied by Germany on 9 April 1940. Denmark was liberated on 5 May 1945. After the war Denmark got aid from the USA through the Marshall Plan. The Social Democrats were in government for the most years between 1929 and 1982.",
+    "book": [
+     {
+      "page": 114,
+      "lines": "20-21"
+     },
+     {
+      "page": 114,
+      "lines": "30"
+     },
+     {
+      "page": 116,
+      "lines": "28-31"
+     },
+     {
+      "page": 118,
+      "lines": "58-60"
+     }
+    ]
    },
    {
     "da": "1960'erne var en tid med høj økonomisk vækst, og mange gæstearbejdere kom fra Tyrkiet. I 1970'erne kæmpede rødstrømperne (kvindebevægelsen) for kvinders rettigheder. I 2011 blev Helle Thorning-Schmidt den første kvindelige statsminister. I 2015 var der et terrorangreb ved Københavns Synagoge.",
-    "en": "The 1960s were a time of high economic growth, and many guest workers came from Turkey. In the 1970s the Redstockings (the women's movement) fought for women's rights. In 2011 Helle Thorning-Schmidt became the first female prime minister. In 2015 there was a terrorist attack at Copenhagen Synagogue."
+    "en": "The 1960s were a time of high economic growth, and many guest workers came from Turkey. In the 1970s the Redstockings (the women's movement) fought for women's rights. In 2011 Helle Thorning-Schmidt became the first female prime minister. In 2015 there was a terrorist attack at Copenhagen Synagogue.",
+    "book": [
+     {
+      "page": 117,
+      "lines": "9-19"
+     },
+     {
+      "page": 117,
+      "lines": "33-35"
+     },
+     {
+      "page": 118,
+      "lines": "23-25"
+     },
+     {
+      "page": 59,
+      "lines": "53-55"
+     },
+     {
+      "page": 140,
+      "lines": "40-45"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "OBS: Den officielle rettenøgle til prøven fra november 2017 (spørgsmål 23) siger fejlagtigt 'Skåne, Halland og Blekinge' for 1864. Det rigtige svar er Slesvig og Holsten. Skåne blev mistet i 1658.",
-    "en": "NOTE: The official answer key for the November 2017 exam (question 23) wrongly says 'Skåne, Halland and Blekinge' for 1864. The right answer is Slesvig and Holsten. Skåne was lost in 1658."
+    "en": "NOTE: The official answer key for the November 2017 exam (question 23) wrongly says 'Skåne, Halland and Blekinge' for 1864. The right answer is Slesvig and Holsten. Skåne was lost in 1658.",
+    "book": [
+     {
+      "page": 113,
+      "lines": "9-11"
+     },
+     {
+      "page": 111,
+      "lines": "20-22"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -198,21 +478,71 @@
   "intro": [
    {
     "da": "Danmark består af Jylland og mange øer. De største øer er Sjælland og Fyn. Mellem Jylland og Fyn ligger Lillebælt. Mellem Fyn og Sjælland ligger Storebælt. Mellem Sjælland (København) og Sverige ligger Øresund. Broerne har samme navne: Lillebæltsbroen, Storebæltsbroen og Øresundsbroen.",
-    "en": "Denmark consists of Jutland and many islands. The largest islands are Zealand and Funen. Between Jutland and Funen lies Lillebælt (the Little Belt). Between Funen and Zealand lies Storebælt (the Great Belt). Between Zealand (Copenhagen) and Sweden lies Øresund (the Sound). The bridges have the same names: the Little Belt Bridge, the Great Belt Bridge and the Øresund Bridge."
+    "en": "Denmark consists of Jutland and many islands. The largest islands are Zealand and Funen. Between Jutland and Funen lies Lillebælt (the Little Belt). Between Funen and Zealand lies Storebælt (the Great Belt). Between Zealand (Copenhagen) and Sweden lies Øresund (the Sound). The bridges have the same names: the Little Belt Bridge, the Great Belt Bridge and the Øresund Bridge.",
+    "book": [
+     {
+      "page": 105,
+      "lines": "39-61"
+     },
+     {
+      "page": 39,
+      "lines": "9-10"
+     }
+    ]
    },
    {
     "da": "Danmark er fladt. Det højeste naturlige punkt, Møllehøj, er ca. 170 meter. Danmark er ca. 43.000 km², og ca. 60 % af arealet er landbrug. Det nordligste punkt er Grenen ved Skagen. Det sydligste punkt er Gedser Odde på Falster.",
-    "en": "Denmark is flat. The highest natural point, Møllehøj, is about 170 metres. Denmark is about 43,000 km², and about 60% of the area is farmland. The northernmost point is Grenen near Skagen. The southernmost point is Gedser Odde on Falster."
+    "en": "Denmark is flat. The highest natural point, Møllehøj, is about 170 metres. Denmark is about 43,000 km², and about 60% of the area is farmland. The northernmost point is Grenen near Skagen. The southernmost point is Gedser Odde on Falster.",
+    "book": [
+     {
+      "page": 106,
+      "lines": "24-25"
+     },
+     {
+      "page": 105,
+      "lines": "36-37"
+     },
+     {
+      "page": 146,
+      "lines": "9-10"
+     },
+     {
+      "page": 105,
+      "lines": "63-66"
+     }
+    ]
    },
    {
     "da": "Danmark har ca. 6 millioner indbyggere. De største byer er København, Aarhus (Østjylland), Odense (Fyn), Aalborg (Nordjylland) og Esbjerg (Vestjylland). Region Hovedstaden er den største region.",
-    "en": "Denmark has about 6 million inhabitants. The largest cities are Copenhagen, Aarhus (East Jutland), Odense (Funen), Aalborg (North Jutland) and Esbjerg (West Jutland). The Capital Region is the largest region."
+    "en": "Denmark has about 6 million inhabitants. The largest cities are Copenhagen, Aarhus (East Jutland), Odense (Funen), Aalborg (North Jutland) and Esbjerg (West Jutland). The Capital Region is the largest region.",
+    "book": [
+     {
+      "page": 106,
+      "lines": "36"
+     },
+     {
+      "page": 106,
+      "lines": "43-47"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
-    "da": "Region Hovedstaden: prøven i 2018 sagde ca. 1,7 millioner – i dag ca. 1,9 millioner. Indvandrere og efterkommere: prøven i 2018 sagde 12-13 % – i dag ca. 16 %.",
-    "en": "Capital Region: the 2018 exam said about 1.7 million – today about 1.9 million. Immigrants and descendants: the 2018 exam said 12–13% – today about 16%."
+    "da": "Region Hovedstaden: prøven i 2018 sagde ca. 1,7 millioner – i dag ca. 1,9 millioner. Region Hovedstaden og Region Sjælland lægges sammen til Region Østdanmark den 1. januar 2027. Indvandrere og efterkommere: prøven i 2018 sagde 12-13 % – i dag ca. 17 % (læremateriale 2026).",
+    "en": "Capital Region: the 2018 exam said about 1.7 million – today about 1.9 million. The Capital Region and Region Zealand merge into Region Østdanmark on 1 January 2027. Immigrants and descendants: the 2018 exam said 12–13% – today about 17% (book 2026).",
+    "nobook_da": "Indbyggertallet 1,9 millioner står ikke i læremateriale 2026 (bogen: ca. 2 millioner i hovedstadsområdet).",
+    "nobook_en": "The 1.9 million figure is not in book 2026 (the book: about 2 million in the capital area).",
+    "book": [
+     {
+      "page": 106,
+      "lines": "36-41"
+     },
+     {
+      "page": 80,
+      "lines": "22-23"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -249,19 +579,93 @@
   "intro": [
    {
     "da": "På det danske arbejdsmarked laver fagforeninger og arbejdsgivere aftaler, der hedder kollektive overenskomster. De handler om løn, arbejdstid og ferie. Den normale arbejdsuge er 37 timer, og man har ret til 5-6 ugers ferie om året.",
-    "en": "On the Danish labour market, trade unions and employers make agreements called collective agreements. They cover pay, working hours and holidays. The normal working week is 37 hours, and you are entitled to 5–6 weeks of holiday a year."
+    "en": "On the Danish labour market, trade unions and employers make agreements called collective agreements. They cover pay, working hours and holidays. The normal working week is 37 hours, and you are entitled to 5–6 weeks of holiday a year.",
+    "book": [
+     {
+      "page": 22,
+      "lines": "35-37"
+     },
+     {
+      "page": 27,
+      "lines": "9-10"
+     },
+     {
+      "page": 27,
+      "lines": "43-47"
+     }
+    ]
    },
    {
-    "da": "Det koster penge at være med i en fagforening. Medarbejderne vælger selv deres tillidsrepræsentant. I et samarbejdsudvalg mødes ledelsen og de ansatte. For at få dagpenge, hvis man bliver arbejdsløs, skal man være medlem af en a-kasse – ca. 70 % af lønmodtagerne er med.",
-    "en": "It costs money to be in a trade union. The employees elect their own union representative. In a cooperation committee, management and employees meet. To get unemployment benefit if you lose your job, you must be a member of an a-kasse – about 70% of employees are."
+    "da": "Det koster penge at være med i en fagforening. Medarbejderne vælger selv deres tillidsrepræsentant. I et samarbejdsudvalg mødes ledelsen og de ansatte. For at få dagpenge, hvis man bliver arbejdsløs, skal man være medlem af en a-kasse – det er de fleste (prøverne sagde ca. 70 %). Ca. 68 % af lønmodtagerne er medlem af en fagforening.",
+    "en": "It costs money to be in a trade union. The employees elect their own union representative. In a cooperation committee, management and employees meet. To get unemployment benefit if you lose your job, you must be a member of an a-kasse – most are (the exams said about 70%). About 68% of employees are members of a trade union.",
+    "nobook_da": "Tallet 70 % for a-kasse står ikke i læremateriale 2026.",
+    "nobook_en": "The 70% figure for a-kasse is not in book 2026.",
+    "book": [
+     {
+      "page": 24,
+      "lines": "57-63"
+     },
+     {
+      "page": 25,
+      "lines": "42-46"
+     },
+     {
+      "page": 28,
+      "lines": "60-63"
+     }
+    ]
    },
    {
-    "da": "En arbejdsgiver må ikke fyre en kvinde, fordi hun er gravid, eller en ansat, fordi han eller hun melder sig ind i en fagforening. Kvinder har ret til samme løn som mænd for samme arbejde. Man har ikke altid krav på deltid, og arbejdsgiveren kan heller ikke bare forlange det. Ca. 3 ud af 4 mellem 15 og 64 år har et arbejde.",
-    "en": "An employer may not fire a woman because she is pregnant, or an employee because he or she joins a trade union. Women have the right to the same pay as men for the same work. You do not always have a right to part-time work, and the employer cannot just demand it either. About 3 out of 4 people aged 15 to 64 have a job."
+    "da": "En arbejdsgiver må ikke fyre en kvinde, fordi hun er gravid, eller en ansat, fordi han eller hun melder sig ind i en fagforening. Kvinder har ret til samme løn som mænd for samme arbejde. Man har ikke altid krav på deltid, og arbejdsgiveren kan heller ikke bare forlange det. Ca. 73 % af de 16-66-årige har et lønmodtagerarbejde (ca. 3 ud af 4).",
+    "en": "An employer may not fire a woman because she is pregnant, or an employee because he or she joins a trade union. Women have the right to the same pay as men for the same work. You do not always have a right to part-time work, and the employer cannot just demand it either. About 73% of 16–66-year-olds have a job as an employee (about 3 out of 4).",
+    "book": [
+     {
+      "page": 22,
+      "lines": "58-59"
+     },
+     {
+      "page": 28,
+      "lines": "41-44"
+     },
+     {
+      "page": 25,
+      "lines": "11-13"
+     },
+     {
+      "page": 58,
+      "lines": "57"
+     },
+     {
+      "page": 27,
+      "lines": "34-38"
+     }
+    ]
    },
    {
     "da": "Kendte danske virksomheder: Vestas laver vindmøller, Novo Nordisk laver medicin, og LEGO laver legetøj. Vindenergi er den grønne energi, Danmark producerer mest af. Antallet af landmænd er faldet meget siden 1960.",
-    "en": "Well-known Danish companies: Vestas makes wind turbines, Novo Nordisk makes medicine, and LEGO makes toys. Wind energy is the green energy Denmark produces most of. The number of farmers has fallen a lot since 1960."
+    "en": "Well-known Danish companies: Vestas makes wind turbines, Novo Nordisk makes medicine, and LEGO makes toys. Wind energy is the green energy Denmark produces most of. The number of farmers has fallen a lot since 1960.",
+    "book": [
+     {
+      "page": 32,
+      "lines": "27-29"
+     },
+     {
+      "page": 32,
+      "lines": "40-41"
+     },
+     {
+      "page": 32,
+      "lines": "23-25"
+     },
+     {
+      "page": 144,
+      "lines": "54-57"
+     },
+     {
+      "page": 31,
+      "lines": "31-33"
+     }
+    ]
    }
   ],
   "current_facts": [],
@@ -302,29 +706,119 @@
   "intro": [
    {
     "da": "Sundhedsvæsenet betales mest via skatter. Det er gratis at gå til læge og på hospitalet. Voksne betaler selv en del hos tandlægen, men børn og unge får gratis tandpleje. Vacciner til børn (fx MFR og HPV) er gratis. Det er gratis at låne bøger på biblioteket.",
-    "en": "The health service is paid mostly through taxes. Seeing a doctor and going to hospital is free. Adults pay part of the cost at the dentist, but children and young people get free dental care. Vaccines for children (e.g. MMR and HPV) are free. Borrowing books at the library is free."
+    "en": "The health service is paid mostly through taxes. Seeing a doctor and going to hospital is free. Adults pay part of the cost at the dentist, but children and young people get free dental care. Vaccines for children (e.g. MMR and HPV) are free. Borrowing books at the library is free.",
+    "book": [
+     {
+      "page": 53,
+      "lines": "6-13"
+     },
+     {
+      "page": 38,
+      "lines": "23-24"
+     },
+     {
+      "page": 55,
+      "lines": "9-20"
+     },
+     {
+      "page": 55,
+      "lines": "33-38"
+     },
+     {
+      "page": 51,
+      "lines": "9-12"
+     }
+    ]
    },
    {
-    "da": "Man bliver myndig som 18-årig, og man skal være mindst 18 år for at blive gift. Man kan gifte sig med en person af samme køn. Man skal være 18 år for at købe cigaretter og 16 år for at købe øl og vin. Man kan få kørekort fra 17 år.",
-    "en": "You become a legal adult at 18, and you must be at least 18 to marry. You can marry a person of the same sex. You must be 18 to buy cigarettes and 16 to buy beer and wine. You can get a driving licence from 17."
+    "da": "Man bliver myndig som 18-årig, og man skal være mindst 18 år for at blive gift. Man kan gifte sig med en person af samme køn. Man skal være 18 år for at købe cigaretter, vin, spiritus og stærk øl (over 6 %), men kun 16 år for at købe almindelig øl. Man kan få kørekort fra 17 år: 17-årige må køre alene kl. 5-20, men skal have en ledsager kl. 20-5.",
+    "en": "You become a legal adult at 18, and you must be at least 18 to marry. You can marry a person of the same sex. You must be 18 to buy cigarettes, wine, spirits and strong beer (over 6%), but only 16 to buy ordinary beer. You can get a driving licence from 17: 17-year-olds may drive alone 5 am–8 pm, but need an accompanying adult 8 pm–5 am.",
+    "book": [
+     {
+      "page": 41,
+      "lines": "63-64"
+     },
+     {
+      "page": 45,
+      "lines": "18-19"
+     },
+     {
+      "page": 44,
+      "lines": "45-47"
+     },
+     {
+      "page": 55,
+      "lines": "52-55"
+     },
+     {
+      "page": 45,
+      "lines": "29-33"
+     }
+    ]
    },
    {
     "da": "Når forældrene er gift, har begge forældremyndigheden. Det er forbudt at slå børn. Begge forældre kan få orlov og økonomisk støtte, når de får et barn. Boligstøtte er hjælp til at betale husleje. Mænd lever i gennemsnit ca. 80 år.",
-    "en": "When the parents are married, both have custody. It is forbidden to hit children. Both parents can get leave and financial support when they have a child. Housing benefit is help to pay rent. Men live about 80 years on average."
+    "en": "When the parents are married, both have custody. It is forbidden to hit children. Both parents can get leave and financial support when they have a child. Housing benefit is help to pay rent. Men live about 80 years on average.",
+    "book": [
+     {
+      "page": 42,
+      "lines": "30-31"
+     },
+     {
+      "page": 44,
+      "lines": "41"
+     },
+     {
+      "page": 44,
+      "lines": "6-13"
+     },
+     {
+      "page": 38,
+      "lines": "9-11"
+     },
+     {
+      "page": 120,
+      "lines": "34-36"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "Orlov: Siden august 2022 har hver forælder 11 øremærkede uger. Faren har stadig ret til 2 uger omkring fødslen (svaret i prøven fra 2017).",
-    "en": "Leave: Since August 2022 each parent has 11 earmarked weeks. The father still has the right to 2 weeks around the birth (the answer in the 2017 exam)."
+    "en": "Leave: Since August 2022 each parent has 11 earmarked weeks. The father still has the right to 2 weeks around the birth (the answer in the 2017 exam).",
+    "nobook_da": "'11 øremærkede uger' og '2 uger omkring fødslen' står ikke i læremateriale 2026. Bogen siger kun, at barnets far også har ret til at gå på barsel.",
+    "nobook_en": "'11 earmarked weeks' and '2 weeks around the birth' are not in book 2026. The book only says that the child's father also has the right to parental leave.",
+    "book": [
+     {
+      "page": 44,
+      "lines": "6-13"
+     }
+    ]
    },
    {
     "da": "Abort: Siden 1. juni 2025 er grænsen for fri abort 18 uger (før 12 uger).",
-    "en": "Abortion: Since 1 June 2025 the limit for abortion on request is 18 weeks (before: 12 weeks)."
+    "en": "Abortion: Since 1 June 2025 the limit for abortion on request is 18 weeks (before: 12 weeks).",
+    "book": [
+     {
+      "page": 44,
+      "lines": "18-19"
+     },
+     {
+      "page": 118,
+      "lines": "25-28"
+     }
+    ]
    },
    {
     "da": "Tandlæge: Per 2026 er tandpleje gratis, til man fylder 22.",
-    "en": "Dentist: Per 2026 dental care is free until you turn 22."
+    "en": "Dentist: Per 2026 dental care is free until you turn 22.",
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -362,16 +856,86 @@
   "title_en": "Education and children",
   "intro": [
    {
-    "da": "Små børn går i dagpleje (i et privat hjem) eller vuggestue (0-3 år) og derefter i børnehave (3-6 år). Næsten alle børn mellem 3 og 5 år bliver passet uden for hjemmet. Kommunerne står for daginstitutionerne.",
-    "en": "Small children go to a childminder (in a private home) or a nursery (0–3) and then to kindergarten (3–6). Almost all children aged 3 to 5 are looked after outside the home. The municipalities run day care."
+    "da": "Små børn går i dagpleje (i et privat hjem) eller vuggestue (fra ca. 6 måneder til ca. 3 år) og derefter i børnehave (ca. 3-6 år). De fleste børn mellem 3 og 5 år bliver passet uden for hjemmet. Kommunerne står for daginstitutionerne.",
+    "en": "Small children go to a childminder (in a private home) or a nursery (from about 6 months to about 3) and then to kindergarten (about 3–6). Most children aged 3 to 5 are looked after outside the home. The municipalities run day care.",
+    "book": [
+     {
+      "page": 18,
+      "lines": "12-14"
+     },
+     {
+      "page": 18,
+      "lines": "38"
+     },
+     {
+      "page": 18,
+      "lines": "54-56"
+     },
+     {
+      "page": 19,
+      "lines": "9"
+     },
+     {
+      "page": 77,
+      "lines": "45-57"
+     }
+    ]
    },
    {
-    "da": "Der er 10 års undervisningspligt. Børn begynder i 0. klasse, når de er 5-6 år. De fleste går i kommunale folkeskoler, som er gratis. Friskoler og privatskoler koster penge for forældrene. I skolebestyrelsen sidder både forældre og elever. Man kan gå på efterskole i 8., 9. og 10. klasse.",
-    "en": "There are 10 years of compulsory education. Children start year 0 at 5–6. Most go to municipal folkeskoler, which are free. Free schools and private schools cost money for the parents. The school board includes both parents and pupils. You can attend an efterskole in years 8, 9 and 10."
+    "da": "Der er 10 års undervisningspligt. Børn begynder i børnehaveklassen (0. klasse), når de er omkring 6 år (prøvens svar: 5-6 år). De fleste går i kommunale folkeskoler, som er gratis. Friskoler og privatskoler koster penge for forældrene. I skolebestyrelsen sidder både forældre og elever. Man kan gå på efterskole i 8., 9. og 10. klasse.",
+    "en": "There are 10 years of compulsory education. Children start the reception class (year 0) at about 6 (the exam answer: 5–6). Most go to municipal folkeskoler, which are free. Free schools and private schools cost money for the parents. The school board includes both parents and pupils. You can attend an efterskole in years 8, 9 and 10.",
+    "book": [
+     {
+      "page": 6,
+      "lines": "6-10"
+     },
+     {
+      "page": 6,
+      "lines": "29-31"
+     },
+     {
+      "page": 10,
+      "lines": "23-24"
+     },
+     {
+      "page": 8,
+      "lines": "6-10"
+     },
+     {
+      "page": 10,
+      "lines": "30-31"
+     }
+    ]
    },
    {
     "da": "Karaktererne gives efter 7-trinsskalaen, og 12 er den højeste karakter. Eleverne får karakterer fra 8. klasse. Det offentlige gymnasium er gratis, og man kan få SU fra 18 år. Elektrikere uddannes på en erhvervsskole, og læger på et universitet.",
-    "en": "Grades are given on the 7-point scale, and 12 is the highest grade. Pupils get grades from year 8. The public gymnasium is free, and you can get SU from 18. Electricians train at a vocational school, and doctors at a university."
+    "en": "Grades are given on the 7-point scale, and 12 is the highest grade. Pupils get grades from year 8. The public gymnasium is free, and you can get SU from 18. Electricians train at a vocational school, and doctors at a university.",
+    "book": [
+     {
+      "page": 8,
+      "lines": "39-52"
+     },
+     {
+      "page": 12,
+      "lines": "55"
+     },
+     {
+      "page": 45,
+      "lines": "20-21"
+     },
+     {
+      "page": 13,
+      "lines": "39"
+     },
+     {
+      "page": 14,
+      "lines": "14"
+     },
+     {
+      "page": 15,
+      "lines": "25-27"
+     }
+    ]
    }
   ],
   "current_facts": [],
@@ -410,11 +974,59 @@
   "intro": [
    {
     "da": "H.C. Andersen (1805-1875) skrev eventyr, fx Den Grimme Ælling. Karen Blixen og Ludvig Holberg var også forfattere, og Yahya Hassan (1995-2020) var digter. Søren Kierkegaard (1813-1855) var filosof. N.F.S. Grundtvig fik stor betydning for højskolerne i 1800-tallet.",
-    "en": "H.C. Andersen (1805–1875) wrote fairy tales, e.g. The Ugly Duckling. Karen Blixen and Ludvig Holberg were also authors, and Yahya Hassan (1995–2020) was a poet. Søren Kierkegaard (1813–1855) was a philosopher. N.F.S. Grundtvig was very important for the folk high schools in the 1800s."
+    "en": "H.C. Andersen (1805–1875) wrote fairy tales, e.g. The Ugly Duckling. Karen Blixen and Ludvig Holberg were also authors, and Yahya Hassan (1995–2020) was a poet. Søren Kierkegaard (1813–1855) was a philosopher. N.F.S. Grundtvig was very important for the folk high schools in the 1800s.",
+    "book": [
+     {
+      "page": 123,
+      "lines": "35-51"
+     },
+     {
+      "page": 123,
+      "lines": "21-30"
+     },
+     {
+      "page": 124,
+      "lines": "21-30"
+     },
+     {
+      "page": 126,
+      "lines": "25-28"
+     },
+     {
+      "page": 50,
+      "lines": "33-40"
+     }
+    ]
    },
    {
     "da": "P.S. Krøyer var kunstmaler, og Carl Nielsen komponerede musik. Arkitekten Arne Jacobsen tegnede Nationalbanken og stolen Ægget. Thomas Vinterberg og Susanne Bier er filminstruktører – Vinterberg vandt en Oscar i 2021 for Druk. Popgruppen Aqua udgav Barbie Girl i 1990'erne.",
-    "en": "P.S. Krøyer was a painter, and Carl Nielsen composed music. The architect Arne Jacobsen designed the National Bank and the Egg chair. Thomas Vinterberg and Susanne Bier are film directors – Vinterberg won an Oscar in 2021 for Druk. The pop group Aqua released Barbie Girl in the 1990s."
+    "en": "P.S. Krøyer was a painter, and Carl Nielsen composed music. The architect Arne Jacobsen designed the National Bank and the Egg chair. Thomas Vinterberg and Susanne Bier are film directors – Vinterberg won an Oscar in 2021 for Druk. The pop group Aqua released Barbie Girl in the 1990s.",
+    "book": [
+     {
+      "page": 123,
+      "lines": "53-55"
+     },
+     {
+      "page": 124,
+      "lines": "9"
+     },
+     {
+      "page": 124,
+      "lines": "42-57"
+     },
+     {
+      "page": 125,
+      "lines": "9-11"
+     },
+     {
+      "page": 125,
+      "lines": "24-26"
+     },
+     {
+      "page": 125,
+      "lines": "36-37"
+     }
+    ]
    }
   ],
   "current_facts": [],
@@ -447,17 +1059,57 @@
   "intro": [
    {
     "da": "Til fastelavn klæder børn sig ud og slår katten af tønden. Påske ligger om foråret, og pinse er 7 uger efter påske. Grundlovsdag er den 5. juni. Til sankthans i juni tænder man bål om aftenen.",
-    "en": "At Fastelavn children dress up and hit the cat out of the barrel. Easter is in spring, and Whitsun is 7 weeks after Easter. Constitution Day is 5 June. At Sankthans in June people light a bonfire in the evening."
+    "en": "At Fastelavn children dress up and hit the cat out of the barrel. Easter is in spring, and Whitsun is 7 weeks after Easter. Constitution Day is 5 June. At Sankthans in June people light a bonfire in the evening.",
+    "book": [
+     {
+      "page": 128,
+      "lines": "36-43"
+     },
+     {
+      "page": 129,
+      "lines": "10-11"
+     },
+     {
+      "page": 129,
+      "lines": "20-22"
+     },
+     {
+      "page": 129,
+      "lines": "45-48"
+     },
+     {
+      "page": 129,
+      "lines": "58-66"
+     }
+    ]
    },
    {
     "da": "Et flertal af befolkningen er medlem af folkekirken. Man kan blive gift i folkekirken, hvis den ene er medlem. Man behøver ikke være medlem for at blive begravet på en af folkekirkens kirkegårde.",
-    "en": "A majority of the population are members of the National Church. You can marry in the National Church if one of you is a member. You do not need to be a member to be buried in one of its churchyards."
+    "en": "A majority of the population are members of the National Church. You can marry in the National Church if one of you is a member. You do not need to be a member to be buried in one of its churchyards.",
+    "book": [
+     {
+      "page": 93,
+      "lines": "43"
+     },
+     {
+      "page": 94,
+      "lines": "25-27"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "Store Bededag er afskaffet som helligdag fra 2024. Den står kun som forkert svar i gamle prøver.",
-    "en": "Store Bededag was abolished as a public holiday from 2024. It only appears as a wrong answer in old exams."
+    "en": "Store Bededag was abolished as a public holiday from 2024. It only appears as a wrong answer in old exams.",
+    "nobook_da": "Store Bededag nævnes ikke i læremateriale 2026.",
+    "nobook_en": "Store Bededag is not mentioned in book 2026.",
+    "book": [
+     {
+      "page": 128,
+      "lines": "59-62"
+     }
+    ]
    }
   ],
   "cluster_ids": [
@@ -483,22 +1135,90 @@
   "title_en": "Denmark in the world and defence",
   "intro": [
    {
-    "da": "Danmark blev medlem af FN i 1945 og af NATO i 1949. I NATO samarbejder landene om forsvar. Danmark kom med i EF (i dag EU) i 1973. EU arbejder for fri handel, og de fleste danske folkeafstemninger siden 1953 har handlet om EU. Danmark handler mest med Tyskland.",
-    "en": "Denmark joined the UN in 1945 and NATO in 1949. In NATO the countries cooperate on defence. Denmark joined the EC (today the EU) in 1973. The EU works for free trade, and most Danish referendums since 1953 have been about the EU. Denmark trades most with Germany."
+    "da": "Danmark blev medlem af FN i 1945 og af NATO i 1949. I NATO samarbejder landene om forsvar. Danmark kom med i EF (i dag EU) i 1973. EU arbejder for fri handel, og de fleste danske folkeafstemninger siden 1953 har handlet om EU. USA er Danmarks største handelspartner samlet (14,1 % i 2025) foran Tyskland (12,7 %). Danmark importerer mest fra Tyskland og eksporterer mest til USA.",
+    "en": "Denmark joined the UN in 1945 and NATO in 1949. In NATO the countries cooperate on defence. Denmark joined the EC (today the EU) in 1973. The EU works for free trade, and most Danish referendums since 1953 have been about the EU. The USA is Denmark's largest trading partner overall (14.1% in 2025) ahead of Germany (12.7%). Denmark imports most from Germany and exports most to the USA.",
+    "book": [
+     {
+      "page": 32,
+      "lines": "53-61"
+     },
+     {
+      "page": 101,
+      "lines": "9"
+     },
+     {
+      "page": 133,
+      "lines": "6-11"
+     },
+     {
+      "page": 98,
+      "lines": "6"
+     },
+     {
+      "page": 75,
+      "lines": "53-55"
+     }
+    ]
    },
    {
     "da": "Europa-Parlamentet vælges af befolkningerne i EU-landene hvert 5. år. Stemmeprocenten er lavere end ved folketingsvalg.",
-    "en": "The European Parliament is elected by the populations of the EU countries every 5 years. Turnout is lower than in general elections."
+    "en": "The European Parliament is elected by the populations of the EU countries every 5 years. Turnout is lower than in general elections.",
+    "book": [
+     {
+      "page": 100,
+      "lines": "14-24"
+     },
+     {
+      "page": 83,
+      "lines": "57"
+     }
+    ]
    },
    {
     "da": "I 1990'erne var danske soldater i Bosnien for FN. I 2003 sendte Danmark soldater til Irak. Størstedelen af den danske udviklingsbistand går til Afrika. Værnepligt er pligten til at forsvare Danmark. I 2024 blev det besluttet at indkalde flere værnepligtige, og i dag har både mænd og kvinder værnepligt.",
-    "en": "In the 1990s Danish soldiers were in Bosnia for the UN. In 2003 Denmark sent soldiers to Iraq. Most of Denmark's development aid goes to Africa. Conscription is the duty to defend Denmark. In 2024 it was decided to call up more conscripts, and today both men and women have compulsory military service."
+    "en": "In the 1990s Danish soldiers were in Bosnia for the UN. In 2003 Denmark sent soldiers to Iraq. Most of Denmark's development aid goes to Africa. Conscription is the duty to defend Denmark. In 2024 it was decided to call up more conscripts, and today both men and women have compulsory military service.",
+    "book": [
+     {
+      "page": 133,
+      "lines": "37-40"
+     },
+     {
+      "page": 134,
+      "lines": "31-43"
+     },
+     {
+      "page": 103,
+      "lines": "14-20"
+     },
+     {
+      "page": 89,
+      "lines": "36-39"
+     },
+     {
+      "page": 90,
+      "lines": "55-56"
+     },
+     {
+      "page": 91,
+      "lines": "18-19"
+     }
+    ]
    }
   ],
   "current_facts": [
    {
     "da": "Europa-Parlamentet: Danmark har 15 medlemmer siden valget i 2024. Prøverne fra 2017-2018 sagde 13 (det var rigtigt dengang).",
-    "en": "European Parliament: Denmark has had 15 members since the 2024 election. The 2017–2018 exams said 13 (correct at the time)."
+    "en": "European Parliament: Denmark has had 15 members since the 2024 election. The 2017–2018 exams said 13 (correct at the time).",
+    "book": [
+     {
+      "page": 83,
+      "lines": "61-62"
+     },
+     {
+      "page": 100,
+      "lines": "20-21"
+     }
+    ]
    }
   ],
   "cluster_ids": [

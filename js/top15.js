@@ -39,7 +39,7 @@
         h("div", { class: "face" }, MBP.ui.faceValue(c.times_asked)),
         h("div", { class: "body" },
           topic ? MBP.ui.topicChip(topic) : null,
-          biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"))));
+          MBP.ui.withBook(biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"), c.book))));
     });
     return ol;
   }

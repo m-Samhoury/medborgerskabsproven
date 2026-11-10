@@ -160,7 +160,7 @@
               t ? MBP.ui.topicChip(t) : null,
               c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null),
             MBP.ui.faceValue(c.times_asked)),
-          h("div", { class: "fact" }, bi(c.fact_da, c.fact_en, "p")),
+          h("div", { class: "fact" }, MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book)),
           h("div", { class: "rule" }),
           biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"),
           MBP.ui.noteBoxes(c));
@@ -287,7 +287,7 @@
           var t = D.tById.get(c.topic_id);
           list.appendChild(h("li", null,
             t ? MBP.ui.topicChip(t) : null,
-            bi(c.fact_da, c.fact_en, "p"),
+            MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book),
             bi("Rigtigt svar: " + c.answer_da, "Correct answer: " + c.answer_en, "p")));
         });
         content.appendChild(list);

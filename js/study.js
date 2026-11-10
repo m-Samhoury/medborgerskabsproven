@@ -5,6 +5,7 @@
   var h = MBP.ui.h;
   var bi = MBP.ui.bi;
   var biQA = MBP.ui.biQA;
+  var withBook = MBP.ui.withBook;
 
   // West to east, for the Farvandene strait strip.
   var STRAIT = [
@@ -130,11 +131,13 @@
           "p"))));
 
     t.intro.forEach(function (p) {
-      section.appendChild(bi(p.da, p.en, "p"));
+      section.appendChild(withBook(bi(p.da, p.en, "p"), p.book));
+      if (p.nobook_da) section.appendChild(MBP.ui.nobookNote(p.nobook_da, p.nobook_en));
     });
 
     t.current_facts.forEach(function (cf) {
-      section.appendChild(MBP.ui.note("changed", "Ændret siden prøven", "Changed since the exam", cf.da, cf.en));
+      section.appendChild(MBP.ui.note("changed", "Ændret siden prøven", "Changed since the exam", cf.da, cf.en, cf.book));
+      if (cf.nobook_da) section.appendChild(MBP.ui.nobookNote(cf.nobook_da, cf.nobook_en));
     });
 
     section.appendChild(bi("Det skal du huske", "What to remember", "h3"));
@@ -177,7 +180,7 @@
 
     var body = h("div", { class: "fact-body" },
       c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null,
-      bi(c.fact_da, c.fact_en, "p"),
+      withBook(bi(c.fact_da, c.fact_en, "p"), c.book),
       qa,
       MBP.ui.noteBoxes(c));
 
@@ -198,7 +201,8 @@
     var kids = [
       h("div", { class: "fg-head" },
         first ? MBP.ui.topicChip(first) : null,
-        h("h4", { class: "fg-title", id: titleId }, g.title_da, h("span", { class: "en", lang: "en" }, g.title_en)))
+        h("h4", { class: "fg-title", id: titleId }, g.title_da, h("span", { class: "en", lang: "en" }, g.title_en)),
+        MBP.ui.withBook(h("span", { class: "fg-book" }, h("span", { class: "da" })), g.book))
     ];
 
     if (g.id === "fg-farvande") {
@@ -228,6 +232,7 @@
         thead,
         h("tbody", null, rows))));
 
+    if (g.nobook_da) kids.push(MBP.ui.nobookNote(g.nobook_da, g.nobook_en));
     kids.push(MBP.ui.note("remember", "Husk", "Remember", g.mnemonic_da, g.mnemonic_en));
 
     return h("div", attrs, kids);

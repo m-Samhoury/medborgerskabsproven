@@ -12,13 +12,15 @@
     });
   }
 
-  function index(questions, clusters, topicsRaw, groups) {
+  // book: the book excerpts by "page:lines" (only in the bundle; without it the popover shows just the reference).
+  function index(questions, clusters, topicsRaw, groups, book) {
     var topics = topicsRaw.slice().sort(function (a, b) { return a.order - b.order; });
     return {
       questions: questions,
       clusters: clusters,
       topics: topics,
       groups: groups,
+      book: book || {},
       qById: new Map(questions.map(function (q) { return [q.id, q]; })),
       cById: new Map(clusters.map(function (c) { return [c.id, c]; })),
       tById: new Map(topics.map(function (t) { return [t.id, t]; })),
@@ -31,7 +33,7 @@
     if (MBP.data) return Promise.resolve(MBP.data);
     var raw = window.MBP_RAW;
     if (raw) {
-      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups);
+      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups, raw.book);
       return Promise.resolve(MBP.data);
     }
     return Promise.all([

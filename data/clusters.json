@@ -71,7 +71,13 @@
   "trap_note_da": "Mette Frederiksen er statsminister nu (siden 2019) – men hun var den ANDEN. 'Hvor mange før Helle Thorning-Schmidt?' = Ingen.",
   "trap_note_en": "Mette Frederiksen is prime minister now (since 2019) – but she was the SECOND. 'How many before Helle Thorning-Schmidt?' = None.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 59,
+    "lines": "53-55"
+   }
+  ]
  },
  {
   "id": "dem-rettigheder",
@@ -169,7 +175,17 @@
   "trap_note_da": "De forkerte svar er altid: våben, stifte familie, have et arbejde, holde ferie. De står IKKE i grundloven.",
   "trap_note_en": "The wrong answers are always: weapons, starting a family, having a job, taking holidays. They are NOT in the Constitution.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 63,
+    "lines": "24-56"
+   },
+   {
+    "page": 89,
+    "lines": "39-49"
+   }
+  ]
  },
  {
   "id": "dem-kommunerne-boern",
@@ -272,7 +288,13 @@
   "trap_note_da": "Kommunen = børn og skole. Regionen = sygehuse. Staten = fx politiet. 'Hvilket område har kommunerne ansvaret for?' = Børnehaver.",
   "trap_note_en": "Municipality = children and school. Region = hospitals. State = e.g. the police. 'Which area are the municipalities responsible for?' = Kindergartens.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 77,
+    "lines": "45-57"
+   }
+  ]
  },
  {
   "id": "kon-rigsfaellesskab",
@@ -375,7 +397,21 @@
   "trap_note_da": "Læs spørgsmålet: 'Hvem er IKKE med?' – svaret er Island (eller Åland). 'Hvilken ø-gruppe ER med?' – svaret er Færøerne.",
   "trap_note_en": "Read the question: 'Who is NOT part of it?' – the answer is Iceland (or Åland). 'Which island group IS part of it?' – the answer is the Faroe Islands.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "12-14"
+   },
+   {
+    "page": 102,
+    "lines": "31-33"
+   },
+   {
+    "page": 153,
+    "lines": "34-35"
+   }
+  ]
  },
  {
   "id": "udd-undervisningspligt",
@@ -470,13 +506,23 @@
   "trap_note_da": "Det hedder undervisningspligt – ikke skolepligt. 'Hvor mange år går børn normalt i folkeskolen?' = også 10 år.",
   "trap_note_en": "It is called compulsory education (undervisningspligt) – not compulsory school. 'How many years do children normally go to folkeskole?' = also 10 years.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 6,
+    "lines": "6-10"
+   },
+   {
+    "page": 6,
+    "lines": "29-33"
+   }
+  ]
  },
  {
   "id": "arb-tillidsrepraesentant",
   "topic_id": "arbejde",
-  "fact_da": "Tillidsrepræsentanten vælges af medarbejderne (de ansatte).",
-  "fact_en": "The union representative (tillidsrepræsentant) is elected by the employees.",
+  "fact_da": "Tillidsrepræsentanten vælges af fagforeningens medlemmer blandt medarbejderne – på et møde (klubmøde), hvor arbejdsgiveren ikke er med.",
+  "fact_en": "The union representative (tillidsrepræsentant) is elected by the union members among the employees – at a meeting (club meeting) without the employer.",
   "question_ids": [
    "2016-12-q3",
    "2018-06-q6",
@@ -530,7 +576,17 @@
   "trap_note_da": "Kun medarbejderne – IKKE arbejdsgiveren og IKKE 'medarbejderne og arbejdsgiveren i fællesskab'.",
   "trap_note_en": "Only the employees – NOT the employer and NOT 'the employees and the employer together'.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 25,
+    "lines": "42-46"
+   },
+   {
+    "page": 25,
+    "lines": "58-63"
+   }
+  ]
  },
  {
   "id": "dem-2-og-2",
@@ -598,7 +654,17 @@
   "trap_note_da": "Svaret er 2 for BÅDE Færøerne og Grønland. Det kan stå som tal (2) eller ord (To).",
   "trap_note_en": "The answer is 2 for BOTH the Faroe Islands and Greenland. It may be written as a number (2) or a word (To).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 72,
+    "lines": "29-32"
+   },
+   {
+    "page": 83,
+    "lines": "12-14"
+   }
+  ]
  },
  {
   "id": "his-reformation",
@@ -682,7 +748,17 @@
   "trap_note_da": "Spørgsmålet kan sige 'reformationen' eller 'protestantismen' og spørge om året (1536) eller århundredet (1500-tallet).",
   "trap_note_en": "The question may say 'the Reformation' or 'Protestantism' and ask for the year (1536) or the century (the 1500s).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 110,
+    "lines": "37-42"
+   },
+   {
+    "page": 93,
+    "lines": "33-35"
+   }
+  ]
  },
  {
   "id": "arb-vestas",
@@ -750,7 +826,13 @@
   "trap_note_da": "Spørgsmålet kan også være omvendt: 'Hvad fremstiller Vestas?' = Vindmøller.",
   "trap_note_en": "The question can also be reversed: 'What does Vestas make?' = Wind turbines.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 32,
+    "lines": "40-41"
+   }
+  ]
  },
  {
   "id": "geo-hoejeste-punkt",
@@ -831,7 +913,13 @@
   "trap_note_da": "Svaret er altid ca. 170 m (også skrevet 'godt 170 meter'). Danmark er et fladt land.",
   "trap_note_en": "The answer is always about 170 m (also written 'just over 170 metres'). Denmark is a flat country.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "24-25"
+   }
+  ]
  },
  {
   "id": "arb-novo",
@@ -904,7 +992,13 @@
   "trap_note_da": "Spørgsmålet kan også være omvendt: 'Hvilken virksomhed producerer medicin?' = Novo Nordisk.",
   "trap_note_en": "The question can also be reversed: 'Which company makes medicine?' = Novo Nordisk.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 32,
+    "lines": "27-29"
+   }
+  ]
  },
  {
   "id": "dem-forening",
@@ -961,7 +1055,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 47,
+    "lines": "33-37"
+   }
+  ]
  },
  {
   "id": "arb-37-timer",
@@ -1034,7 +1134,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 27,
+    "lines": "9-10"
+   },
+   {
+    "page": 27,
+    "lines": "28"
+   }
+  ]
  },
  {
   "id": "udd-karakter-12",
@@ -1107,7 +1217,13 @@
   "trap_note_da": "Skalaen hedder '7-trins' (fordi der er 7 karakterer: -3, 00, 02, 4, 7, 10, 12), men den højeste karakter er 12 – ikke 7.",
   "trap_note_en": "The scale is called '7-point' (because there are 7 grades: -3, 00, 02, 4, 7, 10, 12), but the highest grade is 12 – not 7.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 8,
+    "lines": "50-52"
+   }
+  ]
  },
  {
   "id": "dem-179",
@@ -1153,7 +1269,17 @@
   "trap_note_da": "179 = 175 fra Danmark + 2 fra Færøerne + 2 fra Grønland.",
   "trap_note_en": "179 = 175 from Denmark + 2 from the Faroe Islands + 2 from Greenland.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 72,
+    "lines": "29"
+   },
+   {
+    "page": 83,
+    "lines": "12-14"
+   }
+  ]
  },
  {
   "id": "dem-grundlov-1953",
@@ -1215,7 +1341,13 @@
   "trap_note_da": "Lad dig ikke snyde af 1849 (første grundlov) eller 1915 (kvinders stemmeret).",
   "trap_note_en": "Don't be fooled by 1849 (first Constitution) or 1915 (women's vote).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 62,
+    "lines": "45-47"
+   }
+  ]
  },
  {
   "id": "tra-grundlovsdag",
@@ -1269,7 +1401,13 @@
   "trap_note_da": "Omvendt: 'På hvilken dato er grundlovsdag?' = 5. juni. Ikke 5. maj (befrielsen).",
   "trap_note_en": "Reverse: 'On which date is Constitution Day?' = 5 June. Not 5 May (the liberation).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 129,
+    "lines": "45-55"
+   }
+  ]
  },
  {
   "id": "vel-bibliotek",
@@ -1315,7 +1453,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 38,
+    "lines": "46-47"
+   },
+   {
+    "page": 51,
+    "lines": "9-12"
+   }
+  ]
  },
  {
   "id": "dem-kommuner-98",
@@ -1361,7 +1509,17 @@
   "trap_note_da": "98 kommuner, men kun 5 regioner.",
   "trap_note_en": "98 municipalities, but only 5 regions.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 77,
+    "lines": "40"
+   },
+   {
+    "page": 83,
+    "lines": "37"
+   }
+  ]
  },
  {
   "id": "dem-statsborger-stemme",
@@ -1423,7 +1581,17 @@
   "trap_note_da": "Modsat spørgsmål: 'Kan udlændinge stemme til folketingsvalg?' = Nej. (Til kommunal- og regionsvalg kan udlændinge stemme på visse betingelser.)",
   "trap_note_en": "Opposite question: 'Can foreigners vote in general elections?' = No. (Foreigners can vote in municipal and regional elections under certain conditions.)",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 82,
+    "lines": "61-66"
+   },
+   {
+    "page": 83,
+    "lines": "29-33"
+   }
+  ]
  },
  {
   "id": "his-besat-aar",
@@ -1493,7 +1661,13 @@
   "trap_note_da": "1940 = besat. 1945 = befriet (5. maj).",
   "trap_note_en": "1940 = occupied. 1945 = liberated (5 May).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 114,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "arb-akasse-dagpenge",
@@ -1563,7 +1737,17 @@
   "trap_note_da": "Omvendt spørgsmål: 'Hvad skal man være medlem af en a-kasse for at få?' = Arbejdsløshedsdagpenge (ikke kontanthjælp, ikke førtidspension).",
   "trap_note_en": "Reverse question: 'What must you be a member of an a-kasse to get?' = Unemployment benefit (not social assistance, not early pension).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 23,
+    "lines": "18-21"
+   },
+   {
+    "page": 28,
+    "lines": "60-63"
+   }
+  ]
  },
  {
   "id": "arb-overenskomst",
@@ -1633,7 +1817,17 @@
   "trap_note_da": "Overenskomster bestemmer fx arbejdstid og løn – IKKE skatter. Staten er ikke part.",
   "trap_note_en": "Collective agreements decide e.g. working hours and pay – NOT taxes. The state is not a party.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 22,
+    "lines": "35-37"
+   },
+   {
+    "page": 23,
+    "lines": "34-44"
+   }
+  ]
  },
  {
   "id": "dem-anke",
@@ -1708,10 +1902,16 @@
     ]
    }
   ],
-  "trap_note_da": "Rækkefølgen er: byret → landsret → Højesteret. Man går ét trin op ad gangen.",
-  "trap_note_en": "The order is: District Court → High Court → Supreme Court. You go up one step at a time.",
+  "trap_note_da": "Byret → landsret. En sag, der er anket fra byretten til landsretten, kan som regel IKKE ankes videre til Højesteret. Kun sager, der starter i landsretten, kan som regel ankes til Højesteret.",
+  "trap_note_en": "District Court → High Court. A case appealed from the District Court to the High Court can usually NOT be appealed further to the Supreme Court. Only cases that start in the High Court can usually be appealed to the Supreme Court.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 69,
+    "lines": "29-40"
+   }
+  ]
  },
  {
   "id": "dem-betinget",
@@ -1765,7 +1965,13 @@
   "trap_note_da": "Samme fakta – modsat spørgsmål! 'Skal man direkte i fængsel?' = Nej. 'Kan man undgå at komme i fængsel?' = Ja.",
   "trap_note_en": "Same fact – opposite question! 'Do you go straight to prison?' = No. 'Can you avoid going to prison?' = Yes.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 70,
+    "lines": "10-18"
+   }
+  ]
  },
  {
   "id": "vel-gift-18",
@@ -1827,7 +2033,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 41,
+    "lines": "63-64"
+   }
+  ]
  },
  {
   "id": "dem-folketingsvalg",
@@ -1897,13 +2109,19 @@
   "trap_note_da": "Folketing og kommune/region: hvert 4. år. Europa-Parlamentet: hvert 5. år.",
   "trap_note_en": "Folketing and municipality/region: every 4 years. European Parliament: every 5 years.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 82,
+    "lines": "59-61"
+   }
+  ]
  },
  {
   "id": "his-1864",
   "topic_id": "historie",
-  "fact_da": "I 1864 mistede Danmark Slesvig og Holsten efter krigen mod Preussen og Østrig.",
-  "fact_en": "In 1864 Denmark lost Slesvig and Holsten (Schleswig and Holstein) after the war against Prussia and Austria.",
+  "fact_da": "I 1864 mistede Danmark Slesvig og Holsten efter en krig mod Det Tyske Forbund.",
+  "fact_en": "In 1864 Denmark lost Slesvig and Holsten (Schleswig and Holstein) after a war against the German Confederation.",
   "question_ids": [
    "2017-11-q23",
    "2020-06-q20",
@@ -1967,7 +2185,13 @@
   "trap_note_da": "1864 = Slesvig. 1658 = Skåne. 1814 = Norge. OBS: Den officielle rettenøgle fra november 2017 siger fejlagtigt 'Skåne, Halland og Blekinge' – det rigtige svar er Slesvig og Holsten.",
   "trap_note_en": "1864 = Slesvig. 1658 = Skåne. 1814 = Norway. NOTE: The official answer key from November 2017 wrongly says 'Skåne, Halland and Blekinge' – the right answer is Slesvig and Holsten.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 113,
+    "lines": "9-11"
+   }
+  ]
  },
  {
   "id": "dem-grundlov-1849",
@@ -2037,7 +2261,17 @@
   "trap_note_da": "Spørgsmålet kan spørge om århundredet: 1849 = 1800-tallet. 1849 = første grundlov, 1953 = sidst ændret.",
   "trap_note_en": "The question may ask for the century: 1849 = the 1800s. 1849 = first Constitution, 1953 = last changed.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 62,
+    "lines": "45"
+   },
+   {
+    "page": 112,
+    "lines": "44"
+   }
+  ]
  },
  {
   "id": "dem-straffeattest",
@@ -2099,7 +2333,13 @@
   "trap_note_da": "Det er ikke noget, man viser politiet ved anholdelse, og ikke en ansøgning om statsborgerskab.",
   "trap_note_en": "It is not something you show the police when arrested, and not an application for citizenship.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 70,
+    "lines": "32-37"
+   }
+  ]
  },
  {
   "id": "kul-hca-levede",
@@ -2161,7 +2401,13 @@
   "trap_note_da": "Spørgsmålet kan bede om årstallene (1805-1875) eller århundredet (1800-tallet).",
   "trap_note_en": "The question may ask for the years (1805–1875) or the century (the 1800s).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 123,
+    "lines": "35"
+   }
+  ]
  },
  {
   "id": "udd-gymnasium-gratis",
@@ -2207,7 +2453,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 12,
+    "lines": "55"
+   }
+  ]
  },
  {
   "id": "geo-lillebaelt",
@@ -2253,7 +2505,13 @@
   "trap_note_da": "Lille-bælt = den lille, vestlige: Jylland–Fyn. Store-bælt er østligere: Fyn–Sjælland. Øresund: Sjælland–Sverige.",
   "trap_note_en": "Lille-bælt = the small, western one: Jutland–Funen. Store-bælt is further east: Funen–Zealand. Øresund: Zealand–Sweden.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "47"
+   }
+  ]
  },
  {
   "id": "arb-ferie",
@@ -2320,7 +2578,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 27,
+    "lines": "43-47"
+   }
+  ]
  },
  {
   "id": "arb-lego",
@@ -2371,7 +2635,13 @@
   "trap_note_da": "Svaret kan stå som 'Byggeklodser' eller 'Legetøj'. 'Insulin' er en fælde (det er Novo Nordisk).",
   "trap_note_en": "The answer may be 'Building bricks' or 'Toys'. 'Insulin' is a trap (that is Novo Nordisk).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 32,
+    "lines": "23-25"
+   }
+  ]
  },
  {
   "id": "udd-friskole-betale",
@@ -2422,7 +2692,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 6,
+    "lines": "13-15"
+   },
+   {
+    "page": 10,
+    "lines": "23-24"
+   }
+  ]
  },
  {
   "id": "vel-vaccine",
@@ -2489,7 +2769,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 55,
+    "lines": "33-38"
+   }
+  ]
  },
  {
   "id": "dem-valgdeltagelse",
@@ -2556,7 +2842,17 @@
   "trap_note_da": "Valgdeltagelsen er høj ved folketingsvalg – men lavere ved valg til Europa-Parlamentet.",
   "trap_note_en": "Turnout is high in general elections – but lower in European Parliament elections.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 82,
+    "lines": "45-54"
+   },
+   {
+    "page": 100,
+    "lines": "21-24"
+   }
+  ]
  },
  {
   "id": "geo-oresund",
@@ -2615,13 +2911,19 @@
   "trap_note_da": "Spørgsmålet kan sige 'København og Sverige' – det er stadig Øresund. Kattegat ligger nord for, mellem Jylland og Sverige.",
   "trap_note_en": "The question may say 'Copenhagen and Sweden' – it is still Øresund. Kattegat lies further north, between Jutland and Sweden.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "48-49"
+   }
+  ]
  },
  {
   "id": "udd-boernehave-vuggestue",
   "topic_id": "uddannelse",
-  "fact_da": "Børn på 0-3 år går i vuggestue. Børn på 3-6 år går i børnehave.",
-  "fact_en": "Children aged 0–3 go to a nursery (vuggestue). Children aged 3–6 go to a kindergarten (børnehave).",
+  "fact_da": "Vuggestue er for børn fra ca. 6 måneder til ca. 3 år. Børnehave er for børn fra ca. 3 til 6 år.",
+  "fact_en": "A nursery (vuggestue) is for children from about 6 months to about 3. A kindergarten (børnehave) is for children from about 3 to 6.",
   "question_ids": [
    "2022-11-q2",
    "2023-11-q25",
@@ -2682,7 +2984,17 @@
   "trap_note_da": "Læs alderen! 4 år = børnehave. 2 år = vuggestue.",
   "trap_note_en": "Read the age! Age 4 = kindergarten. Age 2 = nursery.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 18,
+    "lines": "38"
+   },
+   {
+    "page": 19,
+    "lines": "9"
+   }
+  ]
  },
  {
   "id": "ver-bosnien",
@@ -2741,7 +3053,13 @@
   "trap_note_da": "1990'erne + FN = Bosnien. 2003 + USA-ledet invasion = Irak.",
   "trap_note_en": "1990s + UN = Bosnia. 2003 + US-led invasion = Iraq.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 133,
+    "lines": "37-40"
+   }
+  ]
  },
  {
   "id": "geo-storebaelt",
@@ -2792,7 +3110,13 @@
   "trap_note_da": "Rækkefølgen kan være 'Fyn og Sjælland' eller 'Sjælland og Fyn' – svaret er det samme: Storebælt.",
   "trap_note_en": "The order may be 'Funen and Zealand' or 'Zealand and Funen' – the answer is the same: Storebælt.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "47-48"
+   }
+  ]
  },
  {
   "id": "kul-grimme-aelling",
@@ -2851,7 +3175,13 @@
   "trap_note_da": "Ikke Karen Blixen og ikke Benny Andersen (to andre forfattere).",
   "trap_note_en": "Not Karen Blixen and not Benny Andersen (two other writers).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 123,
+    "lines": "38-40"
+   }
+  ]
  },
  {
   "id": "tra-sankthans",
@@ -2910,7 +3240,13 @@
   "trap_note_da": "Bål = sankthans. Udklædning og 'slå katten af tønden' = fastelavn.",
   "trap_note_en": "Bonfire = Sankthans. Dressing up and 'hitting the cat out of the barrel' = Fastelavn.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 129,
+    "lines": "58-66"
+   }
+  ]
  },
  {
   "id": "geo-aarhus",
@@ -2977,7 +3313,13 @@
   "trap_note_da": "Rækkefølgen: 1 København, 2 Aarhus, 3 Odense, 4 Aalborg, 5 Esbjerg. Aarhus er større end Odense og Aalborg.",
   "trap_note_en": "The order: 1 Copenhagen, 2 Aarhus, 3 Odense, 4 Aalborg, 5 Esbjerg. Aarhus is bigger than Odense and Aalborg.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "43-44"
+   }
+  ]
  },
  {
   "id": "vel-tandlaege",
@@ -3036,7 +3378,17 @@
   "trap_note_da": "Tre varianter: 'Hvad er IKKE gratis for voksne?' = tandlæge. 'Skal personer over 21 betale en del hos tandlægen?' = Ja. 'Er tandlæge gratis under 20 år?' = Ja.",
   "trap_note_en": "Three variants: 'What is NOT free for adults?' = the dentist. 'Do people over 21 pay part at the dentist?' = Yes. 'Is the dentist free under 20?' = Yes.",
   "current_note_da": "Gratis tandpleje er udvidet: per 2026 er den gratis, til man fylder 22.",
-  "current_note_en": "Free dental care has been extended: per 2026 it is free until you turn 22."
+  "current_note_en": "Free dental care has been extended: per 2026 it is free until you turn 22.",
+  "book": [
+   {
+    "page": 55,
+    "lines": "9-20"
+   },
+   {
+    "page": 53,
+    "lines": "10-13"
+   }
+  ]
  },
  {
   "id": "dem-borgmester",
@@ -3079,7 +3431,13 @@
   "trap_note_da": "Kommunaldirektøren er en ansat embedsmand – ikke en politiker.",
   "trap_note_en": "The municipal chief executive is an employed civil servant – not a politician.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 79,
+    "lines": "10-12"
+   }
+  ]
  },
  {
   "id": "arb-gravid",
@@ -3122,7 +3480,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 28,
+    "lines": "43-44"
+   }
+  ]
  },
  {
   "id": "dem-regioner-5",
@@ -3173,7 +3537,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 80,
+    "lines": "9"
+   },
+   {
+    "page": 83,
+    "lines": "47"
+   }
+  ]
  },
  {
   "id": "vel-myndig-18",
@@ -3232,7 +3606,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 45,
+    "lines": "18-19"
+   }
+  ]
  },
  {
   "id": "ver-fn-1945",
@@ -3283,7 +3663,17 @@
   "trap_note_da": "1945 = FN. 1949 = NATO.",
   "trap_note_en": "1945 = the UN. 1949 = NATO.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 101,
+    "lines": "9-10"
+   },
+   {
+    "page": 133,
+    "lines": "6"
+   }
+  ]
  },
  {
   "id": "ver-nato-medlem",
@@ -3326,7 +3716,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 133,
+    "lines": "6-11"
+   }
+  ]
  },
  {
   "id": "ver-vaernepligt",
@@ -3385,7 +3781,13 @@
   "trap_note_da": "Det handler ikke om familie eller skat.",
   "trap_note_en": "It is not about family or tax.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 89,
+    "lines": "36-39"
+   }
+  ]
  },
  {
   "id": "dem-1915",
@@ -3444,7 +3846,17 @@
   "trap_note_da": "1915 handler om stemmeret – ikke om abort eller skilsmisse.",
   "trap_note_en": "1915 is about the right to vote – not about abortion or divorce.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 59,
+    "lines": "37-43"
+   },
+   {
+    "page": 63,
+    "lines": "19-21"
+   }
+  ]
  },
  {
   "id": "kon-nytaarstale",
@@ -3487,7 +3899,17 @@
   "trap_note_da": "31. december = monarken (i dag Kongen). 1. januar = statsministeren. Står der 'Dronningen' som mulighed, er det det rigtige svar i den gamle prøve.",
   "trap_note_en": "31 December = the monarch (today the King). 1 January = the prime minister. If 'the Queen' is an option, it is the right answer in the old exam.",
   "current_note_da": "Per 2026 er Frederik 10. konge (siden 14. januar 2024). Ældre prøver siger 'Dronningen' – i dag er svaret 'Kongen'.",
-  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'."
+  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'.",
+  "book": [
+   {
+    "page": 65,
+    "lines": "39-41"
+   },
+   {
+    "page": 130,
+    "lines": "32-42"
+   }
+  ]
  },
  {
   "id": "tra-fastelavn",
@@ -3554,7 +3976,13 @@
   "trap_note_da": "Ikke Halloween, ikke sankthans, ikke pinse.",
   "trap_note_en": "Not Halloween, not Sankthans, not Whitsun.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 128,
+    "lines": "27-43"
+   }
+  ]
  },
  {
   "id": "kon-arv",
@@ -3605,7 +4033,17 @@
   "trap_note_da": "Ingen vælger kongen – hverken Folketinget, regeringen eller en folkeafstemning.",
   "trap_note_en": "Nobody elects the king – not the Folketing, the government or a referendum.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 65,
+    "lines": "12-20"
+   },
+   {
+    "page": 111,
+    "lines": "43-46"
+   }
+  ]
  },
  {
   "id": "dem-doemmende",
@@ -3648,7 +4086,13 @@
   "trap_note_da": "Magtens tredeling: lovgivende = Folketinget og regeringen, udøvende = regeringen, dømmende = domstolene.",
   "trap_note_en": "Separation of powers: legislative = the Folketing and the government, executive = the government, judicial = the courts.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 66,
+    "lines": "34-36"
+   }
+  ]
  },
  {
   "id": "udd-su-18",
@@ -3707,7 +4151,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 45,
+    "lines": "18-21"
+   }
+  ]
  },
  {
   "id": "arb-fagforening-pris",
@@ -3758,7 +4208,13 @@
   "trap_note_da": "Svaret er Nej, også når der står 'normalt'.",
   "trap_note_en": "The answer is No, also when it says 'normally'.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 24,
+    "lines": "57-58"
+   }
+  ]
  },
  {
   "id": "arb-samarbejdsudvalg",
@@ -3817,7 +4273,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 27,
+    "lines": "63"
+   },
+   {
+    "page": 28,
+    "lines": "10"
+   }
+  ]
  },
  {
   "id": "geo-esbjerg",
@@ -3865,7 +4331,13 @@
   "trap_note_da": "Esbjerg er større end Thisted og Hjørring – men mindre end Aalborg.",
   "trap_note_en": "Esbjerg is bigger than Thisted and Hjørring – but smaller than Aalborg.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "46-47"
+   }
+  ]
  },
  {
   "id": "geo-sydligste",
@@ -3913,7 +4385,13 @@
   "trap_note_da": "Spørgsmålet kan også være: 'Hvad er Gedser Odde?' – svar: Danmarks sydligste punkt.",
   "trap_note_en": "The question can also be: 'What is Gedser Odde?' – answer: Denmark's southernmost point.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "65-66"
+   }
+  ]
  },
  {
   "id": "his-besat-krig",
@@ -3953,13 +4431,19 @@
   "trap_note_da": "Danmark var neutralt og IKKE besat under 1. verdenskrig.",
   "trap_note_en": "Denmark was neutral and NOT occupied during the First World War.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 114,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "his-tyrkiet",
   "topic_id": "historie",
-  "fact_da": "I slutningen af 1960'erne kom der mange indvandrere (gæstearbejdere) fra Tyrkiet.",
-  "fact_en": "At the end of the 1960s many immigrants (guest workers) came from Turkey.",
+  "fact_da": "Fra 1960'erne blev der hentet arbejdskraft i udlandet (gæstearbejdere). De fleste kom fra Tyrkiet, ex-Jugoslavien eller Pakistan.",
+  "fact_en": "From the 1960s labour was brought in from abroad (guest workers). Most came from Turkey, former Yugoslavia or Pakistan.",
   "question_ids": [
    "2024-05-q6",
    "2025-05-q13",
@@ -3993,7 +4477,13 @@
   "trap_note_da": "Ikke Syrien (flygtninge kom især efter 2011) og ikke Rumænien.",
   "trap_note_en": "Not Syria (refugees came mainly after 2011) and not Romania.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 117,
+    "lines": "29-35"
+   }
+  ]
  },
  {
   "id": "kul-druk",
@@ -4033,7 +4523,13 @@
   "trap_note_da": "'Hævnen' er Susanne Biers Oscar-film (2011) – ikke Vinterbergs.",
   "trap_note_en": "'Hævnen' (In a Better World) is Susanne Bier's Oscar film (2011) – not Vinterberg's.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 125,
+    "lines": "9-11"
+   }
+  ]
  },
  {
   "id": "tra-folkekirke-flertal",
@@ -4081,7 +4577,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 93,
+    "lines": "43"
+   }
+  ]
  },
  {
   "id": "kul-yahya-hassan",
@@ -4129,7 +4631,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 126,
+    "lines": "25-28"
+   }
+  ]
  },
  {
   "id": "ver-nato-1949",
@@ -4185,7 +4693,17 @@
   "trap_note_da": "1945 = FN. 1949 = NATO. 1973 = EF (i dag EU).",
   "trap_note_en": "1945 = the UN. 1949 = NATO. 1973 = the EC (today the EU).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 116,
+    "lines": "17-18"
+   },
+   {
+    "page": 133,
+    "lines": "10"
+   }
+  ]
  },
  {
   "id": "dem-kommunalvalg",
@@ -4233,7 +4751,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 77,
+    "lines": "24-27"
+   },
+   {
+    "page": 83,
+    "lines": "25"
+   }
+  ]
  },
  {
   "id": "dem-lovgivende",
@@ -4281,13 +4809,19 @@
   "trap_note_da": "Domstolene laver IKKE love – de dømmer efter lovene. 'Hvem laver lovene?' er samme spørgsmål.",
   "trap_note_en": "The courts do NOT make laws – they judge according to the laws. 'Who makes the laws?' is the same question.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 66,
+    "lines": "12-18"
+   }
+  ]
  },
  {
   "id": "dem-kvinder-folketing",
   "topic_id": "demokrati",
-  "fact_da": "Ca. 45 % af Folketingets medlemmer var kvinder efter valget i 2022 (i 2018–2020 ca. 40 %).",
-  "fact_en": "About 45% of the members of the Folketing were women after the 2022 election (about 40% in 2018–2020).",
+  "fact_da": "Efter valget i 2026 er 48-49 % af Folketingets medlemmer kvinder (86 af 179). Prøverne sagde ca. 40 % (2018-2020) og ca. 45 % (2024).",
+  "fact_en": "After the 2026 election 48–49% of the members of the Folketing are women (86 of 179). The exams said about 40% (2018–2020) and about 45% (2024).",
   "question_ids": [
    "2018-11-q12",
    "2020-11-q10",
@@ -4303,8 +4837,8 @@
   "frequent": false,
   "canonical_question_da": "Hvor stor en andel af Folketingets medlemmer er kvinder?",
   "canonical_question_en": "What share of the members of the Folketing are women?",
-  "answer_da": "Ca. 40-45 %",
-  "answer_en": "About 40–45%",
+  "answer_da": "Ca. 40-45 % (prøvernes svar) – i dag 48-49 %",
+  "answer_en": "About 40–45% (the exam answers) – today 48–49%",
   "variants": [
    {
     "question_da": "Hvor mange af medlemmerne af Folketinget er kvinder?",
@@ -4334,10 +4868,20 @@
     ]
    }
   ],
-  "trap_note_da": "Vælg det tal, der ligger tættest på 40-45 %. Ældre prøver: 'ca. 40 %'. Prøven 2024: 'cirka 45 procent'.",
-  "trap_note_en": "Pick the figure closest to 40–45%. Older exams: 'about 40%'. The 2024 exam: 'about 45 per cent'.",
-  "current_note_da": "Tallet ændrer sig ved hvert valg. Der var folketingsvalg 24. marts 2026. Ingen af prøvens forkerte svar (20 %, 25 %, 35 %, 60 %) er tæt på.",
-  "current_note_en": "The figure changes with each election. There was a general election on 24 March 2026. None of the exam's wrong answers (20%, 25%, 35%, 60%) is close."
+  "trap_note_da": "Vælg det tal, der ligger tættest på 40-50 %. Ældre prøver: 'ca. 40 %'. Prøven 2024: 'cirka 45 procent'. I dag: 48-49 %.",
+  "trap_note_en": "Pick the figure closest to 40–50%. Older exams: 'about 40%'. The 2024 exam: 'about 45 per cent'. Today: 48–49%.",
+  "current_note_da": "Læremateriale 2026: 86 af 179 medlemmer (48 %) er kvinder, og efter valget i 2026 er 49 % af de valgte kvinder. Ingen af prøvens forkerte svar (20 %, 25 %, 35 %, 60 %) er tæt på.",
+  "current_note_en": "Book 2026: 86 of 179 members (48%) are women, and after the 2026 election 49% of those elected are women. None of the exam's wrong answers (20%, 25%, 35%, 60%) is close.",
+  "book": [
+   {
+    "page": 59,
+    "lines": "45-46"
+   },
+   {
+    "page": 83,
+    "lines": "14-20"
+   }
+  ]
  },
  {
   "id": "dem-regionerne-sygehuse",
@@ -4385,7 +4929,17 @@
   "trap_note_da": "Sygehuse = regionerne. Børnehaver = kommunerne. Bland dem ikke sammen.",
   "trap_note_en": "Hospitals = the regions. Kindergartens = the municipalities. Don't mix them up.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 80,
+    "lines": "25-27"
+   },
+   {
+    "page": 54,
+    "lines": "19-20"
+   }
+  ]
  },
  {
   "id": "kul-kroeyer",
@@ -4425,7 +4979,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 123,
+    "lines": "53-55"
+   }
+  ]
  },
  {
   "id": "vel-slaa-boern",
@@ -4465,7 +5025,17 @@
   "trap_note_da": "Pas på: spørgsmålet er 'Er det FORBUDT?' – svaret er Ja.",
   "trap_note_en": "Careful: the question is 'Is it FORBIDDEN?' – the answer is Yes.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 44,
+    "lines": "41"
+   },
+   {
+    "page": 118,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "his-besat-land",
@@ -4505,7 +5075,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 114,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "kon-rolle",
@@ -4545,7 +5121,17 @@
   "trap_note_da": "Monarken holder IKKE åbningstalen i Folketinget i oktober – det gør statsministeren. Monarken repræsenterer ikke regeringen i EU.",
   "trap_note_en": "The monarch does NOT give the opening speech in the Folketing in October – the prime minister does. The monarch does not represent the government in the EU.",
   "current_note_da": "Per 2026 er Frederik 10. konge (siden 14. januar 2024). Ældre prøver siger 'Dronningen' – i dag er svaret 'Kongen'.",
-  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'."
+  "current_note_en": "Per 2026 Frederik 10. is king (since 14 January 2024). Older exams say 'the Queen' – today the answer is 'the King'.",
+  "book": [
+   {
+    "page": 65,
+    "lines": "22-26"
+   },
+   {
+    "page": 66,
+    "lines": "21-25"
+   }
+  ]
  },
  {
   "id": "vel-barsel-stoette",
@@ -4601,7 +5187,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 44,
+    "lines": "6-13"
+   }
+  ]
  },
  {
   "id": "arb-deltid",
@@ -4657,7 +5249,13 @@
   "trap_note_da": "Begge spørgsmål har svaret Nej: 'Har medarbejderen altid krav på deltid?' = Nej. 'Kan arbejdsgiveren forlange deltid?' = Nej.",
   "trap_note_en": "Both questions have the answer No: 'Does the employee always have a right to part-time?' = No. 'Can the employer demand part-time?' = No.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 27,
+    "lines": "34-38"
+   }
+  ]
  },
  {
   "id": "dem-parti",
@@ -4705,7 +5303,17 @@
   "trap_note_da": "Man kan stille op og sidde i Folketinget uden for partierne (løsgænger).",
   "trap_note_en": "You can stand for election and sit in the Folketing without a party (as an independent).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 85,
+    "lines": "23-25"
+   },
+   {
+    "page": 85,
+    "lines": "55-59"
+   }
+  ]
  },
  {
   "id": "his-foerste-kvindelige-sm-aar",
@@ -4745,13 +5353,19 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 59,
+    "lines": "54-55"
+   }
+  ]
  },
  {
   "id": "vel-faedreorlov",
   "topic_id": "velfaerd",
-  "fact_da": "Fædre har ret til orlov. Faren har ret til 2 uger lige efter fødslen, og siden 2022 har hver forælder 11 øremærkede uger.",
-  "fact_en": "Fathers have the right to leave. The father has the right to 2 weeks just after the birth, and since 2022 each parent has 11 earmarked weeks.",
+  "fact_da": "Fædre har ret til orlov: barnets far har også ret til at gå på barsel. (Prøven fra 2017: 2 uger lige efter fødslen. Siden 2022 har hver forælder 11 øremærkede uger.)",
+  "fact_en": "Fathers have the right to leave: the child's father also has the right to parental leave. (The 2017 exam: 2 weeks just after the birth. Since 2022 each parent has 11 earmarked weeks.)",
   "question_ids": [
    "2017-06-q25",
    "2017-11-q19",
@@ -4801,7 +5415,15 @@
   "trap_note_da": "Prøven 2017 spurgte 'Hvor mange ugers fædreorlov efter fødslen?' – svaret var 2 uger (de 2 uger omkring fødslen).",
   "trap_note_en": "The 2017 exam asked 'How many weeks of paternity leave after the birth?' – the answer was 2 weeks (the 2 weeks around the birth).",
   "current_note_da": "Siden august 2022 har hver forælder 11 øremærkede ugers orlov. Faren har stadig ret til 2 uger omkring fødslen.",
-  "current_note_en": "Since August 2022 each parent has 11 earmarked weeks of leave. The father still has the right to 2 weeks around the birth."
+  "current_note_en": "Since August 2022 each parent has 11 earmarked weeks of leave. The father still has the right to 2 weeks around the birth.",
+  "nobook_note_da": "'2 uger' og '11 øremærkede uger' står ikke i læremateriale 2026. Bogen siger kun, at barnets far også har ret til at gå på barsel.",
+  "nobook_note_en": "'2 weeks' and '11 earmarked weeks' are not in book 2026. The book only says that the child's father also has the right to parental leave.",
+  "book": [
+   {
+    "page": 44,
+    "lines": "6-10"
+   }
+  ]
  },
  {
   "id": "tra-pinse",
@@ -4857,7 +5479,13 @@
   "trap_note_da": "Grundlovsdag og nytår er ikke kristne helligdage. Store Bededag er afskaffet som helligdag fra 2024.",
   "trap_note_en": "Constitution Day and New Year are not Christian holy days. Store Bededag was abolished as a public holiday from 2024.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 129,
+    "lines": "20-25"
+   }
+  ]
  },
  {
   "id": "ver-mep-antal",
@@ -4905,7 +5533,17 @@
   "trap_note_da": "Hvis valgmulighederne er 13, 23 og 33, så vælg 13 (det gamle tal). Hvis 15 står der, så vælg 15.",
   "trap_note_en": "If the options are 13, 23 and 33, choose 13 (the old figure). If 15 is offered, choose 15.",
   "current_note_da": "Tallet har ændret sig: 13 (2009-2020), 14 (2020-2024 efter Brexit), 15 (siden 2024).",
-  "current_note_en": "The number has changed: 13 (2009–2020), 14 (2020–2024 after Brexit), 15 (since 2024)."
+  "current_note_en": "The number has changed: 13 (2009–2020), 14 (2020–2024 after Brexit), 15 (since 2024).",
+  "book": [
+   {
+    "page": 83,
+    "lines": "61-62"
+   },
+   {
+    "page": 100,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "geo-landbrug",
@@ -4950,7 +5588,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 146,
+    "lines": "9-10"
+   }
+  ]
  },
  {
   "id": "his-jernbaner",
@@ -4995,7 +5639,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 113,
+    "lines": "27-28"
+   }
+  ]
  },
  {
   "id": "his-venstre-1870",
@@ -5032,7 +5682,13 @@
   "trap_note_da": "Dansk Folkeparti (1995) og SF (1959) er meget yngre.",
   "trap_note_en": "The Danish People's Party (1995) and SF (1959) are much younger.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 113,
+    "lines": "41-42"
+   }
+  ]
  },
  {
   "id": "kon-konge",
@@ -5069,7 +5725,13 @@
   "trap_note_da": "Husk tallet 10. Frederik 7. underskrev grundloven i 1849 – han er en distraktor.",
   "trap_note_en": "Remember the number 10. Frederik 7. signed the Constitution in 1849 – he is a distractor.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 65,
+    "lines": "12-19"
+   }
+  ]
  },
  {
   "id": "vel-sundhed-skat",
@@ -5114,7 +5776,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 53,
+    "lines": "6-11"
+   },
+   {
+    "page": 35,
+    "lines": "63-64"
+   }
+  ]
  },
  {
   "id": "dem-domstole-uafhaengige",
@@ -5159,7 +5831,17 @@
   "trap_note_da": "Det kan stå 'politikerne' eller 'regeringen' – svaret er Nej begge gange.",
   "trap_note_en": "It may say 'politicians' or 'the government' – the answer is No both times.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 66,
+    "lines": "34-40"
+   },
+   {
+    "page": 69,
+    "lines": "22-27"
+   }
+  ]
  },
  {
   "id": "dem-folkeafstemning-grundlov",
@@ -5196,7 +5878,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 63,
+    "lines": "6-13"
+   }
+  ]
  },
  {
   "id": "dem-moms",
@@ -5233,7 +5921,13 @@
   "trap_note_da": "Skat af indkomst er IKKE moms. Moms er 25 % i Danmark.",
   "trap_note_en": "Tax on income is NOT moms. Moms is 25% in Denmark.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 39,
+    "lines": "28-31"
+   }
+  ]
  },
  {
   "id": "his-1814-norge",
@@ -5270,7 +5964,13 @@
   "trap_note_da": "Ikke Sverige og ikke Finland.",
   "trap_note_en": "Not Sweden and not Finland.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 110,
+    "lines": "30-34"
+   }
+  ]
  },
  {
   "id": "kul-aqua",
@@ -5315,7 +6015,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 125,
+    "lines": "36-37"
+   }
+  ]
  },
  {
   "id": "udd-efterskole",
@@ -5360,7 +6066,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 10,
+    "lines": "30-31"
+   }
+  ]
  },
  {
   "id": "arb-landmaend",
@@ -5397,7 +6109,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 31,
+    "lines": "28-33"
+   }
+  ]
  },
  {
   "id": "dem-1849-ikke-kvinder",
@@ -5442,7 +6160,21 @@
   "trap_note_da": "Kvinder fik stemmeret i 1915, ikke i 1849. Også 'alle mænd og kvinder over 18 år i 1849?' = Nej.",
   "trap_note_en": "Women got the vote in 1915, not in 1849. 'All men and women over 18 in 1849?' is also No.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 59,
+    "lines": "33-35"
+   },
+   {
+    "page": 112,
+    "lines": "49-51"
+   },
+   {
+    "page": 63,
+    "lines": "21-23"
+   }
+  ]
  },
  {
   "id": "dem-regering",
@@ -5462,8 +6194,8 @@
   "frequent": false,
   "canonical_question_da": "Hvilket parti har været med i regeringen siden 2022?",
   "canonical_question_en": "Which party has been in the government since 2022?",
-  "answer_da": "Venstre (SVM-regeringen 2022–2026). Konservative var IKKE med.",
-  "answer_en": "Venstre (the SVM government 2022–2026). The Conservatives were NOT in it.",
+  "answer_da": "Venstre (SVM-regeringen 2022–2026, prøvernes svar). I dag er Venstre ikke med. Konservative var IKKE med.",
+  "answer_en": "Venstre (the SVM government 2022–2026, the exam answer). Venstre is not in it today. The Conservatives were NOT in it.",
   "variants": [
    {
     "question_da": "Hvilket af følgende partier har været med i regeringen siden 2022?",
@@ -5487,7 +6219,17 @@
   "trap_note_da": "Prøverne fra 2024-2025 spørger om SVM-regeringen: Venstre = Ja, Konservative = Nej, Dansk Folkeparti = Nej.",
   "trap_note_en": "The 2024–2025 exams ask about the SVM government: Venstre = Yes, the Conservatives = No, the Danish People's Party = No.",
   "current_note_da": "Efter valget 24. marts 2026 dannede Mette Frederiksen en ny regering den 3. juni 2026: Socialdemokratiet, SF, Moderaterne og Radikale Venstre. Venstre er ikke længere med. Konservative er stadig ikke med. Tjek stm.dk før prøven.",
-  "current_note_en": "After the election on 24 March 2026, Mette Frederiksen formed a new government on 3 June 2026: the Social Democrats, SF, the Moderates and the Social Liberals. Venstre is no longer in it. The Conservatives are still not in it. Check stm.dk before the exam."
+  "current_note_en": "After the election on 24 March 2026, Mette Frederiksen formed a new government on 3 June 2026: the Social Democrats, SF, the Moderates and the Social Liberals. Venstre is no longer in it. The Conservatives are still not in it. Check stm.dk before the exam.",
+  "book": [
+   {
+    "page": 75,
+    "lines": "25-27"
+   },
+   {
+    "page": 75,
+    "lines": "36-45"
+   }
+  ]
  },
  {
   "id": "dem-stoerste-parti-2022",
@@ -5524,7 +6266,15 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "Socialdemokratiet blev også største parti ved valget 24. marts 2026.",
-  "current_note_en": "The Social Democrats were also the largest party in the election on 24 March 2026."
+  "current_note_en": "The Social Democrats were also the largest party in the election on 24 March 2026.",
+  "nobook_note_da": "Læremateriale 2026 nævner kun valget i 2026 (Socialdemokratiet fik flest stemmer), ikke valget i 2022.",
+  "nobook_note_en": "Book 2026 only mentions the 2026 election (the Social Democrats got the most votes), not the 2022 election.",
+  "book": [
+   {
+    "page": 85,
+    "lines": "27-29"
+   }
+  ]
  },
  {
   "id": "geo-aalborg",
@@ -5569,7 +6319,13 @@
   "trap_note_da": "Aalborg er større end Esbjerg og Randers.",
   "trap_note_en": "Aalborg is bigger than Esbjerg and Randers.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "45-46"
+   }
+  ]
  },
  {
   "id": "geo-grenen",
@@ -5614,7 +6370,13 @@
   "trap_note_da": "Nord = Grenen/Skagen. Syd = Gedser Odde på Falster.",
   "trap_note_en": "North = Grenen/Skagen. South = Gedser Odde on Falster.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "63-64"
+   }
+  ]
  },
  {
   "id": "his-befrielse",
@@ -5659,7 +6421,17 @@
   "trap_note_da": "5. maj = befrielsen. 5. juni = grundlovsdag. Genforeningen med Sønderjylland var i 1920.",
   "trap_note_en": "5 May = the liberation. 5 June = Constitution Day. The reunification with Southern Jutland was in 1920.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 114,
+    "lines": "30"
+   },
+   {
+    "page": 129,
+    "lines": "36-38"
+   }
+  ]
  },
  {
   "id": "kul-kierkegaard",
@@ -5704,7 +6476,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 123,
+    "lines": "43-44"
+   }
+  ]
  },
  {
   "id": "kul-grundtvig",
@@ -5741,7 +6519,13 @@
   "trap_note_da": "Højskole = Grundtvig. Kierkegaard = filosof. Holberg = forfatter. Krøyer = maler.",
   "trap_note_en": "Folk high school = Grundtvig. Kierkegaard = philosopher. Holberg = author. Krøyer = painter.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 50,
+    "lines": "33-40"
+   }
+  ]
  },
  {
   "id": "arb-vindenergi",
@@ -5786,7 +6570,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 144,
+    "lines": "54-57"
+   }
+  ]
  },
  {
   "id": "his-terror-2015",
@@ -5831,7 +6621,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 140,
+    "lines": "40-45"
+   }
+  ]
  },
  {
   "id": "vel-cigaretter-18",
@@ -5868,7 +6664,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 55,
+    "lines": "54"
+   },
+   {
+    "page": 44,
+    "lines": "46-47"
+   }
+  ]
  },
  {
   "id": "vel-samme-koen",
@@ -5913,7 +6719,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 41,
+    "lines": "57-59"
+   },
+   {
+    "page": 42,
+    "lines": "27-28"
+   }
+  ]
  },
  {
   "id": "dem-demonstration",
@@ -5958,7 +6774,17 @@
   "trap_note_da": "Ét ord ændrer svaret! 'underrette politiet' = Ja. 'politiet skal give tilladelse' = Nej.",
   "trap_note_en": "One word changes the answer! 'notify the police' = Yes. 'the police must give permission' = No.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 63,
+    "lines": "46-51"
+   },
+   {
+    "page": 87,
+    "lines": "21-23"
+   }
+  ]
  },
  {
   "id": "geo-odense",
@@ -6003,7 +6829,13 @@
   "trap_note_da": "Odense er den eneste af de 5 største byer, der ikke ligger i Jylland eller på Sjælland (København).",
   "trap_note_en": "Odense is the only one of the 5 largest cities that is not in Jutland or on Zealand (Copenhagen).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "44-45"
+   }
+  ]
  },
  {
   "id": "kul-blixen",
@@ -6040,7 +6872,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 124,
+    "lines": "21-30"
+   }
+  ]
  },
  {
   "id": "tra-paaske",
@@ -6085,7 +6923,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 129,
+    "lines": "10-11"
+   }
+  ]
  },
  {
   "id": "arb-fagforening-fyre",
@@ -6122,7 +6966,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 25,
+    "lines": "11-13"
+   },
+   {
+    "page": 28,
+    "lines": "46-48"
+   }
+  ]
  },
  {
   "id": "tra-begravet",
@@ -6159,7 +7013,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 94,
+    "lines": "26-27"
+   }
+  ]
  },
  {
   "id": "ver-fn-medlem",
@@ -6196,7 +7056,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 101,
+    "lines": "9-10"
+   }
+  ]
  },
  {
   "id": "tra-gift-kirke",
@@ -6241,13 +7107,19 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 94,
+    "lines": "25-26"
+   }
+  ]
  },
  {
   "id": "udd-skolestart",
   "topic_id": "uddannelse",
-  "fact_da": "Børn begynder normalt i skole (0. klasse), når de er 5-6 år.",
-  "fact_en": "Children normally start school (year 0) when they are 5–6.",
+  "fact_da": "Børn starter i børnehaveklassen (0. klasse), når de er omkring 6 år. Prøvens svar er '5-6 år'.",
+  "fact_en": "Children start the reception class (year 0) when they are about 6. The exam answer is '5–6 years'.",
   "question_ids": [
    "2018-11-q20",
    "2021-06-q18"
@@ -6286,7 +7158,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 6,
+    "lines": "29-31"
+   }
+  ]
  },
  {
   "id": "kul-arne-jacobsen",
@@ -6331,7 +7209,13 @@
   "trap_note_da": "Jørn Utzon tegnede operahuset i Sydney – han er en distraktor her.",
   "trap_note_en": "Jørn Utzon designed the Sydney Opera House – he is a distractor here.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 124,
+    "lines": "42-57"
+   }
+  ]
  },
  {
   "id": "kul-holberg",
@@ -6376,7 +7260,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 123,
+    "lines": "21-30"
+   }
+  ]
  },
  {
   "id": "vel-laege",
@@ -6421,7 +7311,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 38,
+    "lines": "23-24"
+   },
+   {
+    "page": 53,
+    "lines": "45-46"
+   }
+  ]
  },
  {
   "id": "ver-ep-stemmeprocent",
@@ -6466,13 +7366,23 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 100,
+    "lines": "21-24"
+   },
+   {
+    "page": 82,
+    "lines": "45-54"
+   }
+  ]
  },
  {
   "id": "arb-akasse-procent",
   "topic_id": "arbejde",
-  "fact_da": "Ca. 70 % af lønmodtagerne er medlem af en a-kasse (prøvens svar).",
-  "fact_en": "About 70% of employees are members of an a-kasse (the exam answer).",
+  "fact_da": "Prøvens svar: ca. 70 % af lønmodtagerne er medlem af en a-kasse. Læremateriale 2026 siger kun, at de fleste er medlem af en a-kasse – og at 68 % er medlem af en fagforening.",
+  "fact_en": "The exam answer: about 70% of employees are members of an a-kasse. Book 2026 only says that most are members of an a-kasse – and that 68% are members of a trade union.",
   "question_ids": [
    "2017-11-q11",
    "2018-11-q19"
@@ -6503,7 +7413,19 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "nobook_note_da": "Tallet 70 % står ikke i læremateriale 2026. Forveksl det ikke med de 68 %, der er medlem af en fagforening.",
+  "nobook_note_en": "The 70% figure is not in book 2026. Do not confuse it with the 68% who are members of a trade union.",
+  "book": [
+   {
+    "page": 28,
+    "lines": "60-63"
+   },
+   {
+    "page": 24,
+    "lines": "60-63"
+   }
+  ]
  },
  {
   "id": "dem-anholdt-24t",
@@ -6548,7 +7470,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 64,
+    "lines": "22-25"
+   },
+   {
+    "page": 68,
+    "lines": "53-59"
+   }
+  ]
  },
  {
   "id": "dem-forfatning",
@@ -6585,7 +7517,13 @@
   "trap_note_da": "Kongeloven (1665) og Danske Lov (1683) er gamle love fra enevælden – ikke forfatningen i dag.",
   "trap_note_en": "Kongeloven (1665) and Danske Lov (1683) are old laws from the age of absolute monarchy – not today's constitution.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 62,
+    "lines": "29-30"
+   }
+  ]
  },
  {
   "id": "udd-folkeskole-flest",
@@ -6619,7 +7557,21 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 6,
+    "lines": "10"
+   },
+   {
+    "page": 10,
+    "lines": "9"
+   },
+   {
+    "page": 77,
+    "lines": "49-57"
+   }
+  ]
  },
  {
   "id": "ver-ep-valgt-af",
@@ -6653,13 +7605,19 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 100,
+    "lines": "14-19"
+   }
+  ]
  },
  {
   "id": "ver-tyskland-handel",
   "topic_id": "verden",
-  "fact_da": "Danmark handler mest med Tyskland (import og eksport).",
-  "fact_en": "Denmark trades most with Germany (imports and exports).",
+  "fact_da": "USA er Danmarks største handelspartner samlet (14,1 % af samhandlen i 2025), Tyskland er nr. 2 (12,7 %). Tyskland er det land, Danmark importerer mest fra; USA er det land, Danmark eksporterer mest til.",
+  "fact_en": "The USA is Denmark's largest trading partner overall (14.1% of trade in 2025), Germany is second (12.7%). Germany is the country Denmark imports most from; the USA is the country Denmark exports most to.",
   "question_ids": [
    "2026-06-q18"
   ],
@@ -6671,8 +7629,8 @@
   "frequent": false,
   "canonical_question_da": "Hvilket land har Danmark størst samhandel med?",
   "canonical_question_en": "Which country does Denmark trade most with?",
-  "answer_da": "Tyskland",
-  "answer_en": "Germany",
+  "answer_da": "Tyskland (prøvens svar 2026) – læremateriale 2026: USA samlet, Tyskland størst for import",
+  "answer_en": "Germany (the 2026 exam answer) – book 2026: the USA overall, Germany largest for imports",
   "variants": [
    {
     "question_da": "Hvilket af følgende lande har Danmark størst samhandel (import og eksport) med?",
@@ -6684,10 +7642,16 @@
     ]
    }
   ],
-  "trap_note_da": "",
-  "trap_note_en": "",
-  "current_note_da": "",
-  "current_note_en": ""
+  "trap_note_da": "Står USA som mulighed, er USA rigtigt (samlet handel 2025). Prøven fra juni 2026 havde kun Kina, Tyskland og Storbritannien – dér er Tyskland rigtigt.",
+  "trap_note_en": "If the USA is an option, the USA is right (total trade 2025). The June 2026 exam only had China, Germany and the UK – there Germany is right.",
+  "current_note_da": "Læremateriale 2026: I 2025 var USA største handelspartner (14,1 %) foran Tyskland (12,7 %). Tyskland er stadig størst for import.",
+  "current_note_en": "Book 2026: In 2025 the USA was the largest trading partner (14.1%) ahead of Germany (12.7%). Germany is still largest for imports.",
+  "book": [
+   {
+    "page": 32,
+    "lines": "53-61"
+   }
+  ]
  },
  {
   "id": "ver-vaernepligt-koen",
@@ -6721,13 +7685,23 @@
   "trap_note_da": "Ældre materialer siger 'kun mænd' – det er ændret. Svaret er nu begge køn.",
   "trap_note_en": "Older material says 'only men' – that has changed. The answer is now both sexes.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 90,
+    "lines": "31-32"
+   },
+   {
+    "page": 90,
+    "lines": "55-56"
+   }
+  ]
  },
  {
   "id": "arb-beskaeftigelse",
   "topic_id": "arbejde",
-  "fact_da": "Ca. tre ud af fire danskere mellem 15 og 64 år har et arbejde.",
-  "fact_en": "About three out of four Danes aged 15 to 64 have a job.",
+  "fact_da": "Ca. 73 % af borgerne mellem 16 og 66 år har et lønmodtagerarbejde – altså ca. tre ud af fire.",
+  "fact_en": "About 73% of residents aged 16 to 66 have a job as an employee – so about three out of four.",
   "question_ids": [
    "2025-11-q3"
   ],
@@ -6754,8 +7728,18 @@
   ],
   "trap_note_da": "",
   "trap_note_en": "",
-  "current_note_da": "",
-  "current_note_en": ""
+  "current_note_da": "Læremateriale 2026 bruger aldersgruppen 16-66 år (ca. 73 %). Prøven spurgte om 15-64-årige – svaret er stadig 'cirka tre ud af fire'.",
+  "current_note_en": "Book 2026 uses the age group 16–66 (about 73%). The exam asked about 15–64-year-olds – the answer is still 'about three out of four'.",
+  "book": [
+   {
+    "page": 22,
+    "lines": "58-59"
+   },
+   {
+    "page": 120,
+    "lines": "28-30"
+   }
+  ]
  },
  {
   "id": "his-aeldste-parti",
@@ -6789,7 +7773,17 @@
   "trap_note_da": "Dansk Folkeparti blev dannet i 1995 – det er et ungt parti.",
   "trap_note_en": "The Danish People's Party was founded in 1995 – it is a young party.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 113,
+    "lines": "40-44"
+   },
+   {
+    "page": 119,
+    "lines": "37-39"
+   }
+  ]
  },
  {
   "id": "kon-kronprins",
@@ -6823,7 +7817,17 @@
   "trap_note_da": "Frederik er kongen, ikke kronprinsen (han var kronprins før 2024).",
   "trap_note_en": "Frederik is the king, not the crown prince (he was crown prince before 2024).",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 65,
+    "lines": "19"
+   },
+   {
+    "page": 65,
+    "lines": "36"
+   }
+  ]
  },
  {
   "id": "vel-abort",
@@ -6857,13 +7861,23 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "Ældre prøver nævner '12. graviditetsuge' som forkert svar til 1915-spørgsmålet. I dag er grænsen 18 uger.",
-  "current_note_en": "Older exams mention 'week 12 of pregnancy' as a wrong answer to the 1915 question. Today the limit is 18 weeks."
+  "current_note_en": "Older exams mention 'week 12 of pregnancy' as a wrong answer to the 1915 question. Today the limit is 18 weeks.",
+  "book": [
+   {
+    "page": 44,
+    "lines": "18-19"
+   },
+   {
+    "page": 118,
+    "lines": "25-28"
+   }
+  ]
  },
  {
   "id": "vel-koerekort-17",
   "topic_id": "velfaerd",
-  "fact_da": "Man kan få kørekort til almindelig bil fra 17 år (indtil 18 år skal man køre med en ledsager).",
-  "fact_en": "You can get a driving licence for an ordinary car from 17 (until 18 you must drive with an accompanying adult).",
+  "fact_da": "Man kan få kørekort til almindelig bil, når man fylder 17 år. 17-årige må køre alene mellem kl. 5 og kl. 20. Fra kl. 20 til kl. 5 skal de have en ledsager over 24 år, der har haft kørekort i mindst fem år. Fra 18 år må man køre alene hele døgnet.",
+  "fact_en": "You can get a driving licence for an ordinary car when you turn 17. 17-year-olds may drive alone between 5 am and 8 pm. From 8 pm to 5 am they must have an accompanying adult over 24 who has held a licence for at least five years. From 18 you may drive alone at any time.",
   "question_ids": [
    "2025-11-q2"
   ],
@@ -6891,7 +7905,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 45,
+    "lines": "29-33"
+   }
+  ]
  },
  {
   "id": "vel-levetid",
@@ -6925,7 +7945,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 120,
+    "lines": "34-36"
+   }
+  ]
  },
  {
   "id": "ver-bistand-afrika",
@@ -6959,7 +7985,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 103,
+    "lines": "14-20"
+   }
+  ]
  },
  {
   "id": "ver-folkeafstemning-eu",
@@ -6993,7 +8025,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 75,
+    "lines": "53-55"
+   }
+  ]
  },
  {
   "id": "ver-vaernepligt-flere",
@@ -7027,7 +8065,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 91,
+    "lines": "18-19"
+   },
+   {
+    "page": 135,
+    "lines": "25-26"
+   }
+  ]
  },
  {
   "id": "dem-hemmelig-stemme",
@@ -7061,7 +8109,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 84,
+    "lines": "9-10"
+   },
+   {
+    "page": 62,
+    "lines": "13"
+   }
+  ]
  },
  {
   "id": "his-1658",
@@ -7095,7 +8153,13 @@
   "trap_note_da": "1658 = Skåne. 1864 = Slesvig.",
   "trap_note_en": "1658 = Skåne. 1864 = Slesvig.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 111,
+    "lines": "20-22"
+   }
+  ]
  },
  {
   "id": "his-marshall",
@@ -7129,7 +8193,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 116,
+    "lines": "28-31"
+   }
+  ]
  },
  {
   "id": "his-roedstroemper",
@@ -7163,7 +8233,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 118,
+    "lines": "23-25"
+   },
+   {
+    "page": 153,
+    "lines": "40-41"
+   }
+  ]
  },
  {
   "id": "kul-bier-vinterberg",
@@ -7197,7 +8277,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 125,
+    "lines": "9"
+   }
+  ]
  },
  {
   "id": "ver-irak",
@@ -7231,7 +8317,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 134,
+    "lines": "31-43"
+   }
+  ]
  },
  {
   "id": "his-1960erne",
@@ -7265,7 +8357,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 117,
+    "lines": "9-19"
+   }
+  ]
  },
  {
   "id": "his-s-regering-1929-82",
@@ -7299,7 +8397,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 118,
+    "lines": "58-61"
+   }
+  ]
  },
  {
   "id": "ver-nato-forsvar",
@@ -7333,7 +8437,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 133,
+    "lines": "6-12"
+   },
+   {
+    "page": 135,
+    "lines": "20-21"
+   }
+  ]
  },
  {
   "id": "geo-lillebaeltsbro",
@@ -7367,7 +8481,13 @@
   "trap_note_da": "Broen har samme navn som farvandet: Lillebæltsbroen = Fyn–Jylland, Storebæltsbroen = Fyn–Sjælland.",
   "trap_note_en": "The bridge has the same name as the water: Little Belt Bridge = Funen–Jutland, Great Belt Bridge = Funen–Zealand.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "57"
+   }
+  ]
  },
  {
   "id": "geo-indbyggere",
@@ -7401,7 +8521,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 106,
+    "lines": "36"
+   },
+   {
+    "page": 108,
+    "lines": "6-10"
+   }
+  ]
  },
  {
   "id": "udd-karakterer-8-klasse",
@@ -7435,7 +8565,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 8,
+    "lines": "39-41"
+   }
+  ]
  },
  {
   "id": "kon-thule",
@@ -7469,7 +8605,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 136,
+    "lines": "20-25"
+   }
+  ]
  },
  {
   "id": "arb-ligeloen",
@@ -7503,13 +8645,23 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 58,
+    "lines": "57"
+   },
+   {
+    "page": 118,
+    "lines": "30-32"
+   }
+  ]
  },
  {
   "id": "udd-boern-passes",
   "topic_id": "uddannelse",
-  "fact_da": "Næsten alle børn mellem 3 og 5 år bliver passet uden for hjemmet.",
-  "fact_en": "Almost all children aged 3 to 5 are looked after outside the home.",
+  "fact_da": "De fleste børn mellem 3 og 5 år bliver passet uden for hjemmet.",
+  "fact_en": "Most children aged 3 to 5 are looked after outside the home.",
   "question_ids": [
    "2019-11-q13"
   ],
@@ -7536,8 +8688,14 @@
   ],
   "trap_note_da": "",
   "trap_note_en": "",
-  "current_note_da": "",
-  "current_note_en": ""
+  "current_note_da": "Læremateriale 2026 siger 'de fleste'. Prøven fra 2019 havde svaret 'Næsten alle' – det er facit dér.",
+  "current_note_en": "Book 2026 says 'most'. The 2019 exam had the answer 'Almost all' – that is the key there.",
+  "book": [
+   {
+    "page": 18,
+    "lines": "12-14"
+   }
+  ]
  },
  {
   "id": "udd-dagpleje",
@@ -7571,7 +8729,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 18,
+    "lines": "54-57"
+   }
+  ]
  },
  {
   "id": "udd-laege-universitet",
@@ -7605,7 +8769,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 15,
+    "lines": "25-27"
+   }
+  ]
  },
  {
   "id": "vel-boligstoette",
@@ -7639,7 +8809,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 38,
+    "lines": "9-11"
+   }
+  ]
  },
  {
   "id": "vel-foraeldremyndighed",
@@ -7673,7 +8849,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 42,
+    "lines": "30-31"
+   }
+  ]
  },
  {
   "id": "ver-ep-valg-5-aar",
@@ -7707,7 +8889,17 @@
   "trap_note_da": "Europa-Parlamentet = 5 år. Folketinget og kommunerne = 4 år.",
   "trap_note_en": "European Parliament = 5 years. Folketing and municipalities = 4 years.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 83,
+    "lines": "57"
+   },
+   {
+    "page": 100,
+    "lines": "20"
+   }
+  ]
  },
  {
   "id": "geo-areal",
@@ -7741,13 +8933,19 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 105,
+    "lines": "36-37"
+   }
+  ]
  },
  {
   "id": "geo-indvandrere",
   "topic_id": "geografi",
-  "fact_da": "Ca. 16 procent af befolkningen er indvandrere og efterkommere (per 2026).",
-  "fact_en": "About 16 per cent of the population are immigrants and their descendants (per 2026).",
+  "fact_da": "Ca. 17 procent af befolkningen (ca. 1 million) er indvandrere eller efterkommere (læremateriale 2026).",
+  "fact_en": "About 17 per cent of the population (about 1 million) are immigrants or descendants (book 2026).",
   "question_ids": [
    "2018-11-q1"
   ],
@@ -7759,8 +8957,8 @@
   "frequent": false,
   "canonical_question_da": "Hvor stor en andel af befolkningen er indvandrere og efterkommere?",
   "canonical_question_en": "What share of the population are immigrants and descendants?",
-  "answer_da": "12-13 % (prøvens svar i 2018) – i dag ca. 16 %",
-  "answer_en": "12–13% (the 2018 exam answer) – today about 16%",
+  "answer_da": "12-13 % (prøvens svar i 2018) – i dag ca. 17 %",
+  "answer_en": "12–13% (the 2018 exam answer) – today about 17%",
   "variants": [
    {
     "question_da": "Hvor stor en andel af befolkningen i Danmark er indvandrere og efterkommere?",
@@ -7772,16 +8970,22 @@
     ]
    }
   ],
-  "trap_note_da": "Hvis valgmulighederne er 5-6 %, 12-13 % og 19-20 %, så vælg 12-13 % (det var svaret i 2018). Hvis der står ca. 16 %, så vælg det.",
-  "trap_note_en": "If the options are 5–6%, 12–13% and 19–20%, choose 12–13% (the answer in 2018). If about 16% is offered, choose that.",
-  "current_note_da": "Andelen er steget: i 2018 ca. 12-13 %, i dag ca. 16 %.",
-  "current_note_en": "The share has risen: about 12–13% in 2018, about 16% today."
+  "trap_note_da": "Hvis valgmulighederne er 5-6 %, 12-13 % og 19-20 %, så vælg 12-13 % (det var svaret i 2018). Hvis der står ca. 17 %, så vælg det.",
+  "trap_note_en": "If the options are 5–6%, 12–13% and 19–20%, choose 12–13% (the answer in 2018). If about 17% is offered, choose that.",
+  "current_note_da": "Andelen er steget: i 2018 ca. 12-13 %, i dag ca. 17 % (læremateriale 2026).",
+  "current_note_en": "The share has risen: about 12–13% in 2018, about 17% today (book 2026).",
+  "book": [
+   {
+    "page": 106,
+    "lines": "36-37"
+   }
+  ]
  },
  {
   "id": "geo-region-hovedstaden",
   "topic_id": "geografi",
-  "fact_da": "Region Hovedstaden er den største region med ca. 1,9 millioner indbyggere (per 2026).",
-  "fact_en": "The Capital Region is the largest region, with about 1.9 million inhabitants (per 2026).",
+  "fact_da": "Region Hovedstaden er den største region. Prøven i 2018 sagde ca. 1,7 millioner indbyggere; i dag er det ca. 1,9 millioner.",
+  "fact_en": "The Capital Region is the largest region. The 2018 exam said about 1.7 million inhabitants; today it is about 1.9 million.",
   "question_ids": [
    "2018-11-q2"
   ],
@@ -7809,7 +9013,23 @@
   "trap_note_da": "Vælg det tal, der er tættest på 1,7–1,9 millioner. 2,8 og 3,9 millioner er alt for meget.",
   "trap_note_en": "Pick the figure closest to 1.7–1.9 million. 2.8 and 3.9 million are far too high.",
   "current_note_da": "Prøven fra 2018 sagde ca. 1,7 millioner. I dag (per 2026) bor der ca. 1,9 millioner.",
-  "current_note_en": "The 2018 exam said about 1.7 million. Today (per 2026) about 1.9 million live there."
+  "current_note_en": "The 2018 exam said about 1.7 million. Today (per 2026) about 1.9 million live there.",
+  "nobook_note_da": "Indbyggertallet står ikke i læremateriale 2026. Bogen siger, at ca. 2 millioner bor i hovedstadsområdet, og at Region Hovedstaden og Region Sjælland lægges sammen til Region Østdanmark den 1. januar 2027.",
+  "nobook_note_en": "The population figure is not in book 2026. The book says about 2 million live in the capital area, and that the Capital Region and Region Zealand merge into Region Østdanmark on 1 January 2027.",
+  "book": [
+   {
+    "page": 80,
+    "lines": "9-11"
+   },
+   {
+    "page": 80,
+    "lines": "22-23"
+   },
+   {
+    "page": 106,
+    "lines": "38-41"
+   }
+  ]
  },
  {
   "id": "kul-carl-nielsen",
@@ -7843,7 +9063,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 124,
+    "lines": "9"
+   }
+  ]
  },
  {
   "id": "udd-elektriker",
@@ -7877,7 +9103,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 13,
+    "lines": "39"
+   },
+   {
+    "page": 14,
+    "lines": "14"
+   }
+  ]
  },
  {
   "id": "dem-udskriver-valg",
@@ -7911,7 +9147,13 @@
   "trap_note_da": "Ikke Folketingets formand. Valget skal dog holdes mindst hvert 4. år.",
   "trap_note_en": "Not the Speaker of the Folketing. But the election must be held at least every 4 years.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 82,
+    "lines": "59-61"
+   }
+  ]
  },
  {
   "id": "his-landboreformer",
@@ -7945,7 +9187,13 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 111,
+    "lines": "55-62"
+   }
+  ]
  },
  {
   "id": "udd-skolebestyrelse",
@@ -7979,13 +9227,23 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 8,
+    "lines": "6-10"
+   },
+   {
+    "page": 9,
+    "lines": "49-52"
+   }
+  ]
  },
  {
   "id": "vel-oel-vin-16",
   "topic_id": "velfaerd",
-  "fact_da": "Man skal være 16 år for at købe øl og vin (med under 16,5 % alkohol). Stærkere alkohol: 18 år.",
-  "fact_en": "You must be 16 to buy beer and wine (with under 16.5% alcohol). Stronger alcohol: 18.",
+  "fact_da": "Man skal være 16 år for at købe almindelig øl. Vin, spiritus og meget stærk øl (alkohol over 6 %) kræver 18 år – ligesom cigaretter.",
+  "fact_en": "You must be 16 to buy ordinary beer. Wine, spirits and very strong beer (over 6% alcohol) require 18 – like cigarettes.",
   "question_ids": [
    "2017-06-q14"
   ],
@@ -7997,8 +9255,8 @@
   "frequent": false,
   "canonical_question_da": "Hvor gamle skal unge være, før de må købe vin og øl?",
   "canonical_question_en": "How old must young people be before they may buy wine and beer?",
-  "answer_da": "16 år",
-  "answer_en": "16 years",
+  "answer_da": "16 år (prøvens svar i 2017) – i dag: almindelig øl 16 år, vin 18 år",
+  "answer_en": "16 (the 2017 exam answer) – today: ordinary beer 16, wine 18",
   "variants": [
    {
     "question_da": "Hvor gamle skal unge være, før de må købe vin og øl?",
@@ -8010,10 +9268,20 @@
     ]
    }
   ],
-  "trap_note_da": "Øl og vin = 16. Cigaretter = 18. Kørekort = 17.",
-  "trap_note_en": "Beer and wine = 16. Cigarettes = 18. Driving licence = 17.",
-  "current_note_da": "",
-  "current_note_en": ""
+  "trap_note_da": "Almindelig øl = 16. Vin, spiritus og stærk øl = 18. Cigaretter = 18. Kørekort = 17. Prøven fra 2017 spurgte om 'vin og øl' – dengang var svaret 16 år.",
+  "trap_note_en": "Ordinary beer = 16. Wine, spirits and strong beer = 18. Cigarettes = 18. Driving licence = 17. The 2017 exam asked about 'wine and beer' – then the answer was 16.",
+  "current_note_da": "Læremateriale 2026: 16 år gælder kun almindelig øl. Vin, spiritus og alt over 6 % alkohol kræver 18 år.",
+  "current_note_en": "Book 2026: 16 applies only to ordinary beer. Wine, spirits and anything over 6% alcohol require 18.",
+  "book": [
+   {
+    "page": 44,
+    "lines": "45-47"
+   },
+   {
+    "page": 55,
+    "lines": "52-55"
+   }
+  ]
  },
  {
   "id": "ver-eu-handel",
@@ -8047,7 +9315,17 @@
   "trap_note_da": "",
   "trap_note_en": "",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 97,
+    "lines": "31-34"
+   },
+   {
+    "page": 98,
+    "lines": "23-24"
+   }
+  ]
  },
  {
   "id": "dem-regeringsdannelse",
@@ -8081,6 +9359,16 @@
   "trap_note_da": "Ikke monarken og ikke domstolene. Ingen regering kan sidde, hvis et flertal i Folketinget er imod den.",
   "trap_note_en": "Not the monarch and not the courts. No government can stay if a majority in the Folketing is against it.",
   "current_note_da": "",
-  "current_note_en": ""
+  "current_note_en": "",
+  "book": [
+   {
+    "page": 72,
+    "lines": "42-43"
+   },
+   {
+    "page": 65,
+    "lines": "23-26"
+   }
+  ]
  }
 ]

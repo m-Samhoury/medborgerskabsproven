@@ -1229,7 +1229,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How old must young people be before they may buy wine and beer?",
-  "cluster_id": "vel-oel-vin-16"
+  "cluster_id": "vel-oel-vin-16",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: 16 år for almindelig øl, men 18 år for vin, spiritus og stærk øl (over 6 %). Facit '16 år' var rigtigt i 2017.",
+  "book_note_en": "The book (Aug 2026) now says: 16 for ordinary beer, but 18 for wine, spirits and strong beer (over 6%). The key '16' was right in 2017."
  },
  {
   "id": "2017-06-q15",
@@ -1412,7 +1415,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many members does Denmark elect to the European Parliament?",
-  "cluster_id": "ver-mep-antal"
+  "cluster_id": "ver-mep-antal",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
  },
  {
   "id": "2017-06-q21",
@@ -1755,7 +1761,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many members does Denmark have in the European Parliament?",
-  "cluster_id": "ver-mep-antal"
+  "cluster_id": "ver-mep-antal",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
  },
  {
   "id": "2017-11-q7",
@@ -1915,7 +1924,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "What percentage of employees in Denmark are members of an a-kasse (unemployment insurance fund)?",
-  "cluster_id": "arb-akasse-procent"
+  "cluster_id": "arb-akasse-procent",
+  "book_status": "nobook",
+  "book_note_da": "Tallet står ikke i læremateriale 2026. Bogen siger kun, at de fleste er medlem af en a-kasse, og at 68 % er medlem af en fagforening.",
+  "book_note_en": "The figure is not in book 2026. The book only says that most are members of an a-kasse, and that 68% are members of a trade union."
  },
  {
   "id": "2017-11-q12",
@@ -2169,7 +2181,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many weeks of paternity leave do fathers have the right to after the birth?",
-  "cluster_id": "vel-faedreorlov"
+  "cluster_id": "vel-faedreorlov",
+  "book_status": "nobook",
+  "book_note_da": "'2 uger' står ikke i læremateriale 2026. Bogen siger kun, at barnets far også har ret til at gå på barsel.",
+  "book_note_en": "'2 weeks' is not in book 2026. The book only says that the child's father also has the right to parental leave."
  },
  {
   "id": "2017-11-q20",
@@ -2581,7 +2596,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
-  "cluster_id": "kon-nytaarstale"
+  "cluster_id": "kon-nytaarstale",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
  },
  {
   "id": "2018-06-q8",
@@ -3188,7 +3206,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "What share of the population in Denmark are immigrants and their descendants?",
-  "cluster_id": "geo-indvandrere"
+  "cluster_id": "geo-indvandrere",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: ca. 17 % (ca. 1 million) er indvandrere eller efterkommere. Facit 12-13 % var rigtigt i 2018.",
+  "book_note_en": "The book (Aug 2026) now says: about 17% (about 1 million) are immigrants or descendants. The key 12–13% was right in 2018."
  },
  {
   "id": "2018-11-q2",
@@ -3221,7 +3242,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many people live in the Capital Region (Region Hovedstaden)?",
-  "cluster_id": "geo-region-hovedstaden"
+  "cluster_id": "geo-region-hovedstaden",
+  "book_status": "nobook",
+  "book_note_da": "Indbyggertallet for Region Hovedstaden står ikke i læremateriale 2026. Bogen siger, at ca. 2 millioner bor i hovedstadsområdet.",
+  "book_note_en": "The Capital Region's population is not in book 2026. The book says about 2 million live in the capital area."
  },
  {
   "id": "2018-11-q3",
@@ -3315,7 +3339,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many members does Denmark have in the European Parliament?",
-  "cluster_id": "ver-mep-antal"
+  "cluster_id": "ver-mep-antal",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Danmark vælger 15 medlemmer til Europa-Parlamentet. Facit 13 var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: Denmark elects 15 members of the European Parliament. The key 13 was right when the exam was held."
  },
  {
   "id": "2018-11-q6",
@@ -3442,7 +3469,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle"
+  "cluster_id": "kon-rolle",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
+  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
  },
  {
   "id": "2018-11-q10",
@@ -3541,7 +3571,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many of the members of the Folketing are women?",
-  "cluster_id": "dem-kvinder-folketing"
+  "cluster_id": "dem-kvinder-folketing",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
  },
  {
   "id": "2018-11-q13",
@@ -3767,7 +3800,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "What percentage of employees in Denmark are members of an a-kasse (unemployment insurance fund)?",
-  "cluster_id": "arb-akasse-procent"
+  "cluster_id": "arb-akasse-procent",
+  "book_status": "nobook",
+  "book_note_da": "Tallet står ikke i læremateriale 2026. Bogen siger kun, at de fleste er medlem af en a-kasse, og at 68 % er medlem af en fagforening.",
+  "book_note_en": "The figure is not in book 2026. The book only says that most are members of an a-kasse, and that 68% are members of a trade union."
  },
  {
   "id": "2018-11-q20",
@@ -3800,7 +3836,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How old are children normally when they start school?",
-  "cluster_id": "udd-skolestart"
+  "cluster_id": "udd-skolestart",
+  "book_status": "differs",
+  "book_note_da": "Bogen (aug. 2026) siger: børnene starter i børnehaveklassen, når de er omkring seks år. Facit '5-6 år' er stadig det bedste svar her.",
+  "book_note_en": "The book (Aug 2026) says: children start the reception class when they are about six. The key '5–6' is still the best answer here."
  },
  {
   "id": "2018-11-q21",
@@ -5184,7 +5223,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many children aged three to five are looked after outside the home?",
-  "cluster_id": "udd-boern-passes"
+  "cluster_id": "udd-boern-passes",
+  "book_status": "differs",
+  "book_note_da": "Bogen (aug. 2026) siger: 'De fleste' børn mellem tre og fem år passes uden for hjemmet. Prøvens facit er 'Næsten alle'.",
+  "book_note_en": "The book (Aug 2026) says: 'most' children aged three to five are looked after outside the home. The exam key is 'Almost all'."
  },
  {
   "id": "2019-11-q14",
@@ -6251,7 +6293,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
-  "cluster_id": "kon-nytaarstale"
+  "cluster_id": "kon-nytaarstale",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
  },
  {
   "id": "2020-06-q23",
@@ -6670,7 +6715,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "What share of the members of the Folketing are women?",
-  "cluster_id": "dem-kvinder-folketing"
+  "cluster_id": "dem-kvinder-folketing",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
  },
  {
   "id": "2020-11-q11",
@@ -6947,7 +6995,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle"
+  "cluster_id": "kon-rolle",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
+  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
  },
  {
   "id": "2020-11-q20",
@@ -7694,7 +7745,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How old are children normally when they start in year 0 (0. klasse, the reception class) at school?",
-  "cluster_id": "udd-skolestart"
+  "cluster_id": "udd-skolestart",
+  "book_status": "differs",
+  "book_note_da": "Bogen (aug. 2026) siger: børnene starter i børnehaveklassen, når de er omkring seks år. Facit '5-6 år' er stadig det bedste svar her.",
+  "book_note_en": "The book (Aug 2026) says: children start the reception class when they are about six. The key '5–6' is still the best answer here."
  },
  {
   "id": "2021-06-q19",
@@ -8022,7 +8076,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
-  "cluster_id": "kon-nytaarstale"
+  "cluster_id": "kon-nytaarstale",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
  },
  {
   "id": "2021-11-q5",
@@ -9259,7 +9316,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which role does the Queen have, among other things?",
-  "cluster_id": "kon-rolle"
+  "cluster_id": "kon-rolle",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kong Frederik 10. underskriver landets love sammen med ministrene. Spørgsmålet siger 'dronningen', fordi Margrethe 2. var regent dengang.",
+  "book_note_en": "The book (Aug 2026) now says: King Frederik 10. signs the laws together with the ministers. The question says 'the Queen' because Margrethe 2. was on the throne then."
  },
  {
   "id": "2022-06-q19",
@@ -9602,7 +9662,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Who gives their New Year's speech on 31 December?",
-  "cluster_id": "kon-nytaarstale"
+  "cluster_id": "kon-nytaarstale",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Kongen holder nytårstale den 31. december (Frederik 10. har været konge siden 2024). Facit 'Dronningen' var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: The King gives the New Year's speech on 31 December (Frederik 10. has been king since 2024). The key 'the Queen' was right when the exam was held."
  },
  {
   "id": "2022-11-q5",
@@ -11271,7 +11334,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which party got the most votes in the 2022 general election?",
-  "cluster_id": "dem-stoerste-parti-2022"
+  "cluster_id": "dem-stoerste-parti-2022",
+  "book_status": "nobook",
+  "book_note_da": "Læremateriale 2026 nævner ikke valget i 2022 – kun valget i 2026, hvor Socialdemokratiet også fik flest stemmer.",
+  "book_note_en": "Book 2026 does not mention the 2022 election – only the 2026 election, where the Social Democrats also got the most votes."
  },
  {
   "id": "2023-11-q8",
@@ -12495,7 +12561,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "What share of the members of the Folketing are women?",
-  "cluster_id": "dem-kvinder-folketing"
+  "cluster_id": "dem-kvinder-folketing",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: 48-49 % af Folketingets medlemmer er kvinder (86 af 179 efter valget i 2026). Prøvens facit var rigtigt, da prøven blev holdt.",
+  "book_note_en": "The book (Aug 2026) now says: 48–49% of the members of the Folketing are women (86 of 179 after the 2026 election). The exam key was right when the exam was held."
  },
  {
   "id": "2024-05-q21",
@@ -12904,7 +12973,10 @@
   "uncertain": false,
   "notes": "Key B (Venstre) is correct: SVM government (Socialdemokratiet, Venstre, Moderaterne) since Dec 2022. Verified.",
   "question_en": "Which of the following parties has been in the government since 2022?",
-  "cluster_id": "dem-regering"
+  "cluster_id": "dem-regering",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: Siden 3. juni 2026 består regeringen af Socialdemokratiet, SF, Moderaterne og Radikale Venstre. Venstre er ikke længere med. Facit 'Venstre' var rigtigt, da prøven blev holdt (SVM-regeringen 2022-2026).",
+  "book_note_en": "The book (Aug 2026) now says: Since 3 June 2026 the government has been the Social Democrats, SF, the Moderates and the Social Liberals. Venstre is no longer in it. The key 'Venstre' was right when the exam was held (the SVM government 2022–2026)."
  },
  {
   "id": "2024-11-q9",
@@ -14032,7 +14104,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which party got the most votes in the 2022 general election?",
-  "cluster_id": "dem-stoerste-parti-2022"
+  "cluster_id": "dem-stoerste-parti-2022",
+  "book_status": "nobook",
+  "book_note_da": "Læremateriale 2026 nævner ikke valget i 2022 – kun valget i 2026, hvor Socialdemokratiet også fik flest stemmer.",
+  "book_note_en": "Book 2026 does not mention the 2022 election – only the 2026 election, where the Social Democrats also got the most votes."
  },
  {
   "id": "2025-05-q20",
@@ -14329,7 +14404,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "How many citizens in Denmark aged 15 to 64 have a job?",
-  "cluster_id": "arb-beskaeftigelse"
+  "cluster_id": "arb-beskaeftigelse",
+  "book_status": "differs",
+  "book_note_da": "Bogen (aug. 2026) siger: ca. 73 % af de 16-66-årige har et lønmodtagerarbejde – altså stadig ca. tre ud af fire.",
+  "book_note_en": "The book (Aug 2026) says: about 73% of 16–66-year-olds have a job as an employee – so still about three out of four."
  },
  {
   "id": "2025-11-q4",
@@ -15594,7 +15672,10 @@
   "uncertain": false,
   "notes": "",
   "question_en": "Which of the following countries does Denmark trade most with (imports and exports)?",
-  "cluster_id": "ver-tyskland-handel"
+  "cluster_id": "ver-tyskland-handel",
+  "book_status": "outdated",
+  "book_note_da": "Bogen (aug. 2026) siger nu: USA er Danmarks største handelspartner samlet (14,1 % i 2025), Tyskland nr. 2 (12,7 %). USA er ikke en svarmulighed her, så Tyskland er stadig det rigtige valg.",
+  "book_note_en": "The book (Aug 2026) now says: the USA is Denmark's largest trading partner overall (14.1% in 2025), Germany second (12.7%). The USA is not an option here, so Germany is still the right choice."
  },
  {
   "id": "2026-06-q19",
