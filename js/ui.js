@@ -151,6 +151,7 @@
   var POP_MAX = 360;   // px; the content scrolls inside (matches --book-pop-max)
   var pop = null;      // the one shared popover
   var popOwner = null; // the button that opened it
+  var popGrip = null;  // the resize grip, kept across openings
 
   function closeBook(refocus) {
     if (!pop || pop.hidden) return;
@@ -163,6 +164,7 @@
   }
 
   function buildPop() {
+    popGrip = buildGrip();
     pop = h("div", {
       id: "book-pop",
       class: "book-pop",
@@ -194,13 +196,57 @@
     document.body.appendChild(pop);
   }
 
+  // The English translation of a Danish book text (data/book_en.json, keyed by the exact Danish text). "" when there is none.
+  function enFor(da) {
+    return (MBP.data && MBP.data.en && MBP.data.en[da]) || "";
+  }
+
+  // The Danish quote and, under it, the English translation (hidden until the reader turns it on).
+  // Both sit in one wrapper, so a wide popover can show them side by side.
+  function quotePair(da, en, body) {
+    var pair = [h("blockquote", { class: "book-quote", lang: "da" }, body(da))];
+    if (en) pair.push(h("blockquote", { class: "book-quote book-quote-en", lang: "en" },
+      h("p", { class: "book-en-label" }, "English translation (not from the book)"), body(en)));
+    return h("div", { class: "book-pair" }, pair);
+  }
+
+  // The paragraphs of a section-1 text, one <p> per line.
+  function paras(text) {
+    return text.split("\n").map(function (para) { return h("p", null, para); });
+  }
+
+  // The button that shows or hides the English translations. Shared by every popover and block on the page.
+  // full: the long label (inline blocks); otherwise the compact "EN" (popover header).
+  function bookEnToggle(full) {
+    var on = MBP.store.bookEnOpen();
+    var label = "Vis engelsk oversættelse · Show English translation";
+    return h("button", {
+      type: "button",
+      class: full ? "book-en-toggle book-en-toggle-full" : "book-en-toggle",
+      "aria-pressed": String(on),
+      "aria-label": label,
+      title: label,
+      onclick: function () {
+        var next = !MBP.store.bookEnOpen();
+        MBP.store.setBookEnOpen(next);
+        applyBookEn(next);
+      }
+    }, full ? label : "EN");
+  }
+
+  // Applies the English switch to the whole page: the class drives the CSS, aria-pressed drives every toggle.
+  function applyBookEn(on) {
+    document.documentElement.classList.toggle("show-book-en", on);
+    document.querySelectorAll(".book-en-toggle").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(on));
+    });
+  }
+
   function refBlock(r) {
     var text = (MBP.data && MBP.data.book && MBP.data.book[r.page + ":" + r.lines]) || "";
     return h("section", { class: "book-ref" },
       h("p", { class: "book-cite" }, "Læremateriale 2026 · " + refLabel(r)),
-      text ? h("blockquote", { class: "book-quote", lang: "da" }, text.split("\n").map(function (para) {
-        return h("p", null, para);
-      })) : null,
+      text ? quotePair(text, enFor(text), paras) : null,
       pageLink(r.page));
   }
 
@@ -231,11 +277,23 @@
 
   // One extra excerpt: its heading, the citation, the quote and the link to the page.
   function moreItem(x) {
+    var enTitle = enFor(x.title_da);
     return h("section", { class: "book-ref book-more-item" },
       h("h4", { class: "book-more-title", lang: "da" }, x.title_da),
+      enTitle ? h("p", { class: "book-en-title", lang: "en" }, enTitle) : null,
       h("p", { class: "book-cite" }, "Læremateriale 2026 · " + refLabel(x)),
-      h("blockquote", { class: "book-quote", lang: "da" }, moreText(x.excerpt_da)),
+      quotePair(x.excerpt_da, enFor(x.excerpt_da), moreText),
       pageLink(x.page));
+  }
+
+  // The Danish texts of one "Mere fra bogen" excerpt: its title and its quote.
+  function moreTexts(x) {
+    return [x.title_da, x.excerpt_da];
+  }
+
+  // True when at least one of the texts has an English translation (then the English toggle is shown).
+  function anyEn(texts) {
+    return texts.some(function (t) { return !!enFor(t); });
   }
 
   // "* = explained in the glossary", once, when one of the excerpts has a "*".
@@ -267,7 +325,9 @@
     },
       h("summary", null, chev,
         bi("Mere fra bogen (" + items.length + ")", "More from the book (" + items.length + ")", "span")),
-      h("div", { class: "book-more-body" }, items.map(moreItem), starNote(items)));
+      h("div", { class: "book-more-body" },
+        anyEn(items.map(moreTexts).reduce(function (a, b) { return a.concat(b); }, [])) ? bookEnToggle(true) : null,
+        items.map(moreItem), starNote(items)));
     if (feedback) {
       block.addEventListener("toggle", function () { MBP.store.setBookMoreOpen(block.open); });
     }
@@ -283,24 +343,149 @@
 
   // Places the popover under the button, or above it when there is more room there,
   // inside the page gutters. Its height is capped to the room on that side, so it never covers the button.
+  // The size the reader chose ({w, h} in px), or null for the default size. Kept in the store between visits.
+  var userSize = null;
+  var DEFAULT_W = 440;
+  var LARGE_W = 760;
+  var MIN_W = 280;
+  var MIN_H = 200;
+  var GUTTER = 16;
+
+  // Clamps a size to the room in the viewport: at least MIN_W × MIN_H, at most the page gutters.
+  function fitSize(s) {
+    var maxW = document.documentElement.clientWidth - 2 * GUTTER;
+    var maxH = window.innerHeight - 2 * GUTTER;
+    return {
+      w: Math.round(Math.min(maxW, Math.max(MIN_W, s.w))),
+      h: Math.round(Math.min(maxH, Math.max(MIN_H, s.h)))
+    };
+  }
+
+  // The "large" size of the expand button: wide, and 80% of the viewport height.
+  function largeSize() {
+    return fitSize({ w: LARGE_W, h: window.innerHeight * 0.8 });
+  }
+
+  function isLarge() {
+    var L = largeSize();
+    return !!userSize && userSize.w === L.w && userSize.h === L.h;
+  }
+
+  function saveSize() {
+    MBP.store.setBookPopSize(userSize ? { w: userSize.w, h: userSize.h } : null);
+  }
+
   function placePop(btn) {
-    var gutter = 16;
     var vw = document.documentElement.clientWidth;
-    var width = Math.min(440, vw - 2 * gutter);
+    var vh = window.innerHeight;
+    var width, height;
+    if (userSize) {
+      var s = fitSize(userSize);
+      width = s.w;
+      height = s.h;
+      pop.style.height = height + "px";
+      pop.style.maxHeight = "none";
+    } else {
+      width = Math.min(DEFAULT_W, vw - 2 * GUTTER);
+      pop.style.height = "";
+      pop.style.maxHeight = "";
+    }
     pop.style.width = width + "px";
-    pop.style.maxHeight = "";
     var r = btn.getBoundingClientRect();
-    var left = Math.max(gutter, Math.min(r.left + r.width / 2 - width / 2, vw - width - gutter));
+    var left = Math.max(GUTTER, Math.min(r.left + r.width / 2 - width / 2, vw - width - GUTTER));
     pop.style.left = (left + window.scrollX) + "px";
-    var below = window.innerHeight - r.bottom - 16;
+    var below = vh - r.bottom - 16;
     var above = r.top - 16;
-    var natural = pop.offsetHeight;
-    var under = below >= natural || below >= above;
-    var room = Math.min(POP_MAX, Math.max(160, under ? below : above));
-    if (natural > room) pop.style.maxHeight = room + "px";
-    var height = Math.min(natural, room);
-    var top = under ? r.bottom + 8 : r.top - height - 8;
+    var top;
+    if (userSize) {
+      // The reader's size is kept: below the button if it fits, else above, else pinned to the bottom of the viewport.
+      if (below >= height) top = r.bottom + 8;
+      else if (above >= height) top = r.top - height - 8;
+      else top = Math.max(GUTTER, vh - height - GUTTER);
+    } else {
+      // Default size: placed under the button, or above it when there is more room there, capped to that room.
+      var natural = pop.offsetHeight;
+      var under = below >= natural || below >= above;
+      var room = Math.min(POP_MAX, Math.max(160, under ? below : above));
+      if (natural > room) pop.style.maxHeight = room + "px";
+      height = Math.min(natural, room);
+      top = under ? r.bottom + 8 : r.top - height - 8;
+    }
     pop.style.top = (top + window.scrollY) + "px";
+  }
+
+  // Grip and expand button. The grip resizes with the pointer (mouse, pen, touch) or the arrow keys.
+  function buildGrip() {
+    var drag = null;
+    var grip = h("button", {
+      type: "button",
+      class: "book-pop-grip",
+      "aria-label": "Ændr størrelse – Resize",
+      title: "Træk for at ændre størrelse – Drag to resize"
+    }, constSvg('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 9 9 20M20 15l-5 5"/></svg>'));
+    grip.addEventListener("pointerdown", function (e) {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      grip.setPointerCapture(e.pointerId);
+      drag = { x: e.clientX, y: e.clientY, w: pop.offsetWidth, h: pop.offsetHeight };
+    });
+    // While dragging only the size changes (the popover stays where it is); it is re-placed when the drag ends.
+    grip.addEventListener("pointermove", function (e) {
+      if (!drag) return;
+      userSize = fitSize({ w: drag.w + e.clientX - drag.x, h: drag.h + e.clientY - drag.y });
+      pop.style.width = userSize.w + "px";
+      pop.style.height = userSize.h + "px";
+      pop.style.maxHeight = "none";
+    });
+    function endDrag() {
+      if (!drag) return;
+      drag = null;
+      saveSize();
+      if (popOwner) placePop(popOwner);
+      syncExpand();
+    }
+    grip.addEventListener("pointerup", endDrag);
+    grip.addEventListener("pointercancel", endDrag);
+    // Double-click resets to the default size.
+    grip.addEventListener("dblclick", function () {
+      userSize = null;
+      saveSize();
+      if (popOwner) placePop(popOwner);
+      syncExpand();
+    });
+    grip.addEventListener("keydown", function (e) {
+      var step = e.shiftKey ? 96 : 24;
+      var d = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step] }[e.key];
+      if (!d) return;
+      e.preventDefault();
+      userSize = fitSize({ w: pop.offsetWidth + d[0], h: pop.offsetHeight + d[1] });
+      saveSize();
+      if (popOwner) placePop(popOwner);
+      syncExpand();
+    });
+    return grip;
+  }
+
+  // The expand button in the header: switches between the default size and the large size.
+  function expandButton() {
+    return h("button", {
+      type: "button",
+      class: "book-pop-size",
+      "aria-label": "Stor visning – Large view",
+      title: "Stor visning – Large view",
+      "aria-pressed": String(isLarge()),
+      onclick: function () {
+        userSize = isLarge() ? null : largeSize();
+        saveSize();
+        if (popOwner) placePop(popOwner);
+        syncExpand();
+      }
+    }, constSvg('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>'));
+  }
+
+  function syncExpand() {
+    var b = pop && pop.querySelector(".book-pop-size");
+    if (b) b.setAttribute("aria-pressed", String(isLarge()));
   }
 
   function openBook(btn, refs, more) {
@@ -310,17 +495,28 @@
       return;
     }
     closeBook(false);
+    userSize = MBP.store.bookPopSize();
+    var texts = [];
+    refs.forEach(function (r) {
+      texts.push((MBP.data && MBP.data.book && MBP.data.book[r.page + ":" + r.lines]) || "");
+    });
+    more.forEach(function (x) { texts = texts.concat(moreTexts(x)); });
+    var showEn = anyEn(texts);
     pop.textContent = "";
     pop.appendChild(h("div", { class: "book-pop-head" },
       h("p", { class: "book-pop-title", id: "book-pop-title" }, MBP.icon("book", 18),
         bi("Læs mere i bogen", "Read more in the book", "span")),
-      h("button", { type: "button", class: "book-pop-close", "aria-label": "Luk – Close", title: "Luk – Close",
-        onclick: function () { closeBook(true); } }, MBP.icon("close", 18))));
+      h("div", { class: "book-pop-tools" },
+        showEn ? bookEnToggle(false) : null,
+        expandButton(),
+        h("button", { type: "button", class: "book-pop-close", "aria-label": "Luk – Close", title: "Luk – Close",
+          onclick: function () { closeBook(true); } }, MBP.icon("close", 18)))));
     // Section 1: the fact's own references. Section 2 ("Mere fra bogen"): the extra excerpts, when there are any.
     pop.appendChild(h("div", { class: "book-pop-body" },
       refs.map(refBlock),
       more.length ? moreSection(more) : null,
       officialLink(refs.length ? refs : more)));
+    pop.appendChild(popGrip);
     pop.hidden = false;
     popOwner = btn;
     btn.setAttribute("aria-expanded", "true");
@@ -724,6 +920,7 @@
       }
     }
     apply(MBP.store.showEnglish());
+    applyBookEn(MBP.store.bookEnOpen());
     if (btn) {
       btn.addEventListener("click", function () {
         var on = document.documentElement.classList.contains("hide-en");

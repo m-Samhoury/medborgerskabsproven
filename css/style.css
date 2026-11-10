@@ -1660,10 +1660,61 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
   cursor: pointer;
 }
 .book-pop-close:hover { background: var(--wash); }
+.book-pop-tools { display: flex; align-items: center; flex: 0 0 auto; }
+.book-pop-size {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.book-pop-size:hover { background: var(--wash); }
+.book-pop-size[aria-pressed="true"] { color: var(--accent); }
+.book-pop-size svg,
+.book-pop-grip svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* Resize grip in the bottom-right corner; a 44px touch target. touch-action stops the page scrolling while dragging. */
+.book-pop-grip {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border: 0;
+  border-radius: 0 0 var(--r-m) 0;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: nwse-resize;
+  touch-action: none;
+}
+.book-pop-grip:hover { color: var(--accent); }
+.book-pop-grip:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
 .book-pop-body {
+  container-type: inline-size;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 4px 14px 14px;
+  padding: 4px 14px 28px;
+}
+/* A wide popover shows the Danish and English quotes side by side. */
+@container (min-width: 620px) {
+  html.show-book-en .book-pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; align-items: start; }
 }
 .book-ref { padding-top: 12px; }
 .book-ref + .book-ref { margin-top: 12px; border-top: 1px solid var(--line); }
@@ -1685,6 +1736,49 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
   line-height: 1.5;
 }
 .book-quote p { margin: 0; }
+
+/* English translations of the book passages: always in the DOM, shown only when the reader turns them on. */
+.book-pair { display: grid; gap: 8px; }
+.book-quote-en,
+.book-en-title { display: none; }
+html.show-book-en .book-quote-en { display: grid; }
+html.show-book-en .book-en-title { display: block; }
+.book-quote-en {
+  background: transparent;
+  border-left-color: var(--line);
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+.book-en-label { margin: 0; font: 700 var(--fs-xs)/1.3 var(--f-body); letter-spacing: 0.02em; }
+.book-en-title { margin: 0 0 4px; font: 400 var(--fs-s)/1.3 var(--f-body); color: var(--ink-2); }
+.book-en-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ink);
+  font: 700 var(--fs-xs)/1 var(--f-body);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.book-en-toggle:hover { background: var(--wash); }
+.book-en-toggle[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.book-en-toggle-full {
+  min-height: 36px;
+  margin: 0 0 10px;
+  padding: 0 14px;
+  border: 1.5px solid var(--line);
+  font: 700 var(--fs-s)/1 var(--f-body);
+  letter-spacing: 0;
+  color: var(--accent);
+}
+.book-en-toggle-full:hover { background: var(--wash); }
+.book-en-toggle-full[aria-pressed="true"] { border-color: var(--accent); }
 .book-links {
   display: flex;
   flex-wrap: wrap;

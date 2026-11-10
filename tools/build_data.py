@@ -7,6 +7,9 @@ from bookdump/pages/page-NNN.txt into the bundle, so the popover can quote the b
 Also adds data/book_more.json ("Mere fra bogen": extra verbatim book excerpts per cluster,
 fact group or topic id) to the bundle as "more", unchanged.
 
+Also adds the English translations of the book texts (data/book_en.json, keyed by the exact Danish text)
+as "en", only for the texts that are used; the rest of the file is left out of the bundle.
+
 Run after every change to data/*.json:  python3 tools/build_data.py
 """
 import json
@@ -89,6 +92,13 @@ def main():
         key = f"{ref['page']}:{ref['lines']}"
         if key not in book:
             book[key] = excerpt(ref["page"], ref["lines"])
+    en_path = DATA / "book_en.json"
+    all_en = json.loads(en_path.read_text(encoding="utf-8")) if en_path.exists() else {}
+    used = set(book.values())
+    for items in more.values():
+        for x in items:
+            used.update([x["title_da"], x["excerpt_da"]])
+    en = {da: all_en[da] for da in sorted(used) if all_en.get(da)}
     payload = json.dumps(
         {
             "questions": raw["questions"],
@@ -97,6 +107,7 @@ def main():
             "groups": raw["fact_groups"],
             "book": dict(sorted(book.items(), key=lambda kv: [int(x) for x in re.findall(r"\d+", kv[0])])),
             "more": more,
+            "en": en,
         },
         ensure_ascii=False,
         separators=(",", ":"),
@@ -109,6 +120,7 @@ def main():
           f"{len(raw['clusters'])} clusters, {len(raw['topics'])} topics, "
           f"{len(raw['fact_groups'])} groups, {len(book)} book excerpts, "
           f"{sum(len(v) for v in more.values())} more-from-the-book excerpts)")
+    print(f"English: {len(en)} of {len(used)} book texts translated")
 
 
 if __name__ == "__main__":

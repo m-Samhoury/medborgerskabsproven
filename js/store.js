@@ -9,6 +9,8 @@
   var ACTIVITY_KEY = "mbp.v1.activity";
   var SEEN_KEY = "mbp.v1.seenMastered";
   var BOOK_MORE_KEY = "mbp.v1.bookMoreOpen";
+  var BOOK_EN_KEY = "mbp.v1.bookEnOpen";
+  var BOOK_POP_SIZE_KEY = "mbp.v1.bookPopSize";
   var RESET_KEY = "mbp.v1.resetAt";
   var GOAL = 25;
   var KEEP_DAYS = 60;
@@ -274,6 +276,30 @@
 
     setBookMoreOpen: function (on) {
       writeStorage(BOOK_MORE_KEY, on ? "1" : "0");
+    },
+
+    // Whether the English translations under the book passages are shown. Off unless the reader turned it on.
+    bookEnOpen: function () {
+      return readStorage(BOOK_EN_KEY) === "1";
+    },
+
+    setBookEnOpen: function (on) {
+      writeStorage(BOOK_EN_KEY, on ? "1" : "0");
+    },
+
+    // The size the reader gave the book popover, {w, h} in px, or null for the default size.
+    bookPopSize: function () {
+      try {
+        var s = JSON.parse(readStorage(BOOK_POP_SIZE_KEY) || "null");
+        return s && s.w > 0 && s.h > 0 ? { w: s.w, h: s.h } : null;
+      } catch (e) {
+        return null;
+      }
+    },
+
+    setBookPopSize: function (size) {
+      if (size) writeStorage(BOOK_POP_SIZE_KEY, JSON.stringify(size));
+      else removeStorage(BOOK_POP_SIZE_KEY);
     },
 
     reset: function () {
