@@ -48,6 +48,29 @@
   --t-traditioner: #2F6B3A;
   --t-verden:      #34507A;
 
+  /* Fact sheets (the book's 26 fakta-ark): colour from the old topic family (REORG_PLAN.md). */
+  --t-skole:              var(--t-uddannelse);
+  --t-dagtilbud:          var(--t-uddannelse);
+  --t-arbejdsmarked:      var(--t-arbejde);
+  --t-erhvervsliv:        var(--t-arbejde);
+  --t-familieliv:         var(--t-velfaerd);
+  --t-foreningsliv:       var(--t-kultur);
+  --t-sundhed:            var(--t-velfaerd);
+  --t-ligestilling:       var(--t-velfaerd);
+  --t-grundloven:         var(--t-kongehus);
+  --t-retssamfund:        var(--t-demokrati);
+  --t-folketing:          var(--t-demokrati);
+  --t-selvstyre:          var(--t-demokrati);
+  --t-valg:               var(--t-demokrati);
+  --t-rettigheder:        var(--t-demokrati);
+  --t-religion:           var(--t-traditioner);
+  --t-omverdenen:         var(--t-verden);
+  --t-historie-foer-1945: var(--t-historie);
+  --t-historie-efter-1945: var(--t-historie);
+  --t-forsvar:            var(--t-verden);
+  --t-diskrimination:     var(--t-demokrati);
+  --t-klima:              var(--t-geografi);
+
   --tint-mix:  14%;
   --tint-base: #FFFFFF;
   --ink-mix:   100%;

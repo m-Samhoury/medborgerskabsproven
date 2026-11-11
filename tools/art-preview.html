@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Illustration preview (not linked from the site)</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 0; padding: 16px; }
+  .panel { padding: 12px; border-radius: 8px; margin-bottom: 16px; }
+  .light { background: #ffffff; color: #1B3F8F; }
+  .dark { background: #0B1430; color: #9DB4F0; }
+  .grid { display: grid; grid-template-columns: 160px 1fr 1fr 1fr; gap: 8px 12px; align-items: center; }
+  .grid .name { font-family: ui-monospace, monospace; font-size: 12px; }
+  .cell { display: flex; align-items: center; gap: 10px; }
+  h2 { font-size: 15px; margin: 0 0 8px; }
+</style>
+</head>
+<body>
+<p>Every <code>ART</code> key from <code>js/icons.js</code> at 16, 32 and 64 px, on a light and a dark background. Check that each reads clearly.</p>
+<div id="root"></div>
+<script src="../js/icons.js"></script>
+<script>
+  (function () {
+    var keys = Object.keys(window.MBP.ART || {});
+    var root = document.getElementById("root");
+    function panel(theme) {
+      var p = document.createElement("div");
+      p.className = "panel " + theme;
+      var h = document.createElement("h2");
+      h.textContent = theme === "light" ? "Light" : "Dark";
+      p.appendChild(h);
+      var grid = document.createElement("div");
+      grid.className = "grid";
+      var head = ["sheet", "16 px (chip dot)", "32 px (mini stamp)", "64 px (stamp)"];
+      head.forEach(function (t) { var d = document.createElement("div"); d.textContent = t; d.style.fontWeight = "700"; grid.appendChild(d); });
+      keys.forEach(function (k) {
+        var n = document.createElement("div"); n.className = "name"; n.textContent = k; grid.appendChild(n);
+        [16, 32, 64].forEach(function (w) {
+          var c = document.createElement("div"); c.className = "cell";
+          // MBP.topicArt sets --fill and the stroke width exactly as the site does.
+          c.appendChild(window.MBP.topicArt(k, w));
+          grid.appendChild(c);
+        });
+      });
+      p.appendChild(grid);
+      return p;
+    }
+    root.appendChild(panel("light"));
+    root.appendChild(panel("dark"));
+  })();
+</script>
+</body>
+</html>

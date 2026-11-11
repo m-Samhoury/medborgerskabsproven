@@ -5,18 +5,34 @@
 
   var LOAD_ERROR = "Kunne ikke indlæse data. Prøv at genindlæse siden. / Could not load data. Try reloading the page.";
 
-  // Short Danish and English stamp names (the stamps are small).
+  // Short Danish and English stamp names for the 26 fact sheets (the stamps are small).
   var SHORT = {
-    demokrati: ["Demokrati", "Democracy"],
-    kongehus: ["Kongehus", "Royal family"],
-    historie: ["Historie", "History"],
-    geografi: ["Geografi", "Geography"],
-    arbejde: ["Arbejde", "Work"],
-    velfaerd: ["Velfærd", "Welfare"],
+    skole: ["Skole", "School"],
     uddannelse: ["Uddannelse", "Education"],
+    dagtilbud: ["Dagtilbud", "Childcare"],
+    arbejdsmarked: ["Arbejde", "Work"],
+    erhvervsliv: ["Erhverv", "Business"],
+    velfaerd: ["Velfærd", "Welfare"],
+    familieliv: ["Familie", "Family"],
+    foreningsliv: ["Fritid", "Leisure"],
+    sundhed: ["Sundhed", "Health"],
+    ligestilling: ["Ligestilling", "Equality"],
+    grundloven: ["Grundloven", "Constitution"],
+    retssamfund: ["Retssamfund", "Justice"],
+    folketing: ["Folketinget", "Parliament"],
+    selvstyre: ["Kommuner", "Local gov."],
+    valg: ["Valg", "Elections"],
+    rettigheder: ["Rettigheder", "Rights"],
+    religion: ["Religion", "Religion"],
+    omverdenen: ["Verden", "The world"],
+    geografi: ["Geografi", "Geography"],
+    "historie-foer-1945": ["Før 1945", "Before 1945"],
+    "historie-efter-1945": ["Efter 1945", "After 1945"],
     kultur: ["Kultur", "Culture"],
-    traditioner: ["Højtider", "Holidays"],
-    verden: ["Verden", "The world"]
+    traditioner: ["Traditioner", "Traditions"],
+    forsvar: ["Forsvar", "Defence"],
+    diskrimination: ["Diskrimination", "Discrimination"],
+    klima: ["Klima", "Climate"]
   };
 
   var NOTE_ICON = { trap: "warn", changed: "changed", remember: "remember", keyerror: "flag", nobook: "book" };

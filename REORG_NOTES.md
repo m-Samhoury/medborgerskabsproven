@@ -366,3 +366,13 @@ Not added anywhere, as the plan asks. The user decides.
 
 ### Known limitation (not changed)
 - `build_data.py` `excerpt()` still starts a new paragraph (a `\n` in the popover quote) on some blank lines before a capital letter. Examples: "På den måde har\nDanmark" (sheet 18) and "og\nSverige" (sheet 19). Headings are also separated by `\n`, which is the intended behaviour. Fixing the mid-sentence splits would change many popover keys, so I left it as it is. The words are right, and the English keeps the same break.
+
+## Phase 3: colours, short names, illustrations
+- `css/style.css`: the 21 new `--t-<sheet>` tokens are aliases of the 10 old ones, as in the plan. The five that already existed (`uddannelse`, `velfaerd`, `geografi`, `kultur`, `traditioner`) are unchanged. The dark theme does not redefine `--t-*`, so the aliases follow automatically.
+- `js/ui.js` `SHORT`: the 26 short names from the plan. None needed shortening yet. Stamp and chip fit are checked in Phase 6.
+- `js/icons.js` `ART`: the 10 drawings re-keyed (`demokrati→valg`, `kongehus→grundloven`, `historie→historie-foer-1945`, `geografi→geografi`, `arbejde→erhvervsliv`, `velfaerd→sundhed`, `uddannelse→uddannelse`, `kultur→kultur`, `traditioner→traditioner`, `verden→omverdenen`). Their markup is unchanged.
+- 16 new drawings: skole, dagtilbud, arbejdsmarked, velfaerd, familieliv, foreningsliv, ligestilling, retssamfund, folketing, selvstyre, rettigheder, religion, historie-efter-1945, forsvar, diskrimination, klima. All are stroke-only with at most one `var(--fill)` area, at the plan's viewBox.
+- Deviations from the plan's motifs:
+  - **diskrimination**: the plan asked for a raised hand in front of a circle with a diagonal. At 16 px the hand is illegible, so the drawing is the circle with a diagonal (a "not allowed" sign) only. Open point for the user.
+  - **arbejdsmarked** (handshake): a simplified clasp between two cuffs. It reads at 64 px; at 16 px it is only a faint shape.
+- `MBP.ART` is now exported for `tools/art-preview.html`, which is not linked from the site. It shows every key at 16, 32 and 64 px on light and dark. I checked it in the browser: all 26 read at 64 px, and the 16 px versions are as expected for the plan's rule.
