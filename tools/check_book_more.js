@@ -3,8 +3,10 @@
 // Run from the repo root:  node tools/check_book_more.js   (or node book-expansion/check_bundle_more.js)
 // Exits 1 on any failure.
 //  1 the bundle loads and has a "more" object
-//  2 bundle.more is exactly data/book_more.json, and exactly book-expansion/01-content-plan.json when that file exists
-//    (so no excerpt text was changed on the way)
+//  2 bundle.more is exactly data/book_more.json, and holds the same excerpts as book-expansion/01-content-plan.json
+//    when that file exists (so no excerpt text was changed on the way). The plan file is keyed by the old
+//    topic ids; after the fact-sheet reorganisation (tools/reorg_sheets.py) the keys moved, so that comparison
+//    is of the multiset of items (each item as JSON), not of the keyed object.
 //  3 every key is a cluster id, fact-group id or topic id; every item has title_da, page, lines, excerpt_da
 //  4 every question's cluster_id has at least one excerpt (the feedback block shows for 500 of 500)
 "use strict";
@@ -38,8 +40,18 @@ function sameAs(file) {
 var asData = sameAs(path.join("data", "book_more.json"));
 if (asData === null) fail("data/book_more.json is missing");
 else if (!asData) fail("bundle.more differs from data/book_more.json");
-var asPlan = sameAs(path.join("book-expansion", "01-content-plan.json"));
-if (asPlan === false) fail("bundle.more differs from book-expansion/01-content-plan.json");
+function items_of(obj) {
+  var out = [];
+  Object.keys(obj).forEach(function (k) { obj[k].forEach(function (x) { out.push(JSON.stringify(x)); }); });
+  return out.sort();
+}
+var asPlan = null;
+var planPath = path.join(ROOT, "book-expansion", "01-content-plan.json");
+if (fs.existsSync(planPath)) {
+  asPlan = JSON.stringify(items_of(JSON.parse(fs.readFileSync(planPath, "utf8")))) ===
+    JSON.stringify(items_of(more));
+  if (!asPlan) fail("bundle.more has different excerpts from book-expansion/01-content-plan.json");
+}
 
 var ids = new Set();
 raw.clusters.forEach(function (c) { ids.add(c.id); });

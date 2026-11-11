@@ -2309,19 +2309,23 @@
    "excerpt_da": "SFO er en forkortelse for SkoleFritidsOrdning. SFO er et sted, hvor børn i folkeskolen kan blive passet før eller efter skoletid af pædagoger. I SFO’en er der nogle fælles aktiviteter for alle børnene. Det kan fx være at spille musik og teater, at male, sy eller tegne, men det kan også være sportsaktiviteter som fx svømning, fodbold eller skøjteløb."
   }
  ],
- "demokrati": [
+ "grundloven": [
   {
    "title_da": "Et demokrati i hverdagen",
    "page": 62,
    "lines": "6-27",
    "excerpt_da": "Danmark er et demokrati. Det viser sig fx både gennem regler for valg, ved de demokratiske rettigheder og i en demokratisk kultur. Når der er valg, er det borgerne, der vælger politikerne til Folketinget, kommunalbestyrelser, regionsråd og Europa-Parlamentet, og valgene er frie og hemmelige*. Borgerne har også rettigheder, som giver dem frihed til at gøre, hvad de vil, blot de overholder lovene. Myndighederne, som fx politiet eller kommunen, må som udgangspunkt ikke blande sig i, hvad borgerne laver. Borgerne har fx frihed til at danne foreninger og til at have den religion, de vil. Der er desuden mange foreninger i Danmark, der fungerer som et slags minidemokrati, hvor medlemmerne vælger ledelsen – og afsætter den – hvis der opstår uenighed mellem medlemmer og ledelse. Demokratiet er på den måde også med til at præge* samfundet og kulturen mere generelt."
-  },
+  }
+ ],
+ "folketing": [
   {
    "title_da": "Spørgetid",
    "page": 73,
    "lines": "20-29",
    "excerpt_da": "Hver onsdag er der spørgetid i Folketinget. Her svarer en eller flere ministre på spørgsmål fra medlemmerne af Folketinget, og spørgeren og ministeren diskuterer svaret. På den måde kan folketingsmedlemmerne kontrollere, at ministrene fører* lovene ud i livet på den rigtige måde, eller have en mere generel politisk drøftelse* med ministrene."
-  },
+  }
+ ],
+ "valg": [
   {
    "title_da": "Interesseorganisationer",
    "page": 86,
@@ -2333,7 +2337,9 @@
    "page": 87,
    "lines": "34-44",
    "excerpt_da": "Man kan som borger forsøge at påvirke politikken ved at skrive et læserbrev til en avis. Man kan også henvende sig direkte til aviser eller TV for at gøre opmærksom på en sag og så håbe, at medierne vil tage sagen op. De elektroniske medier giver andre muligheder for at påvirke politikken. Gennem underskriftsindsamlinger via internettet eller i Facebookgrupper kan befolkningen debattere politikerne, partierne eller forskellige konkrete sager. Borgerne kan desuden vise deres utilfredshed med bestemte love eller bestemmelser og på den måde påvirke politikerne. Borgerne bruger også flittigt muligheden for at skrive kommentarer på avisernes hjemmesider eller indlæg på forskellige diskussionsfora på internettet."
-  },
+  }
+ ],
+ "diskrimination": [
   {
    "title_da": "Love mod diskrimination",
    "page": 139,
@@ -2347,7 +2353,19 @@
    "excerpt_da": "Domstolene mente, at det var særligt alvorligt, at de havde angrebet repræsentanter for folkestyret. De senere årtier har Politiets Efterretningstjeneste måttet beskytte et stigende antal politikere med livvagter, fordi den vurderer, at flere politikere er truet af angreb eller chikane."
   }
  ],
- "kongehus": [
+ "forsvar": [
+  {
+   "title_da": "Støtte til Ukraine",
+   "page": 135,
+   "lines": "28-32",
+   "excerpt_da": "Som reaktion på det russiske angreb på Ukraine har Vesten støttet Ukraine med våben og træning, så landet kan forsvare sig mod det russiske angreb. Og Vesten har også forsøgt at svække den russiske økonomi ved at forbyde salg af en række varer til Rusland samt forbyde køb af russisk olie. Mange vestlige virksomheder har trukket sig ud af Rusland."
+  },
+  {
+   "title_da": "Arktis og Grønland",
+   "page": 137,
+   "lines": "14-19",
+   "excerpt_da": "Det arktiske område er derfor stadig i fokus for dansk sikkerhedspolitik. De internationale stormagter USA, Rusland og Kina er dog alle interesserede i Arktis. Det er de, fordi landene har interesse i at beskytte deres eget land mod angreb fra andre. Men også fordi landene har økonomiske interesser i for eksempel minedrift og transport af varer med skib. Det kan udfordre Rigsfællesskabets mål om, at Arktis skal være et fredeligt område."
+  },
   {
    "title_da": "Grønland og USA",
    "page": 137,
@@ -2355,7 +2373,7 @@
    "excerpt_da": "De seneste år har den amerikanske præsident Donald Trump (født 1946) udtrykt ønske om, at Grønland skal blive en del af USA. Dette ønske er dog blevet afvist af både den grønlandske og den danske regering."
   }
  ],
- "historie": [
+ "historie-foer-1945": [
   {
    "title_da": "Vikingetiden og Jellingestenen",
    "page": 108,
@@ -2373,7 +2391,9 @@
    "page": 110,
    "lines": "24-33",
    "excerpt_da": "I middelalderen blev Europa og Danmark ramt af pest – en sygdom, som slog mange mennesker ihjel. Det skete omkring 1350. Cirka en tredjedel af Danmarks befolkning døde. Det medførte store økonomiske og sociale forandringer i det danske samfund. Kongen fik igen mere magt – bl.a. fordi han ofte overtog den jord, som tilhørte personer, der døde af pesten. I 1397 blev Danmark, Norge og Sverige samlet i en union. Den fik navnet Kalmarunionen, fordi den blev indgået i den svenske by Kalmar. Af afgørende betydning for dannelsen af denne union var Margrete 1., der havde magten i de tre riger frem til sin død i 1412. De tre lande var samlet i Kalmarunionen frem til 1523."
-  },
+  }
+ ],
+ "historie-efter-1945": [
   {
    "title_da": "Den Kolde Krig",
    "page": 116,
@@ -2411,6 +2431,20 @@
    "page": 105,
    "lines": "6-10",
    "excerpt_da": "Danmark ligger i den nordlige del af Europa. Norge ligger nord for Danmark, og Sverige ligger nordøst for Danmark. Syd for Danmark ligger Tyskland og Polen."
+  }
+ ],
+ "klima": [
+  {
+   "title_da": "Global opvarmning",
+   "page": 143,
+   "lines": "43-47",
+   "excerpt_da": "Siden perioden 1850-1900 er temperaturen steget globalt med mere end én grad. Historisk er det en stor ændring på lidt over 100 år. Særligt de seneste årtier er det gået stærkt, og udviklingen ser ud til at fortsætte. FN forudser, at klimaet vil blive 1,4 til 4,4 grader varmere i slutningen af dette århundrede, end det var i perioden 1850-1900."
+  },
+  {
+   "title_da": "Paris-aftalen",
+   "page": 144,
+   "lines": "16-22",
+   "excerpt_da": "Problemet kan derfor kun løses, hvis mange andre lande også reducerer deres udledning, og derfor er et internationalt samarbejde nødvendigt. Verdens lande – ikke mindst i FN – har haft fokus på at løse problemet. Og man har lavet mange internationale aftaler, bl.a. Paris-aftalen i 2015, hvor næsten alle verdens lande har skrevet under på, at de vil være med til at reducere den globale udledning af drivhusgasser over de kommende årtier. Desuden har man aftaler inden for EU med højere ambitioner end Paris-aftalen."
   },
   {
    "title_da": "Klimaloven",
@@ -2419,7 +2453,7 @@
    "excerpt_da": "I 2019 blev de fleste politiske partier enige om en ny klimalov. I klimaloven står der, at regeringen frem til 2030 skal reducere Danmarks udledning af drivhusgasser med 70 procent i forhold til 1990. Der står også, at Danmark skal være klimaneutral senest i 2050, det vil sige, at man i Danmark ikke må udlede flere drivhusgasser, end man optager. Efter klimaloven blev vedtaget, har Folketinget og regeringen lavet en række aftaler om, hvordan man kan nå målene."
   }
  ],
- "arbejde": [
+ "arbejdsmarked": [
   {
    "title_da": "Flexicurity",
    "page": 23,
@@ -2437,7 +2471,9 @@
    "page": 29,
    "lines": "48-62",
    "excerpt_da": "Hvis man gerne vil være selvstændig erhvervsdrivende, skal man registrere sig hos Erhvervsstyrelsen via dens hjemmeside og give nogle få oplysninger. Man kan søge råd om, hvordan det er at arbejde som selvstændig hos en vækstkonsulent, der har stor erfaring i at hjælpe folk med at starte en virksomhed. Man kan også henvende sig til den lokale erhvervsrådgiver i kommunen. Endvidere er der kommunale kurser for folk, der gerne vil være selvstændige. På disse kurser kan man lære noget om økonomi, regnskab eller personaleledelse. Som selvstændig erhvervsdrivende har man bl.a. pligt til at føre regnskab, og virksomhedens overskud* eller underskud* skal opgives* til SKAT."
-  },
+  }
+ ],
+ "erhvervsliv": [
   {
    "title_da": "Danske medarbejdere tager ansvar",
    "page": 33,
@@ -2446,6 +2482,18 @@
   }
  ],
  "velfaerd": [
+  {
+   "title_da": "Børnecheck",
+   "page": 36,
+   "lines": "26-29",
+   "excerpt_da": "Forældrene kan få en ’børnecheck’ (børne- og ungeydelse), hvis de har børn under 18 år. Forældre, der har særlig høj indkomst, får en mindre ydelse eller slet ingen ydelse, afhængig af deres indkomst. For udlændinge gælder der særlige regler."
+  },
+  {
+   "title_da": "Sygedagpenge, fleksjob og førtidspension",
+   "page": 37,
+   "lines": "23-28",
+   "excerpt_da": "Hvis man er syg i længere tid, er der mulighed for at få sygedagpenge, hvis man har optjent retten til det enten ved at arbejde eller som medlem af en a-kasse. Hvis man ikke er i stand til at forsørge sig selv, fordi ens arbejdsevne er begrænset, kan løsningen fx være fleksjob, hvor man arbejder og tjener en del selv og får resten i offentlig ydelse. Hvis man har en varig og væsentlig nedsat evne til at arbejde, kan man få førtidspension."
+  },
   {
    "title_da": "Folkepension",
    "page": 37,
@@ -2457,25 +2505,17 @@
    "page": 37,
    "lines": "36-43",
    "excerpt_da": "Man skal som hovedregel være dansk statsborger, have fast bopæl i Danmark og have boet i Danmark i mindst tre år fra det fyldte 15. år til folkepensionsalderen for at få ret til førtidspension eller folkepension. Har man boet i landet i mindre end 40 år, får man pension i forhold til, hvor mange år man har boet her. Der gælder særlige regler for personer, der bor i udlandet eller er EU-statsborgere eller flygtninge. Mange pensionister får udbetalt pension ved siden af folkepensionen. Det skyldes at de, i forbindelse med deres arbejde, har indbetalt til pensionsordninger (arbejdsmarkedspension)."
-  },
-  {
-   "title_da": "Sygedagpenge, fleksjob og førtidspension",
-   "page": 37,
-   "lines": "23-28",
-   "excerpt_da": "Hvis man er syg i længere tid, er der mulighed for at få sygedagpenge, hvis man har optjent retten til det enten ved at arbejde eller som medlem af en a-kasse. Hvis man ikke er i stand til at forsørge sig selv, fordi ens arbejdsevne er begrænset, kan løsningen fx være fleksjob, hvor man arbejder og tjener en del selv og får resten i offentlig ydelse. Hvis man har en varig og væsentlig nedsat evne til at arbejde, kan man få førtidspension."
-  },
-  {
-   "title_da": "Børnecheck",
-   "page": 36,
-   "lines": "26-29",
-   "excerpt_da": "Forældrene kan få en ’børnecheck’ (børne- og ungeydelse), hvis de har børn under 18 år. Forældre, der har særlig høj indkomst, får en mindre ydelse eller slet ingen ydelse, afhængig af deres indkomst. For udlændinge gælder der særlige regler."
-  },
+  }
+ ],
+ "familieliv": [
   {
    "title_da": "Skilsmisse",
    "page": 42,
    "lines": "44-62",
    "excerpt_da": "I Danmark ender cirka 40 procent af alle ægteskaber med en skilsmisse. Hvis man ikke ønsker at fortsætte sit ægteskab, har man ret til at få separation. Separation er en slags prøvetid, hvor man stadig er gift, men normalt bor hver for sig. Efter et halvt års separation, har man ret til skilsmisse. Er ægtefællerne enige herom, kan de dog også blive skilt med det samme uden først at blive separeret. Selv om der er uenighed, kan man i visse situationer også blive skilt med det samme, hvis der fx er tale om utroskab eller vold. Efter en skilsmisse har begge parter ret til at gifte sig igen."
-  },
+  }
+ ],
+ "sundhed": [
   {
    "title_da": "Akutmodtagelse",
    "page": 54,
@@ -2487,7 +2527,9 @@
    "page": 54,
    "lines": "57-59",
    "excerpt_da": "Det er vigtigt, at læge og patient forstår hinanden. Hvis man har behov for tolk, når man skal til lægen eller på sygehuset, har man ret til, at der bliver tilkaldt en tolk. I nogle tilfælde skal man betale et gebyr*, for at der bliver tilkaldt en tolk."
-  },
+  }
+ ],
+ "ligestilling": [
   {
    "title_da": "Klage over forskelsbehandling",
    "page": 59,
@@ -2513,7 +2555,9 @@
    "page": 16,
    "lines": "9-25",
    "excerpt_da": "Der er en lang tradition for efteruddannelse i Danmark. Man taler ofte om, at livslang læring (læring gennem hele livet) er vigtig. Personer, der allerede har en uddannelse og erhvervserfaring, har mange muligheder for at videreuddanne sig. De kan fx tage en diplomuddannelse, som er en uddannelse på deltid*, hvor det faglige niveau svarer til en bacheloruddannelse. Uddannelsen tager typisk to til tre år på deltid, og man betaler for at gå på uddannelsen. Mange skoler, der tilbyder videregående uddannelser, har kurser, hvor det er muligt at læse ét fag ad gangen. Voksne kan også tage korte AMU-kurser. AMU står for arbejdsmarkedsuddannelser og er korterevarende kursusforløb primært rettet mod faglærte og ufaglærte. Der er mange forskellige arbejdsmarkedsuddannelser inden for handel, administration og ledelse, sundhed, bygge/ anlæg, jordbrug, køkken/restaurant, metalindustri, transport m.m."
-  },
+  }
+ ],
+ "skole": [
   {
    "title_da": "Skole-hjem-samtaler",
    "page": 9,
@@ -2529,19 +2573,19 @@
    "excerpt_da": "En anden kendt forfatter er Tove Ditlevsen (1917-76). Hun voksede op i en fattig familie på Vesterbro i København, og hun drømte allerede som barn om at blive digter, selv om hendes far sagde, at det kunne piger ikke blive. Hun skrev både digte og romaner om at være barn, kvinde og fattig i datidens samfund, og blandt hendes hovedværker er Barndommens Gade (1943) samt bøgerne Barndom (1967), Ungdom (1967) og Gift (1971)."
   },
   {
-   "title_da": "Olafur Eliasson",
-   "page": 126,
-   "lines": "6-12",
-   "excerpt_da": "En anden kunstner er dansk-islandske Olafur Eliasson (født 1967). Et af hans mest kendte værker er ’Your rainbow panorama’ (Din regnbueudsigt) (2011) oven på kunstmuseet ARoS i Aarhus, som er en 150 meter lang cirkelformet gangbro i glas, hvor man kan se ud over Aarhus i alle regnbuens farver."
-  },
-  {
    "title_da": "Eurovision",
    "page": 125,
    "lines": "28-34",
    "excerpt_da": "Danmark har vundet Eurovision Song Contest (Det Europæiske Melodi Grand Prix) tre gange. Første gang var i 1963 med ’Dansevise’, som blev fremført af Grethe Ingmann (1938-90) og Jørgen Ingmann (1925-2015). Anden gang i år 2000 med ’Smuk som et stjerneskud/Fly on the Wings of Love’, skrevet og fremført af duoen Brødrene Olsen, der består af Jørgen Olsen (født 1950) og Niels Olsen (født 1954). Tredje gang var i 2013 med ’Only Teardrops’, som blev sunget af Emmelie de Forest (født 1993)."
+  },
+  {
+   "title_da": "Olafur Eliasson",
+   "page": 126,
+   "lines": "6-12",
+   "excerpt_da": "En anden kunstner er dansk-islandske Olafur Eliasson (født 1967). Et af hans mest kendte værker er ’Your rainbow panorama’ (Din regnbueudsigt) (2011) oven på kunstmuseet ARoS i Aarhus, som er en 150 meter lang cirkelformet gangbro i glas, hvor man kan se ud over Aarhus i alle regnbuens farver."
   }
  ],
- "traditioner": [
+ "religion": [
   {
    "title_da": "Religionsfrihed",
    "page": 93,
@@ -2553,6 +2597,14 @@
    "page": 95,
    "lines": "6-12",
    "excerpt_da": "Der findes 435 anerkendte trossamfund og menigheder i Danmark. De er meget forskellige i størrelse og omfatter mange forskellige religioner. Langt de fleste er kristne, men der er også fx muslimske, buddhistiske, hinduistiske og jødiske trossamfund."
+  }
+ ],
+ "traditioner": [
+  {
+   "title_da": "Jul",
+   "page": 130,
+   "lines": "9-23",
+   "excerpt_da": "Julen markerer i den kristne tradition Jesu fødsel. Juleaftensdag, den 24. december, holdes der julegudstjenester, og den dag er der mange børn og voksne, der går i kirke. I Danmark har man normalt fri fra arbejde og skole den 24., 25. og 26. december. Disse tre dage kaldes juleaftensdag, juledag og 2. juledag. I mange familier fejrer flere generationer juleaften sammen. Man har juletræ*, spiser en traditionel julemiddag, danser om juletræet, synger julesalmer og julesange og giver hinanden julegaver. I familier, hvor der er børn fra flere ægteskaber, holdes der ofte jul flere gange, så børnene både fejrer jul med deres far og deres mor. Juledag og 2. juledag samles man i mange familier til julefrokost."
   },
   {
    "title_da": "Ramadan og Eid",
@@ -2565,15 +2617,9 @@
    "page": 131,
    "lines": "36-40",
    "excerpt_da": "Af andre mærkedage, som er kommet til Danmark via den øgede kulturelle udveksling, kan nævnes kinesisk nytår. Kinesisk nytår er den vigtigste traditionelle kinesiske helligdag. Det kinesiske nytår starter på den første dag i den første måned i den kinesiske kalender og slutter med lanternefestival på den 15. dag."
-  },
-  {
-   "title_da": "Jul",
-   "page": 130,
-   "lines": "9-23",
-   "excerpt_da": "Julen markerer i den kristne tradition Jesu fødsel. Juleaftensdag, den 24. december, holdes der julegudstjenester, og den dag er der mange børn og voksne, der går i kirke. I Danmark har man normalt fri fra arbejde og skole den 24., 25. og 26. december. Disse tre dage kaldes juleaftensdag, juledag og 2. juledag. I mange familier fejrer flere generationer juleaften sammen. Man har juletræ*, spiser en traditionel julemiddag, danser om juletræet, synger julesalmer og julesange og giver hinanden julegaver. I familier, hvor der er børn fra flere ægteskaber, holdes der ofte jul flere gange, så børnene både fejrer jul med deres far og deres mor. Juledag og 2. juledag samles man i mange familier til julefrokost."
   }
  ],
- "verden": [
+ "omverdenen": [
   {
    "title_da": "EU-medlemskabet 1973",
    "page": 98,
@@ -2591,30 +2637,6 @@
    "page": 100,
    "lines": "44-51",
    "excerpt_da": "Europarådet er en selvstændig organisation, der består af 47 europæiske lande. Danmark har været medlem fra starten i 1949. Europarådet har bl.a. vedtaget* Den Europæiske Menneskerettighedskonvention. Den indeholder en række grundlæggende rettigheder, som i et vist omfang svarer til de rettigheder, man kender fra den danske grundlov, fx ytringsfrihed og forsamlingsfrihed. Den indeholder også andre rettigheder, fx forbud mod tortur og ret til retfærdig rettergang."
-  },
-  {
-   "title_da": "Global opvarmning",
-   "page": 143,
-   "lines": "43-47",
-   "excerpt_da": "Siden perioden 1850-1900 er temperaturen steget globalt med mere end én grad. Historisk er det en stor ændring på lidt over 100 år. Særligt de seneste årtier er det gået stærkt, og udviklingen ser ud til at fortsætte. FN forudser, at klimaet vil blive 1,4 til 4,4 grader varmere i slutningen af dette århundrede, end det var i perioden 1850-1900."
-  },
-  {
-   "title_da": "Paris-aftalen",
-   "page": 144,
-   "lines": "16-22",
-   "excerpt_da": "Problemet kan derfor kun løses, hvis mange andre lande også reducerer deres udledning, og derfor er et internationalt samarbejde nødvendigt. Verdens lande – ikke mindst i FN – har haft fokus på at løse problemet. Og man har lavet mange internationale aftaler, bl.a. Paris-aftalen i 2015, hvor næsten alle verdens lande har skrevet under på, at de vil være med til at reducere den globale udledning af drivhusgasser over de kommende årtier. Desuden har man aftaler inden for EU med højere ambitioner end Paris-aftalen."
-  },
-  {
-   "title_da": "Arktis og Grønland",
-   "page": 137,
-   "lines": "14-19",
-   "excerpt_da": "Det arktiske område er derfor stadig i fokus for dansk sikkerhedspolitik. De internationale stormagter USA, Rusland og Kina er dog alle interesserede i Arktis. Det er de, fordi landene har interesse i at beskytte deres eget land mod angreb fra andre. Men også fordi landene har økonomiske interesser i for eksempel minedrift og transport af varer med skib. Det kan udfordre Rigsfællesskabets mål om, at Arktis skal være et fredeligt område."
-  },
-  {
-   "title_da": "Støtte til Ukraine",
-   "page": 135,
-   "lines": "28-32",
-   "excerpt_da": "Som reaktion på det russiske angreb på Ukraine har Vesten støttet Ukraine med våben og træning, så landet kan forsvare sig mod det russiske angreb. Og Vesten har også forsøgt at svække den russiske økonomi ved at forbyde salg af en række varer til Rusland samt forbyde køb af russisk olie. Mange vestlige virksomheder har trukket sig ud af Rusland."
   }
  ]
 }

@@ -1,7 +1,10 @@
 [
  {
   "id": "his-foerste-kvindelige-sm",
-  "topic_id": "historie",
+  "topic_id": "ligestilling",
+  "topic_ids": [
+   "ligestilling"
+  ],
   "fact_da": "Danmarks første kvindelige statsminister var Helle Thorning-Schmidt (fra 2011). Før hende havde der ingen været.",
   "fact_en": "Denmark's first female prime minister was Helle Thorning-Schmidt (from 2011). Before her there had been none.",
   "question_ids": [
@@ -81,7 +84,11 @@
  },
  {
   "id": "dem-rettigheder",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "rettigheder"
+  ],
   "fact_da": "Grundloven sikrer blandt andet forsamlingsfrihed, ytringsfrihed og religionsfrihed.",
   "fact_en": "The Constitution guarantees, among other things, freedom of assembly, freedom of expression and freedom of religion.",
   "question_ids": [
@@ -189,7 +196,10 @@
  },
  {
   "id": "dem-kommunerne-boern",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre"
+  ],
   "fact_da": "Kommunerne har ansvaret for vuggestuer, børnehaver og folkeskoler.",
   "fact_en": "The municipalities are responsible for nurseries, kindergartens and folkeskoler (public schools).",
   "question_ids": [
@@ -298,7 +308,11 @@
  },
  {
   "id": "kon-rigsfaellesskab",
-  "topic_id": "kongehus",
+  "topic_id": "geografi",
+  "topic_ids": [
+   "geografi",
+   "omverdenen"
+  ],
   "fact_da": "Rigsfællesskabet er Danmark, Grønland og Færøerne. Island, Norge og Åland er IKKE med.",
   "fact_en": "The Danish Realm (rigsfællesskabet) is Denmark, Greenland and the Faroe Islands. Iceland, Norway and Åland are NOT part of it.",
   "question_ids": [
@@ -415,7 +429,10 @@
  },
  {
   "id": "udd-undervisningspligt",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Der er 10 års undervisningspligt i Danmark (0.–9. klasse).",
   "fact_en": "There are 10 years of compulsory education in Denmark (years 0–9).",
   "question_ids": [
@@ -520,7 +537,10 @@
  },
  {
   "id": "arb-tillidsrepraesentant",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Tillidsrepræsentanten vælges af fagforeningens medlemmer blandt medarbejderne – på et møde (klubmøde), hvor arbejdsgiveren ikke er med.",
   "fact_en": "The union representative (tillidsrepræsentant) is elected by the union members among the employees – at a meeting (club meeting) without the employer.",
   "question_ids": [
@@ -590,7 +610,11 @@
  },
  {
   "id": "dem-2-og-2",
-  "topic_id": "demokrati",
+  "topic_id": "folketing",
+  "topic_ids": [
+   "folketing",
+   "valg"
+  ],
   "fact_da": "Færøerne vælger 2 medlemmer og Grønland vælger 2 medlemmer til Folketinget.",
   "fact_en": "The Faroe Islands elect 2 members and Greenland elects 2 members to the Folketing.",
   "question_ids": [
@@ -668,7 +692,11 @@
  },
  {
   "id": "his-reformation",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945",
+   "religion"
+  ],
   "fact_da": "Reformationen kom til Danmark i 1536. Siden da har Danmark været protestantisk (luthersk).",
   "fact_en": "The Reformation came to Denmark in 1536. Since then Denmark has been Protestant (Lutheran).",
   "question_ids": [
@@ -762,7 +790,10 @@
  },
  {
   "id": "arb-vestas",
-  "topic_id": "arbejde",
+  "topic_id": "erhvervsliv",
+  "topic_ids": [
+   "erhvervsliv"
+  ],
   "fact_da": "Vestas producerer vindmøller.",
   "fact_en": "Vestas makes wind turbines.",
   "question_ids": [
@@ -837,6 +868,9 @@
  {
   "id": "geo-hoejeste-punkt",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Danmarks højeste naturlige punkt (Møllehøj) er ca. 170 meter højt.",
   "fact_en": "Denmark's highest natural point (Møllehøj) is about 170 metres high.",
   "question_ids": [
@@ -923,7 +957,10 @@
  },
  {
   "id": "arb-novo",
-  "topic_id": "arbejde",
+  "topic_id": "erhvervsliv",
+  "topic_ids": [
+   "erhvervsliv"
+  ],
   "fact_da": "Novo Nordisk producerer medicin (fx insulin).",
   "fact_en": "Novo Nordisk makes medicine (e.g. insulin).",
   "question_ids": [
@@ -1002,7 +1039,10 @@
  },
  {
   "id": "dem-forening",
-  "topic_id": "demokrati",
+  "topic_id": "foreningsliv",
+  "topic_ids": [
+   "foreningsliv"
+  ],
   "fact_da": "Alle må danne en forening – også hvis man ikke er dansk statsborger. Foreningsfrihed står i grundloven.",
   "fact_en": "Everyone may form an association – also if you are not a Danish citizen. Freedom of association is in the Constitution.",
   "question_ids": [
@@ -1065,7 +1105,10 @@
  },
  {
   "id": "arb-37-timer",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Den normale arbejdstid ved fuldtid er 37 timer om ugen.",
   "fact_en": "Normal full-time working hours are 37 hours a week.",
   "question_ids": [
@@ -1148,7 +1191,10 @@
  },
  {
   "id": "udd-karakter-12",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Danmark bruger 7-trinsskalaen. Den højeste karakter er 12.",
   "fact_en": "Denmark uses the 7-point grading scale. The highest grade is 12.",
   "question_ids": [
@@ -1227,7 +1273,11 @@
  },
  {
   "id": "dem-179",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "folketing"
+  ],
   "fact_da": "Folketinget har 179 medlemmer.",
   "fact_en": "The Folketing has 179 members.",
   "question_ids": [
@@ -1283,7 +1333,10 @@
  },
  {
   "id": "dem-grundlov-1953",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Grundloven blev sidst ændret i 1953.",
   "fact_en": "The Constitution was last changed in 1953.",
   "question_ids": [
@@ -1352,6 +1405,9 @@
  {
   "id": "tra-grundlovsdag",
   "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner"
+  ],
   "fact_da": "Grundlovsdag fejres den 5. juni (grundloven blev underskrevet 5. juni 1849).",
   "fact_en": "Constitution Day is celebrated on 5 June (the Constitution was signed on 5 June 1849).",
   "question_ids": [
@@ -1411,7 +1467,11 @@
  },
  {
   "id": "vel-bibliotek",
-  "topic_id": "velfaerd",
+  "topic_id": "foreningsliv",
+  "topic_ids": [
+   "foreningsliv",
+   "velfaerd"
+  ],
   "fact_da": "Det er gratis at låne bøger på folkebibliotekerne.",
   "fact_en": "It is free to borrow books at the public libraries.",
   "question_ids": [
@@ -1467,7 +1527,11 @@
  },
  {
   "id": "dem-kommuner-98",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "valg"
+  ],
   "fact_da": "Der er 98 kommuner i Danmark.",
   "fact_en": "There are 98 municipalities in Denmark.",
   "question_ids": [
@@ -1523,7 +1587,10 @@
  },
  {
   "id": "dem-statsborger-stemme",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg"
+  ],
   "fact_da": "Man skal være dansk statsborger for at stemme til folketingsvalg.",
   "fact_en": "You must be a Danish citizen to vote in general elections.",
   "question_ids": [
@@ -1595,7 +1662,10 @@
  },
  {
   "id": "his-besat-aar",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Tyskland besatte Danmark den 9. april 1940.",
   "fact_en": "Germany occupied Denmark on 9 April 1940.",
   "question_ids": [
@@ -1671,7 +1741,10 @@
  },
  {
   "id": "arb-akasse-dagpenge",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Man skal være medlem af en a-kasse for at få dagpenge, hvis man bliver arbejdsløs.",
   "fact_en": "You must be a member of an a-kasse (unemployment insurance fund) to get dagpenge (unemployment benefit) if you become unemployed.",
   "question_ids": [
@@ -1751,7 +1824,10 @@
  },
  {
   "id": "arb-overenskomst",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "En kollektiv overenskomst er en aftale mellem fagforeninger og arbejdsgivere (fx DA og LO/FH) om løn, arbejdstid og ferie.",
   "fact_en": "A collective agreement is an agreement between trade unions and employers (e.g. DA and LO/FH) on pay, working hours and holidays.",
   "question_ids": [
@@ -1831,7 +1907,10 @@
  },
  {
   "id": "dem-anke",
-  "topic_id": "demokrati",
+  "topic_id": "retssamfund",
+  "topic_ids": [
+   "retssamfund"
+  ],
   "fact_da": "En dom fra byretten kan ankes til landsretten.",
   "fact_en": "A ruling from the District Court (byretten) can be appealed to the High Court (landsretten).",
   "question_ids": [
@@ -1915,7 +1994,10 @@
  },
  {
   "id": "dem-betinget",
-  "topic_id": "demokrati",
+  "topic_id": "retssamfund",
+  "topic_ids": [
+   "retssamfund"
+  ],
   "fact_da": "En betinget dom betyder, at man ikke skal i fængsel, hvis man overholder betingelserne (fx ikke begår ny kriminalitet).",
   "fact_en": "A suspended sentence means you do not go to prison if you keep the conditions (e.g. commit no new crime).",
   "question_ids": [
@@ -1975,7 +2057,10 @@
  },
  {
   "id": "vel-gift-18",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Man skal være mindst 18 år for at blive gift i Danmark.",
   "fact_en": "You must be at least 18 to get married in Denmark.",
   "question_ids": [
@@ -2043,7 +2128,10 @@
  },
  {
   "id": "dem-folketingsvalg",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg"
+  ],
   "fact_da": "Der skal være folketingsvalg mindst hvert 4. år.",
   "fact_en": "There must be a general election at least every 4 years.",
   "question_ids": [
@@ -2119,7 +2207,10 @@
  },
  {
   "id": "his-1864",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "I 1864 mistede Danmark Slesvig og Holsten efter en krig mod Det Tyske Forbund.",
   "fact_en": "In 1864 Denmark lost Slesvig and Holsten (Schleswig and Holstein) after a war against the German Confederation.",
   "question_ids": [
@@ -2195,7 +2286,11 @@
  },
  {
   "id": "dem-grundlov-1849",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "historie-foer-1945"
+  ],
   "fact_da": "Danmarks første grundlov er fra 1849 (5. juni 1849).",
   "fact_en": "Denmark's first Constitution is from 1849 (5 June 1849).",
   "question_ids": [
@@ -2275,7 +2370,10 @@
  },
  {
   "id": "dem-straffeattest",
-  "topic_id": "demokrati",
+  "topic_id": "retssamfund",
+  "topic_ids": [
+   "retssamfund"
+  ],
   "fact_da": "En straffeattest er et dokument, der viser, om man har været straffet.",
   "fact_en": "A straffeattest (criminal record certificate) is a document that shows whether you have been convicted.",
   "question_ids": [
@@ -2344,6 +2442,9 @@
  {
   "id": "kul-hca-levede",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "H.C. Andersen levede 1805-1875 (i 1800-tallet).",
   "fact_en": "H.C. Andersen lived 1805–1875 (in the 1800s).",
   "question_ids": [
@@ -2412,6 +2513,9 @@
  {
   "id": "udd-gymnasium-gratis",
   "topic_id": "uddannelse",
+  "topic_ids": [
+   "uddannelse"
+  ],
   "fact_da": "Undervisningen på de offentlige gymnasier er gratis.",
   "fact_en": "Teaching at the public upper-secondary schools (gymnasier) is free.",
   "question_ids": [
@@ -2464,6 +2568,9 @@
  {
   "id": "geo-lillebaelt",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Lillebælt er farvandet mellem Jylland og Fyn.",
   "fact_en": "Lillebælt (the Little Belt) is the water between Jutland and Funen.",
   "question_ids": [
@@ -2515,7 +2622,10 @@
  },
  {
   "id": "arb-ferie",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Lønmodtagere har normalt ret til 5-6 ugers ferie om året.",
   "fact_en": "Employees are normally entitled to 5–6 weeks of holiday a year.",
   "question_ids": [
@@ -2588,7 +2698,10 @@
  },
  {
   "id": "arb-lego",
-  "topic_id": "arbejde",
+  "topic_id": "erhvervsliv",
+  "topic_ids": [
+   "erhvervsliv"
+  ],
   "fact_da": "LEGO fremstiller legetøj (byggeklodser).",
   "fact_en": "LEGO makes toys (building bricks).",
   "question_ids": [
@@ -2645,7 +2758,10 @@
  },
  {
   "id": "udd-friskole-betale",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Forældre skal normalt betale for, at deres børn går i friskole eller privatskole. Folkeskolen er gratis.",
   "fact_en": "Parents normally have to pay for their children to attend a free school or private school. The folkeskole is free.",
   "question_ids": [
@@ -2706,7 +2822,10 @@
  },
  {
   "id": "vel-vaccine",
-  "topic_id": "velfaerd",
+  "topic_id": "sundhed",
+  "topic_ids": [
+   "sundhed"
+  ],
   "fact_da": "Vaccinationer til børn (fx MFR mod mæslinger, fåresyge og røde hunde, og HPV) er gratis.",
   "fact_en": "Vaccinations for children (e.g. MMR against measles, mumps and rubella, and HPV) are free.",
   "question_ids": [
@@ -2779,7 +2898,11 @@
  },
  {
   "id": "dem-valgdeltagelse",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "omverdenen"
+  ],
   "fact_da": "Ca. 80-90 procent af vælgerne stemmer ved folketingsvalg.",
   "fact_en": "About 80–90 per cent of voters vote in general elections.",
   "question_ids": [
@@ -2857,6 +2980,9 @@
  {
   "id": "geo-oresund",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Øresund er farvandet mellem Sjælland (København) og Sverige.",
   "fact_en": "Øresund (the Sound) is the water between Zealand (Copenhagen) and Sweden.",
   "question_ids": [
@@ -2921,7 +3047,10 @@
  },
  {
   "id": "udd-boernehave-vuggestue",
-  "topic_id": "uddannelse",
+  "topic_id": "dagtilbud",
+  "topic_ids": [
+   "dagtilbud"
+  ],
   "fact_da": "Vuggestue er for børn fra ca. 6 måneder til ca. 3 år. Børnehave er for børn fra ca. 3 til 6 år.",
   "fact_en": "A nursery (vuggestue) is for children from about 6 months to about 3. A kindergarten (børnehave) is for children from about 3 to 6.",
   "question_ids": [
@@ -2998,7 +3127,10 @@
  },
  {
   "id": "ver-bosnien",
-  "topic_id": "verden",
+  "topic_id": "forsvar",
+  "topic_ids": [
+   "forsvar"
+  ],
   "fact_da": "I 1990'erne var danske soldater udsendt til Bosnien som en del af FN's styrker.",
   "fact_en": "In the 1990s Danish soldiers were sent to Bosnia as part of the UN's forces.",
   "question_ids": [
@@ -3064,6 +3196,9 @@
  {
   "id": "geo-storebaelt",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Storebælt er farvandet mellem Fyn og Sjælland.",
   "fact_en": "Storebælt (the Great Belt) is the water between Funen and Zealand.",
   "question_ids": [
@@ -3121,6 +3256,9 @@
  {
   "id": "kul-grimme-aelling",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "H.C. Andersen skrev eventyret 'Den Grimme Ælling'.",
   "fact_en": "H.C. Andersen wrote the fairy tale 'The Ugly Duckling'.",
   "question_ids": [
@@ -3186,6 +3324,9 @@
  {
   "id": "tra-sankthans",
   "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner"
+  ],
   "fact_da": "Sankthans fejres i juni (sankthansaften 23. juni) med bål.",
   "fact_en": "Sankthans (Midsummer) is celebrated in June (Midsummer Eve, 23 June) with a bonfire.",
   "question_ids": [
@@ -3251,6 +3392,9 @@
  {
   "id": "geo-aarhus",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Aarhus er Danmarks næststørste by. Den ligger i Jylland (Østjylland).",
   "fact_en": "Aarhus is Denmark's second-largest city. It is in Jutland (East Jutland).",
   "question_ids": [
@@ -3323,7 +3467,10 @@
  },
  {
   "id": "vel-tandlaege",
-  "topic_id": "velfaerd",
+  "topic_id": "sundhed",
+  "topic_ids": [
+   "sundhed"
+  ],
   "fact_da": "Tandlæge er det eneste af læge/hospital/tandlæge, som voksne normalt selv betaler en del af. Børn og unge får gratis tandpleje (per 2026: til man fylder 22).",
   "fact_en": "The dentist is the only one of doctor/hospital/dentist that adults normally pay part of themselves. Children and young people get free dental care (per 2026: until they turn 22).",
   "question_ids": [
@@ -3392,7 +3539,10 @@
  },
  {
   "id": "dem-borgmester",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre"
+  ],
   "fact_da": "Borgmesteren er den øverste politiske leder af en kommune.",
   "fact_en": "The mayor (borgmester) is the top political leader of a municipality.",
   "question_ids": [
@@ -3441,7 +3591,10 @@
  },
  {
   "id": "arb-gravid",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "En arbejdsgiver må ikke fyre en kvinde, fordi hun er gravid.",
   "fact_en": "An employer may not fire a woman because she is pregnant.",
   "question_ids": [
@@ -3490,7 +3643,11 @@
  },
  {
   "id": "dem-regioner-5",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "valg"
+  ],
   "fact_da": "Danmark er delt i 5 regioner.",
   "fact_en": "Denmark is divided into 5 regions.",
   "question_ids": [
@@ -3551,7 +3708,10 @@
  },
  {
   "id": "vel-myndig-18",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Man bliver myndig, når man fylder 18 år.",
   "fact_en": "You come of age (become a legal adult) when you turn 18.",
   "question_ids": [
@@ -3616,7 +3776,11 @@
  },
  {
   "id": "ver-fn-1945",
-  "topic_id": "verden",
+  "topic_id": "omverdenen",
+  "topic_ids": [
+   "omverdenen",
+   "forsvar"
+  ],
   "fact_da": "Danmark blev medlem af FN i 1945.",
   "fact_en": "Denmark joined the UN in 1945.",
   "question_ids": [
@@ -3677,7 +3841,10 @@
  },
  {
   "id": "ver-nato-medlem",
-  "topic_id": "verden",
+  "topic_id": "forsvar",
+  "topic_ids": [
+   "forsvar"
+  ],
   "fact_da": "Danmark er medlem af NATO.",
   "fact_en": "Denmark is a member of NATO.",
   "question_ids": [
@@ -3726,7 +3893,10 @@
  },
  {
   "id": "ver-vaernepligt",
-  "topic_id": "verden",
+  "topic_id": "rettigheder",
+  "topic_ids": [
+   "rettigheder"
+  ],
   "fact_da": "Værnepligt er pligten til at forsvare Danmark (at være soldat).",
   "fact_en": "Værnepligt (conscription) is the duty to defend Denmark (to be a soldier).",
   "question_ids": [
@@ -3791,7 +3961,11 @@
  },
  {
   "id": "dem-1915",
-  "topic_id": "demokrati",
+  "topic_id": "ligestilling",
+  "topic_ids": [
+   "ligestilling",
+   "grundloven"
+  ],
   "fact_da": "I 1915 fik kvinder stemmeret til Folketinget (grundlovsændringen 1915).",
   "fact_en": "In 1915 women got the right to vote for the Folketing (the 1915 change to the Constitution).",
   "question_ids": [
@@ -3860,7 +4034,11 @@
  },
  {
   "id": "kon-nytaarstale",
-  "topic_id": "kongehus",
+  "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner",
+   "grundloven"
+  ],
   "fact_da": "Kongen holder nytårstale den 31. december. Statsministeren holder nytårstale den 1. januar.",
   "fact_en": "The King gives the New Year's speech on 31 December. The prime minister gives a New Year's speech on 1 January.",
   "question_ids": [
@@ -3914,6 +4092,9 @@
  {
   "id": "tra-fastelavn",
   "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner"
+  ],
   "fact_da": "Til fastelavn klæder børn sig ud og slår katten af tønden.",
   "fact_en": "At Fastelavn children dress up and 'hit the cat out of the barrel' (a barrel with sweets).",
   "question_ids": [
@@ -3986,7 +4167,11 @@
  },
  {
   "id": "kon-arv",
-  "topic_id": "kongehus",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "historie-foer-1945"
+  ],
   "fact_da": "Kongen eller dronningen arver tronen. Danmark er et arvemonarki.",
   "fact_en": "The king or queen inherits the throne. Denmark is a hereditary monarchy.",
   "question_ids": [
@@ -4047,7 +4232,10 @@
  },
  {
   "id": "dem-doemmende",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Den dømmende magt ligger hos domstolene.",
   "fact_en": "The judicial power lies with the courts.",
   "question_ids": [
@@ -4096,7 +4284,10 @@
  },
  {
   "id": "udd-su-18",
-  "topic_id": "uddannelse",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Man kan tidligst få SU, når man fylder 18 år.",
   "fact_en": "The earliest you can get SU (the State Education Grant) is when you turn 18.",
   "question_ids": [
@@ -4161,7 +4352,10 @@
  },
  {
   "id": "arb-fagforening-pris",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Det koster penge (kontingent) at være medlem af en fagforening.",
   "fact_en": "It costs money (a membership fee) to be a member of a trade union.",
   "question_ids": [
@@ -4218,7 +4412,10 @@
  },
  {
   "id": "arb-samarbejdsudvalg",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Et samarbejdsudvalg er et samarbejde i en virksomhed mellem ledelsen og de ansatte.",
   "fact_en": "A cooperation committee (samarbejdsudvalg) is cooperation in a company between management and employees.",
   "question_ids": [
@@ -4288,6 +4485,9 @@
  {
   "id": "geo-esbjerg",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Esbjerg er Danmarks femtestørste by. Den ligger i Vestjylland.",
   "fact_en": "Esbjerg is Denmark's fifth-largest city. It is in West Jutland.",
   "question_ids": [
@@ -4342,6 +4542,9 @@
  {
   "id": "geo-sydligste",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Danmarks sydligste punkt er Gedser Odde på øen Falster.",
   "fact_en": "Denmark's southernmost point is Gedser Odde on the island of Falster.",
   "question_ids": [
@@ -4395,7 +4598,10 @@
  },
  {
   "id": "his-besat-krig",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Danmark var besat af Tyskland under 2. verdenskrig (1940-1945).",
   "fact_en": "Denmark was occupied by Germany during the Second World War (1940–1945).",
   "question_ids": [
@@ -4441,7 +4647,10 @@
  },
  {
   "id": "his-tyrkiet",
-  "topic_id": "historie",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "Fra 1960'erne blev der hentet arbejdskraft i udlandet (gæstearbejdere). De fleste kom fra Tyrkiet, ex-Jugoslavien eller Pakistan.",
   "fact_en": "From the 1960s labour was brought in from abroad (guest workers). Most came from Turkey, former Yugoslavia or Pakistan.",
   "question_ids": [
@@ -4488,6 +4697,9 @@
  {
   "id": "kul-druk",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Thomas Vinterberg vandt en Oscar i 2021 for filmen 'Druk'.",
   "fact_en": "Thomas Vinterberg won an Oscar in 2021 for the film 'Druk' (Another Round).",
   "question_ids": [
@@ -4533,7 +4745,10 @@
  },
  {
   "id": "tra-folkekirke-flertal",
-  "topic_id": "traditioner",
+  "topic_id": "religion",
+  "topic_ids": [
+   "religion"
+  ],
   "fact_da": "Et flertal af befolkningen er medlem af folkekirken.",
   "fact_en": "A majority of the population are members of the National Church.",
   "question_ids": [
@@ -4588,6 +4803,9 @@
  {
   "id": "kul-yahya-hassan",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Yahya Hassan (1995-2020) var digter.",
   "fact_en": "Yahya Hassan (1995–2020) was a poet.",
   "question_ids": [
@@ -4641,7 +4859,11 @@
  },
  {
   "id": "ver-nato-1949",
-  "topic_id": "verden",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945",
+   "forsvar"
+  ],
   "fact_da": "Danmark blev medlem af NATO i 1949.",
   "fact_en": "Denmark joined NATO in 1949.",
   "question_ids": [
@@ -4707,7 +4929,11 @@
  },
  {
   "id": "dem-kommunalvalg",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "valg"
+  ],
   "fact_da": "Der er valg til kommunalbestyrelser og regionsråd hvert 4. år.",
   "fact_en": "There are elections to municipal and regional councils every 4 years.",
   "question_ids": [
@@ -4765,7 +4991,10 @@
  },
  {
   "id": "dem-lovgivende",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Den lovgivende magt har regeringen og Folketinget. De laver lovene.",
   "fact_en": "The legislative power is held by the government and the Folketing. They make the laws.",
   "question_ids": [
@@ -4819,7 +5048,11 @@
  },
  {
   "id": "dem-kvinder-folketing",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "ligestilling"
+  ],
   "fact_da": "Efter valget i 2026 er 48-49 % af Folketingets medlemmer kvinder (86 af 179) – altså ca. halvdelen.",
   "fact_en": "After the 2026 election, 48–49% of the members of the Folketing are women (86 of 179) – about half.",
   "question_ids": [
@@ -4885,7 +5118,11 @@
  },
  {
   "id": "dem-regionerne-sygehuse",
-  "topic_id": "demokrati",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "sundhed"
+  ],
   "fact_da": "Regionerne har ansvaret for de offentlige sygehuse.",
   "fact_en": "The regions are responsible for the public hospitals.",
   "question_ids": [
@@ -4944,6 +5181,9 @@
  {
   "id": "kul-kroeyer",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "P.S. Krøyer var kunstmaler (en af Skagensmalerne).",
   "fact_en": "P.S. Krøyer was a painter (one of the Skagen Painters).",
   "question_ids": [
@@ -4989,7 +5229,11 @@
  },
  {
   "id": "vel-slaa-boern",
-  "topic_id": "velfaerd",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945",
+   "familieliv"
+  ],
   "fact_da": "Det er forbudt at slå børn i Danmark.",
   "fact_en": "It is forbidden to hit children in Denmark.",
   "question_ids": [
@@ -5039,7 +5283,10 @@
  },
  {
   "id": "his-besat-land",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Det var Tyskland, der besatte Danmark den 9. april 1940.",
   "fact_en": "It was Germany that occupied Denmark on 9 April 1940.",
   "question_ids": [
@@ -5085,7 +5332,10 @@
  },
  {
   "id": "kon-rolle",
-  "topic_id": "kongehus",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Kongen underskriver nye love sammen med en minister.",
   "fact_en": "The King signs new laws together with a minister.",
   "question_ids": [
@@ -5135,7 +5385,10 @@
  },
  {
   "id": "vel-barsel-stoette",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Man kan normalt få økonomisk støtte (barselsdagpenge) under barsels- og fædreorlov.",
   "fact_en": "You can normally get financial support (maternity/parental benefit) during maternity and paternity leave.",
   "question_ids": [
@@ -5197,7 +5450,10 @@
  },
  {
   "id": "arb-deltid",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "En medarbejder har ikke altid krav på deltid – og arbejdsgiveren kan heller ikke bare forlange, at man går på deltid.",
   "fact_en": "An employee does not always have the right to part-time work – and the employer cannot just demand that you go part-time.",
   "question_ids": [
@@ -5259,7 +5515,10 @@
  },
  {
   "id": "dem-parti",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg"
+  ],
   "fact_da": "Folketingets medlemmer behøver ikke være medlem af et politisk parti.",
   "fact_en": "Members of the Folketing do not have to be members of a political party.",
   "question_ids": [
@@ -5317,7 +5576,10 @@
  },
  {
   "id": "his-foerste-kvindelige-sm-aar",
-  "topic_id": "historie",
+  "topic_id": "ligestilling",
+  "topic_ids": [
+   "ligestilling"
+  ],
   "fact_da": "Danmark fik sin første kvindelige statsminister i 2011.",
   "fact_en": "Denmark got its first female prime minister in 2011.",
   "question_ids": [
@@ -5363,7 +5625,10 @@
  },
  {
   "id": "vel-faedreorlov",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Fædre har ret til orlov: barnets far har også ret til at gå på barsel. (Prøven fra 2017: 2 uger lige efter fødslen. Siden 2022 har hver forælder 11 øremærkede uger.)",
   "fact_en": "Fathers have the right to leave: the child's father also has the right to parental leave. (The 2017 exam: 2 weeks just after the birth. Since 2022 each parent has 11 earmarked weeks.)",
   "question_ids": [
@@ -5428,6 +5693,9 @@
  {
   "id": "tra-pinse",
   "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner"
+  ],
   "fact_da": "Pinse er en kristen højtid 7 uger efter påske.",
   "fact_en": "Pinse (Whitsun/Pentecost) is a Christian holiday 7 weeks after Easter.",
   "question_ids": [
@@ -5489,7 +5757,11 @@
  },
  {
   "id": "ver-mep-antal",
-  "topic_id": "verden",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "omverdenen"
+  ],
   "fact_da": "Danmark har 15 medlemmer i Europa-Parlamentet (siden valget i 2024).",
   "fact_en": "Denmark has 15 members of the European Parliament (since the 2024 election).",
   "question_ids": [
@@ -5547,7 +5819,10 @@
  },
  {
   "id": "geo-landbrug",
-  "topic_id": "geografi",
+  "topic_id": "klima",
+  "topic_ids": [
+   "klima"
+  ],
   "fact_da": "Ca. 60 procent af Danmarks areal er landbrug.",
   "fact_en": "About 60 per cent of Denmark's area is farmland.",
   "question_ids": [
@@ -5598,7 +5873,10 @@
  },
  {
   "id": "his-jernbaner",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "De første jernbaner i Danmark åbnede i 1840'erne (1800-tallet). Den første gik fra København til Roskilde i 1847.",
   "fact_en": "The first railways in Denmark opened in the 1840s (the 1800s). The first ran from Copenhagen to Roskilde in 1847.",
   "question_ids": [
@@ -5649,7 +5927,10 @@
  },
  {
   "id": "his-venstre-1870",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Venstre blev dannet omkring 1870. Det er et af de ældste partier.",
   "fact_en": "Venstre was founded around 1870. It is one of the oldest parties.",
   "question_ids": [
@@ -5692,7 +5973,10 @@
  },
  {
   "id": "kon-konge",
-  "topic_id": "kongehus",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Danmarks konge er Frederik 10. (siden 14. januar 2024).",
   "fact_en": "Denmark's king is Frederik 10. (Frederik X), since 14 January 2024.",
   "question_ids": [
@@ -5735,7 +6019,11 @@
  },
  {
   "id": "vel-sundhed-skat",
-  "topic_id": "velfaerd",
+  "topic_id": "sundhed",
+  "topic_ids": [
+   "sundhed",
+   "velfaerd"
+  ],
   "fact_da": "De fleste udgifter til sundhedsvæsenet betales via skatter og afgifter.",
   "fact_en": "Most of the costs of the health service are paid through taxes and duties.",
   "question_ids": [
@@ -5790,7 +6078,11 @@
  },
  {
   "id": "dem-domstole-uafhaengige",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "retssamfund"
+  ],
   "fact_da": "Domstolene er uafhængige. Politikere og regeringen kan ikke bestemme, hvordan en dommer dømmer.",
   "fact_en": "The courts are independent. Politicians and the government cannot decide how a judge rules.",
   "question_ids": [
@@ -5845,7 +6137,10 @@
  },
  {
   "id": "dem-folkeafstemning-grundlov",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Hvis grundloven skal ændres, skal der være en folkeafstemning.",
   "fact_en": "If the Constitution is to be changed, there must be a referendum.",
   "question_ids": [
@@ -5888,7 +6183,10 @@
  },
  {
   "id": "dem-moms",
-  "topic_id": "demokrati",
+  "topic_id": "velfaerd",
+  "topic_ids": [
+   "velfaerd"
+  ],
   "fact_da": "Moms er en afgift på blandt andet varer, man køber i butikkerne.",
   "fact_en": "Moms (VAT) is a tax on, among other things, goods you buy in shops.",
   "question_ids": [
@@ -5931,7 +6229,10 @@
  },
  {
   "id": "his-1814-norge",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Norge var i union med Danmark i over 400 år frem til 1814.",
   "fact_en": "Norway was in a union with Denmark for over 400 years until 1814.",
   "question_ids": [
@@ -5975,6 +6276,9 @@
  {
   "id": "kul-aqua",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Popgruppen Aqua udgav 'Barbie Girl' i 1990'erne.",
   "fact_en": "The pop group Aqua released 'Barbie Girl' in the 1990s.",
   "question_ids": [
@@ -6025,7 +6329,10 @@
  },
  {
   "id": "udd-efterskole",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Man kan gå på efterskole i 8., 9. og 10. klasse.",
   "fact_en": "You can attend an efterskole in years 8, 9 and 10.",
   "question_ids": [
@@ -6076,7 +6383,10 @@
  },
  {
   "id": "arb-landmaend",
-  "topic_id": "arbejde",
+  "topic_id": "erhvervsliv",
+  "topic_ids": [
+   "erhvervsliv"
+  ],
   "fact_da": "Antallet af landmænd er faldet meget siden 1960.",
   "fact_en": "The number of farmers has fallen a lot since 1960.",
   "question_ids": [
@@ -6119,7 +6429,12 @@
  },
  {
   "id": "dem-1849-ikke-kvinder",
-  "topic_id": "demokrati",
+  "topic_id": "ligestilling",
+  "topic_ids": [
+   "ligestilling",
+   "historie-foer-1945",
+   "grundloven"
+  ],
   "fact_da": "Grundloven fra 1849 gav IKKE kvinder stemmeret. Kun en del af mændene fik stemmeret i 1849.",
   "fact_en": "The 1849 Constitution did NOT give women the vote. Only some of the men got the vote in 1849.",
   "question_ids": [
@@ -6178,7 +6493,10 @@
  },
  {
   "id": "dem-regering",
-  "topic_id": "demokrati",
+  "topic_id": "folketing",
+  "topic_ids": [
+   "folketing"
+  ],
   "fact_da": "Fra december 2022 til juni 2026 var regeringen S + V + M (SVM-regeringen). Siden 3. juni 2026 er regeringen S + SF + M + Radikale Venstre (Mette Frederiksen III).",
   "fact_en": "From December 2022 to June 2026 the government was S + V + M (the SVM government). Since 3 June 2026 the government has been S + SF + M + the Social Liberals (Mette Frederiksen III).",
   "question_ids": [
@@ -6233,7 +6551,10 @@
  },
  {
   "id": "dem-stoerste-parti-2022",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg"
+  ],
   "fact_da": "Socialdemokratiet fik flest stemmer ved folketingsvalget i 2022.",
   "fact_en": "The Social Democrats got the most votes in the 2022 general election.",
   "question_ids": [
@@ -6279,6 +6600,9 @@
  {
   "id": "geo-aalborg",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Aalborg er Danmarks fjerdestørste by. Den ligger i Nordjylland.",
   "fact_en": "Aalborg is Denmark's fourth-largest city. It is in North Jutland.",
   "question_ids": [
@@ -6330,6 +6654,9 @@
  {
   "id": "geo-grenen",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Grenen ved Skagen er Danmarks nordligste punkt.",
   "fact_en": "Grenen, near Skagen, is Denmark's northernmost point.",
   "question_ids": [
@@ -6380,7 +6707,11 @@
  },
  {
   "id": "his-befrielse",
-  "topic_id": "historie",
+  "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner",
+   "historie-foer-1945"
+  ],
   "fact_da": "Danmark blev befriet den 5. maj 1945. Den 5. maj markeres befrielsen hvert år.",
   "fact_en": "Denmark was liberated on 5 May 1945. The liberation is marked every year on 5 May.",
   "question_ids": [
@@ -6436,6 +6767,9 @@
  {
   "id": "kul-kierkegaard",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Søren Kierkegaard (1813-1855) var filosof.",
   "fact_en": "Søren Kierkegaard (1813–1855) was a philosopher.",
   "question_ids": [
@@ -6486,7 +6820,10 @@
  },
  {
   "id": "kul-grundtvig",
-  "topic_id": "kultur",
+  "topic_id": "foreningsliv",
+  "topic_ids": [
+   "foreningsliv"
+  ],
   "fact_da": "N.F.S. Grundtvig fik stor betydning for højskolerne i 1800-tallet.",
   "fact_en": "N.F.S. Grundtvig was very important for the folk high schools in the 1800s.",
   "question_ids": [
@@ -6529,7 +6866,10 @@
  },
  {
   "id": "arb-vindenergi",
-  "topic_id": "arbejde",
+  "topic_id": "klima",
+  "topic_ids": [
+   "klima"
+  ],
   "fact_da": "Vindenergi er den grønne energi, Danmark producerer mest af. Den dækker den største del af Danmarks el-forbrug.",
   "fact_en": "Wind energy is the green energy Denmark produces most of. It covers the largest share of Denmark's electricity consumption.",
   "question_ids": [
@@ -6580,7 +6920,10 @@
  },
  {
   "id": "his-terror-2015",
-  "topic_id": "historie",
+  "topic_id": "diskrimination",
+  "topic_ids": [
+   "diskrimination"
+  ],
   "fact_da": "I 2015 var der et terrorangreb ved Københavns Synagoge (og ved kulturhuset Krudttønden).",
   "fact_en": "In 2015 there was a terrorist attack at Copenhagen Synagogue (and at the Krudttønden cultural centre).",
   "question_ids": [
@@ -6631,7 +6974,11 @@
  },
  {
   "id": "vel-cigaretter-18",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv",
+   "sundhed"
+  ],
   "fact_da": "Man skal være mindst 18 år for at købe cigaretter.",
   "fact_en": "You must be at least 18 to buy cigarettes.",
   "question_ids": [
@@ -6678,7 +7025,10 @@
  },
  {
   "id": "vel-samme-koen",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "I Danmark kan man gifte sig med en person af samme køn.",
   "fact_en": "In Denmark you can marry a person of the same sex.",
   "question_ids": [
@@ -6733,7 +7083,11 @@
  },
  {
   "id": "dem-demonstration",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "valg"
+  ],
   "fact_da": "Man skal give politiet besked (underrette), før man holder en demonstration – men man skal IKKE have politiets tilladelse.",
   "fact_en": "You must notify the police before you hold a demonstration – but you do NOT need police permission.",
   "question_ids": [
@@ -6789,6 +7143,9 @@
  {
   "id": "geo-odense",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Odense er Danmarks tredjestørste by. Den ligger på Fyn.",
   "fact_en": "Odense is Denmark's third-largest city. It is on Funen.",
   "question_ids": [
@@ -6840,6 +7197,9 @@
  {
   "id": "kul-blixen",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Karen Blixen skrev bøger (fx 'Den afrikanske farm').",
   "fact_en": "Karen Blixen wrote books (e.g. 'Out of Africa').",
   "question_ids": [
@@ -6883,6 +7243,9 @@
  {
   "id": "tra-paaske",
   "topic_id": "traditioner",
+  "topic_ids": [
+   "traditioner"
+  ],
   "fact_da": "Påsken ligger om foråret.",
   "fact_en": "Easter is in spring.",
   "question_ids": [
@@ -6933,7 +7296,10 @@
  },
  {
   "id": "arb-fagforening-fyre",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "En arbejdsgiver må ikke fyre en ansat, fordi han eller hun melder sig ind i en fagforening.",
   "fact_en": "An employer may not fire an employee because he or she joins a trade union.",
   "question_ids": [
@@ -6980,7 +7346,10 @@
  },
  {
   "id": "tra-begravet",
-  "topic_id": "traditioner",
+  "topic_id": "religion",
+  "topic_ids": [
+   "religion"
+  ],
   "fact_da": "Man behøver ikke være medlem af folkekirken for at blive begravet på en folkekirkegård.",
   "fact_en": "You do not need to be a member of the National Church to be buried in one of its churchyards.",
   "question_ids": [
@@ -7023,7 +7392,10 @@
  },
  {
   "id": "ver-fn-medlem",
-  "topic_id": "verden",
+  "topic_id": "omverdenen",
+  "topic_ids": [
+   "omverdenen"
+  ],
   "fact_da": "Danmark er medlem af FN (De Forenede Nationer).",
   "fact_en": "Denmark is a member of the UN (United Nations).",
   "question_ids": [
@@ -7066,7 +7438,10 @@
  },
  {
   "id": "tra-gift-kirke",
-  "topic_id": "traditioner",
+  "topic_id": "religion",
+  "topic_ids": [
+   "religion"
+  ],
   "fact_da": "Man kan blive gift i folkekirken, hvis den ene person er medlem.",
   "fact_en": "You can get married in the National Church if one of the two is a member.",
   "question_ids": [
@@ -7117,7 +7492,10 @@
  },
  {
   "id": "udd-skolestart",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Børn starter i børnehaveklassen (0. klasse), når de er omkring 6 år. Prøvens svar er '5-6 år'.",
   "fact_en": "Children start the reception class (year 0) when they are about 6. The exam answer is '5–6 years'.",
   "question_ids": [
@@ -7169,6 +7547,9 @@
  {
   "id": "kul-arne-jacobsen",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Arkitekten Arne Jacobsen tegnede Danmarks Nationalbank og designede stolen Ægget.",
   "fact_en": "The architect Arne Jacobsen designed Danmarks Nationalbank and the chair 'the Egg'.",
   "question_ids": [
@@ -7220,6 +7601,9 @@
  {
   "id": "kul-holberg",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Ludvig Holberg var forfatter (han skrev komedier i 1700-tallet).",
   "fact_en": "Ludvig Holberg was an author (he wrote comedies in the 1700s).",
   "question_ids": [
@@ -7271,6 +7655,10 @@
  {
   "id": "vel-laege",
   "topic_id": "velfaerd",
+  "topic_ids": [
+   "velfaerd",
+   "sundhed"
+  ],
   "fact_da": "Det er normalt gratis for voksne at gå til lægen.",
   "fact_en": "It is normally free for adults to see a doctor.",
   "question_ids": [
@@ -7325,7 +7713,11 @@
  },
  {
   "id": "ver-ep-stemmeprocent",
-  "topic_id": "verden",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "omverdenen"
+  ],
   "fact_da": "Stemmeprocenten ved valg til Europa-Parlamentet er lavere end ved folketingsvalg.",
   "fact_en": "Turnout in European Parliament elections is lower than in general elections.",
   "question_ids": [
@@ -7380,7 +7772,10 @@
  },
  {
   "id": "arb-akasse-procent",
-  "topic_id": "arbejde",
+  "topic_id": "arbejdsmarked",
+  "topic_ids": [
+   "arbejdsmarked"
+  ],
   "fact_da": "Prøvens svar: ca. 70 % af lønmodtagerne er medlem af en a-kasse. Læremateriale 2026 siger kun, at de fleste er medlem af en a-kasse – og at 68 % er medlem af en fagforening.",
   "fact_en": "The exam answer: about 70% of employees are members of an a-kasse. Book 2026 only says that most are members of an a-kasse – and that 68% are members of a trade union.",
   "question_ids": [
@@ -7429,7 +7824,11 @@
  },
  {
   "id": "dem-anholdt-24t",
-  "topic_id": "demokrati",
+  "topic_id": "retssamfund",
+  "topic_ids": [
+   "retssamfund",
+   "grundloven"
+  ],
   "fact_da": "En anholdt person skal stilles for en dommer inden 24 timer.",
   "fact_en": "An arrested person must be brought before a judge within 24 hours.",
   "question_ids": [
@@ -7484,7 +7883,10 @@
  },
  {
   "id": "dem-forfatning",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Danmarks forfatning hedder Grundloven.",
   "fact_en": "Denmark's constitution is called Grundloven (the Constitution).",
   "question_ids": [
@@ -7527,7 +7929,11 @@
  },
  {
   "id": "udd-folkeskole-flest",
-  "topic_id": "uddannelse",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "skole"
+  ],
   "fact_da": "De fleste børn går i kommunale folkeskoler.",
   "fact_en": "Most children go to municipal folkeskoler (public schools).",
   "question_ids": [
@@ -7575,7 +7981,10 @@
  },
  {
   "id": "ver-ep-valgt-af",
-  "topic_id": "verden",
+  "topic_id": "omverdenen",
+  "topic_ids": [
+   "omverdenen"
+  ],
   "fact_da": "Medlemmerne af Europa-Parlamentet vælges af befolkningerne i EU-landene.",
   "fact_en": "The members of the European Parliament are elected by the populations of the EU countries.",
   "question_ids": [
@@ -7615,7 +8024,10 @@
  },
  {
   "id": "ver-tyskland-handel",
-  "topic_id": "verden",
+  "topic_id": "erhvervsliv",
+  "topic_ids": [
+   "erhvervsliv"
+  ],
   "fact_da": "USA er Danmarks største handelspartner samlet (14,1 % af samhandlen i 2025), Tyskland er nr. 2 (12,7 %). Tyskland er det land, Danmark importerer mest fra; USA er det land, Danmark eksporterer mest til.",
   "fact_en": "The USA is Denmark's largest trading partner overall (14.1% of trade in 2025), Germany is second (12.7%). Germany is the country Denmark imports most from; the USA is the country Denmark exports most to.",
   "question_ids": [
@@ -7655,7 +8067,10 @@
  },
  {
   "id": "ver-vaernepligt-koen",
-  "topic_id": "verden",
+  "topic_id": "rettigheder",
+  "topic_ids": [
+   "rettigheder"
+  ],
   "fact_da": "I dag har både mænd og kvinder værnepligt i Danmark.",
   "fact_en": "Today both men and women have compulsory military service in Denmark.",
   "question_ids": [
@@ -7699,7 +8114,11 @@
  },
  {
   "id": "arb-beskaeftigelse",
-  "topic_id": "arbejde",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945",
+   "arbejdsmarked"
+  ],
   "fact_da": "Ca. 73 % af borgerne mellem 16 og 66 år har et lønmodtagerarbejde – altså ca. tre ud af fire.",
   "fact_en": "About 73% of residents aged 16 to 66 have a job as an employee – so about three out of four.",
   "question_ids": [
@@ -7743,7 +8162,11 @@
  },
  {
   "id": "his-aeldste-parti",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945",
+   "historie-efter-1945"
+  ],
   "fact_da": "Det Konservative Folkeparti er ældre end Dansk Folkeparti.",
   "fact_en": "The Conservative People's Party is older than the Danish People's Party.",
   "question_ids": [
@@ -7787,7 +8210,10 @@
  },
  {
   "id": "kon-kronprins",
-  "topic_id": "kongehus",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven"
+  ],
   "fact_da": "Danmarks kronprins hedder Christian.",
   "fact_en": "Denmark's crown prince is called Christian.",
   "question_ids": [
@@ -7831,7 +8257,11 @@
  },
  {
   "id": "vel-abort",
-  "topic_id": "velfaerd",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945",
+   "familieliv"
+  ],
   "fact_da": "Siden 1. juni 2025 er grænsen for fri abort 18 uger (før: 12 uger).",
   "fact_en": "Since 1 June 2025 the limit for abortion on request is 18 weeks (before: 12 weeks).",
   "question_ids": [
@@ -7875,7 +8305,10 @@
  },
  {
   "id": "vel-koerekort-17",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Man kan få kørekort til almindelig bil, når man fylder 17 år. 17-årige må køre alene mellem kl. 5 og kl. 20. Fra kl. 20 til kl. 5 skal de have en ledsager over 24 år, der har haft kørekort i mindst fem år. Fra 18 år må man køre alene hele døgnet.",
   "fact_en": "You can get a driving licence for an ordinary car when you turn 17. 17-year-olds may drive alone between 5 am and 8 pm. From 8 pm to 5 am they must have an accompanying adult over 24 who has held a licence for at least five years. From 18 you may drive alone at any time.",
   "question_ids": [
@@ -7915,7 +8348,10 @@
  },
  {
   "id": "vel-levetid",
-  "topic_id": "velfaerd",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "Middellevetiden for mænd var ca. 80 år i 2024.",
   "fact_en": "The average life expectancy for men was about 80 years in 2024.",
   "question_ids": [
@@ -7955,7 +8391,10 @@
  },
  {
   "id": "ver-bistand-afrika",
-  "topic_id": "verden",
+  "topic_id": "omverdenen",
+  "topic_ids": [
+   "omverdenen"
+  ],
   "fact_da": "Størstedelen af den danske udviklingsbistand går til Afrika.",
   "fact_en": "Most of Denmark's development aid goes to Africa.",
   "question_ids": [
@@ -7995,7 +8434,10 @@
  },
  {
   "id": "ver-folkeafstemning-eu",
-  "topic_id": "verden",
+  "topic_id": "folketing",
+  "topic_ids": [
+   "folketing"
+  ],
   "fact_da": "Siden 1953 har der været flest folkeafstemninger om Danmarks forhold til EU.",
   "fact_en": "Since 1953 most referendums have been about Denmark's relationship with the EU.",
   "question_ids": [
@@ -8035,7 +8477,11 @@
  },
  {
   "id": "ver-vaernepligt-flere",
-  "topic_id": "verden",
+  "topic_id": "rettigheder",
+  "topic_ids": [
+   "rettigheder",
+   "forsvar"
+  ],
   "fact_da": "I 2024 blev det besluttet, at der skal indkaldes flere værnepligtige.",
   "fact_en": "In 2024 it was decided that more conscripts will be called up.",
   "question_ids": [
@@ -8079,7 +8525,11 @@
  },
  {
   "id": "dem-hemmelig-stemme",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "grundloven"
+  ],
   "fact_da": "Afstemningen er hemmelig. Andre må ikke se, hvad man stemmer.",
   "fact_en": "Voting is secret. Others may not see how you vote.",
   "question_ids": [
@@ -8123,7 +8573,10 @@
  },
  {
   "id": "his-1658",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "I 1658 mistede Danmark Skåne (og Halland og Blekinge) til Sverige.",
   "fact_en": "In 1658 Denmark lost Skåne (and Halland and Blekinge) to Sweden.",
   "question_ids": [
@@ -8163,7 +8616,10 @@
  },
  {
   "id": "his-marshall",
-  "topic_id": "historie",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "Med Marshall-planen fik Danmark økonomisk hjælp fra USA omkring 1950.",
   "fact_en": "Through the Marshall Plan Denmark got economic aid from the USA around 1950.",
   "question_ids": [
@@ -8203,7 +8659,10 @@
  },
  {
   "id": "his-roedstroemper",
-  "topic_id": "historie",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "Rødstrømpebevægelsen var en del af kvindebevægelsen i 1970'erne.",
   "fact_en": "The Redstocking movement was part of the women's movement in the 1970s.",
   "question_ids": [
@@ -8248,6 +8707,9 @@
  {
   "id": "kul-bier-vinterberg",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Susanne Bier og Thomas Vinterberg er filminstruktører.",
   "fact_en": "Susanne Bier and Thomas Vinterberg are film directors.",
   "question_ids": [
@@ -8287,7 +8749,10 @@
  },
  {
   "id": "ver-irak",
-  "topic_id": "verden",
+  "topic_id": "forsvar",
+  "topic_ids": [
+   "forsvar"
+  ],
   "fact_da": "I 2003 sendte Danmark soldater til Irak efter en invasion ledet af USA.",
   "fact_en": "In 2003 Denmark sent soldiers to Iraq after an invasion led by the USA.",
   "question_ids": [
@@ -8327,7 +8792,10 @@
  },
  {
   "id": "his-1960erne",
-  "topic_id": "historie",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "1960'erne var en tid med høj økonomisk vækst i Danmark.",
   "fact_en": "The 1960s were a time of high economic growth in Denmark.",
   "question_ids": [
@@ -8367,7 +8835,10 @@
  },
  {
   "id": "his-s-regering-1929-82",
-  "topic_id": "historie",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945"
+  ],
   "fact_da": "Socialdemokratiet sad i regering flest år mellem 1929 og 1982.",
   "fact_en": "The Social Democrats were in government for the most years between 1929 and 1982.",
   "question_ids": [
@@ -8407,7 +8878,10 @@
  },
  {
   "id": "ver-nato-forsvar",
-  "topic_id": "verden",
+  "topic_id": "forsvar",
+  "topic_ids": [
+   "forsvar"
+  ],
   "fact_da": "I NATO samarbejder landene primært om forsvarspolitik.",
   "fact_en": "In NATO the countries mainly cooperate on defence policy.",
   "question_ids": [
@@ -8452,6 +8926,9 @@
  {
   "id": "geo-lillebaeltsbro",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Lillebæltsbroen forbinder Fyn og Jylland.",
   "fact_en": "The Little Belt Bridge connects Funen and Jutland.",
   "question_ids": [
@@ -8491,7 +8968,11 @@
  },
  {
   "id": "geo-indbyggere",
-  "topic_id": "geografi",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945",
+   "geografi"
+  ],
   "fact_da": "Danmark har ca. 6 millioner indbyggere.",
   "fact_en": "Denmark has about 6 million inhabitants.",
   "question_ids": [
@@ -8535,7 +9016,10 @@
  },
  {
   "id": "udd-karakterer-8-klasse",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "Eleverne i folkeskolen får karakterer fra 8. klasse.",
   "fact_en": "Pupils in the folkeskole get grades from year 8.",
   "question_ids": [
@@ -8575,7 +9059,10 @@
  },
  {
   "id": "kon-thule",
-  "topic_id": "kongehus",
+  "topic_id": "forsvar",
+  "topic_ids": [
+   "forsvar"
+  ],
   "fact_da": "USA's luftbase Thule ligger i Grønland (i dag hedder den Pituffik).",
   "fact_en": "The US air base Thule is in Greenland (today it is called Pituffik).",
   "question_ids": [
@@ -8615,7 +9102,11 @@
  },
  {
   "id": "arb-ligeloen",
-  "topic_id": "arbejde",
+  "topic_id": "historie-efter-1945",
+  "topic_ids": [
+   "historie-efter-1945",
+   "ligestilling"
+  ],
   "fact_da": "Kvinder har ifølge loven ret til samme løn som mænd for samme arbejde.",
   "fact_en": "By law women have the right to the same pay as men for the same work.",
   "question_ids": [
@@ -8659,7 +9150,10 @@
  },
  {
   "id": "udd-boern-passes",
-  "topic_id": "uddannelse",
+  "topic_id": "dagtilbud",
+  "topic_ids": [
+   "dagtilbud"
+  ],
   "fact_da": "De fleste børn mellem 3 og 5 år bliver passet uden for hjemmet.",
   "fact_en": "Most children aged 3 to 5 are looked after outside the home.",
   "question_ids": [
@@ -8701,7 +9195,10 @@
  },
  {
   "id": "udd-dagpleje",
-  "topic_id": "uddannelse",
+  "topic_id": "dagtilbud",
+  "topic_ids": [
+   "dagtilbud"
+  ],
   "fact_da": "I en dagpleje bliver barnet passet i et privat hjem af en dagplejer.",
   "fact_en": "In dagpleje the child is looked after in a private home by a childminder.",
   "question_ids": [
@@ -8742,6 +9239,9 @@
  {
   "id": "udd-laege-universitet",
   "topic_id": "uddannelse",
+  "topic_ids": [
+   "uddannelse"
+  ],
   "fact_da": "Man læser medicin og bliver læge på et universitet.",
   "fact_en": "You study medicine and become a doctor at a university.",
   "question_ids": [
@@ -8782,6 +9282,9 @@
  {
   "id": "vel-boligstoette",
   "topic_id": "velfaerd",
+  "topic_ids": [
+   "velfaerd"
+  ],
   "fact_da": "Boligstøtte er hjælp til at betale husleje.",
   "fact_en": "Boligstøtte (housing benefit) is help to pay rent.",
   "question_ids": [
@@ -8821,7 +9324,10 @@
  },
  {
   "id": "vel-foraeldremyndighed",
-  "topic_id": "velfaerd",
+  "topic_id": "familieliv",
+  "topic_ids": [
+   "familieliv"
+  ],
   "fact_da": "Når forældrene er gift, har både faren og moren forældremyndigheden.",
   "fact_en": "When the parents are married, both the father and the mother have custody.",
   "question_ids": [
@@ -8861,7 +9367,11 @@
  },
  {
   "id": "ver-ep-valg-5-aar",
-  "topic_id": "verden",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg",
+   "omverdenen"
+  ],
   "fact_da": "Der er valg til Europa-Parlamentet hvert 5. år.",
   "fact_en": "There are elections to the European Parliament every 5 years.",
   "question_ids": [
@@ -8906,6 +9416,9 @@
  {
   "id": "geo-areal",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Danmark (uden Grønland og Færøerne) er ca. 43.000 km².",
   "fact_en": "Denmark (without Greenland and the Faroe Islands) is about 43,000 km².",
   "question_ids": [
@@ -8946,6 +9459,9 @@
  {
   "id": "geo-indvandrere",
   "topic_id": "geografi",
+  "topic_ids": [
+   "geografi"
+  ],
   "fact_da": "Ca. 17 procent af befolkningen (ca. 1 million) er indvandrere eller efterkommere (læremateriale 2026).",
   "fact_en": "About 17 per cent of the population (about 1 million) are immigrants or descendants (book 2026).",
   "question_ids": [
@@ -8985,7 +9501,11 @@
  },
  {
   "id": "geo-region-hovedstaden",
-  "topic_id": "geografi",
+  "topic_id": "selvstyre",
+  "topic_ids": [
+   "selvstyre",
+   "geografi"
+  ],
   "fact_da": "Region Hovedstaden er den største region. Prøven i 2018 sagde ca. 1,7 millioner indbyggere; i dag er det ca. 1,9 millioner.",
   "fact_en": "The Capital Region is the largest region. The 2018 exam said about 1.7 million inhabitants; today it is about 1.9 million.",
   "question_ids": [
@@ -9036,6 +9556,9 @@
  {
   "id": "kul-carl-nielsen",
   "topic_id": "kultur",
+  "topic_ids": [
+   "kultur"
+  ],
   "fact_da": "Carl Nielsen komponerede musik.",
   "fact_en": "Carl Nielsen composed music.",
   "question_ids": [
@@ -9076,6 +9599,9 @@
  {
   "id": "udd-elektriker",
   "topic_id": "uddannelse",
+  "topic_ids": [
+   "uddannelse"
+  ],
   "fact_da": "Man uddanner sig til elektriker på en erhvervsskole.",
   "fact_en": "You train as an electrician at a vocational school (erhvervsskole).",
   "question_ids": [
@@ -9119,7 +9645,10 @@
  },
  {
   "id": "dem-udskriver-valg",
-  "topic_id": "demokrati",
+  "topic_id": "valg",
+  "topic_ids": [
+   "valg"
+  ],
   "fact_da": "Statsministeren bestemmer, hvornår der skal være folketingsvalg (udskriver valg).",
   "fact_en": "The prime minister decides when a general election is held (calls the election).",
   "question_ids": [
@@ -9159,7 +9688,10 @@
  },
  {
   "id": "his-landboreformer",
-  "topic_id": "historie",
+  "topic_id": "historie-foer-1945",
+  "topic_ids": [
+   "historie-foer-1945"
+  ],
   "fact_da": "Landboreformerne i 1700-tallet gav bønderne frihed til selv at vælge, hvor de ville bo og arbejde (stavnsbåndet blev ophævet i 1788).",
   "fact_en": "The agricultural reforms of the 1700s gave farmers the freedom to choose where to live and work (stavnsbåndet, the bond to the estate, was abolished in 1788).",
   "question_ids": [
@@ -9199,7 +9731,10 @@
  },
  {
   "id": "udd-skolebestyrelse",
-  "topic_id": "uddannelse",
+  "topic_id": "skole",
+  "topic_ids": [
+   "skole"
+  ],
   "fact_da": "I en skolebestyrelse sidder der både forældrerepræsentanter og elevrepræsentanter.",
   "fact_en": "A school board has both parent representatives and pupil representatives.",
   "question_ids": [
@@ -9243,7 +9778,11 @@
  },
  {
   "id": "vel-oel-vin-16",
-  "topic_id": "velfaerd",
+  "topic_id": "sundhed",
+  "topic_ids": [
+   "sundhed",
+   "familieliv"
+  ],
   "fact_da": "Man skal være 16 år for at købe almindelig øl. Vin, spiritus og meget stærk øl (alkohol over 6 %) kræver 18 år – ligesom cigaretter.",
   "fact_en": "You must be 16 to buy ordinary beer. Wine, spirits and very strong beer (over 6% alcohol) require 18 – like cigarettes.",
   "question_ids": [
@@ -9287,7 +9826,10 @@
  },
  {
   "id": "ver-eu-handel",
-  "topic_id": "verden",
+  "topic_id": "omverdenen",
+  "topic_ids": [
+   "omverdenen"
+  ],
   "fact_da": "EU arbejder blandt andet for fri handel mellem medlemslandene.",
   "fact_en": "The EU works, among other things, for free trade between its member states.",
   "question_ids": [
@@ -9331,7 +9873,11 @@
  },
  {
   "id": "dem-regeringsdannelse",
-  "topic_id": "demokrati",
+  "topic_id": "grundloven",
+  "topic_ids": [
+   "grundloven",
+   "folketing"
+  ],
   "fact_da": "Efter et valg er det Folketinget (flertallet), der bestemmer, hvem der danner regering.",
   "fact_en": "After an election it is the Folketing (the majority) that decides who forms the government.",
   "question_ids": [

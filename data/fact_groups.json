@@ -84,9 +84,12 @@
  {
   "id": "fg-aarstal",
   "topic_ids": [
-   "historie",
-   "demokrati",
-   "verden"
+   "historie-foer-1945",
+   "forsvar",
+   "historie-efter-1945",
+   "grundloven",
+   "ligestilling",
+   "diskrimination"
   ],
   "title_da": "Vigtige årstal",
   "title_en": "Key years",
@@ -405,9 +408,7 @@
  {
   "id": "fg-hvem-styrer",
   "topic_ids": [
-   "demokrati",
-   "uddannelse",
-   "velfaerd"
+   "selvstyre"
   ],
   "title_da": "Hvem står for hvad? Kommune, region, stat",
   "title_en": "Who runs what? Municipality, region, state",
@@ -495,7 +496,8 @@
  {
   "id": "fg-magt",
   "topic_ids": [
-   "demokrati"
+   "grundloven",
+   "retssamfund"
   ],
   "title_da": "Magtens tredeling og domstolene",
   "title_en": "Separation of powers and the courts",
@@ -586,8 +588,7 @@
  {
   "id": "fg-aldre",
   "topic_ids": [
-   "velfaerd",
-   "uddannelse"
+   "familieliv"
   ],
   "title_da": "Aldersgrænser",
   "title_en": "Age limits",
@@ -717,11 +718,11 @@
  {
   "id": "fg-tal",
   "topic_ids": [
-   "demokrati",
+   "valg",
+   "arbejdsmarked",
+   "skole",
    "geografi",
-   "arbejde",
-   "uddannelse",
-   "verden"
+   "historie-efter-1945"
   ],
   "title_da": "Tal, du skal kunne",
   "title_en": "Numbers you must know",
@@ -1044,8 +1045,7 @@
  {
   "id": "fg-valg",
   "topic_ids": [
-   "demokrati",
-   "verden"
+   "valg"
   ],
   "title_da": "Valg: hvor tit og hvem må stemme",
   "title_en": "Elections: how often and who may vote",
@@ -1267,7 +1267,8 @@
  {
   "id": "fg-kendte",
   "topic_ids": [
-   "kultur"
+   "kultur",
+   "foreningsliv"
   ],
   "title_da": "Kendte danskere",
   "title_en": "Famous Danes",
@@ -1450,7 +1451,7 @@
  {
   "id": "fg-virksomheder",
   "topic_ids": [
-   "arbejde"
+   "erhvervsliv"
   ],
   "title_da": "Danske virksomheder og deres produkter",
   "title_en": "Danish companies and their products",
@@ -1553,9 +1554,7 @@
  {
   "id": "fg-hoejtider",
   "topic_ids": [
-   "traditioner",
-   "historie",
-   "demokrati"
+   "traditioner"
   ],
   "title_da": "Højtider og mærkedage",
   "title_en": "Holidays and special days",
@@ -1750,9 +1749,7 @@
  {
   "id": "fg-gratis",
   "topic_ids": [
-   "velfaerd",
-   "uddannelse",
-   "arbejde"
+   "sundhed"
   ],
   "title_da": "Gratis eller betale?",
   "title_en": "Free or pay?",
@@ -1906,8 +1903,11 @@
  {
   "id": "fg-ja-nej",
   "topic_ids": [
-   "demokrati",
-   "arbejde"
+   "sundhed",
+   "retssamfund",
+   "grundloven",
+   "valg",
+   "arbejdsmarked"
   ],
   "title_da": "Ja/nej-fælder: ét ord ændrer svaret",
   "title_en": "Yes/no traps: one word changes the answer",
@@ -2101,7 +2101,7 @@
  {
   "id": "fg-organisationer",
   "topic_ids": [
-   "verden"
+   "forsvar"
   ],
   "title_da": "Internationale organisationer",
   "title_en": "International organisations",
@@ -2189,7 +2189,8 @@
  {
   "id": "fg-boernepasning",
   "topic_ids": [
-   "uddannelse"
+   "dagtilbud",
+   "skole"
   ],
   "title_da": "Børn: pasning og skole",
   "title_en": "Children: day care and school",
