@@ -656,7 +656,7 @@
       var entry = act[key];
       var on = !!entry && entry.answers > 0;
       if (on) practised++;
-      var cls = [on ? "on" : null, key === todayKey ? "today" : null].filter(Boolean).join(" ");
+      var cls = [on ? "on" : null, key === todayKey ? "is-today" : null].filter(Boolean).join(" ");
       cells.push(h("span", { class: cls || null }, DAYS[i]));
     }
     return h("div", {

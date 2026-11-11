@@ -721,7 +721,7 @@ kbd {
   font: 700 .7rem/1 var(--f-body);
 }
 .week span.on { background: var(--signal); color: var(--on-signal); }
-.week span.today { outline: 2px solid var(--signal); outline-offset: 2px; }
+.week span.is-today { outline: 2px solid var(--signal); outline-offset: 2px; }
 
 /* Run bar in focus mode (§5.1.10) */
 .run-bar {
@@ -867,7 +867,7 @@ kbd {
   color: var(--on-panel-2);
 }
 .today .week span.on { background: var(--signal); color: var(--on-signal); }
-.today .week span.today { outline-color: var(--signal); }
+.today .week span.is-today { outline-color: var(--signal); }
 .today .cta {
   width: 100%;
   margin-top: 16px;
