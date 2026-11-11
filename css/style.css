@@ -1501,7 +1501,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .quiz-opts[hidden] { display: none; }
 .stamp-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
   gap: 14px 8px;
 }
 .stamp-toggle {
@@ -1512,7 +1512,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
   text-align: center;
 }
 .stamp-toggle .stamp.mini { width: 100%; max-width: 64px; }
-.stamp-toggle .toggle-name { font-size: var(--fs-xs); color: var(--ink); line-height: 1.2; }
+.stamp-toggle .toggle-name { font-size: var(--fs-xs); color: var(--ink); line-height: 1.2; overflow-wrap: anywhere; }
 .stamp-toggle:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
 .seg {
   display: inline-grid;

@@ -216,7 +216,7 @@
           "p"))));
 
     t.intro.forEach(function (p) {
-      section.appendChild(withBook(bi(p.da, p.en, "p"), p.book));
+      section.appendChild(withBook(introBi(p), p.book));
       if (p.nobook_da) section.appendChild(MBP.ui.nobookNote(p.nobook_da, p.nobook_en));
     });
 
@@ -247,6 +247,21 @@
 
     section.appendChild(endBar(t));
     return section;
+  }
+
+  // An intro paragraph. Lines inside it ("\n": the contents box's bullets) keep their line breaks.
+  function introBi(p) {
+    function lines(text) {
+      var out = [];
+      text.split("\n").forEach(function (line, i) {
+        if (i > 0) out.push(h("br"));
+        out.push(line);
+      });
+      return out;
+    }
+    var kids = [h("span", { class: "da" }, lines(p.da))];
+    if (p.en) kids.push(h("span", { class: "en", lang: "en" }, lines(p.en)));
+    return h("p", { class: "bi" }, kids);
   }
 
   // One fact row: face value (and postmark when mastered), the fact, its questions and the notes.

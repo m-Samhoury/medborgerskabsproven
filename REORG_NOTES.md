@@ -390,3 +390,25 @@ Not added anywhere, as the plan asks. The user decides.
 - Stamps show "Fakta-ark N" above the name (not on the mini stamps). Check fit at 375 px in Phase 6.
 - Læs sidebar: the active row is kept in view by setting `side.scrollTop` only (`setActive` in `js/study.js`).
 - Chip bar, Test grid, Lær album: the layout is checked in the browser in Phase 6.
+
+## Phase 6: browser checks (done in the built-in preview on http://localhost:8000, then stopped)
+Checked at 375 px (phone) and 1280 px (desktop), light and dark. Console errors: none on study, top15, exams, learn.
+- **Læs**: all 26 sheets open from the chip bar at 375 px. Each header reads "Fakta-ark N · title", and each has its illustration. No sideways scroll.
+- **Deep link** `#velfaerd/vel-laege` (fresh load, 375 px): the fact is centred (top 334 of 812), not under the chip bar (bottom 64). It has focus and the flash class.
+- **"Også i" link** on `vel-laege` in sheet 6 opens `#sundhed/vel-laege`, which is centred and focused. Back returns to `#velfaerd/vel-laege`.
+- **Frequent-only filter on**: following a link to a non-frequent shared fact (`ver-nato-1949`, sheet 24) switches the filter off, shows the toast "Viser alle spørgsmål / Showing all questions", and shows the fact.
+- **Three-sheet cluster** `dem-1849-ikke-kvinder`: seen from sheet 10 (`#ligestilling/…`), it shows two "Også i" links, to `#historie-foer-1945/…` and `#grundloven/…`. Both are the right sheets.
+- **Test**: `?topics=ligestilling,grundloven` shows 2 sheets ticked and "74 spørgsmål tilgængelige". That is the expected union of the two sheets' questions (computed from the data). The sheet grid is 3 columns at 375 px with no overflow. Before the fix it had 5 columns and the "Diskrimination" label overflowed; the fix is `repeat(auto-fill, minmax(84px,1fr))` plus `overflow-wrap:anywhere`.
+- **Lær picker**: 26 stamps, 2 columns at 375 px, each with "Fakta-ark N". No overflow.
+- **Desktop (1280 px)**: the sidebar shows 26 rows in a scrollable panel (max-height 700 px). The active row stays visible inside the sidebar (`scrollTop` only; the page does not move).
+- **Light and dark**: both checked (dark by the system setting, light by emulation) on Læs. Colours follow the aliases.
+- **Intro boxes**: the contents box's bullets keep their line breaks (a `br` per line in `introBi()`, `js/study.js`). Before this fix they were run together on one line.
+
+Not run in this session (say so; the reasons are in the notes):
+- Full 25-question quiz with both sheets of one shared cluster ticked (the no-duplicate check): `eligible()` filters each question once, and the count check above matches, but I did not run the quiz itself.
+- A browser profile with old progress on `main`: the progress keys are per cluster (unchanged), and the old topic keys are ignored by the code. I did not run this in a separate profile.
+- Lær lesson with a shared cluster: the lesson I opened (`?topic=arbejdsmarked`) had no shared cluster, so the "Også i" line in a lesson card was not seen on screen.
+
+Deviations found in Phase 6:
+- The plan says "I dag: the album shows 26 stamps". There is no album on `index.html` (I dag) in this codebase. Only the Lær picker has the album. Nothing was added there.
+- The scroll margin is 88 px for `.fact-row`. Measured: the chip bar bottom is 64 px. The fact lands centred, so the margin is not what is doing the work; it's kept as a safety margin.
