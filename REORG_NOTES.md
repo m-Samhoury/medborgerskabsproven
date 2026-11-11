@@ -412,3 +412,79 @@ Not run in this session (say so; the reasons are in the notes):
 Deviations found in Phase 6:
 - The plan says "I dag: the album shows 26 stamps". There is no album on `index.html` (I dag) in this codebase. Only the Lær picker has the album. Nothing was added there.
 - The scroll margin is 88 px for `.fact-row`. Measured: the chip bar bottom is 64 px. The fact lands centred, so the margin is not what is doing the work; it's kept as a safety margin.
+
+## Phase 7: report
+
+### Per-sheet cluster counts (own = main sheet, shared = also listed in this sheet)
+Output of `node tools/check_sheets.js`. Totals: 168 clusters, 210 placements, 41 clusters in two or more sheets.
+       1 skole  own/shared 7/1  questions 25
+       2 uddannelse  own/shared 3/0  questions 7
+       3 dagtilbud  own/shared 3/0  questions 6
+       4 arbejdsmarked  own/shared 11/1  questions 47
+       5 erhvervsliv  own/shared 5/0  questions 20
+       6 velfaerd  own/shared 3/2  questions 12
+       7 familieliv  own/shared 9/3  questions 30
+       8 foreningsliv  own/shared 3/0  questions 13
+       9 sundhed  own/shared 4/3  questions 18
+      10 ligestilling  own/shared 4/2  questions 22
+      11 grundloven  own/shared 14/5  questions 58
+      12 retssamfund  own/shared 4/1  questions 19
+      13 folketing  own/shared 3/2  questions 16
+      14 selvstyre  own/shared 8/0  questions 29
+      15 valg  own/shared 12/5  questions 56
+      16 rettigheder  own/shared 3/1  questions 15
+      17 religion  own/shared 3/1  questions 14
+      18 omverdenen  own/shared 5/5  questions 27
+      19 geografi  own/shared 14/2  questions 48
+      20 historie-foer-1945  own/shared 12/4  questions 46
+      21 historie-efter-1945  own/shared 11/1  questions 18
+      22 kultur  own/shared 12/0  questions 30
+      23 traditioner  own/shared 7/0  questions 24
+      24 forsvar  own/shared 5/3  questions 19
+      25 diskrimination  own/shared 1/0  questions 2
+      26 klima  own/shared 2/0  questions 4
+    ALL OK
+
+### Changed line ranges (Phase 2 table)
+See "Line ranges: changes from the plan table" in the Phase 2 section above: sheet 4 (box is 13 bullets, lines 7–25, opening text 28–59), sheet 19 (it does have a box, "Dette afsnit", lines 27–29), sheet 21 (heading line 7, bullets 8–9), sheet 6 (body bullets kept in the paragraph), sheets 5, 23 and 24 (opening ranges).
+
+### Dropped intro pointers (Phase 2.5)
+1. verden: "Danmark kom med i EF (i dag EU) i 1973." (not in any cluster)
+2. geografi: "Danmark består af Jylland og mange øer." (background, not an exam point)
+Everything else in the old intros was already covered by a cluster's fact or trap note. Nothing was added anywhere.
+
+### Totals checked (Phase 4.4)
+- Home totals: `js/home.js` uses `D.clusters` and `D.questions`.
+- Per-sheet sums: only per-sheet uses (side counts, sheet heads, the Test stamp grid, the Lær album). No overall total is built from sheet counts.
+- Test: `?topics=ligestilling,grundloven` gives 74 questions, which is the expected union computed from the data.
+- `grep -n "D.topics\|question_count\|cluster_ids.length" js/*.js` was reviewed; nothing sums across sheets.
+
+### Things that differ from the plan, and why
+1. **Sheet 19 has a box.** The plan says it has none; the page has "Dette afsnit handler om:" (lines 27–29). It is handled like the other sheets.
+2. **Sheet 4 box is 13 bullets** split by a margin label, and its opening text runs to the page end (the next heading is at the top of page 23).
+3. **Sheet 21 heading is line 7** (plan: 6); the bullet wraps over lines 8–9.
+4. **`fg-kendte`** is overridden to `kultur` by hand, as planned. The other fact groups use the rule as written. Fact groups now appear in more sheets than the plan expected: `fg-aarstal` in 6, `fg-tal` in 5, `fg-ja-nej` in 5 (see open points).
+5. **`tools/build_data.py` `excerpt()`** now also drops margin labels beside body lines (`SECOND_COL`, the same rule as `bookclean.py`). This changed 12 popover quotes, which were retranslated. Not in the plan, but needed: the quotes had words like `SKOLE` and `KLIMA` in them.
+6. **`tools/check_book_more.js` rule 2** compares the multiset of items with `01-content-plan.json` (as the plan says). The content-plan file is unchanged.
+7. **`tools/check_sheets.js` rule 8** (intros) is skipped while the intros are empty (Phase 1 only) and is on from Phase 2.
+8. **`js/study.js` `introBi()`**: intro paragraphs keep their line breaks (the box bullets). Not in the plan: without it the bullets ran together.
+9. **The home page (I dag) has no album.** The plan's Phase 5 said "the album shows 26 stamps". Only the Lær picker has the album, and it shows 26.
+10. **Phase 6 is partly done** (see its section). The full quiz run with a shared cluster, and the old-progress profile test, were not run.
+11. **`Sheet 25 illustration`**: the plan asks for a hand in front of a circle. Drawn as the circle with a diagonal only (see open points).
+
+### Open points for the user
+1. **Illustrations**: the 16 new ones are first drafts. Two are weak: `diskrimination` (no hand, see above) and `arbejdsmarked` (handshake; clear at 64 px, a faint shape at 16 px). `tools/art-preview.html` shows them all.
+2. **Fact-group placement**: with the rule as written, `fg-aarstal` appears in 6 sheets, `fg-tal` in 5 and `fg-ja-nej` in 5. Decide whether to keep the ≥5-line rule or pick a main sheet by hand.
+3. **English intros** are my translation (Haiku), not reviewed by a person. They are in `data/topics.json` (`intro[].en`) and follow the rules in `check_sheets.js`.
+4. **Two dropped pointers** (EF 1973; "Danmark består af Jylland og mange øer"): add them somewhere, or leave them out.
+5. **Popover paragraph breaks**: some quotes still break mid-sentence on a `\n` where a capital letter starts a line after a blank line (for example "På den måde har / Danmark", sheet 18). Changing this would change about 20 popover keys; left as it is.
+6. **Progress**: topic-level progress (`studied`, `seenMastered`) resets, as agreed. Cluster progress carries over.
+7. **Phase 6 gaps**: a full quiz with a shared cluster ticked in both sheets, and an old-progress browser profile, were not run in the browser.
+
+### Summary of commits (branch `reorg-fact-sheets`, not pushed, not merged)
+- eb5a5fd Re-key data to the book's 26 fact sheets
+- d6a3c7f Sheet intros from the book, with English
+- ccd4534 Sheet colours, short names and illustrations
+- bfb1333 Shared clusters: show in every sheet, with deep links
+- d722f34 Pages and wording for 26 fact sheets
+- a55eff8 Verify and fix the fact-sheet reorganisation
