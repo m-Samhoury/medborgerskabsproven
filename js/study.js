@@ -29,14 +29,16 @@
     main.appendChild(bi("Læs stoffet", "Study the material", "h1"));
     main.appendChild(bi("10 emner. De mest stillede står først.", "10 topics. The most-asked come first.", "p"));
 
-    // Phone: sticky chip bar. Desktop: sidebar. Both link to the same topic sections.
+    // Phone: sticky chip bar. Desktop: sidebar. Both are tabs: each links to one topic, or to the overview tables.
     var chips = h("nav", { class: "chips", "aria-label": "Emner – Topics" });
     D.topics.forEach(function (t) {
       var link = h("a", { class: "chip-link", href: "#" + t.id }, MBP.ui.topicChip(t));
       chipLinks[t.id] = link;
       chips.appendChild(link);
     });
-    chips.appendChild(h("a", { class: "chip-link chip-neutral", href: "#tabeller" }, "Alle tabeller"));
+    var chipTables = h("a", { class: "chip-link chip-neutral", href: "#tabeller" }, "Alle tabeller");
+    chipLinks.tabeller = chipTables;
+    chips.appendChild(chipTables);
     main.appendChild(chips);
     chipBar = chips;
 
@@ -51,85 +53,75 @@
       side.appendChild(row);
     });
     side.appendChild(filterControl("freq-side"));
-    side.appendChild(h("a", { class: "side-link", href: "#tabeller" }, "Alle tabeller"));
+    var sideTables = h("a", { class: "side-link", href: "#tabeller" }, "Alle tabeller");
+    sideRows.tabeller = sideTables;
+    side.appendChild(sideTables);
 
     var content = h("div", { class: "study-content" });
     content.appendChild(filterControl("freq-only"));
-
-    // The overview tables repeat the fact groups. Their heading is built now; the blocks follow after the first render,
-    // unless the hash points into this section (then they are built now, before the scroll).
-    var tables = h("section", { id: "tabeller", class: "study-section" });
-    tables.appendChild(bi("Alle oversigtstabeller", "All overview tables", "h2"));
-    content.appendChild(tables);
-    var tablesBuilt = false;
-    function buildTables() {
-      if (tablesBuilt) return;
-      tablesBuilt = true;
-      D.groups.forEach(function (g) {
-        tables.appendChild(groupBlock(D, g, null));
-      });
-    }
-
-    // The topics are built in order, one at a time, and always before the tables. The first one is built now;
-    // the rest follow one per idle callback, unless the hash needs them now.
-    var builtTopics = 0;
-    function buildTopicsUpTo(last) {
-      while (builtTopics < D.topics.length && (last === undefined || builtTopics <= last)) {
-        content.insertBefore(topicSection(D, D.topics[builtTopics]), tables);
-        builtTopics++;
-      }
-    }
-    function nextChunk() {
-      if (builtTopics < D.topics.length) {
-        buildTopicsUpTo(builtTopics);
-        scheduleIdle(nextChunk);
-      } else {
-        scheduleIdle(buildTables);
-      }
-    }
-    // Builds what a hash points at: a topic and all before it, or the whole content for the tables.
-    function buildForHash(id) {
-      var k = topicIndex(id);
-      if (k >= 0) buildTopicsUpTo(k);
-      else if (id === "tabeller" || D.groups.some(function (g) { return g.id === id; })) {
-        buildTopicsUpTo(undefined);
-        buildTables();
-      }
-    }
-    function topicIndex(id) {
-      for (var i = 0; i < D.topics.length; i++) if (D.topics[i].id === id) return i;
-      return -1;
-    }
-
-    buildTopicsUpTo(0);
     main.appendChild(h("div", { class: "study" }, side, content));
 
-    var hashId = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
-    buildForHash(hashId);
-
-    watchTopics(D);
-
-    // Scroll to the hash, now that the content exists.
-    if (hashId) {
-      var target = document.getElementById(hashId);
-      if (target) target.scrollIntoView();
+    // A tab's section is built the first time it is selected, then kept. Until then it is not in the DOM.
+    // Built sections are placed in topic order, with the overview tables last.
+    var order = D.topics.map(function (t) { return t.id; }).concat(["tabeller"]);
+    var built = {};
+    function place(key, el) {
+      for (var j = order.indexOf(key) + 1; j < order.length; j++) {
+        if (built[order[j]]) {
+          content.insertBefore(el, built[order[j]]);
+          return;
+        }
+      }
+      content.appendChild(el);
+    }
+    function ensureBuilt(key) {
+      if (built[key]) return;
+      var el = key === "tabeller" ? tablesSection(D) : topicSection(D, D.tById.get(key));
+      el.hidden = true;
+      built[key] = el;
+      place(key, el);
     }
 
-    scheduleIdle(nextChunk);
+    // The tab a hash selects: a topic, the tables, or the tables at one fact group. No (or another) hash: the first topic.
+    function selection() {
+      var raw = location.hash.slice(1);
+      try { raw = decodeURIComponent(raw); } catch (e) { /* keep the raw text */ }
+      if (D.tById.has(raw)) return { key: raw };
+      if (raw === "tabeller") return { key: "tabeller" };
+      if (D.gById.has(raw)) return { key: "tabeller", group: raw };
+      return { key: D.topics[0].id };
+    }
 
-    // A chip or sidebar link to a topic or table that is not built yet: build it, then scroll there.
-    window.addEventListener("hashchange", function () {
-      var id = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
-      buildForHash(id);
-      var target = document.getElementById(id);
-      if (target) target.scrollIntoView();
-    });
+    // Shows the selected tab. userSwitch: a click or the back button, so the content top comes into view.
+    function show(userSwitch) {
+      var sel = selection();
+      ensureBuilt(sel.key);
+      order.forEach(function (key) {
+        if (built[key]) built[key].hidden = key !== sel.key;
+      });
+      setActive(sel.key);
+      if (sel.group) {
+        var group = document.getElementById(sel.group);
+        if (group) group.scrollIntoView();
+      } else if (userSwitch) {
+        // The chip bar is sticky on phones: put it at the top of the view. On desktop, the sidebar's row is the top.
+        var anchor = chipBar.offsetParent ? chipBar : side.parentNode;
+        anchor.scrollIntoView({ block: "start" });
+      }
+    }
+
+    window.addEventListener("hashchange", function () { show(true); });
+    show(false);
   }
 
-  // Runs fn when the browser is idle, or right away after a timeout where requestIdleCallback is missing.
-  function scheduleIdle(fn) {
-    if ("requestIdleCallback" in window) window.requestIdleCallback(fn);
-    else setTimeout(fn, 0);
+  // The overview tables: every fact group once, under the heading.
+  function tablesSection(D) {
+    var tables = h("section", { id: "tabeller", class: "study-section" });
+    tables.appendChild(bi("Alle oversigtstabeller", "All overview tables", "h2"));
+    D.groups.forEach(function (g) {
+      tables.appendChild(groupBlock(D, g, null));
+    });
+    return tables;
   }
 
   // The "only frequently asked" switch. Every switch on the page is kept in step.
@@ -150,14 +142,17 @@
     });
   }
 
-  // Highlights the topic in view in the chip bar and the sidebar.
+  // Marks the selected tab in the chip bar and the sidebar, and keeps its chip in view on the phone bar.
   function setActive(id) {
     if (id === activeId) return;
     activeId = id;
     Object.keys(chipLinks).forEach(function (key) {
       var on = key === id;
-      chipLinks[key].classList.toggle("active", on);
-      sideRows[key].classList.toggle("active", on);
+      [chipLinks[key], sideRows[key]].forEach(function (el) {
+        el.classList.toggle("active", on);
+        if (on) el.setAttribute("aria-current", "true");
+        else el.removeAttribute("aria-current");
+      });
     });
     // Scroll only the chip bar sideways. scrollIntoView would also scroll the page.
     var link = chipLinks[id];
@@ -165,27 +160,6 @@
       var left = link.offsetLeft - (chipBar.clientWidth - link.offsetWidth) / 2;
       chipBar.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
     }
-  }
-
-  // Highlights the topic whose section has reached 40% down the screen.
-  function watchTopics(D) {
-    var queued = false;
-    // The sections are looked up on each update: topics are built one at a time after the first render.
-    function update() {
-      queued = false;
-      var line = window.innerHeight * 0.4;
-      var current = document.getElementById(D.topics[0].id);
-      D.topics.forEach(function (t) {
-        var s = document.getElementById(t.id);
-        if (s && s.getBoundingClientRect().top <= line) current = s;
-      });
-      if (current) setActive(current.id);
-    }
-    window.addEventListener("scroll", function () {
-      if (!queued) { queued = true; requestAnimationFrame(update); }
-    }, { passive: true });
-    window.addEventListener("resize", update);
-    update();
   }
 
   // One topic: header band, intro, changes, the facts, the fact groups and the end bar.

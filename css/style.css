@@ -1323,6 +1323,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
     grid-template-columns: 240px minmax(0, 1fr);
     gap: 32px;
     align-items: start;
+    scroll-margin-top: 96px; /* the sticky header sits above the content top */
   }
   .chips { display: none; }
   .side {
@@ -1345,6 +1346,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
     text-decoration: none;
   }
   .side-row.active { background: var(--c-tint); }
+  .side-link.active { background: var(--c-tint); border-radius: var(--r-s, 8px); }
   .side-row .stamp.mini { width: 40px; flex: 0 0 auto; }
   .side-text { display: grid; }
   .side-name { font: 700 var(--fs-s)/1.2 var(--f-body); }
