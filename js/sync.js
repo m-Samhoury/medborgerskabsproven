@@ -13,7 +13,8 @@
   var CODE_RE = /^[A-Z2-9]{16}$/;
   var DEBOUNCE_MS = 15000;
   var FRESH_MS = 10000;
-  var RENDER_WAIT_MS = 2500;
+  var RENDER_WAIT_FIRST_MS = 1200;
+  var SESSION_KEY = "mbp.v1.syncSession";
 
   var inflight = null;
   var dirty = false;
@@ -148,11 +149,27 @@
     });
   }
 
-  // Before a page renders: sync if there is unsent data or the last sync is old, but wait at most 2.5 s.
+  // The first page view of a browser session may wait for the sync, at most 1.2 s. Later page views do not wait:
+  // they sync in the background and render at once (the synced progress shows on the next page view).
+  function firstViewThisSession() {
+    try {
+      if (sessionStorage.getItem(SESSION_KEY)) return false;
+      sessionStorage.setItem(SESSION_KEY, "1");
+    } catch (e) {
+      /* storage blocked: every page view counts as the first */
+    }
+    return true;
+  }
+
+  // Before a page renders: sync if there is unsent data or the last sync is old.
   function beforeRender() {
     if (!enabled() || !rawCode()) return Promise.resolve();
     if (!dirty && Date.now() - lastSync() < FRESH_MS) return Promise.resolve();
-    return Promise.race([syncNow(), wait(RENDER_WAIT_MS)]);
+    if (!firstViewThisSession()) {
+      syncNow(); // background: not awaited, no re-render
+      return Promise.resolve();
+    }
+    return Promise.race([syncNow(), wait(RENDER_WAIT_FIRST_MS)]);
   }
 
   // Makes a new sync code on this device and uploads the current progress under it.
