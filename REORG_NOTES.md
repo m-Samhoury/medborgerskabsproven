@@ -384,3 +384,9 @@ Not added anywhere, as the plan asks. The user decides.
 - Test (`js/quiz.js` `eligible()`): a question is eligible if any of its sheets is ticked, so it is never drawn twice.
 - Totals: `grep -n "D.topics\|question_count\|cluster_ids.length" js/*.js` shows per-sheet uses only (stamps, list counts, the sheet's own header). Home totals use `D.clusters`. Nothing sums per-sheet numbers into an overall total.
 - CSS: `.also-in`, `.fact-row { scroll-margin-top: 88px }` (to be checked on the phone chip bar in Phase 6), `.fact-row.flash` with a reduced-motion variant.
+
+## Phase 5: pages and wording for 26 sheets
+- Copy changed as in the plan table (Læs intro line, aria labels, title headers "Fakta-ark N · …", "Øv dette fakta-ark", Lær back/test/empty/picker lines, Hjem "Vælg et fakta-ark", Test "0 spørgsmål – vælg mindst ét fakta-ark" and the legend "Fakta-ark"). "N emner" counts were kept where they count clusters (Læs side counts and topic heads, Hjem "Dagens kurs er 10 emner", Lær "10 emner fra alle fakta-ark").
+- Stamps show "Fakta-ark N" above the name (not on the mini stamps). Check fit at 375 px in Phase 6.
+- Læs sidebar: the active row is kept in view by setting `side.scrollTop` only (`setActive` in `js/study.js`).
+- Chip bar, Test grid, Lær album: the layout is checked in the browser in Phase 6.

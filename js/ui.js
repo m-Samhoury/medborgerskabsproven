@@ -653,6 +653,7 @@
     var face = h("div", { class: "stamp-face" },
       constSvg(WAVE),
       h("div", { class: "art" }, MBP.topicArt(topic.id, mini ? 32 : 64)),
+      mini ? null : h("div", { class: "no" }, "Fakta-ark " + topic.sheet),
       mini ? null : h("div", { class: "nm" }, names[0]),
       mini ? null : h("div", { class: "ct" }, progress.mastered + " / " + progress.total));
 

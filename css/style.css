@@ -572,6 +572,7 @@ a.stamp:hover { transform: rotate(-1.5deg) translateY(-2px); }
 .stamp-face .art svg { width: 78%; height: auto; }
 .stamp-face .nm { font: 400 .92rem/1.1 var(--f-display); }
 .stamp-face .ct { font: 700 .72rem var(--f-body); font-variant-numeric: tabular-nums; opacity: .9; }
+.stamp-face .no { font: 700 .6rem/1.1 var(--f-body); letter-spacing: .02em; opacity: .85; }
 .stamp.lvl-0 .stamp-face { background: var(--surface); color: var(--ink-2); outline: 1.5px dashed var(--line); outline-offset: -5px; }
 .stamp.lvl-2 .stamp-face { background: linear-gradient(to top, color-mix(in srgb, var(--c) 28%, var(--tint-base)) 50%, var(--c-tint) 50%); }
 .stamp.lvl-4 .stamp-face { background: var(--c); color: #fff; }

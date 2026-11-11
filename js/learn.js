@@ -92,22 +92,22 @@
     if (pool.length === 0) {
       content.appendChild(bi("Ingen emner her endnu.", "No items here yet.", "p"));
       content.appendChild(h("div", { class: "btn-row" },
-        h("a", { class: "btn btn-secondary", href: "learn.html" }, bi("Tilbage til emner", "Back to topics", "span"))));
+        h("a", { class: "btn btn-secondary", href: "learn.html" }, bi("Tilbage til fakta-ark", "Back to fact sheets", "span"))));
       return;
     }
 
     var clusters = buildSession(pool, any);
     var base = "learn.html?topic=" + topicParam + (frequent ? "&frequent=1" : "");
     if (clusters.length === 0) {
-      content.appendChild(bi("Alt i dette emne er mestret.", "Everything in this topic is mastered.", "h2"));
+      content.appendChild(bi("Alt i dette fakta-ark er mestret.", "Everything in this fact sheet is mastered.", "h2"));
       if (topic) {
         var progress = MBP.ui.topicProgress(D, topic);
         content.appendChild(MBP.ui.stamp(topic, progress, {}));
       }
       content.appendChild(h("div", { class: "btn-row" },
         h("a", { class: "btn btn-secondary", href: base + "&any=1", title: "Practise anyway" }, bi("Øv alligevel", "Practise anyway", "span")),
-        h("a", { class: "btn btn-primary", href: isAll ? "quiz.html" : "quiz.html?topics=" + topicParam, title: "Test this topic" },
-          bi("Test emnet", "Test this topic", "span"))));
+        h("a", { class: "btn btn-primary", href: isAll ? "quiz.html" : "quiz.html?topics=" + topicParam, title: "Test this fact sheet" },
+          bi("Test fakta-arket", "Test this fact sheet", "span"))));
       return;
     }
 
@@ -301,9 +301,9 @@
       content.appendChild(h("div", { class: "btn-row summary-actions" },
         h("button", { type: "button", class: "btn btn-primary", title: "Continue", onclick: function () { location.reload(); } },
           bi("Fortsæt", "Continue", "span")),
-        h("a", { class: "btn btn-secondary", href: testHref, title: "Test this topic" },
-          bi("Test emnet", "Test this topic", "span")),
-        h("a", { class: "btn btn-quiet", href: "learn.html" }, bi("Tilbage til emner", "Back to topics", "span"))));
+        h("a", { class: "btn btn-secondary", href: testHref, title: "Test this fact sheet" },
+          bi("Test fakta-arket", "Test this fact sheet", "span")),
+        h("a", { class: "btn btn-quiet", href: "learn.html" }, bi("Tilbage til fakta-ark", "Back to fact sheets", "span"))));
     }
 
     renderExplain();
@@ -321,8 +321,8 @@
     main.appendChild(h("section", { class: "today" },
       h("h2", null, bi("Dagens mærker", "Today's stamps", "span")),
       bi(
-        "10 emner fra alle emner: først dem, der skal gentages, så nye.",
-        "10 items from all topics: first the ones due for review, then new ones.",
+        "10 emner fra alle fakta-ark: først dem, der skal gentages, så nye.",
+        "10 items from all fact sheets: first the ones due for review, then new ones.",
         "p"),
       h("a", { class: "btn btn-stack cta", href: "learn.html?topic=all" },
         bi("Saml dagens mærker", "Collect today's stamps", "span"))));
@@ -331,7 +331,7 @@
       h("a", { class: "btn btn-secondary", href: "learn.html?topic=all&frequent=1", title: "Only frequently asked" },
         MBP.icon("star", 18), bi("Kun ofte stillede", "Only frequently asked", "span"))));
 
-    main.appendChild(bi("Vælg et emne", "Choose a topic", "h2"));
+    main.appendChild(bi("Vælg et fakta-ark", "Choose a fact sheet", "h2"));
     var album = h("div", { class: "album" });
     var now = Date.now();
     var clusters = MBP.store.progress().clusters;

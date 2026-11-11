@@ -18,6 +18,7 @@
   var chipLinks = {};
   var sideRows = {};
   var chipBar = null;
+  var sideEl = null;
   var activeId = null;
 
   MBP.ui.initShell();
@@ -27,10 +28,10 @@
     var main = document.getElementById("main");
     main.textContent = "";
     main.appendChild(bi("Læs stoffet", "Study the material", "h1"));
-    main.appendChild(bi("10 emner. De mest stillede står først.", "10 topics. The most-asked come first.", "p"));
+    main.appendChild(bi("Bogens 26 fakta-ark, i samme rækkefølge. I hvert ark står de mest stillede spørgsmål først.", "The book's 26 fact sheets, in the same order. In each sheet, the most-asked questions come first.", "p"));
 
     // Phone: sticky chip bar. Desktop: sidebar. Both are tabs: each links to one topic, or to the overview tables.
-    var chips = h("nav", { class: "chips", "aria-label": "Emner – Topics" });
+    var chips = h("nav", { class: "chips", "aria-label": "Fakta-ark – Fact sheets" });
     D.topics.forEach(function (t) {
       var link = h("a", { class: "chip-link", href: "#" + t.id }, MBP.ui.topicChip(t));
       chipLinks[t.id] = link;
@@ -42,7 +43,8 @@
     main.appendChild(chips);
     chipBar = chips;
 
-    var side = h("aside", { class: "side", "aria-label": "Emner – Topics" });
+    var side = h("aside", { class: "side", "aria-label": "Fakta-ark – Fact sheets" });
+    sideEl = side;
     D.topics.forEach(function (t) {
       var row = h("a", { class: "side-row topic-scope", href: "#" + t.id, style: "--c: var(--t-" + t.id + ")" },
         MBP.ui.stamp(t, MBP.ui.topicProgress(D, t), { mini: true }),
@@ -183,6 +185,14 @@
         else el.removeAttribute("aria-current");
       });
     });
+    // Keep the active sidebar row visible inside the sidebar only (scrollIntoView would move the page).
+    var row = sideRows[id];
+    if (row && sideEl && sideEl.scrollHeight > sideEl.clientHeight) {
+      var top = row.offsetTop - sideEl.offsetTop;
+      if (top < sideEl.scrollTop || top + row.offsetHeight > sideEl.scrollTop + sideEl.clientHeight) {
+        sideEl.scrollTop = Math.max(0, top - 8);
+      }
+    }
     // Scroll only the chip bar sideways. scrollIntoView would also scroll the page.
     var link = chipLinks[id];
     if (link && chipBar) {
@@ -199,7 +209,7 @@
     section.appendChild(h("div", { class: "topic-head" },
       MBP.ui.stamp(t, progress, {}),
       h("div", null,
-        bi(t.title_da, t.title_en, "h2"),
+        bi("Fakta-ark " + t.sheet + " · " + t.title_da, "Fact sheet " + t.sheet + " · " + t.title_en, "h2"),
         bi(
           t.cluster_ids.length + " emner, " + t.question_count + " spørgsmål. " + progress.mastered + " mærker samlet.",
           t.cluster_ids.length + " items, " + t.question_count + " questions. " + progress.mastered + " stamps collected.",
@@ -347,9 +357,9 @@
       h("a", {
         class: "btn btn-primary",
         href: "learn.html?topic=" + t.id,
-        title: "Practise this topic",
+        title: "Practise this fact sheet",
         style: "background: var(--c); color: #fff"
-      }, "Øv dette emne"),
+      }, "Øv dette fakta-ark"),
       studiedBtn);
 
     // Reaching the end of the topic counts as studied.

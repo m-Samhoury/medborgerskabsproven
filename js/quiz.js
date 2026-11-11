@@ -189,7 +189,7 @@
       } else {
         n = eligible(D, selectedTopics(), freqBox.checked).length;
         if (n === 0) {
-          count.appendChild(bi("0 spørgsmål – vælg mindst ét emne", "0 questions – choose at least one topic", "span"));
+          count.appendChild(bi("0 spørgsmål – vælg mindst ét fakta-ark", "0 questions – choose at least one fact sheet", "span"));
         } else {
           count.appendChild(bi(n + " spørgsmål tilgængelige", n + " questions available", "span"));
         }
@@ -216,7 +216,7 @@
     lenInputs.forEach(function (i) { i.addEventListener("change", refresh); });
 
     quizOpts.appendChild(h("fieldset", { class: "topic-picker" },
-      h("legend", null, bi("Emner", "Topics", "span")),
+      h("legend", null, bi("Fakta-ark", "Fact sheets", "span")),
       allBtn,
       h("div", { class: "stamp-grid" }, stampBoxes.map(function (b) { return b.label; }))));
     quizOpts.appendChild(h("fieldset", { class: "len-picker" },

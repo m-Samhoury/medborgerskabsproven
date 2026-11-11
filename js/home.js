@@ -96,16 +96,16 @@
   // The two main buttons under the panel: learn and test.
   function mainActions() {
     return h("div", { class: "quick" },
-      h("a", { class: "btn btn-secondary", href: "learn.html", title: "Learn – choose a topic" },
+      h("a", { class: "btn btn-secondary", href: "learn.html", title: "Learn – choose a fact sheet" },
         MBP.icon("practise", 22),
         h("span", { class: "btn-text" },
           bi("Lær", "Learn", "span"),
-          h("span", { class: "hint" }, bi("Vælg et emne", "Choose a topic", "span")))),
-      h("a", { class: "btn btn-secondary", href: "quiz.html?mode=quiz", title: "Test – choose a topic or all" },
+          h("span", { class: "hint" }, bi("Vælg et fakta-ark", "Choose a fact sheet", "span")))),
+      h("a", { class: "btn btn-secondary", href: "quiz.html?mode=quiz", title: "Test – choose a fact sheet or all" },
         MBP.icon("test", 22),
         h("span", { class: "btn-text" },
           bi("Test", "Test", "span"),
-          h("span", { class: "hint" }, bi("Vælg emne eller alle", "Choose a topic or all", "span")))));
+          h("span", { class: "hint" }, bi("Vælg fakta-ark eller alle", "Choose a fact sheet or all", "span")))));
   }
 
   // Quiet link to the 15 most-asked questions, on their own page.
