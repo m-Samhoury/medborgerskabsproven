@@ -55,9 +55,6 @@
 
     var content = h("div", { class: "study-content" });
     content.appendChild(filterControl("freq-only"));
-    D.topics.forEach(function (t) {
-      content.appendChild(topicSection(D, t));
-    });
 
     // The overview tables repeat the fact groups. Their heading is built now; the blocks follow after the first render,
     // unless the hash points into this section (then they are built now, before the scroll).
@@ -73,20 +70,60 @@
       });
     }
 
+    // The topics are built in order, one at a time, and always before the tables. The first one is built now;
+    // the rest follow one per idle callback, unless the hash needs them now.
+    var builtTopics = 0;
+    function buildTopicsUpTo(last) {
+      while (builtTopics < D.topics.length && (last === undefined || builtTopics <= last)) {
+        content.insertBefore(topicSection(D, D.topics[builtTopics]), tables);
+        builtTopics++;
+      }
+    }
+    function nextChunk() {
+      if (builtTopics < D.topics.length) {
+        buildTopicsUpTo(builtTopics);
+        scheduleIdle(nextChunk);
+      } else {
+        scheduleIdle(buildTables);
+      }
+    }
+    // Builds what a hash points at: a topic and all before it, or the whole content for the tables.
+    function buildForHash(id) {
+      var k = topicIndex(id);
+      if (k >= 0) buildTopicsUpTo(k);
+      else if (id === "tabeller" || D.groups.some(function (g) { return g.id === id; })) {
+        buildTopicsUpTo(undefined);
+        buildTables();
+      }
+    }
+    function topicIndex(id) {
+      for (var i = 0; i < D.topics.length; i++) if (D.topics[i].id === id) return i;
+      return -1;
+    }
+
+    buildTopicsUpTo(0);
     main.appendChild(h("div", { class: "study" }, side, content));
 
-    watchTopics(D);
-
     var hashId = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
-    var hashInTables = hashId === "tabeller" || D.groups.some(function (g) { return g.id === hashId; });
-    if (hashInTables) buildTables();
-    else scheduleIdle(buildTables);
+    buildForHash(hashId);
+
+    watchTopics(D);
 
     // Scroll to the hash, now that the content exists.
     if (hashId) {
       var target = document.getElementById(hashId);
       if (target) target.scrollIntoView();
     }
+
+    scheduleIdle(nextChunk);
+
+    // A chip or sidebar link to a topic or table that is not built yet: build it, then scroll there.
+    window.addEventListener("hashchange", function () {
+      var id = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
+      buildForHash(id);
+      var target = document.getElementById(id);
+      if (target) target.scrollIntoView();
+    });
   }
 
   // Runs fn when the browser is idle, or right away after a timeout where requestIdleCallback is missing.
@@ -132,16 +169,15 @@
 
   // Highlights the topic whose section has reached 40% down the screen.
   function watchTopics(D) {
-    var sections = D.topics
-      .map(function (t) { return document.getElementById(t.id); })
-      .filter(Boolean);
     var queued = false;
+    // The sections are looked up on each update: topics are built one at a time after the first render.
     function update() {
       queued = false;
       var line = window.innerHeight * 0.4;
-      var current = sections[0];
-      sections.forEach(function (s) {
-        if (s.getBoundingClientRect().top <= line) current = s;
+      var current = document.getElementById(D.topics[0].id);
+      D.topics.forEach(function (t) {
+        var s = document.getElementById(t.id);
+        if (s && s.getBoundingClientRect().top <= line) current = s;
       });
       if (current) setActive(current.id);
     }
