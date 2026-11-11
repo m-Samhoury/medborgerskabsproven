@@ -7,7 +7,7 @@
 //  4 every number in the Danish appears in the English, unchanged
 //  5 the English is not the Danish, and for texts of 60 characters or more its length is 0.6–1.8 × the Danish
 //    (shorter headings are left out of the length rule: a two-word title can change length a lot)
-//  6 bundle.en (data/bundle.js) is exactly the used part of data/book_en.json
+//  6 bundle.en (data/bundle-book.js) is exactly the used part of data/book_en.json
 // EXCEPTIONS: a Danish string → the reason it may break rule 5. Keep it empty unless there is a good reason.
 "use strict";
 var fs = require("fs");
@@ -61,8 +61,8 @@ stale.forEach(function (k) { fail("stale key, not used by the book data: " + JSO
 
 // 6 bundle.en
 var sandbox = { window: {} };
-vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle.js"), "utf8"), sandbox);
-var bundleEn = sandbox.window.MBP_RAW && sandbox.window.MBP_RAW.en;
+vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle-book.js"), "utf8"), sandbox);
+var bundleEn = sandbox.window.MBP_RAW_BOOK && sandbox.window.MBP_RAW_BOOK.en;
 var subset = {};
 used.forEach(function (da) { if (en[da]) subset[da] = en[da]; });
 // Same keys and values; the key order does not matter (the builder sorts them, so JSON text can differ).
@@ -71,8 +71,8 @@ function sameObject(a, b) {
   return ka.length === kb.length && ka.every(function (k, i) { return k === kb[i] && a[k] === b[k]; });
 }
 var bundleMatches = !!bundleEn && sameObject(bundleEn, subset);
-if (!bundleEn) fail("data/bundle.js has no \"en\" – run python3 tools/build_data.py");
-else if (!bundleMatches) fail("data/bundle.js \"en\" differs from data/book_en.json – run python3 tools/build_data.py");
+if (!bundleEn) fail("data/bundle-book.js has no \"en\" – run python3 tools/build_data.py");
+else if (!bundleMatches) fail("data/bundle-book.js \"en\" differs from data/book_en.json – run python3 tools/build_data.py");
 
 console.log("book en: " + translated + " of " + used.length + " strings translated; " +
   "stale keys: " + stale.length + "; bundle matches: " + bundleMatches);

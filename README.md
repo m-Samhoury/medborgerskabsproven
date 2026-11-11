@@ -51,7 +51,7 @@ Progress is per browser and per device unless sync is on. Clearing site data rem
 
 ## Run it
 
-No server is needed. Open `index.html` directly in a browser. The data is read from `data/bundle.js`, so it also works from `file://`. Fonts are loaded from Google Fonts, so you need an internet connection for them.
+No server is needed. Open `index.html` directly in a browser. The data is read from `data/bundle-core.js` (and `data/bundle-book.js` on the pages that show book material), so it also works from `file://`. Fonts are loaded from Google Fonts, so you need an internet connection for them.
 
 To serve it locally instead:
 
@@ -81,7 +81,7 @@ learn.html        Øv (practise)
 quiz.html         Test
 exams.html        Prøver (past exams)
 css/style.css     All styles. Colour tokens are at the top, with the light and dark values.
-js/data.js        Loads the data (from data/bundle.js; fetches the JSON only as a fallback)
+js/data.js        Loads the data (from data/bundle-core.js and data/bundle-book.js; fetches the JSON only as a fallback)
 js/store.js       Progress, EN and theme settings, all in localStorage
 js/sync.js        Sync between devices (off while SYNC_URL is empty; see sync/README.md)
 sync/             The sync server: AWS Lambda code (sync/lambda) and the owner's setup steps (sync/README.md)
@@ -94,8 +94,8 @@ js/study.js       Page script: Læs
 js/learn.js       Page script: Øv
 js/quiz.js        Page script: Test
 js/exams.js       Page script: Prøver
-data/             Question, cluster, topic and fact-group data, plus the generated bundle.js
+data/             Question, cluster, topic and fact-group data, plus the generated bundle-core.js and bundle-book.js
 exams/            The 20 official exam PDFs and answer keys, with INDEX.md
-tools/build_data.py  Builds data/bundle.js from data/*.json
+tools/build_data.py  Builds data/bundle-core.js and data/bundle-book.js from data/*.json
 PLAN.md           Original build plan
 ```

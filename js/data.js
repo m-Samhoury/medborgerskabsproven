@@ -1,5 +1,6 @@
 // Loads and indexes the four data files. Read-only: the JSON is never edited.
-// Normally the data comes from data/bundle.js (window.MBP_RAW), which works from file://.
+// Normally the data comes from data/bundle-core.js (window.MBP_RAW) and, on the pages that show book material,
+// data/bundle-book.js (window.MBP_RAW_BOOK). Both work from file://.
 // fetch() of data/*.json is only a fallback for when the bundle is missing.
 (function () {
   "use strict";
@@ -37,7 +38,9 @@
     if (MBP.data) return Promise.resolve(MBP.data);
     var raw = window.MBP_RAW;
     if (raw) {
-      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups, raw.book, raw.more, raw.en);
+      // The book part is missing on pages that do not show book material: then book, more and en are {}.
+      var rawBook = window.MBP_RAW_BOOK || {};
+      MBP.data = index(raw.questions, raw.clusters, raw.topics, raw.groups, rawBook.book, rawBook.more, rawBook.en);
       return Promise.resolve(MBP.data);
     }
     return Promise.all([

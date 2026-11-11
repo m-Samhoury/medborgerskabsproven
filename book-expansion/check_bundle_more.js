@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Checks the "Mere fra bogen" data in data/bundle.js (MBP_RAW.more).
+// Checks the "Mere fra bogen" data in data/bundle-book.js (MBP_RAW_BOOK.more).
 // Run from the repo root:  node tools/check_book_more.js   (or node book-expansion/check_bundle_more.js)
 // Exits 1 on any failure.
 //  1 the bundle loads and has a "more" object
@@ -17,12 +17,14 @@ var fails = [];
 function fail(msg) { fails.push(msg); }
 
 var sandbox = { window: {} };
-vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle.js"), "utf8"), sandbox);
-var raw = sandbox.window.MBP_RAW;
-if (!raw) { console.error("FAIL: data/bundle.js does not set window.MBP_RAW"); process.exit(1); }
+vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle-book.js"), "utf8"), sandbox);
+var raw = sandbox.window.MBP_RAW_BOOK;
+vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle-core.js"), "utf8"), sandbox);
+raw = Object.assign({}, raw, sandbox.window.MBP_RAW);
+if (!raw) { console.error("FAIL: data/bundle-book.js does not set window.MBP_RAW_BOOK"); process.exit(1); }
 var more = raw.more;
 if (!more || typeof more !== "object" || Array.isArray(more)) {
-  console.error("FAIL: MBP_RAW.more is missing – run python3 tools/build_data.py");
+  console.error("FAIL: MBP_RAW_BOOK.more is missing – run python3 tools/build_data.py");
   process.exit(1);
 }
 

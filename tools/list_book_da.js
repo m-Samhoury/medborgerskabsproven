@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Lists the distinct Danish book strings that need an English translation in data/book_en.json.
-// The strings are: every section-1 passage in MBP_RAW.book, and every title_da and excerpt_da in MBP_RAW.more.
+// The strings are: every section-1 passage in MBP_RAW_BOOK.book, and every title_da and excerpt_da in MBP_RAW_BOOK.more.
 // Run from the repo root:
 //   node tools/list_book_da.js                       every distinct string, as a JSON array
 //   node tools/list_book_da.js --batch 3 --size 25   batch 3 (1-based) of that list
@@ -21,9 +21,9 @@ function load(file) {
 // Every distinct Danish string, in bundle order (book passages first, then the "more" items).
 function distinctStrings() {
   var sandbox = { window: {} };
-  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle.js"), "utf8"), sandbox);
-  var raw = sandbox.window.MBP_RAW;
-  if (!raw || !raw.book || !raw.more) throw new Error("data/bundle.js has no book data – run python3 tools/build_data.py");
+  vm.runInNewContext(fs.readFileSync(path.join(ROOT, "data", "bundle-book.js"), "utf8"), sandbox);
+  var raw = sandbox.window.MBP_RAW_BOOK;
+  if (!raw || !raw.book || !raw.more) throw new Error("data/bundle-book.js has no book data – run python3 tools/build_data.py");
   var seen = new Set();
   var out = [];
   function add(s) {
