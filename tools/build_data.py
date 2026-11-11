@@ -26,6 +26,7 @@ PARTS = ["questions", "clusters", "topics", "fact_groups"]
 # pdftotext -layout puts the running header and the margin headings far to the right.
 MARGIN = re.compile(r"^\s{30,}\S")
 HEADER = re.compile(r"^\s*\d+ / 156\s*$")
+SECOND_COL = re.compile(r"\S {5,}\S")  # same rule as book-expansion/bookclean.py
 
 
 def book_refs(raw):
@@ -53,6 +54,9 @@ def excerpt(page, lines):
     for row in rows[a - 1:b]:
         if HEADER.match(row) or MARGIN.match(row):
             continue
+        m = SECOND_COL.search(row)
+        if m:
+            row = row[:m.start() + 1]  # a margin label beside a body line ("... friskoler     SKOLE")
         row = " ".join(row.split())
         if not row:
             gap = bool(cur)

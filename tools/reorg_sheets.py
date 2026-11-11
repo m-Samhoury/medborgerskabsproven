@@ -272,10 +272,213 @@ def phase1():
 
 
 # ---------------------------------------------------------------------------
-# Phase 2 (filled in later): intros from the book.
+# Phase 2: intros from the book (Danish, word for word via book-expansion/bookclean.py).
 # ---------------------------------------------------------------------------
+
+sys.path.insert(0, str(BOOK_EXPANSION))
+import bookclean  # noqa: E402
+
+# Per sheet: the book page, the opening text lines (paragraphs before the contents box), the contents box
+# heading line and its bullet line ranges. Checked against bookdump/pages/page-NNN.txt (see REORG_NOTES.md).
+# "box_first": the box comes before the opening text (sheet 4), so the opening text is read after the bullets.
+# A bullet range of None means: read the bullets up to the first blank line.
+INTRO_SPECS = {
+    "skole": dict(page=6, open=(6, 18), head=19, bullets=[(20, 22)]),
+    "uddannelse": dict(page=12, open=(6, 17), head=18, bullets=[(19, 21)]),
+    "dagtilbud": dict(page=18, open=(6, 26), head=27, bullets=[(28, 31)]),
+    "arbejdsmarked": dict(page=22, box_first=True, head=7, bullets=[(8, 11), (17, 25)], open_from=28),
+    "erhvervsliv": dict(page=31, open=(6, 6), head=10, bullets=[(11, 20)]),
+    "velfaerd": dict(page=35, open=(6, 37), head=38, bullets=[(39, 40)]),
+    "familieliv": dict(page=41, open=(6, 19), head=20, bullets=[(21, 25)]),
+    "foreningsliv": dict(page=47, open=(6, 18), head=19, bullets=[(20, 25)]),
+    "sundhed": dict(page=53, open=(6, 18), head=19, bullets=[(20, 24)]),
+    "ligestilling": dict(page=58, open=(6, 17), head=18, bullets=[(19, 21)]),
+    "grundloven": dict(page=62, open=(6, 34), head=35, bullets=[(36, 38)]),
+    "retssamfund": dict(page=68, open=(6, 17), head=18, bullets=[(19, 20)]),
+    "folketing": dict(page=72, open=(6, 12), head=13, bullets=[(14, 21)]),
+    "selvstyre": dict(page=77, open=(6, 29), head=30, bullets=[(31, 33)]),
+    "valg": dict(page=82, open=(6, 17), head=18, bullets=[(19, 20)]),
+    "rettigheder": dict(page=89, open=(6, 22), head=23, bullets=[(24, 25)]),
+    "religion": dict(page=93, open=(6, 23), head=24, bullets=[(25, 26)]),
+    "omverdenen": dict(page=97, open=(6, 19), head=20, bullets=[(21, 24)]),
+    "geografi": dict(page=105, open=(6, 26), head=27, bullets=[(28, 29)]),   # book has a box here (heading "Dette afsnit")
+    "historie-foer-1945": dict(page=108, open=(6, 24), head=25, bullets=[(26, 26)]),
+    "historie-efter-1945": dict(page=116, open=None, head=7, bullets=[(8, 9)]),  # no opening text
+    "kultur": dict(page=123, open=(6, 12), head=13, bullets=[(14, 14)]),
+    "traditioner": dict(page=128, open=(6, 12), head=18, bullets=[(19, 19)]),
+    "forsvar": dict(page=133, open=(6, 12), head=18, bullets=[(19, 19)]),
+    "diskrimination": dict(page=139, open=(6, 28), head=29, bullets=[(30, 33)]),
+    "klima": dict(page=143, open=(6, 22), head=23, bullets=[(24, 25)]),
+}
+
+
+def _rows(page):
+    return bookclean.raw_lines(page)
+
+
+def _is_blank(row):
+    return not row.strip()
+
+
+def _is_margin(row):
+    return bool(bookclean.MARGIN.match(row) or bookclean.HEADER.match(row))
+
+
+def _one(page, r):
+    return bookclean.clean(page, f"{r}-{r}")
+
+
+def _ends_sentence(text):
+    t = text.rstrip().rstrip("*").rstrip()
+    return t[-1:] in ".!?:"
+
+
+def _body_segments(page, a, b):
+    """Split rows a..b into paragraphs. A paragraph ends at a blank line after a sentence end; a bullet
+    line starts its own segment and its continuation lines belong to it. Returns [(kind, s, e)]."""
+    rows = _rows(page)
+    segs = []
+    cur = None
+    gap = False
+    prev_text = ""
+    for r in range(a, b + 1):
+        row = rows[r - 1]
+        if _is_blank(row):
+            gap = True
+            continue
+        if _is_margin(row):
+            continue
+        t = _one(page, r)
+        if not t:
+            continue
+        if t.startswith("•"):
+            cur = None
+            segs.append(["bullet", r, r])
+            gap = False
+            prev_text = t
+            continue
+        if cur is not None and cur[0] == "bullet" and not gap:
+            cur[2] = r            # continuation of a bullet
+        elif cur is not None and cur[0] == "text" and not (gap and _ends_sentence(prev_text)):
+            cur[2] = r            # same paragraph
+        else:
+            cur = ["text", r, r]
+            segs.append(cur)
+        prev_text = t
+        gap = False
+    return segs
+
+
+def _paragraphs(page, a, b):
+    """Group segments into paragraphs; bullets in the running text stay inside their paragraph, one per line."""
+    out = []
+    for kind, s, e in _body_segments(page, a, b):
+        if kind == "text" or not out:
+            out.append({"lines": [(s, e, kind)]})
+        else:
+            out[-1]["lines"].append((s, e, kind))
+    paras = []
+    for p in out:
+        da_parts = []
+        for s, e, kind in p["lines"]:
+            da_parts.append(bookclean.clean(page, f"{s}-{e}"))
+        s0, e0 = p["lines"][0][0], p["lines"][-1][1]
+        paras.append({"da": "\n".join(da_parts), "en": "", "book": [{"page": page, "lines": f"{s0}-{e0}"}]})
+    return paras
+
+
+def _bullet_groups(page, ranges):
+    """Bullet items in the given line ranges: a line starting with • opens an item; other lines continue it."""
+    rows = _rows(page)
+    items = []
+    for a, b in ranges:
+        cur = None
+        for r in range(a, b + 1):
+            row = rows[r - 1]
+            if _is_blank(row) or _is_margin(row):
+                continue
+            t = _one(page, r)
+            if not t:
+                continue
+            if t.startswith("•"):
+                cur = [r, r]
+                items.append(cur)
+            elif cur is not None:
+                cur[1] = r
+    out = []
+    for s, e in items:
+        out.append(bookclean.clean(page, f"{s}-{e}"))
+    return out, items
+
+
+def _box(page, spec):
+    head = bookclean.clean(page, f"{spec['head']}-{spec['head']}")
+    bullets, items = _bullet_groups(page, spec["bullets"])
+    lines = [head] + bullets
+    first = min([spec["head"]] + [s for s, _ in items])
+    last = max([spec["head"]] + [e for _, e in items])
+    return {"da": "\n".join(lines), "en": "", "book": [{"page": page, "lines": f"{first}-{last}"}]}, head, bullets
+
+
+def build_intro(sid):
+    spec = INTRO_SPECS[sid]
+    page = spec["page"]
+    box, head, bullets = _box(page, spec)
+    if spec.get("box_first"):
+        # Sheet 4: the box comes first, then the paragraphs after its bullets up to the first heading.
+        rows = _rows(page)
+        start = spec["open_from"]
+        end = start
+        for r in range(start, len(rows) + 1):
+            row = rows[r - 1]
+            if _is_margin(row) or _is_blank(row):
+                end = r
+                continue
+            if row.strip().isupper() and len(row.strip()) > 3 and not row.startswith(" "):
+                break  # first heading ends the opening text
+            end = r
+        paras = _paragraphs(page, start, end)
+        return [box] + paras
+    paras = []
+    if spec["open"]:
+        paras = _paragraphs(page, spec["open"][0], spec["open"][1])
+    return paras + [box]
+
+
+def print_table():
+    print("Sheet  page  opening text   box heading   bullets")
+    for number, sid, _, _, _ in SHEETS:
+        spec = INTRO_SPECS[sid]
+        o = "none" if not spec.get("open") else "%d-%d" % spec["open"]
+        print("%5d  %4d  %-12s  %-11s   %s" % (number, spec["page"], o, spec["head"],
+                                              ", ".join("%d-%d" % r for r in spec["bullets"])))
+
+
+def intros():
+    topics = load("topics.json")
+    if len(topics) != 26:
+        sys.exit("run the data step first (phase 1)")
+    print_table()
+    for t in topics:
+        sid = t["id"]
+        paras = build_intro(sid)
+        assert paras, sid
+        # Keep the English that is already there when the Danish paragraph is unchanged.
+        old_en = {p["da"]: p["en"] for p in t.get("intro", []) if p.get("en")}
+        for p in paras:
+            p["en"] = old_en.get(p["da"], "")
+        t["intro"] = paras
+        print("\n=== %d %s (page %d)" % (t["sheet"], sid, INTRO_SPECS[sid]["page"]))
+        for p in paras:
+            print("  [%s]" % p["book"][0]["lines"])
+            for line in p["da"].split("\n"):
+                print("    " + line)
+    save("topics.json", topics)
+    print("\nwrote intros to data/topics.json (English kept where the Danish is unchanged)")
+
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "intros":
-        sys.exit("intros: not built yet (Phase 2)")
-    phase1()
+        intros()
+    else:
+        phase1()

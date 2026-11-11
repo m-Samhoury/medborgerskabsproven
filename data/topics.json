@@ -10,7 +10,38 @@
    5,
    10
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Der er undervisningspligt i Danmark. Alle børn skal have mindst ti års undervisning. De fleste forældre vælger at sætte deres barn i folkeskolen.",
+    "en": "There is compulsory education in Denmark. All children must have at least ten years of education. Most parents choose to send their child to the folkeskole (the Danish public primary and lower secondary school).",
+    "book": [
+     {
+      "page": 6,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Forældrene kan dog også vælge, at barnet skal modtage undervisning andre steder end i folkeskolen. De kan fx vælge at sætte barnet i en friskole eller i en privatskole. Her skal forældrene betale direkte til skolen for barnets skolegang. Det skal de ikke, hvis barnet går i folkeskolen. Det er et krav*, at børn på friskoler og privatskoler skal lære det samme som børn i folkeskolen.",
+    "en": "Parents can also choose to have their child taught somewhere other than the folkeskole. For example, they can choose to send the child to a friskole (independent free school) or a privatskole (private school). Here the parents must pay the school directly for the child's schooling. They do not have to pay if the child attends the folkeskole. It is a requirement* that children at friskoler and privatskoler learn the same as children in the folkeskole.",
+    "book": [
+     {
+      "page": 6,
+      "lines": "12-16"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Folkeskolen\n• Forældresamarbejde\n• Frie grundskoler",
+    "en": "This fact sheet covers:\n• The folkeskole\n• Cooperation with parents\n• Independent free primary schools (frie grundskoler)",
+    "book": [
+     {
+      "page": 6,
+      "lines": "19-22"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "udd-undervisningspligt",
@@ -39,7 +70,28 @@
    11,
    16
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Uddannelse er meget vigtig, da de fleste job på det danske arbejdsmarked kræver, at man har en uddannelse. Det danske samfund kaldes ofte et videnssamfund. Det betyder, at stadig flere mennesker har et arbejde, hvor viden er den vigtigste ressource*. Derfor spiller uddannelse en helt afgørende* rolle for unge og voksne. Uddannelse er som regel gratis i Danmark.",
+    "en": "Education is very important, because most jobs on the Danish labour market require a person to have an education. Denmark is often called a knowledge society (videnssamfund). That means that more and more people have jobs where knowledge is the most important resource*. Therefore education plays a decisive* role for young people and adults. Education is usually free in Denmark.",
+    "book": [
+     {
+      "page": 12,
+      "lines": "6-13"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Ungdomsuddannelser\n• Videregående uddannelser\n• Voksen- og efteruddannelse",
+    "en": "This fact sheet covers:\n• Youth education programmes (ungdomsuddannelser)\n• Higher education (videregående uddannelser)\n• Adult and continuing education",
+    "book": [
+     {
+      "page": 12,
+      "lines": "18-21"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "udd-gymnasium-gratis",
@@ -60,7 +112,38 @@
    17,
    20
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Det har været et politisk mål i Danmark siden 1960’erne at give forældre mulighed for at få deres børn passet uden for hjemmet i vuggestuer og børnehaver, fordi man ønskede at få kvinderne ud på arbejdsmarkedet. I dag arbejder begge forældre normalt uden for hjemmet. Langt de fleste mindre børn går derfor i vuggestue, børnehave eller dagpleje. De fleste børn mellem tre og fem år passes uden for hjemmet. Fælles for alle former for pasningstilbud er, at det pædagogiske arbejde skal fremme* børns trivsel*, udvikling og læring.",
+    "en": "Since the 1960s it has been a political goal in Denmark to give parents the chance to have their children cared for outside the home, in crèches (vuggestuer) and kindergartens (børnehaver), because the aim was to get women into the labour market. Today both parents normally work outside the home. So most young children go to a vuggestue, a børnehave or a dagpleje (childminding in a private home). Most children aged three to five are cared for outside the home. What all forms of childcare have in common is that the educational work must promote* children's well-being*, development and learning.",
+    "book": [
+     {
+      "page": 18,
+      "lines": "6-17"
+     }
+    ]
+   },
+   {
+    "da": "Alle børn har ret til en plads i et dagtilbud. Det er kommunerne, der er ansvarlige for dagtilbuddene, men det er forskelligt fra kommune til kommune, hvilke tilbud der er. De mest almindelige er vuggestue, børnehave og dagpleje. Kommunen betaler en del af udgiften, mens forældrene betaler den resterende del. Men hvis fx forældrenes indtægt er lav, eller der er tale om en enlig forsørger, er der mulighed for at søge om yderligere økonomisk tilskud fra kommunen.",
+    "en": "All children have the right to a place in a dagtilbud (early-years childcare). The municipalities (kommunerne) are responsible for the dagtilbud, but which services are offered differs from one municipality to another. The most common are vuggestue, børnehave and dagpleje. The municipality pays part of the cost, while the parents pay the rest. But if, for example, the parents' income is low, or the family has a single parent, it is possible to apply to the municipality for extra financial support.",
+    "book": [
+     {
+      "page": 18,
+      "lines": "19-24"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Vuggestue\n• Dagpleje\n• Børnehave\n• SFO og fritidsklub",
+    "en": "This fact sheet covers:\n• Vuggestue (crèche)\n• Dagpleje\n• Børnehave\n• SFO og fritidsklub",
+    "book": [
+     {
+      "page": 18,
+      "lines": "27-31"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "udd-boernehave-vuggestue",
@@ -83,7 +166,78 @@
    21,
    29
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Dette fakta-ark handler om:\n• Hvordan det danske arbejdsmarked fungerer\n• Flexicurity\n• Kollektive overenskomster\n• Fagforeninger\n• Når man får arbejde\n• Løn\n• Arbejdstid\n• Ferie\n• Barselsorlov, fædreorlov og forældreorlov\n• Demokrati på arbejdspladsen\n• Regler for fyring\n• Hvis man mister sit arbejde\n• At være selvstændig erhvervsdrivende",
+    "en": "This fact sheet covers:\n• How the Danish labour market works\n• Flexicurity\n• Collective agreements (kollektive overenskomster)\n• Trade unions (fagforeninger)\n• Getting a job\n• Pay (løn)\n• Working hours\n• Holidays\n• Maternity, paternity and parental leave\n• Democracy in the workplace\n• Rules on dismissal\n• If you lose your job\n• Being self-employed",
+    "book": [
+     {
+      "page": 22,
+      "lines": "7-25"
+     }
+    ]
+   },
+   {
+    "da": "I nogle lande er der tradition for, at det mest er parlamentet og regeringen, som bestemmer, hvordan arbejdsmarkedet skal fungere. Men sådan er det ikke i Danmark. Her er det kun få regler om ansættelsesforhold, som er bestemt i lovgivningen. De fleste regler er aftalt mellem arbejdsmarkedets parter – fagforeningerne og arbejdsgiverorganisationerne. Dette system går helt tilbage til 1899.",
+    "en": "In some countries, parliament and the government mostly decide how the labour market should work. But this is not the case in Denmark. Here, only a few rules on employment are set by law. Most rules are agreed between the parties of the labour market: the trade unions (fagforeningerne) and the employers' organisations (arbejdsgiverorganisationerne). This system dates all the way back to 1899.",
+    "book": [
+     {
+      "page": 22,
+      "lines": "28-33"
+     }
+    ]
+   },
+   {
+    "da": "De to parter mødes og forhandler med hinanden for at indgå kollektive overenskomster*. Det er aftaler om, hvilke regler for løn, arbejdstid m.m. der skal være i aftaleperioden (som oftest varer to eller tre år).",
+    "en": "The two parties meet and negotiate with each other to reach collective agreements* (kollektive overenskomster). These are agreements about which rules apply to pay, working hours and so on during the agreement period (usually two or three years).",
+    "book": [
+     {
+      "page": 22,
+      "lines": "35-37"
+     }
+    ]
+   },
+   {
+    "da": "Begge parter skal rette sig efter overenskomsten, og der er ”fredspligt” – ingen strejker eller lockout, så længe overenskomsten gælder. Der findes et helt særligt system uden for de almindelige domstole til at afgøre overtrædelser (Arbejdsretten og faglige voldgiftsretter*).",
+    "en": "Both parties must follow the agreement, and there is a 'peace obligation' (fredspligt): no strikes or lockouts while the agreement applies. There is a special system outside the ordinary courts for deciding breaches. This is the Labour Court (Arbejdsretten) and the trade arbitration tribunals (faglige voldgiftsretter*).",
+    "book": [
+     {
+      "page": 22,
+      "lines": "39-42"
+     }
+    ]
+   },
+   {
+    "da": "Hvis de ikke kan blive enige om at aftale en overenskomst, har de to parter forskellige muligheder: Fagforeningerne kan fx organisere strejker. Det betyder, at medlemmer standser arbejdet, indtil der er indgået en overenskomst.",
+    "en": "If the parties cannot agree on an agreement, they have different options. The trade unions can, for example, organise strikes. This means that members stop working until an agreement has been reached.",
+    "book": [
+     {
+      "page": 22,
+      "lines": "44-46"
+     }
+    ]
+   },
+   {
+    "da": "Arbejdsgiverne kan fx lave lockout. Det betyder, at de ansatte, der er medlem af en fagforening, ikke må komme på arbejde, før der er indgået en overenskomst. Arbejdsgiverne udbetaler ikke løn til de ansatte, der strejker, eller til ansatte, der er ramt af lockout. Oftest bliver parterne dog enige om en overenskomst uden at anvende strejke eller lockout.",
+    "en": "Employers can, for example, impose a lockout. This means that the employees who are members of a trade union may not come to work until an agreement has been reached. Employers do not pay wages to employees who strike, or to employees affected by a lockout. Most often, however, the parties agree on an agreement without using strikes or lockouts.",
+    "book": [
+     {
+      "page": 22,
+      "lines": "52-56"
+     }
+    ]
+   },
+   {
+    "da": "Cirka 73 procent af borgerne i Danmark mellem 16 og 66 år har et lønmodtagerarbejde. Næsten lige mange mænd og kvinder arbejder.",
+    "en": "About 73 per cent of the citizens of Denmark aged between 16 and 66 are in paid employment. Almost as many men as women work.",
+    "book": [
+     {
+      "page": 22,
+      "lines": "58-59"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "arb-tillidsrepraesentant",
@@ -116,7 +270,28 @@
    30,
    33
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Det danske erhvervsliv består af forskellige sektorer.",
+    "en": "Danish business and industry consists of various sectors.",
+    "book": [
+     {
+      "page": 31,
+      "lines": "6-6"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark omhandler:\n• Det danske landbrug\n• Dansk industri\n• Dansk søfart\n• Danske serviceydelser\n• Danmarks samhandel med udlandet",
+    "en": "This fact sheet covers:\n• Danish agriculture (det danske landbrug)\n• Danish industry (dansk industri)\n• Danish shipping (dansk søfart)\n• Danish service industries\n• Denmark's trade with other countries",
+    "book": [
+     {
+      "page": 31,
+      "lines": "10-20"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Ændret: Samhandel – på prøven i juni 2026 var svaret Tyskland. Ifølge læremateriale 2026 er det nu USA (14,1 % af samhandlen i 2025, Tyskland 12,7 %).",
@@ -152,7 +327,58 @@
    34,
    39
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Velfærdssamfundet* i Danmark bygger på en slags gensidig aftale mellem borgerne og staten. På den ene side bidrager* borgerne ved, at de borgere, der kan, arbejder og betaler skat. På den anden side spænder* det offentlige et sikkerhedsnet ud under borgerne, som sikrer hjælp til dem, der ikke kan klare sig selv.",
+    "en": "Denmark's welfare society (velfærdssamfundet*) is based on a kind of mutual agreement between citizens and the state. On the one hand, citizens contribute* by working and paying tax. On the other hand, the public sector spreads* a safety net under citizens, which ensures help for those who cannot manage on their own.",
+    "book": [
+     {
+      "page": 35,
+      "lines": "6-13"
+     }
+    ]
+   },
+   {
+    "da": "Staten tager altså et stort ansvar for borgernes velfærd. Dvs., at staten har medansvar for, at borgerne kan føle sig trygge, og at de kan trives. På den måde er staten med til at sikre, at borgerne fx:\n• kan få gratis skolegang og uddannelse\n• kan få hjælp under sygdom\n• kan få hjælp, hvis de mister arbejdet\n• kan få hjælp, hvis de har eller får et handicap\n• kan få hjælp, når de bliver ældre",
+    "en": "The state therefore takes great responsibility for citizens' welfare. That is to say, the state shares responsibility for making sure that citizens can feel safe and can thrive. In this way the state helps to make sure that citizens, for example, can:\n• get free schooling and education\n• get help when they are ill\n• get help if they lose their job\n• get help if they have or develop a disability\n• get help when they get older",
+    "book": [
+     {
+      "page": 35,
+      "lines": "19-27"
+     }
+    ]
+   },
+   {
+    "da": "Omvendt har borgerne et ansvar for at bidrage* økonomisk til velfærdsstaten ved at arbejde og betale skat. På den måde kommer der via skattesystemet penge til velfærden.",
+    "en": "On the other hand, citizens have a responsibility to contribute* financially to the welfare state by working and paying tax. In this way, money for welfare comes through the tax system.",
+    "book": [
+     {
+      "page": 35,
+      "lines": "29-31"
+     }
+    ]
+   },
+   {
+    "da": "Princippet i det danske velfærdssamfund er med andre ord, at alle, der kan, skal bidrage til velfærden, og at alle, der har behov for det, kan få hjælp fra det offentlige uanset deres tilknytning til arbejdsmarkedet.",
+    "en": "The principle of the Danish welfare society is, in other words, that everyone who can must contribute to welfare, and that everyone who needs help can get it from the public sector, regardless of their connection to the labour market.",
+    "book": [
+     {
+      "page": 35,
+      "lines": "33-35"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Velfærden i mange dele af borgernes liv\n• Pengene til velfærden – hvor kommer de fra?",
+    "en": "This fact sheet covers:\n• Welfare in many parts of people's lives\n• The money for welfare: where does it come from?",
+    "book": [
+     {
+      "page": 35,
+      "lines": "38-40"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "vel-bibliotek",
@@ -175,7 +401,38 @@
    40,
    45
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Det er de enkelte familiers ansvar at få livet i familien til at fungere og at give børnene trygge forhold at vokse op i.",
+    "en": "It is each family's own responsibility to make family life work and to give the children a safe environment to grow up in.",
+    "book": [
+     {
+      "page": 41,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Men samfundet har en række tilbud, der er med til at skabe gode rammer* for familielivet. Man har fx ret til barselsorlov, og der er tilbud om børnepasning. Samtidig er der nogle regler i samfundet, som beskytter børns, mænds og kvinders rettigheder. De gælder også i hjemmet.",
+    "en": "But society has a range of services that help create good conditions* for family life. For example, people have the right to parental leave (barselsorlov), and there is childcare. At the same time, there are rules in society that protect the rights of children, men and women. These rules also apply in the home.",
+    "book": [
+     {
+      "page": 41,
+      "lines": "12-17"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Familielivets mange former\n• Ægteskab og parforhold\n• Skilsmisse\n• Graviditet, fødsel og barselsorlov\n• Børn og unges rettigheder",
+    "en": "This fact sheet covers:\n• The many forms of family life\n• Marriage and partnerships\n• Divorce\n• Pregnancy, birth and parental leave\n• Children's and young people's rights",
+    "book": [
+     {
+      "page": 41,
+      "lines": "20-25"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Orlov: Siden august 2022 har hver forælder 11 øremærkede uger. Faren har stadig ret til 2 uger omkring fødslen (svaret i prøven fra 2017).",
@@ -220,7 +477,28 @@
    46,
    51
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "I Danmark er der en lang tradition for at danne foreninger. Her mødes mennesker om fælles interesser eller mål. Foreningerne er med til at skabe sociale fællesskaber i det danske samfund. Her mødes nemlig ofte mennesker med forskellig baggrund*. Dvs., at der her kommer mennesker fra forskellige sociale lag*, med forskellige politiske holdninger og forskellig etnisk baggrund.",
+    "en": "In Denmark there is a long tradition of forming associations (foreninger). People meet here around shared interests or goals. The associations help to create social communities in Danish society. Many people with different backgrounds* meet here. That is to say, people from different social classes*, with different political views and different ethnic backgrounds come together.",
+    "book": [
+     {
+      "page": 47,
+      "lines": "6-13"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Foreningslivet i Danmark\n• Idrætsforeninger\n• Frivilligt socialt arbejde\n• Aftenskoler\n• Højskoler\n• Biblioteker",
+    "en": "This fact sheet covers:\n• Associations in Denmark\n• Sports clubs (idrætsforeninger)\n• Voluntary social work\n• Evening schools (aftenskoler)\n• Folk high schools (højskoler)\n• Libraries (biblioteker)",
+    "book": [
+     {
+      "page": 47,
+      "lines": "19-25"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "dem-forening",
@@ -243,7 +521,38 @@
    52,
    56
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Alle borgere kan komme til lægen eller på sygehuset, hvis det er nødvendigt.",
+    "en": "Everyone can see a doctor (lægen) or go to hospital (sygehuset) if it is necessary.",
+    "book": [
+     {
+      "page": 53,
+      "lines": "6-6"
+     }
+    ]
+   },
+   {
+    "da": "Langt de fleste behandlinger er gratis, og udgifterne betales via skatterne. Nogle behandlinger skal borgerne dog selv betale en del af, fx tandlægebesøg og besøg hos fysioterapeut. Desuden skal man normalt betale en del af udgifterne til sin medicin.",
+    "en": "Most treatments are free, and the costs are paid through taxes. However, citizens must pay part of some treatments themselves, for example dental visits and visits to a physiotherapist. You also normally have to pay part of the cost of your medicine.",
+    "book": [
+     {
+      "page": 53,
+      "lines": "10-13"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Sundhedskort, praktiserende læge, medicin og apoteker\n• Sygehuse\n• Tandpleje\n• Børneundersøgelser og vaccinationer\n• Alkohol og cigaretter",
+    "en": "This fact sheet covers:\n• Health card (sundhedskort), GP (praktiserende læge), medicine and pharmacies (apoteker)\n• Hospitals (sygehuse)\n• Dental care (tandpleje)\n• Child health checks and vaccinations\n• Alcohol and cigarettes",
+    "book": [
+     {
+      "page": 53,
+      "lines": "19-24"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Tandlæge: Per 2026 er tandpleje gratis, til man fylder 22.",
@@ -296,7 +605,28 @@
    57,
    60
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Ligebehandling og ligestilling betyder, at alle borgere uanset fx køn, etnisk oprindelse eller religion skal behandles lige. Hvis man bliver forskelsbehandlet, uden der er nogen saglig grund til det, vil der i nogle situationer være tale om ulovlig forskelsbehandling, eksempelvis hvis man fravælges til et bestemt job på grund af sit køn eller religion. Man kan blive straffet for at forskelsbehandle.",
+    "en": "Equal treatment and equality (ligestilling) mean that all citizens must be treated equally, regardless of, for example, sex, ethnic origin or religion. If someone is treated unfairly without any objective reason, there will in some situations be unlawful discrimination, for example if you are turned down for a particular job because of your sex or religion. You can be punished for discriminating.",
+    "book": [
+     {
+      "page": 58,
+      "lines": "6-13"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om reglerne for ligebehandling inden for:\n• Arbejdsmarked og uddannelse\n• Det politiske liv\n• Privatlivet",
+    "en": "This fact sheet covers the rules on equal treatment in:\n• The labour market and education\n• Political life\n• Private life",
+    "book": [
+     {
+      "page": 58,
+      "lines": "18-21"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "his-foerste-kvindelige-sm",
@@ -322,7 +652,68 @@
    61,
    66
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Danmark er et demokrati. Det viser sig fx både gennem regler for valg, ved de demokratiske rettigheder og i en demokratisk kultur.",
+    "en": "Denmark is a democracy. This shows itself, for example, in the rules for elections, in the democratic rights and in a democratic culture.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Når der er valg, er det borgerne, der vælger politikerne til Folketinget, kommunalbestyrelser, regionsråd og Europa-Parlamentet, og valgene er frie og hemmelige*.",
+    "en": "When there is an election, it is the citizens who elect politicians to the Folketing (the Danish parliament), the municipal councils (kommunalbestyrelser), the regional councils (regionsråd) and the European Parliament. The elections are free and secret*.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "12-13"
+     }
+    ]
+   },
+   {
+    "da": "Borgerne har også rettigheder, som giver dem frihed til at gøre, hvad de vil, blot de overholder lovene. Myndighederne, som fx politiet eller kommunen, må som udgangspunkt ikke blande sig i, hvad borgerne laver. Borgerne har fx frihed til at danne foreninger og til at have den religion, de vil.",
+    "en": "Citizens also have rights, which give them the freedom to do as they wish, as long as they obey the laws. Public authorities, such as the police or the municipality, must as a general rule not interfere in what citizens do. Citizens have the freedom, for example, to form associations and to have the religion they want.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "19-22"
+     }
+    ]
+   },
+   {
+    "da": "Der er desuden mange foreninger i Danmark, der fungerer som et slags minidemokrati, hvor medlemmerne vælger ledelsen – og afsætter den – hvis der opstår uenighed mellem medlemmer og ledelse. Demokratiet er på den måde også med til at præge* samfundet og kulturen mere generelt.",
+    "en": "There are also many associations in Denmark that work as a kind of mini-democracy, where members elect the leadership, and can remove it, if there is disagreement between members and the leadership. Democracy therefore also shapes* society and culture more generally.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "24-27"
+     }
+    ]
+   },
+   {
+    "da": "Danmarks Riges Grundlov er Danmarks forfatning*. Til daglig kaldes den ofte for grundloven. Grundloven indeholder de vigtigste regler om Danmarks styreform, og grundloven sikrer borgerne en række fundamentale rettigheder. De øvrige love i Danmark må ikke stride mod grundloven.",
+    "en": "Danmarks Riges Grundlov is Denmark's constitution*. In everyday speech it is often called grundloven (the Constitution). The Constitution contains the most important rules about Denmark's form of government, and it secures citizens a range of fundamental rights. All other laws in Denmark must not conflict with the Constitution.",
+    "book": [
+     {
+      "page": 62,
+      "lines": "29-32"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Grundloven\n• Det danske monarki\n• Statsmagtens tredeling",
+    "en": "This fact sheet covers:\n• The Constitution\n• The Danish monarchy\n• The separation of powers (statsmagtens tredeling)",
+    "book": [
+     {
+      "page": 62,
+      "lines": "35-38"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Ændret: På prøverne fra 2018-2022 var svaret 'Dronningen' (Margrethe 2.). Ifølge læremateriale 2026 er det nu Kongen (Frederik 10.), der holder nytårstale den 31. december og underskriver lovene sammen med ministrene.",
@@ -374,7 +765,28 @@
    67,
    70
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Man har som borger pligt til at overholde landets love, og nogle love kan man straffes for at overtræde. Politiet undersøger sager, hvor der er mistanke om, at en person har gjort noget strafbart*. Men det er domstolene, der afgør, om en person skal straffes for at have overtrådt lovgivningen.",
+    "en": "Citizens have a duty to obey the country's laws, and some laws can be punished if you break them. The police investigate cases where there is suspicion that a person has done something criminal*. But it is the courts that decide whether a person should be punished for breaking the law.",
+    "book": [
+     {
+      "page": 68,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Politiet\n• Domstole og straf",
+    "en": "This fact sheet covers:\n• The police\n• Courts and punishment",
+    "book": [
+     {
+      "page": 68,
+      "lines": "18-20"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "dem-anke",
@@ -400,7 +812,28 @@
    71,
    75
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Danmarks parlament hedder Folketinget. Folketinget arbejder på Christiansborg i København og udgør sammen med regeringen den lovgivende magt.",
+    "en": "Denmark's parliament is called the Folketing. The Folketing works at Christiansborg in Copenhagen and, together with the government, makes up the legislative power (den lovgivende magt).",
+    "book": [
+     {
+      "page": 72,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Folketinget\n• Regeringen\n• Det repræsentative demokrati",
+    "en": "This fact sheet covers:\n• The Folketing\n• The government (regeringen)\n• Representative democracy",
+    "book": [
+     {
+      "page": 72,
+      "lines": "13-21"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Ændret: På prøven i november 2024 var svaret Venstre (SVM-regeringen 2022-2026). Ifølge læremateriale 2026 er regeringen nu Socialdemokratiet, SF, Moderaterne og Radikale Venstre (siden 3. juni 2026) – Venstre er ikke længere med. Ved folketingsvalget 24. marts 2026 blev Socialdemokratiet igen største parti.",
@@ -438,7 +871,48 @@
    76,
    80
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Der er en lang tradition for lokalt selvstyre i Danmark. Det er kommunalbestyrelserne og regionsrådene, der står for det lokale selvstyre. Det er tanken med det lokale selvstyre, at de offentlige opgaver, der har med borgernes dagligdag at gøre, skal løses så tæt på borgerne som muligt.",
+    "en": "Local self-government has a long tradition in Denmark. It is the municipal councils (kommunalbestyrelserne) and the regional councils (regionsrådene) that carry out local self-government. The idea of local self-government is that public tasks that concern citizens' everyday lives should be solved as close to the citizens as possible.",
+    "book": [
+     {
+      "page": 77,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Når en borger skal i kontakt med det offentlige, henvender han eller hun sig ofte til kommunens borgerservice. Her kan man få svar på spørgsmål, hvis man fx skal flytte eller have pension. Og man kan som regel få ordnet praktiske ting, fx hvis man skal have pas eller kørekort.",
+    "en": "When a citizen needs to contact the public sector, they often go to the municipality's citizen service (borgerservice). Here they can get answers to questions, for example if they need to move or get a pension. And you can usually get practical things sorted out, for example if you need a passport or a driving licence.",
+    "book": [
+     {
+      "page": 77,
+      "lines": "14-22"
+     }
+    ]
+   },
+   {
+    "da": "Kommuner og regioner styres af folkevalgte forsamlinger. I kommunerne hedder det kommunalbestyrelser, og i regionerne hedder det regionsråd. Der er valg til kommuner og regionsråd på samme tid. Det foregår hvert fjerde år (2017, 2021, 2025 osv.).",
+    "en": "Municipalities and regions are run by elected assemblies. In the municipalities they are called municipal councils (kommunalbestyrelser), and in the regions they are called regional councils (regionsråd). There are elections to the municipal and regional councils at the same time. They take place every four years (2017, 2021, 2025 etc.).",
+    "book": [
+     {
+      "page": 77,
+      "lines": "24-27"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Det lokale selvstyre\n• Kommunerne\n• Regionerne",
+    "en": "This fact sheet covers:\n• Local self-government\n• The municipalities (kommunerne)\n• The regions (regionerne)",
+    "book": [
+     {
+      "page": 77,
+      "lines": "30-33"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "dem-kommunerne-boern",
@@ -466,7 +940,28 @@
    81,
    87
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Frie valg er noget af det vigtigste i et demokrati. Ved at stemme til folketingsvalg har den enkelte borger indflydelse* på, hvem der skal være medlem af Folketinget. Ved kommunal- og regionalvalg har man indflydelse på, hvem der skal være medlem af den lokale kommunalbestyrelse eller det lokale regionsråd.",
+    "en": "Free elections are one of the most important things in a democracy. By voting in a Folketing election, each citizen has influence* on who becomes a member of the Folketing. In municipal and regional elections, you have influence on who becomes a member of the local municipal council or regional council.",
+    "book": [
+     {
+      "page": 82,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Valg og partier\n• Politisk aktivitet",
+    "en": "This fact sheet covers:\n• Elections and parties\n• Political activity",
+    "book": [
+     {
+      "page": 82,
+      "lines": "18-20"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Ændret: Kvinder i Folketinget – på prøverne i november 2018 og november 2020 var svaret ca. 40 %, og i maj 2024 ca. 45 %. Ifølge læremateriale 2026 er det nu 48-49 % (86 af 179).",
@@ -534,7 +1029,38 @@
    88,
    91
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Det danske samfund er et demokrati og et velfærdssamfund. Det betyder, at borgerne har en række rettigheder. For det første har borgerne demokratiske rettigheder, som omfatter politiske rettigheder og frihedsrettigheder.",
+    "en": "Denmark is a democracy and a welfare society. This means that citizens have a range of rights. Firstly, citizens have democratic rights, which include political rights and civil liberties (frihedsrettigheder).",
+    "book": [
+     {
+      "page": 89,
+      "lines": "6-11"
+     }
+    ]
+   },
+   {
+    "da": "For det andet har borgerne i velfærdssamfundet nogle sociale rettigheder, som omfatter retten til en række sociale tilbud og ydelser. Omvendt har borgerne også nogle pligter. Det er bl.a. skattepligt og værnepligt*.",
+    "en": "Secondly, citizens in the welfare society have some social rights, which include the right to a range of social services and benefits. On the other hand, citizens also have some duties. These include the duty to pay tax and military service* (værnepligt).",
+    "book": [
+     {
+      "page": 89,
+      "lines": "13-20"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Rettigheder\n• Pligter",
+    "en": "This fact sheet covers:\n• Rights\n• Duties",
+    "book": [
+     {
+      "page": 89,
+      "lines": "23-25"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "dem-rettigheder",
@@ -556,7 +1082,38 @@
    92,
    95
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "I Danmark kan man selv vælge religion, og man har ret til at dyrke sin religion, så længe man respekterer nogle grundlæggende regler. Man kan også frit vælge at skifte religion. Og man kan vælge slet ikke at have en religion. Der er religionsfrihed i Danmark. Den blev stadfæstet med grundloven i 1849.",
+    "en": "In Denmark you can choose your own religion, and you have the right to practise your religion as long as you respect some basic rules. You are also free to change religion. And you can choose not to have a religion at all. There is freedom of religion in Denmark. It was enshrined in the Constitution in 1849.",
+    "book": [
+     {
+      "page": 93,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Der findes mange forskellige overbevisninger*. Nogle tror på noget guddommeligt, og andre bygger deres livssyn på andre værdier. Uanset om man er religiøs eller ej, har man som borger i Danmark de samme rettigheder og pligter.",
+    "en": "There are many different beliefs*. Some believe in something divine, and others base their outlook on life on other values. Regardless of whether you are religious or not, as a citizen in Denmark you have the same rights and duties.",
+    "book": [
+     {
+      "page": 93,
+      "lines": "14-21"
+     }
+    ]
+   },
+   {
+    "da": "Dette kapitel handler om:\n• Den danske folkekirke\n• Andre trossamfund i Danmark",
+    "en": "This chapter covers:\n• The Danish folk church (folkekirken)\n• Other religious communities in Denmark",
+    "book": [
+     {
+      "page": 93,
+      "lines": "24-26"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "his-reformation",
@@ -578,7 +1135,28 @@
    96,
    103
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Danmark er medlem af adskillige internationale organisationer. På den måde har Danmark indflydelse på verden uden for Danmark. Samtidig har beslutninger, der tages i de internationale organisationer, indflydelse på rammerne* for det danske samfund. Størst indflydelse har EU – Den Europæiske Union. Men også beslutninger i FN (de Forenede Nationer) har betydning. Desuden samarbejder Danmark med andre lande og selvstyrende områder i Norden.",
+    "en": "Denmark is a member of many international organisations. In this way, Denmark has influence on the world outside Denmark. At the same time, decisions taken in international organisations affect the framework* for Danish society. The EU (the European Union) has the greatest influence. But decisions in the UN (the United Nations) also matter. Denmark also cooperates with other countries and self-governing areas in the Nordic region.",
+    "book": [
+     {
+      "page": 97,
+      "lines": "6-14"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• EU – den Europæiske Union\n• FN – de Forenede Nationer\n• Danmark og Norden\n• Internationalt samarbejde om udvikling",
+    "en": "This fact sheet covers:\n• The EU (the European Union)\n• The UN (the United Nations)\n• Denmark and the Nordic countries\n• International cooperation on development",
+    "book": [
+     {
+      "page": 97,
+      "lines": "20-24"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "kon-rigsfaellesskab",
@@ -606,7 +1184,48 @@
    104,
    106
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Danmark ligger i den nordlige del af Europa. Norge ligger nord for Danmark, og Sverige ligger nordøst for Danmark. Syd for Danmark ligger Tyskland og Polen.",
+    "en": "Denmark lies in the northern part of Europe. Norway lies to the north of Denmark, and Sweden lies to the north-east of Denmark. To the south of Denmark lie Germany and Poland.",
+    "book": [
+     {
+      "page": 105,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Færøerne og Grønland er med i det danske rigsfællesskab*. Færøerne og Grønland regulerer* i høj grad deres samfund selv inden for rammerne af den færøske hjemmestyreordning og den grønlandske selvstyreordning. Færøerne og Grønland har deres egne demokratiske forsamlinger*.",
+    "en": "The Faroe Islands and Greenland are part of the Danish realm*. The Faroe Islands and Greenland largely regulate* their own societies within the framework of the Faroese home rule arrangement (hjemmestyreordningen) and the Greenlandic self-government arrangement (selvstyreordningen). The Faroe Islands and Greenland have their own democratic assemblies*.",
+    "book": [
+     {
+      "page": 105,
+      "lines": "12-20"
+     }
+    ]
+   },
+   {
+    "da": "Samtidig er færinger og grønlændere danske statsborgere og vælger repræsentanter til Folketinget i Danmark. Der vælges to medlemmer på Færøerne og to medlemmer i Grønland.",
+    "en": "At the same time, Faroese and Greenlanders are Danish citizens and elect representatives to the Folketing in Denmark. Two members are elected in the Faroe Islands and two in Greenland.",
+    "book": [
+     {
+      "page": 105,
+      "lines": "22-24"
+     }
+    ]
+   },
+   {
+    "da": "Dette afsnit handler om:\n• Danmarks geografi\n• Danmarks befolkning",
+    "en": "This section covers:\n• Denmark's geography\n• Denmark's population",
+    "book": [
+     {
+      "page": 105,
+      "lines": "27-29"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Ændret: Indvandrere og efterkommere – på prøven i november 2018 var svaret 12-13 %. Ifølge læremateriale 2026 er det nu ca. 17 %. Region Hovedstaden: prøven i 2018 sagde ca. 1,7 millioner – i dag ca. 1,9 millioner. Region Hovedstaden og Region Sjælland lægges sammen til Region Østdanmark den 1. januar 2027.",
@@ -661,7 +1280,38 @@
    107,
    114
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Nutidens Danmark dækker et areal på ca. 43.000 km2 og har et befolkningstal på ca. seks millioner.",
+    "en": "Today's Denmark covers an area of about 43.000 km2 and has a population of about six million.",
+    "book": [
+     {
+      "page": 108,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "For 400 år siden var det anderledes. Dengang regerede den danske konge over et rige, der blandt andet omfattede Norge, Island og landområder, der nu hører til Tyskland og Sverige. Befolkningen talte således blandt andet både dansk, norsk, tysk og islandsk. Sammenlignet med tidligere, hvor landet var en stormagt i Norden og området omkring Østersøen, er Danmark i dag en mindre nationalstat.",
+    "en": "400 years ago things were different. Back then the Danish king ruled over a realm that included, among other places, Norway, Iceland and areas that now belong to Germany and Sweden. The population spoke, among other languages, Danish, Norwegian, German and Icelandic. Compared with earlier, when the country was a great power in the Nordic region and around the Baltic Sea, Denmark today is a smaller nation state.",
+    "book": [
+     {
+      "page": 108,
+      "lines": "12-22"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Vigtige perioder, begivenheder og personer i Danmarks historie før 1945",
+    "en": "This fact sheet covers:\n• Important periods, events and people in Danish history before 1945",
+    "book": [
+     {
+      "page": 108,
+      "lines": "25-26"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "OBS: Den officielle rettenøgle til prøven fra november 2017 (spørgsmål 23) siger fejlagtigt 'Skåne, Halland og Blekinge' for 1864. Det rigtige svar er Slesvig og Holsten. Skåne blev mistet i 1658.",
@@ -712,7 +1362,18 @@
    115,
    121
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Dette fakta-ark handler om:\n• Vigtige perioder, begivenheder og personer i Danmarks historie efter 1945",
+    "en": "This fact sheet covers:\n• Important periods, events and people in Danish history after 1945",
+    "book": [
+     {
+      "page": 116,
+      "lines": "7-9"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Abort: Siden 1. juni 2025 er grænsen for fri abort 18 uger (før 12 uger).",
@@ -760,7 +1421,28 @@
    122,
    126
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Der er en lang tradition for litteratur, teater, billedkunst, musik, arkitektur og film i Danmark.",
+    "en": "There is a long tradition for literature, theatre, fine art, music, architecture and film in Denmark.",
+    "book": [
+     {
+      "page": 123,
+      "lines": "6-10"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Vigtige skikkelser fra dansk kultur",
+    "en": "This fact sheet covers:\n• Important figures from Danish culture",
+    "book": [
+     {
+      "page": 123,
+      "lines": "13-14"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "kul-hca-levede",
@@ -792,7 +1474,28 @@
    127,
    131
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Som i mange andre lande er der i Danmark en række dage i løbet af året, hvor man markerer fx kirkelige højtider eller historiske begivenheder, der har haft stor betydning for Danmark. Ofte hører der særlige traditioner til de enkelte dage. På mange af disse dage har man normalt fri fra arbejde eller skole.",
+    "en": "As in many other countries, there are days in Denmark during the year when people mark, for example, church festivals or historical events that have been of great importance to Denmark. Special traditions often go with each of these days. On many of these days people normally have time off from work or school.",
+    "book": [
+     {
+      "page": 128,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Traditioner og mærkedage",
+    "en": "This fact sheet covers:\n• Traditions and special days",
+    "book": [
+     {
+      "page": 128,
+      "lines": "18-19"
+     }
+    ]
+   }
+  ],
   "current_facts": [
    {
     "da": "Store Bededag er afskaffet som helligdag fra 2024. Den står kun som forkert svar i gamle prøver.",
@@ -832,7 +1535,28 @@
    132,
    137
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "I 1945, lige efter 2. Verdenskrig, blev Danmark medlem af FN*. I 1949, i starten af Den Kolde Krig*, blev Danmark medlem af NATO* sammen med blandt andet USA og en række andre vesteuropæiske lande. Medlemskabet af FN og NATO blev efter 2. verdenskrig grundlaget for Danmarks udenrigs- og sikkerhedspolitik.",
+    "en": "In 1945, just after the Second World War (2. verdenskrig), Denmark became a member of the UN (FN*). In 1949, at the start of the Cold War*, Denmark became a member of NATO* together with, among others, the USA and a number of other Western European countries. Membership of the UN and NATO became the foundation of Denmark's foreign and security policy after the Second World War (2. verdenskrig).",
+    "book": [
+     {
+      "page": 133,
+      "lines": "6-12"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Danmarks udenrigspolitik siden 2. Verdenskrig",
+    "en": "This fact sheet covers:\n• Denmark's foreign policy since the Second World War (2. verdenskrig)",
+    "book": [
+     {
+      "page": 133,
+      "lines": "18-19"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "ver-bosnien",
@@ -861,7 +1585,38 @@
    138,
    141
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Danmark er bygget på idealer om blandt andet frihed og demokrati. Disse er fastlagt i Danmarks grundlov. Grundloven bestemmer for eksempel, at man kan sige eller skrive, hvad man vil (ytringsfrihed). Grundloven bestemmer også, at man kan vælge den religion, man ønsker (religionsfrihed). Grundloven giver også ret til at danne foreninger og være medlem af foreninger (foreningsfrihed) og til at forsamle sig for eksempel til demonstrationer (forsamlingsfrihed).",
+    "en": "Denmark is built on ideals of, among other things, freedom and democracy. These are set out in the Constitution. The Constitution provides, for example, that you may say or write what you want (freedom of expression, ytringsfrihed). It also provides that you can choose the religion you want (religious freedom). The Constitution also gives the right to form associations and to be a member of associations (freedom of association, foreningsfrihed), and the right to gather, for example for demonstrations (freedom of assembly, forsamlingsfrihed).",
+    "book": [
+     {
+      "page": 139,
+      "lines": "6-14"
+     }
+    ]
+   },
+   {
+    "da": "Den enkeltes frihed er altså en grundlæggende værdi i Danmark. Men for at sikre, at friheden ikke bruges til at skade andre, har staten også ret til at begrænse friheden. Man taler om, at ”frihed skal bruges under ansvar”. Derfor er det ulovligt at misbruge friheden for eksempel til at diskriminere andre. Der er tale om diskrimination, hvis man gør forskel på mennesker, behandler dem dårligere, på grund af deres religion, politiske holdning, hudfarve, køn, etnicitet, seksuelle orientering, alder mv.",
+    "en": "Individual freedom is therefore a fundamental value in Denmark. But to make sure that freedom is not used to harm others, the state also has the right to limit freedom. People speak of 'freedom must be used with responsibility' (frihed skal bruges under ansvar). It is therefore illegal to misuse freedom, for example to discriminate against others. Discrimination occurs if you treat people differently and treat them worse because of their religion, political views, skin colour, sex, ethnicity, sexual orientation, age etc.",
+    "book": [
+     {
+      "page": 139,
+      "lines": "20-26"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Diskrimination\n• Antisemitisme\n• Hadforbrydelser\n• Ekstremisme",
+    "en": "This fact sheet covers:\n• Discrimination\n• Antisemitism\n• Hate crimes\n• Extremism",
+    "book": [
+     {
+      "page": 139,
+      "lines": "29-33"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "his-terror-2015"
@@ -882,7 +1637,28 @@
    142,
    146
   ],
-  "intro": [],
+  "intro": [
+   {
+    "da": "Et stort energiforbrug – ved afbrænding af kul, olie og gas (fossile brændsler) – inden for blandt andet produktion og transport har været afgørende for at skabe den store økonomiske vækst de seneste 150 år. Men det har også ført til en stor udledning af CO2 og andre drivhusgasser i atmosfæren. Man taler om drivhusgasser og ’drivhuseffekten’, fordi disse gasser – ligesom et drivhus – på den ene side lukker solens stråler ind, men på den anden side begrænser varmen i at slippe ud igen. Kommer der flere drivhusgasser i atmosfæren, bliver mindre varme lukket ud af atmosfæren igen. Det påvirker klimaet og får temperaturen til at stige, så der sker en global opvarmning. På grund af den globale opvarmning kan der komme flere områder dækket af ørken, flere oversvømmelser og mere ekstrem varme. Det kan betyde, at mennesker får sværere ved at leve i store dele af verden.",
+    "en": "Large energy use, from burning coal, oil and gas (fossil fuels), in production and transport among other things, has been crucial in creating the great economic growth of the last 150 years. But it has also led to large emissions of CO2 and other greenhouse gases into the atmosphere. We talk about greenhouse gases and the 'greenhouse effect', because these gases, just like a greenhouse, on the one hand let the sun's rays in, but on the other hand limit the heat from escaping again. If more greenhouse gases get into the atmosphere, less heat is let out of the atmosphere again. This affects the climate and makes the temperature rise, so that global warming occurs. Because of global warming, more areas may be covered by desert, there may be more floods, and more extreme heat. This may mean that people find it harder to live in large parts of the world.",
+    "book": [
+     {
+      "page": 143,
+      "lines": "6-20"
+     }
+    ]
+   },
+   {
+    "da": "Dette fakta-ark handler om:\n• Global opvarmning\n• Den danske indsats for grøn omstilling",
+    "en": "This fact sheet covers:\n• Global warming\n• Denmark's efforts for the green transition",
+    "book": [
+     {
+      "page": 143,
+      "lines": "23-25"
+     }
+    ]
+   }
+  ],
   "current_facts": [],
   "cluster_ids": [
    "arb-vindenergi",
