@@ -31,7 +31,8 @@
   function eligible(D, topics, frequent) {
     return D.questions.filter(function (q) {
       var c = D.cById.get(q.cluster_id);
-      return topics.indexOf(c.topic_id) !== -1 && (!frequent || c.frequent);
+      var inSheet = (c.topic_ids || [c.topic_id]).some(function (id) { return topics.indexOf(id) !== -1; });
+      return inSheet && (!frequent || c.frequent);
     });
   }
 

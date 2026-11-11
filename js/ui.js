@@ -141,6 +141,32 @@
     return note("nobook", "Ikke i læremateriale 2026", "Not in the 2026 book", da, en);
   }
 
+  // "Også i Fakta-ark 9: Sundhed og sygdom" for a cluster shown in sheet currentId. Each sheet name links to
+  // the same fact in that sheet (linked; hrefPrefix is "" on the Læs page, "study.html" elsewhere).
+  // Returns null when the cluster is only in one sheet.
+  function alsoIn(cluster, currentId, linked, hrefPrefix) {
+    var D = MBP.data;
+    var others = (cluster.topic_ids || [cluster.topic_id]).filter(function (id) { return id !== currentId && D.tById.get(id); });
+    if (!others.length) return null;
+    var parts = [];
+    others.forEach(function (id, i) {
+      var t = D.tById.get(id);
+      if (i > 0) parts.push(", ");
+      var label = "Fakta-ark " + t.sheet + ": " + t.title_da;
+      parts.push(linked
+        ? h("a", { href: (hrefPrefix || "") + "#" + id + "/" + cluster.id, title: "Fact sheet " + t.sheet + ": " + t.title_en }, label)
+        : label);
+    });
+    var en = others.map(function (id) {
+      var t = D.tById.get(id);
+      return "fact sheet " + t.sheet + ": " + t.title_en;
+    }).join(", ");
+    return h("p", { class: "also-in" },
+      MBP.icon("book", 14),
+      h("span", { class: "da" }, "Også i ", parts),
+      h("span", { class: "en", lang: "en" }, "Also in " + en));
+  }
+
   // The trap, "changed since the exam" and "not in the book" notes for a cluster (all optional).
   // inQuestion: leaves out the change note (the exam's old answer), which belongs to learning only.
   function noteBoxes(c, inQuestion) {
@@ -899,6 +925,7 @@
         topic ? topicChip(topic) : null,
         bi("Prøve " + q.exam + ", spm. " + q.number, "Exam " + q.exam + ", q. " + q.number, "span"),
         cluster && cluster.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null),
+      cluster ? alsoIn(cluster, cluster.topic_id, !!review, "study.html") : null,
       h("h2", { class: "qtext" }, q.question_da, h("span", { class: "en", lang: "en" }, q.question_en)),
       h("fieldset", { class: "opts" }, fieldsetChildren),
       explain);
@@ -1025,6 +1052,7 @@
     note: note,
     nobookNote: nobookNote,
     noteBoxes: noteBoxes,
+    alsoIn: alsoIn,
     withBook: withBook,
     moreFor: moreFor,
     moreBlock: moreBlock,

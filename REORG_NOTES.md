@@ -376,3 +376,11 @@ Not added anywhere, as the plan asks. The user decides.
   - **diskrimination**: the plan asked for a raised hand in front of a circle with a diagonal. At 16 px the hand is illegible, so the drawing is the circle with a diagonal (a "not allowed" sign) only. Open point for the user.
   - **arbejdsmarked** (handshake): a simplified clasp between two cuffs. It reads at 64 px; at 16 px it is only a faint shape.
 - `MBP.ART` is now exported for `tools/art-preview.html`, which is not linked from the site. It shows every key at 16, 32 and 64 px on light and dark. I checked it in the browser: all 26 read at 64 px, and the 16 px versions are as expected for the plan's rule.
+
+## Phase 4: shared clusters and deep links
+- `js/ui.js` `alsoIn(cluster, currentId, linked, hrefPrefix)` (exported): "Også i Fakta-ark N: title" (Danish, sheet names linked when `linked`), English "Also in fact sheet N: title" in the `.en` span. Returns null for single-sheet clusters.
+- Læs (`js/study.js`): each fact row has `id="<sheet>--<cluster>"` and `tabindex="-1"`, and shows `alsoIn` (linked) under the fact. `#<sheet>/<cluster>` is routed in `selection()`; `show()` calls `focusFact()`, which switches "Vis kun ofte stillede" off with the toast when the fact is hidden, scrolls the row to the centre, moves focus to it and flashes it (`animationend` or a 1.8 s timer removes the class).
+- Lær (`js/ui.js` `questionCard`, `js/learn.js` lesson cards): the note sits under the topic chip as plain text. On the Test review screen the sheet names link. In the "Det skal du se på igen" list the note links. The "finished" stamps loop now covers every sheet in `topic_ids`.
+- Test (`js/quiz.js` `eligible()`): a question is eligible if any of its sheets is ticked, so it is never drawn twice.
+- Totals: `grep -n "D.topics\|question_count\|cluster_ids.length" js/*.js` shows per-sheet uses only (stamps, list counts, the sheet's own header). Home totals use `D.clusters`. Nothing sums per-sheet numbers into an overall total.
+- CSS: `.also-in`, `.fact-row { scroll-margin-top: 88px }` (to be checked on the phone chip bar in Phase 6), `.fact-row.flash` with a reduced-motion variant.

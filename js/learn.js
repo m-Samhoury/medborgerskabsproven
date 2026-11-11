@@ -160,6 +160,7 @@
               t ? MBP.ui.topicChip(t) : null,
               c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null),
             MBP.ui.faceValue(c.times_asked)),
+          MBP.ui.alsoIn(c, c.topic_id, false),
           h("div", { class: "fact" }, MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id))),
           h("div", { class: "rule" }),
           biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"),
@@ -265,10 +266,12 @@
       // Topics that are now fully mastered for the first time: their stamp, with the Mestret postmark.
       var finished = [];
       sessionClusters.forEach(function (c) {
-        var t = D.tById.get(c.topic_id);
-        if (!t || finished.indexOf(t) !== -1) return;
-        var progress = MBP.ui.topicProgress(D, t);
-        if (MBP.ui.stampLevel(progress) === 4 && !MBP.store.isMasteredSeen(t.id)) finished.push(t);
+        (c.topic_ids || [c.topic_id]).forEach(function (tid) {
+          var t = D.tById.get(tid);
+          if (!t || finished.indexOf(t) !== -1) return;
+          var progress = MBP.ui.topicProgress(D, t);
+          if (MBP.ui.stampLevel(progress) === 4 && !MBP.store.isMasteredSeen(t.id)) finished.push(t);
+        });
       });
       finished.forEach(function (t) {
         stampsSection.appendChild(h("div", { class: "done-stamp" }, MBP.ui.stamp(t, MBP.ui.topicProgress(D, t), {})));
@@ -288,6 +291,7 @@
           list.appendChild(h("li", null,
             t ? MBP.ui.topicChip(t) : null,
             MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id)),
+            MBP.ui.alsoIn(c, c.topic_id, true, "study.html"),
             bi("Rigtigt svar: " + c.answer_da, "Correct answer: " + c.answer_en, "p")));
         });
         content.appendChild(list);

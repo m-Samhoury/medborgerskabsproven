@@ -86,6 +86,13 @@
     function selection() {
       var raw = location.hash.slice(1);
       try { raw = decodeURIComponent(raw); } catch (e) { /* keep the raw text */ }
+      var slash = raw.indexOf("/");
+      if (slash !== -1) {
+        var sid = raw.slice(0, slash), cid = raw.slice(slash + 1);
+        var st = D.tById.get(sid);
+        if (st && st.cluster_ids.indexOf(cid) !== -1) return { key: sid, cluster: cid };
+        if (st) return { key: sid };
+      }
       if (D.tById.has(raw)) return { key: raw };
       if (raw === "tabeller") return { key: "tabeller" };
       if (D.gById.has(raw)) return { key: "tabeller", group: raw };
@@ -100,7 +107,9 @@
         if (built[key]) built[key].hidden = key !== sel.key;
       });
       setActive(sel.key);
-      if (sel.group) {
+      if (sel.cluster) {
+        focusFact(D, sel.key, sel.cluster);
+      } else if (sel.group) {
         var group = document.getElementById(sel.group);
         if (group) group.scrollIntoView();
       } else if (userSwitch) {
@@ -112,6 +121,26 @@
 
     window.addEventListener("hashchange", function () { show(true); });
     show(false);
+  }
+
+  // A deep link to one fact (#sheet/cluster): show all questions if the filter hides it, then centre the
+  // fact, move focus to it (without scrolling again) and flash it briefly.
+  function focusFact(D, sheetId, clusterId) {
+    var row = document.getElementById(sheetId + "--" + clusterId);
+    if (!row) return;
+    var c = D.cById.get(clusterId);
+    if (c && !c.frequent && document.getElementById("main").classList.contains("only-frequent")) {
+      setFrequentOnly(false);
+      MBP.ui.toast("Viser alle spørgsmål", "Showing all questions");
+    }
+    row.scrollIntoView({ block: "center" });
+    row.focus({ preventScroll: true });
+    row.classList.remove("flash");
+    void row.offsetWidth;
+    row.classList.add("flash");
+    var done = function () { row.classList.remove("flash"); };
+    row.addEventListener("animationend", done, { once: true });
+    setTimeout(done, 1800);
   }
 
   // The overview tables: every fact group once, under the heading.
@@ -190,7 +219,7 @@
     var facts = h("ul", { class: "facts" });
     t.cluster_ids.forEach(function (id) {
       var c = D.cById.get(id);
-      if (c) facts.appendChild(factRow(c));
+      if (c) facts.appendChild(factRow(c, t.id));
     });
     section.appendChild(facts);
 
@@ -211,7 +240,7 @@
   }
 
   // One fact row: face value (and postmark when mastered), the fact, its questions and the notes.
-  function factRow(c) {
+  function factRow(c, sheetId) {
     var side = [MBP.ui.faceValue(c.times_asked)];
     if (MBP.store.isMastered(c.id)) {
       var mark = MBP.ui.postmark("check", "fact-check");
@@ -236,10 +265,11 @@
     var body = h("div", { class: "fact-body" },
       c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null,
       withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id)),
+      MBP.ui.alsoIn(c, sheetId, true, ""),
       qa,
       MBP.ui.noteBoxes(c));
 
-    return h("li", { class: c.frequent ? "fact-row freq" : "fact-row" },
+    return h("li", { class: c.frequent ? "fact-row freq" : "fact-row", id: sheetId + "--" + c.id, tabindex: "-1" },
       h("div", { class: "fact-side" }, side),
       body);
   }
