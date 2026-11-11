@@ -59,22 +59,40 @@
       content.appendChild(topicSection(D, t));
     });
 
+    // The overview tables repeat the fact groups. Their heading is built now; the blocks follow after the first render,
+    // unless the hash points into this section (then they are built now, before the scroll).
     var tables = h("section", { id: "tabeller", class: "study-section" });
     tables.appendChild(bi("Alle oversigtstabeller", "All overview tables", "h2"));
-    D.groups.forEach(function (g) {
-      tables.appendChild(groupBlock(D, g, null));
-    });
     content.appendChild(tables);
+    var tablesBuilt = false;
+    function buildTables() {
+      if (tablesBuilt) return;
+      tablesBuilt = true;
+      D.groups.forEach(function (g) {
+        tables.appendChild(groupBlock(D, g, null));
+      });
+    }
 
     main.appendChild(h("div", { class: "study" }, side, content));
 
     watchTopics(D);
 
+    var hashId = location.hash ? decodeURIComponent(location.hash.slice(1)) : "";
+    var hashInTables = hashId === "tabeller" || D.groups.some(function (g) { return g.id === hashId; });
+    if (hashInTables) buildTables();
+    else scheduleIdle(buildTables);
+
     // Scroll to the hash, now that the content exists.
-    if (location.hash) {
-      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (hashId) {
+      var target = document.getElementById(hashId);
       if (target) target.scrollIntoView();
     }
+  }
+
+  // Runs fn when the browser is idle, or right away after a timeout where requestIdleCallback is missing.
+  function scheduleIdle(fn) {
+    if ("requestIdleCallback" in window) window.requestIdleCallback(fn);
+    else setTimeout(fn, 0);
   }
 
   // The "only frequently asked" switch. Every switch on the page is kept in step.
