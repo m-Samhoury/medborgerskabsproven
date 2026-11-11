@@ -190,15 +190,20 @@
       side.push(h("span", { class: "fact-mastered", role: "img", title: "Mestret – Mastered", "aria-label": "Mestret – Mastered" }, mark));
     }
 
+    // The questions and answers are built the first time the reader opens them (the block is closed by default).
     var qa = h("details", { class: "qa" },
       h("summary", null,
         MBP.icon("next", 16),
-        bi("Spørgsmål og svar (" + c.variants.length + ")", "Questions and answers", "span")),
-      h("div", { class: "qa-body" }, c.variants.map(function (v) {
+        bi("Spørgsmål og svar (" + c.variants.length + ")", "Questions and answers", "span")));
+    qa.addEventListener("toggle", function built() {
+      if (!qa.open) return;
+      qa.removeEventListener("toggle", built);
+      qa.appendChild(h("div", { class: "qa-body" }, c.variants.map(function (v) {
         return h("div", { class: "qa-item" },
           biQA(v.question_da, v.question_en, v.answer_da, v.answer_en, "div"),
           h("p", { class: "ids" }, v.question_ids.join(", ")));
       })));
+    });
 
     var body = h("div", { class: "fact-body" },
       c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null,

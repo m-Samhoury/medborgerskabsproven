@@ -317,17 +317,29 @@
   function moreBlock(items, opts) {
     if (!items || !items.length) return null;
     var feedback = !!(opts && opts.feedback);
+    var isOpen = feedback && MBP.store.bookMoreOpen();
     var chev = MBP.icon("next", 16);
     chev.classList.add("book-more-chev");
+    // The body (the excerpts) is built now when the block starts open, otherwise the first time it is opened.
+    function buildBody() {
+      return h("div", { class: "book-more-body" },
+        anyEn(items.map(moreTexts).reduce(function (a, b) { return a.concat(b); }, [])) ? bookEnToggle(true) : null,
+        items.map(moreItem), starNote(items));
+    }
     var block = h("details", {
       class: feedback ? "book-more book-more-feedback" : "book-more",
-      open: feedback && MBP.store.bookMoreOpen()
+      open: isOpen
     },
       h("summary", null, chev,
         bi("Mere fra bogen (" + items.length + ")", "More from the book (" + items.length + ")", "span")),
-      h("div", { class: "book-more-body" },
-        anyEn(items.map(moreTexts).reduce(function (a, b) { return a.concat(b); }, [])) ? bookEnToggle(true) : null,
-        items.map(moreItem), starNote(items)));
+      isOpen ? buildBody() : null);
+    if (!isOpen) {
+      block.addEventListener("toggle", function built() {
+        if (!block.open) return;
+        block.removeEventListener("toggle", built);
+        block.appendChild(buildBody());
+      });
+    }
     if (feedback) {
       block.addEventListener("toggle", function () { MBP.store.setBookMoreOpen(block.open); });
     }
