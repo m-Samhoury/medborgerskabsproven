@@ -9,6 +9,9 @@
   var SVG_NS = "http://www.w3.org/2000/svg";
   var WIDE = "(min-width: 760px)";
   var TABS = ["share", "scan"];
+  // The QR library sits in js/vendor/, next to jsQR (scan.js). It loads the first time a QR code is shown.
+  var QR_SCRIPT = ((document.currentScript && document.currentScript.src) || "js/syncui.js").replace(/syncui\.js([?#].*)?$/, "vendor/qrcode.js");
+  var qrLoading = null; // one shared load of the QR library
 
   var btn = null;
   var pop = null;
@@ -64,8 +67,34 @@
   }
 
   // Has a code: the QR code, the code, the status, copy and disconnect.
+  // Loads the QR library once. Resolves when qrcode() is available, rejects when the file cannot be loaded.
+  function loadQr() {
+    if (window.qrcode) return Promise.resolve();
+    if (!qrLoading) {
+      qrLoading = new Promise(function (resolve, reject) {
+        var s = document.createElement("script");
+        s.src = QR_SCRIPT;
+        s.onload = function () {
+          if (window.qrcode) resolve();
+          else reject(new Error("qrcode"));
+        };
+        s.onerror = function () {
+          qrLoading = null;
+          reject(new Error("qrcode"));
+        };
+        document.head.appendChild(s);
+      });
+    }
+    return qrLoading;
+  }
+
   function connectedView() {
     var code = MBP.sync.code();
+    // The QR code is drawn once the library has loaded. If it fails to load, the card stays empty and the code text is still shown.
+    var qrCard = h("div", { class: "sync-qr-card" });
+    loadQr().then(function () {
+      qrCard.appendChild(qrSvg(syncLink(code)));
+    }, function () {});
     var last = MBP.sync.lastSync();
     var lastText = last ? clock(last) : null;
     var copy = h("button", { type: "button", class: "btn btn-secondary btn-small" }, bi("Kopiér kode", "Copy code", "span"));
@@ -95,7 +124,7 @@
 
     return h("div", { class: "sync-share" },
       bi("Scan med telefonens kamera for at hente fremgangen.", "Scan with your phone's camera to restore the progress.", "p"),
-      h("div", { class: "sync-qr" }, h("div", { class: "sync-qr-card" }, qrSvg(syncLink(code)))),
+      h("div", { class: "sync-qr" }, qrCard),
       h("code", { class: "sync-code" }, code),
       bi("Synkroniseret · sidst " + (lastText || "aldrig"), "Synced · last " + (lastText || "never"), "p"),
       h("div", { class: "sync-actions" }, copy),
