@@ -488,3 +488,10 @@ Everything else in the old intros was already covered by a cluster's fact or tra
 - bfb1333 Shared clusters: show in every sheet, with deep links
 - d722f34 Pages and wording for 26 fact sheets
 - a55eff8 Verify and fix the fact-sheet reorganisation
+
+## Follow-up, 12 Nov
+- Illustrations: Klima is now a tree, Uddannelse a boy in a graduation cap.
+- English: all 75 intro paragraphs and the 4 related book quotes were rewritten by Claude Opus (replacing the build session's text). "2. verdenskrig" is "the 2nd World War", as elsewhere on the site.
+- Shared questions are labelled with the sheet being studied (lessons and quizzes), not always the main sheet.
+- Tested in the browser: old progress from `main` (30 mastered, 60 seen clusters) carries over in full; topic-level "studied" resets as agreed. All 210 sheet rows and all 86 "Også i" links resolve. A Velfærd + Sundhed quiz asks 26 questions, all different. No console errors on any page; no sideways scroll at phone width.
+- Dropped intro pointers: EF 1973 is still on the site, in the "Vigtige årstal" table (6 sheets). "Jylland og over 400 øer" is in the book (page 105) but sits outside the sheet's intro, so it is not on the site.
