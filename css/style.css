@@ -1986,3 +1986,10 @@ html.show-book-en .book-en-title { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .book-more > summary .book-more-chev { transition: none; }
 }
+
+/* Øv: right-in-a-row steps under the verdict */
+.steps { display: flex; align-items: center; gap: .5rem; margin: .25rem 0 .5rem; font-size: .88rem; color: var(--ink-2); }
+.steps-dots { display: inline-flex; gap: 4px; flex: none; }
+.steps-dots i { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid currentColor; opacity: .55; }
+.steps-dots i.on { background: currentColor; opacity: 1; }
+.steps-done { color: var(--ink); font-weight: 600; }

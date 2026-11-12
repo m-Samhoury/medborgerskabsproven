@@ -630,7 +630,8 @@
     var clusters = MBP.store.progress().clusters;
     var now = Date.now();
     var ids = topic.cluster_ids || [];
-    var out = { seen: 0, mastered: 0, total: ids.length, due: 0 };
+    var need = MBP.store.MASTER_BOX;
+    var out = { seen: 0, mastered: 0, total: ids.length, due: 0, steps: 0, stepsTotal: ids.length * need, pct: 0 };
     ids.forEach(function (id) {
       var st = clusters[id];
       var seen = MBP.store.isSeen(id);
@@ -638,7 +639,11 @@
       if (seen) out.seen++;
       if (mastered) out.mastered++;
       if (seen && !mastered && st && st.due <= now) out.due++;
+      // Partial credit: each right answer in a row counts until the item is mastered.
+      out.steps += st ? Math.min(st.box, need) : 0;
     });
+    out.pct = out.stepsTotal ? Math.floor(out.steps * 100 / out.stepsTotal) : 0;
+    if (out.mastered >= out.total) out.pct = 100;
     return out;
   }
 
@@ -646,7 +651,7 @@
   function stampLevel(p) {
     if (p.seen === 0) return 0;
     if (p.mastered >= p.total) return 4;
-    return p.mastered / p.total >= 0.5 ? 2 : 1;
+    return p.pct >= 50 ? 2 : 1;
   }
 
   // Topic stamp (§5.1.6). opts: href (renders a link), mini (small, no name, count or postmark).
@@ -655,8 +660,8 @@
     var names = SHORT[topic.id] || [topic.title_da, topic.title_en];
     var lvl = stampLevel(progress);
     var mini = !!opts.mini;
-    var label = names[0] + ": " + progress.mastered + " af " + progress.total + " mestret – " +
-      names[1] + ": " + progress.mastered + " of " + progress.total + " mastered";
+    var label = names[0] + ": " + progress.pct + " % – " + progress.mastered + " af " + progress.total + " mestret – " +
+      names[1] + ": " + progress.pct + "% – " + progress.mastered + " of " + progress.total + " mastered";
     var celebrate = !mini && lvl === 4 && !MBP.store.isMasteredSeen(topic.id);
     if (celebrate) MBP.store.markMasteredSeen(topic.id);
 
@@ -665,7 +670,8 @@
       h("div", { class: "art" }, MBP.topicArt(topic.id, mini ? 32 : 64)),
       mini ? null : h("div", { class: "no" }, "Fakta-ark " + topic.sheet),
       mini ? null : h("div", { class: "nm" }, names[0]),
-      mini ? null : h("div", { class: "ct" }, progress.mastered + " / " + progress.total));
+      mini ? null : h("div", { class: "ct", title: progress.mastered + " af " + progress.total + " mestret – " + progress.mastered + " of " + progress.total + " mastered" },
+        progress.pct + " %"));
 
     var cls = ["stamp", "topic-scope", "lvl-" + lvl];
     if (mini) cls.push("mini");

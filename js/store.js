@@ -16,6 +16,8 @@
   var KEEP_DAYS = 60;
   var INTERVALS = [0, 10 * 60 * 1000, 24 * 3600 * 1000, 3 * 24 * 3600 * 1000, 7 * 24 * 3600 * 1000, 14 * 24 * 3600 * 1000];
 
+  var MASTER_BOX = 3; // right answers in a row that make an item mastered
+
   var cache = null;
   // Counts local data writes. Sync uses it to tell whether anything changed while a request was in flight.
   var dataVersion = 0;
@@ -146,11 +148,13 @@
   MBP.store = {
     progress: progress,
 
+    MASTER_BOX: MASTER_BOX,
+
     clusterState: clusterState,
 
     isMastered: function (clusterId) {
       var st = progress().clusters[clusterId];
-      return !!st && st.box >= 3;
+      return !!st && st.box >= MASTER_BOX;
     },
 
     isSeen: function (clusterId) {

@@ -149,9 +149,19 @@
       content.textContent = "";
       MBP.ui.screenTop();
       paintBar(S.queuedTotal + plannedItems(lessons[S.li]));
+      // Items already answered right (on their way to mastered) skip the explanation and go straight to questions.
+      var toExplain = lessons[S.li].filter(function (c) { return stateOf(c).box === 0; });
+      if (toExplain.length === 0) return startPractice();
+      var skipped = lessons[S.li].length - toExplain.length;
       content.appendChild(h("h2", { class: "lesson-head" },
         bi("Lektion " + (S.li + 1) + " af " + lessons.length, "Lesson " + (S.li + 1) + " of " + lessons.length, "span")));
-      lessons[S.li].forEach(function (c) {
+      if (skipped > 0) {
+        content.appendChild(bi(
+          skipped + (skipped === 1 ? " emne" : " emner") + ", du allerede har svaret rigtigt på, kommer direkte som spørgsmål.",
+          skipped + (skipped === 1 ? " item" : " items") + " you already answered right go straight to questions.",
+          "p"));
+      }
+      toExplain.forEach(function (c) {
         var sid = MBP.ui.sheetFor(c, sheets);
         var t = D.tById.get(sid);
         var card = h("section", {
@@ -218,6 +228,7 @@
       if (MBP.store.record(item.qid, item.cid, ok)) {
         MBP.ui.toast("Dagens mål er nået: 25 svar", "Today's goal reached: 25 answers");
       }
+      showSteps(c);
       S.answered++;
       S.results.push(ok);
       if (ok) {
@@ -232,6 +243,20 @@
         }
       }
       paintBar(S.queuedTotal);
+    }
+
+    // Under the verdict: how many right answers in a row this item has, out of the number that masters it.
+    function showSteps(c) {
+      var verdict = content.querySelector(".verdict");
+      if (!verdict) return;
+      var need = MBP.store.MASTER_BOX;
+      var box = Math.min(stateOf(c).box, need);
+      var dots = h("span", { class: "steps-dots", "aria-hidden": "true" });
+      for (var i = 0; i < need; i++) dots.appendChild(h("i", { class: i < box ? "on" : null }));
+      var text = box >= need
+        ? bi("Mestret – " + need + " rigtige i træk", "Mastered – " + need + " right in a row", "span")
+        : bi(box + " af " + need + " rigtige i træk – mestret ved " + need, box + " of " + need + " right in a row – mastered at " + need, "span");
+      verdict.after(h("p", { class: "steps" + (box >= need ? " steps-done" : "") }, dots, text));
     }
 
     function finishLesson() {
