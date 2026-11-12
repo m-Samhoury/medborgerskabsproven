@@ -301,6 +301,7 @@
     var list = buildList(D, cfg);
     var main = document.getElementById("main");
     main.textContent = "";
+    MBP.ui.screenTop();
     if (!list.length) {
       main.appendChild(bi("Ingen spørgsmål i dette valg.", "No questions for this choice.", "p"));
       main.appendChild(h("div", { class: "btn-row" },
@@ -356,6 +357,7 @@
 
     function showNormal() {
       content.textContent = "";
+      MBP.ui.screenTop();
       paintBar();
       var q = list[i];
       var last = i === n - 1;
@@ -381,6 +383,7 @@
 
     function showExam() {
       content.textContent = "";
+      MBP.ui.screenTop();
       paintBar();
       var q = list[i];
       var card = MBP.ui.questionCard(q, {
@@ -502,6 +505,7 @@
     var passed = isExam ? score >= EXAM_PASS : pct >= NORMAL_PASS_PERCENT;
     main.textContent = "";
     document.body.classList.remove("focus-mode");
+    MBP.ui.screenTop();
 
     function isRight(q) { return answers.get(q.id) === q.correct[0]; }
     var wrong = list.filter(function (q) { return !isRight(q); });

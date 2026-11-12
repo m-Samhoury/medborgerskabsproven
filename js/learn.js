@@ -147,6 +147,7 @@
 
     function renderExplain() {
       content.textContent = "";
+      MBP.ui.screenTop();
       paintBar(S.queuedTotal + plannedItems(lessons[S.li]));
       content.appendChild(h("h2", { class: "lesson-head" },
         bi("Lektion " + (S.li + 1) + " af " + lessons.length, "Lesson " + (S.li + 1) + " of " + lessons.length, "span")));
@@ -172,7 +173,7 @@
       var ready = h("button", { type: "button", class: "btn btn-primary btn-stack btn-block", onclick: startPractice },
         bi("Jeg er klar – øv nu", "I'm ready – practise now", "span"));
       content.appendChild(ready);
-      ready.focus();
+      ready.focus({ preventScroll: true }); // the lesson opens at the top; the keyboard is ready on the button
     }
 
     function startPractice() {
@@ -192,6 +193,7 @@
 
     function showItem() {
       content.textContent = "";
+      MBP.ui.screenTop();
       if (S.qi >= S.queue.length) return finishLesson();
       var item = S.queue[S.qi];
       S.itemNo++;
@@ -242,6 +244,7 @@
     function renderSummary() {
       document.body.classList.remove("focus-mode");
       content.textContent = "";
+      MBP.ui.screenTop();
       content.appendChild(h("div", { class: "summary-card" },
         bi(S.right + " af " + S.answered + " rigtige", S.right + " of " + S.answered + " correct", "p"),
         h("div", { class: "dots" }, S.results.map(function (ok) {

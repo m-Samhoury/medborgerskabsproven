@@ -101,7 +101,7 @@
       return { key: D.topics[0].id };
     }
 
-    // Shows the selected tab. userSwitch: a click or the back button, so the content top comes into view.
+    // Shows the selected tab. (userSwitch: a click or the back button rather than the first load.)
     function show(userSwitch) {
       var sel = selection();
       ensureBuilt(sel.key);
@@ -109,18 +109,32 @@
         if (built[key]) built[key].hidden = key !== sel.key;
       });
       setActive(sel.key);
+      // Each sheet is a view of its own: it opens where it was left, or at the top the first time.
+      var view = "study.html#" + sel.key;
       if (sel.cluster) {
+        MBP.ui.scrollView(view, false);
         focusFact(D, sel.key, sel.cluster);
       } else if (sel.group) {
+        MBP.ui.scrollView(view, false);
         var group = document.getElementById(sel.group);
         if (group) group.scrollIntoView();
-      } else if (userSwitch) {
-        // The chip bar is sticky on phones: put it at the top of the view. On desktop, the sidebar's row is the top.
-        var anchor = chipBar.offsetParent ? chipBar : side.parentNode;
-        anchor.scrollIntoView({ block: "start" });
+      } else {
+        MBP.ui.scrollView(view);
       }
     }
 
+    // In-page links (#sheet, #sheet/fact, #table) switch the tab without the browser's own jump to the element
+    // with that id: that jump would move the page before the sheet being left has saved its scroll position.
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var hash = a.getAttribute("href");
+      if (hash === "#" || hash === "#main") return;
+      e.preventDefault();
+      if (location.hash !== hash) history.pushState(null, "", hash);
+      show(true);
+    });
+    // The back and forward buttons.
     window.addEventListener("hashchange", function () { show(true); });
     show(false);
   }

@@ -1057,11 +1057,68 @@
     });
   }
 
+  // ---------- Scroll position ----------
+  // Each view (a page, or one sheet in Læs) remembers how far down it was scrolled, for as long as the tab is
+  // open (sessionStorage). A view seen before opens where it was left; a new view opens at the top.
+  // Screens inside a run (a quiz question, a lesson, a result) are not remembered: they open at the top.
+  var SCROLL_STORE = "mbp.v1.scroll";
+  var scrollKey = null;       // the view being remembered, or null
+  var scrollPending = false;  // a save is queued
+  var scrollClaimed = false;  // the page script chose its own view, so start() leaves it alone
+  try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch (e) { /* keep the default */ }
+
+  function readScroll() {
+    try { return JSON.parse(sessionStorage.getItem(SCROLL_STORE)) || {}; } catch (e) { return {}; }
+  }
+  function saveScroll() {
+    scrollPending = false;
+    if (!scrollKey) return;
+    var all = readScroll();
+    all[scrollKey] = Math.round(window.scrollY);
+    try { sessionStorage.setItem(SCROLL_STORE, JSON.stringify(all)); } catch (e) { /* not kept */ }
+  }
+  window.addEventListener("scroll", function () {
+    if (!scrollKey || scrollPending) return;
+    scrollPending = true;
+    setTimeout(saveScroll, 100);
+  }, { passive: true });
+  window.addEventListener("pagehide", saveScroll);
+
+  // Switches to view `key`. restore false: start remembering it, but the caller does its own scrolling
+  // (a deep link to one fact). Otherwise scroll to where it was left, or to the top.
+  function scrollView(key, restore) {
+    scrollClaimed = true;
+    saveScroll(); // the view being left, as it is now
+    scrollKey = null;
+    if (restore === false) {
+      scrollKey = key;
+      return;
+    }
+    var y = readScroll()[key] || 0;
+    window.scrollTo(0, y);
+    scrollKey = key;
+    // Content can still be laying out (fonts, images): if the page was too short to reach y, try once more.
+    if (y && Math.abs(window.scrollY - y) > 2) {
+      setTimeout(function () { if (scrollKey === key) window.scrollTo(0, y); }, 150);
+    }
+  }
+
+  // A screen inside a run: to the top, and nothing is remembered.
+  function screenTop() {
+    scrollClaimed = true;
+    saveScroll(); // the view being left, as it is now
+    scrollKey = null;
+    window.scrollTo(0, 0);
+  }
+
   // Load the data, then run the page script. On failure, <main> shows the fixed error text.
   // The first sync runs alongside the data load, so the page shows the synced progress.
+  // Unless the page script picked a view, the page is remembered as one view (file name + query).
   function start(init) {
     Promise.all([MBP.load(), MBP.sync ? MBP.sync.beforeRender() : null]).then(function (r) {
-      return init(r[0]);
+      return Promise.resolve(init(r[0])).then(function () {
+        if (!scrollClaimed) scrollView((location.pathname.split("/").pop() || "index.html") + location.search);
+      });
     }, function () {
       var main = document.getElementById("main");
       if (main) {
@@ -1080,6 +1137,8 @@
     nobookNote: nobookNote,
     noteBoxes: noteBoxes,
     alsoIn: alsoIn,
+    scrollView: scrollView,
+    screenTop: screenTop,
     sheetFor: sheetFor,
     withBook: withBook,
     moreFor: moreFor,
