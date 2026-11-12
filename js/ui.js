@@ -144,6 +144,16 @@
   // "Også i Fakta-ark 9: Sundhed og sygdom" for a cluster shown in sheet currentId. Each sheet name links to
   // the same fact in that sheet (linked; hrefPrefix is "" on the Læs page, "study.html" elsewhere).
   // Returns null when the cluster is only in one sheet.
+  // The sheet to label a cluster with: the first of its sheets that is in `sheets` (the sheets the user
+  // chose), else its main sheet.
+  function sheetFor(cluster, sheets) {
+    var ids = cluster.topic_ids || [cluster.topic_id];
+    if (sheets) {
+      for (var i = 0; i < ids.length; i++) if (sheets.indexOf(ids[i]) !== -1) return ids[i];
+    }
+    return cluster.topic_id;
+  }
+
   function alsoIn(cluster, currentId, linked, hrefPrefix) {
     var D = MBP.data;
     var others = (cluster.topic_ids || [cluster.topic_id]).filter(function (id) { return id !== currentId && D.tById.get(id); });
@@ -835,7 +845,8 @@
     opts = opts || {};
     var D = MBP.data;
     var cluster = D.cById.get(q.cluster_id);
-    var topic = cluster ? D.tById.get(cluster.topic_id) : null;
+    var sheetId = cluster ? sheetFor(cluster, opts.sheets) : null;
+    var topic = cluster ? D.tById.get(sheetId) : null;
     var feedback = opts.feedback !== false;
     var review = opts.review || null;
     var correctKey = q.correct[0];
@@ -926,7 +937,7 @@
         topic ? topicChip(topic) : null,
         bi("Prøve " + q.exam + ", spm. " + q.number, "Exam " + q.exam + ", q. " + q.number, "span"),
         cluster && cluster.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null),
-      cluster ? alsoIn(cluster, cluster.topic_id, !!review, "study.html") : null,
+      cluster ? alsoIn(cluster, sheetId, !!review, "study.html") : null,
       h("h2", { class: "qtext" }, q.question_da, h("span", { class: "en", lang: "en" }, q.question_en)),
       h("fieldset", { class: "opts" }, fieldsetChildren),
       explain);
@@ -1054,6 +1065,7 @@
     nobookNote: nobookNote,
     noteBoxes: noteBoxes,
     alsoIn: alsoIn,
+    sheetFor: sheetFor,
     withBook: withBook,
     moreFor: moreFor,
     moreBlock: moreBlock,

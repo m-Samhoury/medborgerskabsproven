@@ -79,6 +79,7 @@
 
     var isAll = topicParam === "all";
     var topic = isAll ? null : D.tById.get(topicParam);
+    var sheets = isAll ? null : [topicParam]; // the sheet whose label shared clusters get
     if (!isAll && !topic) return renderPicker(main, D);
 
     var frequent = params.get("frequent") === "1";
@@ -150,17 +151,18 @@
       content.appendChild(h("h2", { class: "lesson-head" },
         bi("Lektion " + (S.li + 1) + " af " + lessons.length, "Lesson " + (S.li + 1) + " of " + lessons.length, "span")));
       lessons[S.li].forEach(function (c) {
-        var t = D.tById.get(c.topic_id);
+        var sid = MBP.ui.sheetFor(c, sheets);
+        var t = D.tById.get(sid);
         var card = h("section", {
           class: "lesson-card topic-scope",
-          style: "--c: var(--t-" + c.topic_id + ")"
+          style: "--c: var(--t-" + sid + ")"
         },
           h("div", { class: "lesson-top" },
             h("div", { class: "lesson-tags" },
               t ? MBP.ui.topicChip(t) : null,
               c.frequent ? h("span", { class: "pill-freq", title: "Frequently asked – asked in 4+ exams" }, MBP.icon("star", 13), "Ofte stillet") : null),
             MBP.ui.faceValue(c.times_asked)),
-          MBP.ui.alsoIn(c, c.topic_id, false),
+          MBP.ui.alsoIn(c, sid, false),
           h("div", { class: "fact" }, MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id))),
           h("div", { class: "rule" }),
           biQA(c.canonical_question_da, c.canonical_question_en, c.answer_da, c.answer_en, "div"),
@@ -196,6 +198,7 @@
       paintBar(S.queuedTotal);
       var q = D.qById.get(item.qid);
       var card = MBP.ui.questionCard(q, {
+        sheets: sheets,
         feedback: true,
         onAnswer: function (ok) { onAnswer(item, ok); },
         next: {
@@ -287,11 +290,12 @@
         content.appendChild(bi("Det skal du se på igen", "Look at these again", "h2"));
         var list = h("ul", { class: "recap" });
         S.wrongClusters.forEach(function (c) {
-          var t = D.tById.get(c.topic_id);
+          var sid = MBP.ui.sheetFor(c, sheets);
+          var t = D.tById.get(sid);
           list.appendChild(h("li", null,
             t ? MBP.ui.topicChip(t) : null,
             MBP.ui.withBook(bi(c.fact_da, c.fact_en, "p"), c.book, MBP.ui.moreFor(c.id)),
-            MBP.ui.alsoIn(c, c.topic_id, true, "study.html"),
+            MBP.ui.alsoIn(c, sid, true, "study.html"),
             bi("Rigtigt svar: " + c.answer_da, "Correct answer: " + c.answer_en, "p")));
         });
         content.appendChild(list);

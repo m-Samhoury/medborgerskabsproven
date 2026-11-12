@@ -360,6 +360,7 @@
       var q = list[i];
       var last = i === n - 1;
       var card = MBP.ui.questionCard(q, {
+        sheets: cfg.topics,
         feedback: true,
         onAnswer: function (ok, key) {
           answers.set(q.id, key);
@@ -383,6 +384,7 @@
       paintBar();
       var q = list[i];
       var card = MBP.ui.questionCard(q, {
+        sheets: cfg.topics,
         feedback: false,
         chosen: answers.get(q.id) || null,
         onChange: function (key) {
@@ -605,7 +607,7 @@
         if (isRight(q) && !showAll) return;
         var item = h("div", { class: "review-item", id: "r-" + (k + 1) },
           h("p", { class: "review-no" }, "Spørgsmål " + (k + 1)),
-          MBP.ui.questionCard(q, { review: { chosen: answers.get(q.id) || null } }).el);
+          MBP.ui.questionCard(q, { sheets: cfg.topics, review: { chosen: answers.get(q.id) || null } }).el);
         reviewArea.appendChild(item);
       });
     }
