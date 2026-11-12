@@ -1895,7 +1895,9 @@ html.show-book-en .book-en-title { display: block; }
   cursor: pointer;
 }
 .book-en-toggle:hover { background: var(--wash); }
-.book-en-toggle[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+/* Pressed wins over hover too: on touch screens :hover sticks after a tap. */
+.book-en-toggle[aria-pressed="true"],
+.book-en-toggle[aria-pressed="true"]:hover { background: var(--accent); color: var(--on-accent); }
 .book-en-toggle-full {
   min-height: 36px;
   margin: 0 0 10px;
