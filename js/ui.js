@@ -1040,6 +1040,21 @@
         applyTheme(next);
       });
     }
+
+    // A page brought back with the browser's back/forward button can come from the back-forward cache, still
+    // showing the theme and English setting it had then. Re-read the saved choices when that happens, and when
+    // another tab changes them.
+    function refreshPrefs() {
+      apply(MBP.store.showEnglish());
+      applyBookEn(MBP.store.bookEnOpen());
+      applyTheme(currentTheme());
+    }
+    window.addEventListener("pageshow", function (e) {
+      if (e.persisted) refreshPrefs();
+    });
+    window.addEventListener("storage", function (e) {
+      if (!e.key || /^mbp\.v1\.(theme|showEnglish|bookEnOpen)$/.test(e.key)) refreshPrefs();
+    });
   }
 
   // Load the data, then run the page script. On failure, <main> shows the fixed error text.
