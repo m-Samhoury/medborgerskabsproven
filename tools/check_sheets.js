@@ -131,7 +131,7 @@ topics.forEach(function (t) {
         if (count(p.da, ch) !== count(p.en, ch)) fail(where + ": '" + ch + "' count differs");
       });
       var nda = (p.da.match(NUM) || []);
-      nda.forEach(function (n) { if (p.en.indexOf(n) === -1) fail(where + ": number " + n + " missing in en"); });
+      nda.forEach(function (n) { if (p.en.indexOf(n) === -1 && p.en.indexOf(n.replace(/\./g, ",")) === -1) fail(where + ": number " + n + " missing in en"); });
       if (p.da.length >= 60) {
         var r = p.en.length / p.da.length;
         if (r < 0.6 || r > 1.8) fail(where + ": length ratio " + r.toFixed(2));
