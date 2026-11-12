@@ -27,6 +27,16 @@
      "Lillebælt (Little Belt)",
      "Jutland – Funen",
      "Little Belt Bridge"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "47"
+     },
+     {
+      "page": 105,
+      "lines": "57"
+     }
     ]
    },
    {
@@ -39,6 +49,12 @@
      "Storebælt (Great Belt)",
      "Funen – Zealand",
      "Great Belt Bridge (1998)"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "47-48"
+     }
     ]
    },
    {
@@ -51,6 +67,12 @@
      "Øresund (the Sound)",
      "Zealand (Copenhagen) – Sweden",
      "Øresund Bridge (2000)"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "48-49"
+     }
     ]
    },
    {
@@ -63,6 +85,15 @@
      "Kattegat",
      "Jutland – Sweden (north of Zealand)",
      "–"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "43-61"
+     }
+    ],
+    "more": [
+     0
     ]
    }
   ],
@@ -75,6 +106,22 @@
    "geo-lillebaeltsbro"
   ],
   "book": [
+   {
+    "page": 105,
+    "lines": "47"
+   },
+   {
+    "page": 105,
+    "lines": "57"
+   },
+   {
+    "page": 105,
+    "lines": "47-48"
+   },
+   {
+    "page": 105,
+    "lines": "48-49"
+   },
    {
     "page": 105,
     "lines": "43-61"
@@ -110,6 +157,16 @@
     "cells_en": [
      "1536",
      "The Reformation – Denmark becomes Protestant"
+    ],
+    "book": [
+     {
+      "page": 110,
+      "lines": "37-42"
+     },
+     {
+      "page": 93,
+      "lines": "33-35"
+     }
     ]
    },
    {
@@ -120,6 +177,12 @@
     "cells_en": [
      "1658",
      "Denmark loses Skåne, Halland and Blekinge to Sweden"
+    ],
+    "book": [
+     {
+      "page": 111,
+      "lines": "20-22"
+     }
     ]
    },
    {
@@ -130,6 +193,12 @@
     "cells_en": [
      "1700s (1788)",
      "The agricultural reforms – stavnsbåndet abolished in 1788"
+    ],
+    "book": [
+     {
+      "page": 111,
+      "lines": "55-62"
+     }
     ]
    },
    {
@@ -140,6 +209,15 @@
     "cells_en": [
      "1814",
      "The union with Norway (over 400 years) ends"
+    ],
+    "book": [
+     {
+      "page": 110,
+      "lines": "34-42"
+     }
+    ],
+    "more": [
+     0
     ]
    },
    {
@@ -150,6 +228,12 @@
     "cells_en": [
      "1840s (1847)",
      "The first railways"
+    ],
+    "book": [
+     {
+      "page": 113,
+      "lines": "27-28"
+     }
     ]
    },
    {
@@ -160,6 +244,23 @@
     "cells_en": [
      "1849",
      "First Constitution (5 June) – women do NOT get the vote"
+    ],
+    "book": [
+     {
+      "page": 59,
+      "lines": "33-35"
+     },
+     {
+      "page": 112,
+      "lines": "49-51"
+     },
+     {
+      "page": 63,
+      "lines": "21-23"
+     }
+    ],
+    "more": [
+     1
     ]
    },
    {
@@ -170,6 +271,12 @@
     "cells_en": [
      "1864",
      "Denmark loses Slesvig and Holsten"
+    ],
+    "book": [
+     {
+      "page": 113,
+      "lines": "9-11"
+     }
     ]
    },
    {
@@ -180,6 +287,12 @@
     "cells_en": [
      "about 1870",
      "Venstre is founded"
+    ],
+    "book": [
+     {
+      "page": 113,
+      "lines": "41-42"
+     }
     ]
    },
    {
@@ -190,6 +303,16 @@
     "cells_en": [
      "1915",
      "Women get the vote"
+    ],
+    "book": [
+     {
+      "page": 59,
+      "lines": "37-43"
+     },
+     {
+      "page": 63,
+      "lines": "19-21"
+     }
     ]
    },
    {
@@ -200,6 +323,12 @@
     "cells_en": [
      "1940",
      "9 April: Germany occupies Denmark (Second World War)"
+    ],
+    "book": [
+     {
+      "page": 114,
+      "lines": "20-21"
+     }
     ]
    },
    {
@@ -210,6 +339,24 @@
     "cells_en": [
      "1945",
      "5 May: liberation. Denmark joins the UN"
+    ],
+    "book": [
+     {
+      "page": 114,
+      "lines": "30"
+     },
+     {
+      "page": 129,
+      "lines": "36-38"
+     },
+     {
+      "page": 101,
+      "lines": "9-10"
+     },
+     {
+      "page": 133,
+      "lines": "6"
+     }
     ]
    },
    {
@@ -220,6 +367,16 @@
     "cells_en": [
      "1949",
      "Denmark joins NATO"
+    ],
+    "book": [
+     {
+      "page": 116,
+      "lines": "17-18"
+     },
+     {
+      "page": 133,
+      "lines": "10"
+     }
     ]
    },
    {
@@ -230,6 +387,12 @@
     "cells_en": [
      "about 1950",
      "The Marshall Plan: aid from the USA"
+    ],
+    "book": [
+     {
+      "page": 116,
+      "lines": "28-31"
+     }
     ]
    },
    {
@@ -240,6 +403,12 @@
     "cells_en": [
      "1953",
      "The Constitution last changed"
+    ],
+    "book": [
+     {
+      "page": 62,
+      "lines": "45-47"
+     }
     ]
    },
    {
@@ -250,6 +419,12 @@
     "cells_en": [
      "1960s",
      "High economic growth; guest workers from Turkey, among others"
+    ],
+    "book": [
+     {
+      "page": 117,
+      "lines": "33-35"
+     }
     ]
    },
    {
@@ -260,6 +435,15 @@
     "cells_en": [
      "1973",
      "Denmark joins the EC (today the EU)"
+    ],
+    "book": [
+     {
+      "page": 98,
+      "lines": "6"
+     }
+    ],
+    "more": [
+     2
     ]
    },
    {
@@ -270,6 +454,12 @@
     "cells_en": [
      "1970s",
      "The Redstocking movement (women's movement)"
+    ],
+    "book": [
+     {
+      "page": 118,
+      "lines": "23-25"
+     }
     ]
    },
    {
@@ -280,6 +470,12 @@
     "cells_en": [
      "1990s",
      "Danish UN soldiers in Bosnia"
+    ],
+    "book": [
+     {
+      "page": 133,
+      "lines": "37-40"
+     }
     ]
    },
    {
@@ -290,6 +486,12 @@
     "cells_en": [
      "2003",
      "Danish soldiers to Iraq"
+    ],
+    "book": [
+     {
+      "page": 134,
+      "lines": "31-43"
+     }
     ]
    },
    {
@@ -300,6 +502,12 @@
     "cells_en": [
      "2011",
      "First female prime minister: Helle Thorning-Schmidt"
+    ],
+    "book": [
+     {
+      "page": 59,
+      "lines": "53-55"
+     }
     ]
    },
    {
@@ -310,6 +518,12 @@
     "cells_en": [
      "2015",
      "Terrorist attack at Copenhagen Synagogue"
+    ],
+    "book": [
+     {
+      "page": 140,
+      "lines": "40-45"
+     }
     ]
    },
    {
@@ -320,6 +534,12 @@
     "cells_en": [
      "2024",
      "Frederik 10. becomes king (14 January)"
+    ],
+    "book": [
+     {
+      "page": 65,
+      "lines": "12-19"
+     }
     ]
    }
   ],
@@ -341,7 +561,11 @@
   "book": [
    {
     "page": 110,
-    "lines": "34-42"
+    "lines": "37-42"
+   },
+   {
+    "page": 93,
+    "lines": "33-35"
    },
    {
     "page": 111,
@@ -352,16 +576,40 @@
     "lines": "55-62"
    },
    {
+    "page": 110,
+    "lines": "34-42"
+   },
+   {
+    "page": 113,
+    "lines": "27-28"
+   },
+   {
+    "page": 59,
+    "lines": "33-35"
+   },
+   {
+    "page": 112,
+    "lines": "49-51"
+   },
+   {
+    "page": 63,
+    "lines": "21-23"
+   },
+   {
     "page": 113,
     "lines": "9-11"
    },
    {
     "page": 113,
-    "lines": "27"
+    "lines": "41-42"
    },
    {
-    "page": 113,
-    "lines": "41-42"
+    "page": 59,
+    "lines": "37-43"
+   },
+   {
+    "page": 63,
+    "lines": "19-21"
    },
    {
     "page": 114,
@@ -372,24 +620,44 @@
     "lines": "30"
    },
    {
+    "page": 129,
+    "lines": "36-38"
+   },
+   {
+    "page": 101,
+    "lines": "9-10"
+   },
+   {
+    "page": 133,
+    "lines": "6"
+   },
+   {
+    "page": 116,
+    "lines": "17-18"
+   },
+   {
+    "page": 133,
+    "lines": "10"
+   },
+   {
     "page": 116,
     "lines": "28-31"
+   },
+   {
+    "page": 62,
+    "lines": "45-47"
    },
    {
     "page": 117,
     "lines": "33-35"
    },
    {
+    "page": 98,
+    "lines": "6"
+   },
+   {
     "page": 118,
     "lines": "23-25"
-   },
-   {
-    "page": 59,
-    "lines": "37-43"
-   },
-   {
-    "page": 65,
-    "lines": "12-19"
    },
    {
     "page": 133,
@@ -400,8 +668,16 @@
     "lines": "31-43"
    },
    {
+    "page": 59,
+    "lines": "53-55"
+   },
+   {
     "page": 140,
     "lines": "40-45"
+   },
+   {
+    "page": 65,
+    "lines": "12-19"
    }
   ]
  },
@@ -437,6 +713,16 @@
      "98",
      "Mayor (municipal council)",
      "Nurseries, kindergartens, childminders, folkeskoler, libraries"
+    ],
+    "book": [
+     {
+      "page": 77,
+      "lines": "40-57"
+     },
+     {
+      "page": 79,
+      "lines": "10-12"
+     }
     ]
    },
    {
@@ -451,6 +737,12 @@
      "5",
      "Chair of the regional council",
      "Hospitals"
+    ],
+    "book": [
+     {
+      "page": 80,
+      "lines": "9-30"
+     }
     ]
    },
    {
@@ -465,6 +757,12 @@
      "1",
      "The government and the Folketing",
      "Police, defence, laws, gymnasier, universities"
+    ],
+    "book": [
+     {
+      "page": 66,
+      "lines": "9-40"
+     }
     ]
    }
   ],
@@ -484,12 +782,16 @@
     "lines": "40-57"
    },
    {
+    "page": 79,
+    "lines": "10-12"
+   },
+   {
     "page": 80,
     "lines": "9-30"
    },
    {
-    "page": 79,
-    "lines": "10-12"
+    "page": 66,
+    "lines": "9-40"
    }
   ]
  },
@@ -518,6 +820,12 @@
     "cells_en": [
      "Legislative power",
      "The government and the Folketing"
+    ],
+    "book": [
+     {
+      "page": 66,
+      "lines": "9-40"
+     }
     ]
    },
    {
@@ -528,6 +836,15 @@
     "cells_en": [
      "Executive power",
      "The government"
+    ],
+    "book": [
+     {
+      "page": 66,
+      "lines": "9-40"
+     }
+    ],
+    "more": [
+     0
     ]
    },
    {
@@ -538,6 +855,12 @@
     "cells_en": [
      "Judicial power",
      "The courts (independent of the politicians)"
+    ],
+    "book": [
+     {
+      "page": 66,
+      "lines": "9-40"
+     }
     ]
    },
    {
@@ -548,6 +871,12 @@
     "cells_en": [
      "The courts",
      "District Court → High Court (appeal). Only cases that start in the High Court can normally be appealed to the Supreme Court"
+    ],
+    "book": [
+     {
+      "page": 69,
+      "lines": "29-40"
+     }
     ]
    },
    {
@@ -558,6 +887,16 @@
     "cells_en": [
      "Arrested",
      "Must be brought before a judge within 24 hours"
+    ],
+    "book": [
+     {
+      "page": 64,
+      "lines": "22-25"
+     },
+     {
+      "page": 68,
+      "lines": "53-59"
+     }
     ]
    }
   ],
@@ -578,6 +917,10 @@
    {
     "page": 69,
     "lines": "29-40"
+   },
+   {
+    "page": 64,
+    "lines": "22-25"
    },
    {
     "page": 68,
@@ -609,6 +952,12 @@
     "cells_en": [
      "About 6 months–3",
      "Nursery (or childminder)"
+    ],
+    "book": [
+     {
+      "page": 18,
+      "lines": "38"
+     }
     ]
    },
    {
@@ -619,6 +968,12 @@
     "cells_en": [
      "3–6",
      "Kindergarten"
+    ],
+    "book": [
+     {
+      "page": 19,
+      "lines": "9"
+     }
     ]
    },
    {
@@ -629,6 +984,12 @@
     "cells_en": [
      "About 6",
      "Start school (reception class; the exam: 5–6)"
+    ],
+    "book": [
+     {
+      "page": 6,
+      "lines": "29-31"
+     }
     ]
    },
    {
@@ -639,6 +1000,12 @@
     "cells_en": [
      "16",
      "Buy ordinary beer"
+    ],
+    "book": [
+     {
+      "page": 44,
+      "lines": "45-47"
+     }
     ]
    },
    {
@@ -649,6 +1016,12 @@
     "cells_en": [
      "17",
      "Driving licence for a car (accompanying adult only 8 pm–5 am until 18)"
+    ],
+    "book": [
+     {
+      "page": 45,
+      "lines": "29-33"
+     }
     ]
    },
    {
@@ -659,6 +1032,20 @@
     "cells_en": [
      "18",
      "Legal adult, marriage, SU, right to vote, cigarettes, wine, spirits and strong beer"
+    ],
+    "book": [
+     {
+      "page": 45,
+      "lines": "18-21"
+     },
+     {
+      "page": 41,
+      "lines": "63-64"
+     },
+     {
+      "page": 44,
+      "lines": "45-47"
+     }
     ]
    },
    {
@@ -669,6 +1056,12 @@
     "cells_en": [
      "Under 22",
      "Free dentist (per 2026)"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     }
     ]
    }
   ],
@@ -686,22 +1079,6 @@
   ],
   "book": [
    {
-    "page": 44,
-    "lines": "45-47"
-   },
-   {
-    "page": 55,
-    "lines": "52-55"
-   },
-   {
-    "page": 45,
-    "lines": "29-33"
-   },
-   {
-    "page": 45,
-    "lines": "18-21"
-   },
-   {
     "page": 18,
     "lines": "38"
    },
@@ -712,6 +1089,26 @@
    {
     "page": 6,
     "lines": "29-31"
+   },
+   {
+    "page": 44,
+    "lines": "45-47"
+   },
+   {
+    "page": 45,
+    "lines": "29-33"
+   },
+   {
+    "page": 45,
+    "lines": "18-21"
+   },
+   {
+    "page": 41,
+    "lines": "63-64"
+   },
+   {
+    "page": 55,
+    "lines": "9-20"
    }
   ]
  },
@@ -743,6 +1140,12 @@
     "cells_en": [
      "179",
      "Members of the Folketing (175 + 2 Faroe Islands + 2 Greenland)"
+    ],
+    "book": [
+     {
+      "page": 72,
+      "lines": "29"
+     }
     ]
    },
    {
@@ -753,6 +1156,16 @@
     "cells_en": [
      "2 + 2",
      "Folketing members from the Faroe Islands and from Greenland"
+    ],
+    "book": [
+     {
+      "page": 72,
+      "lines": "29-32"
+     },
+     {
+      "page": 83,
+      "lines": "12-14"
+     }
     ]
    },
    {
@@ -763,6 +1176,19 @@
     "cells_en": [
      "15",
      "Danish members of the European Parliament (changed: the 2017–2018 exams said 13)"
+    ],
+    "book": [
+     {
+      "page": 83,
+      "lines": "61-62"
+     },
+     {
+      "page": 100,
+      "lines": "20-21"
+     }
+    ],
+    "more": [
+     1
     ]
    },
    {
@@ -773,6 +1199,16 @@
     "cells_en": [
      "98",
      "Municipalities"
+    ],
+    "book": [
+     {
+      "page": 77,
+      "lines": "40"
+     },
+     {
+      "page": 83,
+      "lines": "37"
+     }
     ]
    },
    {
@@ -783,6 +1219,16 @@
     "cells_en": [
      "5",
      "Regions"
+    ],
+    "book": [
+     {
+      "page": 80,
+      "lines": "9"
+     },
+     {
+      "page": 83,
+      "lines": "47"
+     }
     ]
    },
    {
@@ -793,6 +1239,20 @@
     "cells_en": [
      "4 years",
      "General elections (at least), municipal and regional elections"
+    ],
+    "book": [
+     {
+      "page": 82,
+      "lines": "59-61"
+     },
+     {
+      "page": 77,
+      "lines": "24-27"
+     },
+     {
+      "page": 83,
+      "lines": "25"
+     }
     ]
    },
    {
@@ -803,6 +1263,16 @@
     "cells_en": [
      "5 years",
      "European Parliament elections"
+    ],
+    "book": [
+     {
+      "page": 83,
+      "lines": "57"
+     },
+     {
+      "page": 100,
+      "lines": "20"
+     }
     ]
    },
    {
@@ -813,6 +1283,12 @@
     "cells_en": [
      "10 years",
      "Compulsory education"
+    ],
+    "book": [
+     {
+      "page": 6,
+      "lines": "6-10"
+     }
     ]
    },
    {
@@ -823,6 +1299,12 @@
     "cells_en": [
      "12",
      "Highest grade (7-point scale)"
+    ],
+    "book": [
+     {
+      "page": 8,
+      "lines": "50-52"
+     }
     ]
    },
    {
@@ -833,6 +1315,12 @@
     "cells_en": [
      "37 hours",
      "Normal working week"
+    ],
+    "book": [
+     {
+      "page": 27,
+      "lines": "9-10"
+     }
     ]
    },
    {
@@ -843,6 +1331,12 @@
     "cells_en": [
      "5–6 weeks",
      "Holiday per year"
+    ],
+    "book": [
+     {
+      "page": 27,
+      "lines": "43-47"
+     }
     ]
    },
    {
@@ -853,6 +1347,12 @@
     "cells_en": [
      "24 hours",
      "Arrested → before a judge"
+    ],
+    "book": [
+     {
+      "page": 64,
+      "lines": "22-25"
+     }
     ]
    },
    {
@@ -863,6 +1363,12 @@
     "cells_en": [
      "about 170 m",
      "Highest point (Møllehøj)"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "24-25"
+     }
     ]
    },
    {
@@ -873,6 +1379,12 @@
     "cells_en": [
      "about 43,000 km²",
      "Denmark's area"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "36-37"
+     }
     ]
    },
    {
@@ -883,6 +1395,12 @@
     "cells_en": [
      "about 6 million",
      "Inhabitants"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "36"
+     }
     ]
    },
    {
@@ -893,6 +1411,12 @@
     "cells_en": [
      "about 60%",
      "Farmland as a share of the area"
+    ],
+    "book": [
+     {
+      "page": 146,
+      "lines": "9-10"
+     }
     ]
    },
    {
@@ -903,6 +1427,12 @@
     "cells_en": [
      "80–90%",
      "Turnout in general elections"
+    ],
+    "book": [
+     {
+      "page": 82,
+      "lines": "45-54"
+     }
     ]
    },
    {
@@ -913,6 +1443,12 @@
     "cells_en": [
      "68%",
      "Employees in a trade union (the exam asked about a-kasse: about 70%)"
+    ],
+    "book": [
+     {
+      "page": 24,
+      "lines": "60-63"
+     }
     ]
    },
    {
@@ -923,6 +1459,12 @@
     "cells_en": [
      "about 73%",
      "16–66-year-olds with a job as an employee (about 3 out of 4)"
+    ],
+    "book": [
+     {
+      "page": 22,
+      "lines": "58-59"
+     }
     ]
    },
    {
@@ -933,6 +1475,12 @@
     "cells_en": [
      "about 80 years",
      "Life expectancy for men (2024)"
+    ],
+    "book": [
+     {
+      "page": 120,
+      "lines": "34-36"
+     }
     ]
    },
    {
@@ -943,6 +1491,16 @@
     "cells_en": [
      "18 weeks",
      "Limit for abortion on request (since 1 June 2025)"
+    ],
+    "book": [
+     {
+      "page": 44,
+      "lines": "18-19"
+     },
+     {
+      "page": 118,
+      "lines": "25-28"
+     }
     ]
    }
   ],
@@ -965,24 +1523,56 @@
     "lines": "29"
    },
    {
+    "page": 72,
+    "lines": "29-32"
+   },
+   {
+    "page": 83,
+    "lines": "12-14"
+   },
+   {
     "page": 83,
     "lines": "61-62"
+   },
+   {
+    "page": 100,
+    "lines": "20-21"
    },
    {
     "page": 77,
     "lines": "40"
    },
    {
+    "page": 83,
+    "lines": "37"
+   },
+   {
     "page": 80,
     "lines": "9"
    },
    {
+    "page": 83,
+    "lines": "47"
+   },
+   {
     "page": 82,
-    "lines": "59"
+    "lines": "59-61"
+   },
+   {
+    "page": 77,
+    "lines": "24-27"
+   },
+   {
+    "page": 83,
+    "lines": "25"
    },
    {
     "page": 83,
     "lines": "57"
+   },
+   {
+    "page": 100,
+    "lines": "20"
    },
    {
     "page": 6,
@@ -1025,20 +1615,24 @@
     "lines": "45-54"
    },
    {
-    "page": 120,
-    "lines": "34-36"
-   },
-   {
-    "page": 118,
-    "lines": "27-28"
+    "page": 24,
+    "lines": "60-63"
    },
    {
     "page": 22,
     "lines": "58-59"
    },
    {
-    "page": 24,
-    "lines": "60-63"
+    "page": 120,
+    "lines": "34-36"
+   },
+   {
+    "page": 44,
+    "lines": "18-19"
+   },
+   {
+    "page": 118,
+    "lines": "25-28"
    }
   ]
  },
@@ -1074,6 +1668,16 @@
      "At least every 4 years (the PM calls it)",
      "Only Danish citizens (18+)",
      "80–90% (high)"
+    ],
+    "book": [
+     {
+      "page": 82,
+      "lines": "59-66"
+     },
+     {
+      "page": 82,
+      "lines": "45-54"
+     }
     ]
    },
    {
@@ -1088,6 +1692,12 @@
      "Every 4 years",
      "Also foreigners under certain conditions",
      "–"
+    ],
+    "book": [
+     {
+      "page": 83,
+      "lines": "23-33"
+     }
     ]
    },
    {
@@ -1102,6 +1712,20 @@
      "Every 5 years",
      "The populations of the EU countries",
      "Lower than general elections"
+    ],
+    "book": [
+     {
+      "page": 83,
+      "lines": "55-62"
+     },
+     {
+      "page": 100,
+      "lines": "14-19"
+     },
+     {
+      "page": 100,
+      "lines": "21-24"
+     }
     ]
    }
   ],
@@ -1123,6 +1747,10 @@
     "lines": "59-66"
    },
    {
+    "page": 82,
+    "lines": "45-54"
+   },
+   {
     "page": 83,
     "lines": "23-33"
    },
@@ -1131,8 +1759,8 @@
     "lines": "55-62"
    },
    {
-    "page": 84,
-    "lines": "6-10"
+    "page": 100,
+    "lines": "14-19"
    },
    {
     "page": 100,
@@ -1168,6 +1796,12 @@
      "1",
      "Copenhagen",
      "Zealand (the capital)"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "38-47"
+     }
     ]
    },
    {
@@ -1180,6 +1814,12 @@
      "2",
      "Aarhus",
      "East Jutland"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "43-44"
+     }
     ]
    },
    {
@@ -1192,6 +1832,12 @@
      "3",
      "Odense",
      "Funen"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "44-45"
+     }
     ]
    },
    {
@@ -1204,6 +1850,12 @@
      "4",
      "Aalborg",
      "North Jutland"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "45-46"
+     }
     ]
    },
    {
@@ -1216,6 +1868,12 @@
      "5",
      "Esbjerg",
      "West Jutland"
+    ],
+    "book": [
+     {
+      "page": 106,
+      "lines": "46-47"
+     }
     ]
    },
    {
@@ -1228,6 +1886,12 @@
      "North",
      "Grenen",
      "Near Skagen"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "63-64"
+     }
     ]
    },
    {
@@ -1240,6 +1904,12 @@
      "South",
      "Gedser Odde",
      "Falster"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "63-66"
+     }
     ]
    }
   ],
@@ -1257,6 +1927,26 @@
    {
     "page": 106,
     "lines": "38-47"
+   },
+   {
+    "page": 106,
+    "lines": "43-44"
+   },
+   {
+    "page": 106,
+    "lines": "44-45"
+   },
+   {
+    "page": 106,
+    "lines": "45-46"
+   },
+   {
+    "page": 106,
+    "lines": "46-47"
+   },
+   {
+    "page": 105,
+    "lines": "63-64"
    },
    {
     "page": 105,
@@ -1289,6 +1979,12 @@
     "cells_en": [
      "H.C. Andersen (1805–1875)",
      "Author – fairy tales, e.g. The Ugly Duckling"
+    ],
+    "book": [
+     {
+      "page": 123,
+      "lines": "35"
+     }
     ]
    },
    {
@@ -1299,6 +1995,12 @@
     "cells_en": [
      "Karen Blixen",
      "Author – wrote books (Out of Africa)"
+    ],
+    "book": [
+     {
+      "page": 124,
+      "lines": "21-30"
+     }
     ]
    },
    {
@@ -1309,6 +2011,12 @@
     "cells_en": [
      "Ludvig Holberg",
      "Author – comedies (1700s)"
+    ],
+    "book": [
+     {
+      "page": 123,
+      "lines": "21-30"
+     }
     ]
    },
    {
@@ -1319,6 +2027,12 @@
     "cells_en": [
      "Søren Kierkegaard (1813–1855)",
      "Philosopher"
+    ],
+    "book": [
+     {
+      "page": 123,
+      "lines": "43-44"
+     }
     ]
    },
    {
@@ -1329,6 +2043,12 @@
     "cells_en": [
      "N.F.S. Grundtvig",
      "The folk high schools (1800s)"
+    ],
+    "book": [
+     {
+      "page": 50,
+      "lines": "33-40"
+     }
     ]
    },
    {
@@ -1339,6 +2059,12 @@
     "cells_en": [
      "P.S. Krøyer",
      "Painter (Skagen Painter)"
+    ],
+    "book": [
+     {
+      "page": 123,
+      "lines": "53-55"
+     }
     ]
    },
    {
@@ -1349,6 +2075,12 @@
     "cells_en": [
      "Carl Nielsen",
      "Composer (music)"
+    ],
+    "book": [
+     {
+      "page": 124,
+      "lines": "9"
+     }
     ]
    },
    {
@@ -1359,6 +2091,12 @@
     "cells_en": [
      "Arne Jacobsen",
      "Architect/designer – the National Bank, the Egg chair"
+    ],
+    "book": [
+     {
+      "page": 124,
+      "lines": "42-57"
+     }
     ]
    },
    {
@@ -1369,6 +2107,12 @@
     "cells_en": [
      "Yahya Hassan (1995–2020)",
      "Poet"
+    ],
+    "book": [
+     {
+      "page": 126,
+      "lines": "25-28"
+     }
     ]
    },
    {
@@ -1379,6 +2123,12 @@
     "cells_en": [
      "Thomas Vinterberg",
      "Film director – Oscar 2021 for Druk"
+    ],
+    "book": [
+     {
+      "page": 125,
+      "lines": "9"
+     }
     ]
    },
    {
@@ -1389,6 +2139,12 @@
     "cells_en": [
      "Susanne Bier",
      "Film director – Oscar for Hævnen (In a Better World)"
+    ],
+    "book": [
+     {
+      "page": 125,
+      "lines": "9"
+     }
     ]
    },
    {
@@ -1399,6 +2155,12 @@
     "cells_en": [
      "Aqua",
      "Pop group – Barbie Girl (1990s)"
+    ],
+    "book": [
+     {
+      "page": 125,
+      "lines": "36-37"
+     }
     ]
    },
    {
@@ -1409,6 +2171,12 @@
     "cells_en": [
      "Helle Thorning-Schmidt",
      "First female prime minister (2011)"
+    ],
+    "book": [
+     {
+      "page": 59,
+      "lines": "53-55"
+     }
     ]
    }
   ],
@@ -1432,15 +2200,47 @@
   "book": [
    {
     "page": 123,
-    "lines": "21"
+    "lines": "35"
    },
    {
-    "page": 126,
-    "lines": "30"
+    "page": 124,
+    "lines": "21-30"
+   },
+   {
+    "page": 123,
+    "lines": "21-30"
+   },
+   {
+    "page": 123,
+    "lines": "43-44"
    },
    {
     "page": 50,
     "lines": "33-40"
+   },
+   {
+    "page": 123,
+    "lines": "53-55"
+   },
+   {
+    "page": 124,
+    "lines": "9"
+   },
+   {
+    "page": 124,
+    "lines": "42-57"
+   },
+   {
+    "page": 126,
+    "lines": "25-28"
+   },
+   {
+    "page": 125,
+    "lines": "9"
+   },
+   {
+    "page": 125,
+    "lines": "36-37"
    },
    {
     "page": 59,
@@ -1472,6 +2272,12 @@
     "cells_en": [
      "Vestas",
      "Wind turbines"
+    ],
+    "book": [
+     {
+      "page": 32,
+      "lines": "40-41"
+     }
     ]
    },
    {
@@ -1482,6 +2288,12 @@
     "cells_en": [
      "Novo Nordisk",
      "Medicine (e.g. insulin)"
+    ],
+    "book": [
+     {
+      "page": 32,
+      "lines": "27-29"
+     }
     ]
    },
    {
@@ -1492,6 +2304,12 @@
     "cells_en": [
      "LEGO",
      "Toys / building bricks"
+    ],
+    "book": [
+     {
+      "page": 32,
+      "lines": "23-25"
+     }
     ]
    },
    {
@@ -1502,6 +2320,15 @@
     "cells_en": [
      "Arla",
      "Dairy products (milk, cheese)"
+    ],
+    "book": [
+     {
+      "page": 31,
+      "lines": "41-44"
+     }
+    ],
+    "more": [
+     0
     ]
    },
    {
@@ -1512,6 +2339,12 @@
     "cells_en": [
      "Mærsk",
      "Shipping (container ships)"
+    ],
+    "book": [
+     {
+      "page": 33,
+      "lines": "9-10"
+     }
     ]
    },
    {
@@ -1522,6 +2355,12 @@
     "cells_en": [
      "Velux",
      "Roof windows"
+    ],
+    "book": [
+     {
+      "page": 32,
+      "lines": "40-45"
+     }
     ]
    }
   ],
@@ -1535,11 +2374,15 @@
   "book": [
    {
     "page": 32,
-    "lines": "23-29"
+    "lines": "40-41"
    },
    {
     "page": 32,
-    "lines": "40-45"
+    "lines": "27-29"
+   },
+   {
+    "page": 32,
+    "lines": "23-25"
    },
    {
     "page": 31,
@@ -1548,6 +2391,10 @@
    {
     "page": 33,
     "lines": "9-10"
+   },
+   {
+    "page": 32,
+    "lines": "40-45"
    }
   ]
  },
@@ -1579,6 +2426,12 @@
      "Fastelavn",
      "February/March (before Easter)",
      "Children dress up and hit the cat out of the barrel"
+    ],
+    "book": [
+     {
+      "page": 128,
+      "lines": "36-43"
+     }
     ]
    },
    {
@@ -1591,6 +2444,12 @@
      "Easter",
      "In spring",
      "Christian holiday"
+    ],
+    "book": [
+     {
+      "page": 129,
+      "lines": "10-11"
+     }
     ]
    },
    {
@@ -1603,6 +2462,12 @@
      "9 April",
      "1940",
      "The occupation"
+    ],
+    "book": [
+     {
+      "page": 114,
+      "lines": "20-21"
+     }
     ]
    },
    {
@@ -1615,6 +2480,12 @@
      "5 May",
      "1945",
      "The liberation"
+    ],
+    "book": [
+     {
+      "page": 129,
+      "lines": "36-42"
+     }
     ]
    },
    {
@@ -1627,7 +2498,8 @@
      "Ascension Day",
      "A Thursday, the 40th day after Easter",
      "Christian holy day (not in book 2026)"
-    ]
+    ],
+    "book": []
    },
    {
     "cells_da": [
@@ -1639,6 +2511,12 @@
      "Whitsun (Pinse)",
      "7 weeks after Easter",
      "Christian holiday"
+    ],
+    "book": [
+     {
+      "page": 129,
+      "lines": "20-25"
+     }
     ]
    },
    {
@@ -1651,6 +2529,12 @@
      "Constitution Day",
      "5 June",
      "The 1849 Constitution"
+    ],
+    "book": [
+     {
+      "page": 129,
+      "lines": "45-55"
+     }
     ]
    },
    {
@@ -1663,6 +2547,12 @@
      "Sankthans (Midsummer)",
      "23 June (June)",
      "Bonfire in the evening"
+    ],
+    "book": [
+     {
+      "page": 129,
+      "lines": "58-66"
+     }
     ]
    },
    {
@@ -1675,6 +2565,12 @@
      "New Year's Eve",
      "31 December",
      "The King's New Year's speech"
+    ],
+    "book": [
+     {
+      "page": 130,
+      "lines": "32-43"
+     }
     ]
    },
    {
@@ -1687,6 +2583,16 @@
      "New Year's Day",
      "1 January",
      "The prime minister's New Year's speech"
+    ],
+    "book": [
+     {
+      "page": 65,
+      "lines": "39-41"
+     },
+     {
+      "page": 130,
+      "lines": "32-42"
+     }
     ]
    },
    {
@@ -1699,7 +2605,8 @@
      "Store Bededag",
      "–",
      "Abolished as a public holiday from 2024 (not in book 2026)"
-    ]
+    ],
+    "book": []
    }
   ],
   "mnemonic_da": "5. maj = fri (befrielsen). 5. juni = grundloven. Bål = juni. Tønde = fastelavn.",
@@ -1725,12 +2632,16 @@
     "lines": "10-11"
    },
    {
-    "page": 129,
-    "lines": "20-25"
+    "page": 114,
+    "lines": "20-21"
    },
    {
     "page": 129,
     "lines": "36-42"
+   },
+   {
+    "page": 129,
+    "lines": "20-25"
    },
    {
     "page": 129,
@@ -1743,6 +2654,14 @@
    {
     "page": 130,
     "lines": "32-43"
+   },
+   {
+    "page": 65,
+    "lines": "39-41"
+   },
+   {
+    "page": 130,
+    "lines": "32-42"
    }
   ]
  },
@@ -1770,6 +2689,12 @@
     "cells_en": [
      "Doctor (adults)",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 38,
+      "lines": "23-24"
+     }
     ]
    },
    {
@@ -1780,6 +2705,15 @@
     "cells_en": [
      "Hospital",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 54,
+      "lines": "20-21"
+     }
+    ],
+    "more": [
+     1
     ]
    },
    {
@@ -1790,6 +2724,16 @@
     "cells_en": [
      "Dentist (adults)",
      "No – you pay part yourself"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     },
+     {
+      "page": 53,
+      "lines": "10-13"
+     }
     ]
    },
    {
@@ -1800,6 +2744,12 @@
     "cells_en": [
      "Dentist (children and young people)",
      "Yes (per 2026: until you turn 22)"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     }
     ]
    },
    {
@@ -1810,6 +2760,12 @@
     "cells_en": [
      "Child vaccines (MMR, HPV, tetanus)",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "33-38"
+     }
     ]
    },
    {
@@ -1820,6 +2776,12 @@
     "cells_en": [
      "Public library – borrowing books",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 51,
+      "lines": "9-12"
+     }
     ]
    },
    {
@@ -1830,6 +2792,12 @@
     "cells_en": [
      "Public gymnasium",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 12,
+      "lines": "55"
+     }
     ]
    },
    {
@@ -1840,6 +2808,12 @@
     "cells_en": [
      "Free school / private school",
      "No – parents pay part"
+    ],
+    "book": [
+     {
+      "page": 10,
+      "lines": "23-24"
+     }
     ]
    },
    {
@@ -1850,6 +2824,12 @@
     "cells_en": [
      "Trade union",
      "No – you pay a fee"
+    ],
+    "book": [
+     {
+      "page": 24,
+      "lines": "57-58"
+     }
     ]
    }
   ],
@@ -1877,6 +2857,10 @@
    {
     "page": 55,
     "lines": "9-20"
+   },
+   {
+    "page": 53,
+    "lines": "10-13"
    },
    {
     "page": 55,
@@ -1928,6 +2912,12 @@
     "cells_en": [
      "Must you NOTIFY the police before a demonstration?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 63,
+      "lines": "46-51"
+     }
     ]
    },
    {
@@ -1938,6 +2928,12 @@
     "cells_en": [
      "Must the police give PERMISSION for a demonstration?",
      "No"
+    ],
+    "book": [
+     {
+      "page": 63,
+      "lines": "46-51"
+     }
     ]
    },
    {
@@ -1948,6 +2944,12 @@
     "cells_en": [
      "Suspended sentence: do you go STRAIGHT to prison?",
      "No"
+    ],
+    "book": [
+     {
+      "page": 70,
+      "lines": "10-18"
+     }
     ]
    },
    {
@@ -1958,6 +2960,12 @@
     "cells_en": [
      "Suspended sentence: can you AVOID prison?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 70,
+      "lines": "10-18"
+     }
     ]
    },
    {
@@ -1968,6 +2976,12 @@
     "cells_en": [
      "Must you be a citizen to vote in general elections?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 82,
+      "lines": "61-66"
+     }
     ]
    },
    {
@@ -1978,6 +2992,12 @@
     "cells_en": [
      "Can foreigners vote in general elections?",
      "No"
+    ],
+    "book": [
+     {
+      "page": 82,
+      "lines": "61-66"
+     }
     ]
    },
    {
@@ -1988,6 +3008,12 @@
     "cells_en": [
      "Is it FORBIDDEN to hit children?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 44,
+      "lines": "41"
+     }
     ]
    },
    {
@@ -1998,6 +3024,12 @@
     "cells_en": [
      "Did women get the vote in 1849?",
      "No (only in 1915)"
+    ],
+    "book": [
+     {
+      "page": 59,
+      "lines": "33-35"
+     }
     ]
    },
    {
@@ -2008,6 +3040,12 @@
     "cells_en": [
      "Does the employee always have a right to part-time?",
      "No"
+    ],
+    "book": [
+     {
+      "page": 27,
+      "lines": "34-38"
+     }
     ]
    },
    {
@@ -2018,6 +3056,12 @@
     "cells_en": [
      "Can the employer demand part-time?",
      "No"
+    ],
+    "book": [
+     {
+      "page": 27,
+      "lines": "34-38"
+     }
     ]
    },
    {
@@ -2028,6 +3072,12 @@
     "cells_en": [
      "Who is NOT part of the Danish Realm?",
      "Iceland (or Åland)"
+    ],
+    "book": [
+     {
+      "page": 105,
+      "lines": "12-14"
+     }
     ]
    },
    {
@@ -2038,6 +3088,12 @@
     "cells_en": [
      "Dentist over 21: do you pay part?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     }
     ]
    },
    {
@@ -2048,6 +3104,12 @@
     "cells_en": [
      "Dentist under 20: free?",
      "Yes"
+    ],
+    "book": [
+     {
+      "page": 55,
+      "lines": "9-20"
+     }
     ]
    }
   ],
@@ -2126,6 +3188,16 @@
      "UN (United Nations)",
      "1945",
      "Peace and cooperation worldwide; UN soldiers in Bosnia in the 1990s"
+    ],
+    "book": [
+     {
+      "page": 101,
+      "lines": "9-10"
+     },
+     {
+      "page": 133,
+      "lines": "37-40"
+     }
     ]
    },
    {
@@ -2138,6 +3210,12 @@
      "NATO",
      "1949",
      "Defence policy"
+    ],
+    "book": [
+     {
+      "page": 133,
+      "lines": "6-11"
+     }
     ]
    },
    {
@@ -2150,6 +3228,24 @@
      "EC/EU",
      "1973",
      "Free trade between member states; most referendums are about the EU"
+    ],
+    "book": [
+     {
+      "page": 98,
+      "lines": "6"
+     },
+     {
+      "page": 97,
+      "lines": "31-34"
+     },
+     {
+      "page": 98,
+      "lines": "23-24"
+     },
+     {
+      "page": 75,
+      "lines": "53-55"
+     }
     ]
    }
   ],
@@ -2170,6 +3266,10 @@
    },
    {
     "page": 133,
+    "lines": "37-40"
+   },
+   {
+    "page": 133,
     "lines": "6-11"
    },
    {
@@ -2177,12 +3277,16 @@
     "lines": "6"
    },
    {
-    "page": 75,
-    "lines": "53-55"
+    "page": 97,
+    "lines": "31-34"
    },
    {
-    "page": 133,
-    "lines": "37-40"
+    "page": 98,
+    "lines": "23-24"
+   },
+   {
+    "page": 75,
+    "lines": "53-55"
    }
   ]
  },
@@ -2211,6 +3315,12 @@
     "cells_en": [
      "Childminder (in a private home)",
      "About 6 months–3"
+    ],
+    "book": [
+     {
+      "page": 18,
+      "lines": "54-57"
+     }
     ]
    },
    {
@@ -2221,6 +3331,12 @@
     "cells_en": [
      "Nursery",
      "About 6 months–3 (e.g. age 2)"
+    ],
+    "book": [
+     {
+      "page": 18,
+      "lines": "38-56"
+     }
     ]
    },
    {
@@ -2231,6 +3347,12 @@
     "cells_en": [
      "Kindergarten",
      "3–6 (e.g. age 4)"
+    ],
+    "book": [
+     {
+      "page": 19,
+      "lines": "9"
+     }
     ]
    },
    {
@@ -2241,6 +3363,12 @@
     "cells_en": [
      "Year 0 (start of school)",
      "About 6 (the exam: 5–6)"
+    ],
+    "book": [
+     {
+      "page": 6,
+      "lines": "29-31"
+     }
     ]
    },
    {
@@ -2251,6 +3379,12 @@
     "cells_en": [
      "Compulsory education",
      "10 years (years 0–9)"
+    ],
+    "book": [
+     {
+      "page": 6,
+      "lines": "6-10"
+     }
     ]
    },
    {
@@ -2261,6 +3395,16 @@
     "cells_en": [
      "Grades (7-point scale, highest 12)",
      "From year 8"
+    ],
+    "book": [
+     {
+      "page": 8,
+      "lines": "39-41"
+     },
+     {
+      "page": 8,
+      "lines": "50-52"
+     }
     ]
    },
    {
@@ -2271,6 +3415,12 @@
     "cells_en": [
      "Efterskole",
      "Years 8, 9 and 10"
+    ],
+    "book": [
+     {
+      "page": 10,
+      "lines": "30-31"
+     }
     ]
    },
    {
@@ -2281,6 +3431,12 @@
     "cells_en": [
      "SU (education grant)",
      "From 18"
+    ],
+    "book": [
+     {
+      "page": 45,
+      "lines": "20-21"
+     }
     ]
    }
   ],
@@ -2297,6 +3453,10 @@
    "udd-su-18"
   ],
   "book": [
+   {
+    "page": 18,
+    "lines": "54-57"
+   },
    {
     "page": 18,
     "lines": "38-56"
@@ -2316,6 +3476,10 @@
    {
     "page": 8,
     "lines": "39-41"
+   },
+   {
+    "page": 8,
+    "lines": "50-52"
    },
    {
     "page": 10,

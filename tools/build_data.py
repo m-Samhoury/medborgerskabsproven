@@ -32,6 +32,8 @@ SECOND_COL = re.compile(r"\S {5,}\S")  # same rule as book-expansion/bookclean.p
 def book_refs(raw):
     """Every {"page", "lines"} reference in the data."""
     items = list(raw["clusters"]) + list(raw["fact_groups"])
+    for g in raw["fact_groups"]:
+        items += g["rows"]
     for t in raw["topics"]:
         items += t["intro"] + t["current_facts"]
     for item in items:

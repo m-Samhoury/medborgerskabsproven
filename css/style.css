@@ -1727,7 +1727,6 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .book-btn::before { content: ""; position: absolute; inset: -8px; }
 .book-btn svg { width: 18px; height: 18px; }
 .book-btn:hover, .book-btn[aria-expanded="true"] { background: var(--wash); }
-.fg-book { margin-left: auto; }
 
 .note-nobook {
   background: transparent;

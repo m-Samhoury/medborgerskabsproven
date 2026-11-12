@@ -311,9 +311,12 @@
     var kids = [
       h("div", { class: "fg-head" },
         first ? MBP.ui.topicChip(first) : null,
-        h("h4", { class: "fg-title", id: titleId }, g.title_da, h("span", { class: "en", lang: "en" }, g.title_en)),
-        MBP.ui.withBook(h("span", { class: "fg-book" }, h("span", { class: "da" })), g.book, MBP.ui.moreFor(g.id)))
+        h("h4", { class: "fg-title", id: titleId }, g.title_da, h("span", { class: "en", lang: "en" }, g.title_en)))
     ];
+    // Every row has its own book button. Extra excerpts that belong to a row go in its popover; the rest are
+    // listed under the table.
+    var extras = MBP.ui.moreFor(g.id);
+    var usedExtra = {};
 
     if (g.id === "fg-farvande") {
       kids.push(h("ol", { class: "strait", "aria-label": "Fra vest mod øst – West to east" },
@@ -332,9 +335,13 @@
         return h("th", { scope: "col" }, bi(c, g.columns_en[i], "span"));
       })));
     var rows = g.rows.map(function (r) {
+      var last = r.cells_da.length - 1;
+      var more = (r.more || []).map(function (k) { usedExtra[k] = true; return extras[k]; }).filter(Boolean);
       return h("tr", null, r.cells_da.map(function (c, i) {
-        if (i === 0) return h("th", { scope: "row" }, bi(c, r.cells_en[i], "span"));
-        return h("td", { "data-label": g.columns_da[i] }, bi(c, r.cells_en[i], "span"));
+        var text = bi(c, r.cells_en[i], "span");
+        if (i === last) MBP.ui.withBook(text, r.book, more);
+        if (i === 0) return h("th", { scope: "row" }, text);
+        return h("td", { "data-label": g.columns_da[i] }, text);
       }));
     });
     kids.push(h("div", { class: "table-wrap" },
@@ -342,6 +349,8 @@
         thead,
         h("tbody", null, rows))));
 
+    var rest = extras.filter(function (x, k) { return !usedExtra[k]; });
+    if (rest.length) kids.push(MBP.ui.moreBlock(rest));
     if (g.nobook_da) kids.push(MBP.ui.nobookNote(g.nobook_da, g.nobook_en));
     kids.push(MBP.ui.note("remember", "Husk", "Remember", g.mnemonic_da, g.mnemonic_en));
 
