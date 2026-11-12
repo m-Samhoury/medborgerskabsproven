@@ -1156,6 +1156,13 @@ main > p.bi { color: var(--ink-2); margin: 0 0 var(--s-3); }
   cursor: pointer;
 }
 .filter svg { width: 16px; height: 16px; color: var(--caution); flex: 0 0 auto; }
+/* A tap on a switch row only moves the switch: no grey tap flash or text selection across the row.
+   Keyboard focus still shows on the switch itself (:focus-visible). */
+.filter, label:has(> .switch), .switch {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
 .switch {
   appearance: none;
   flex: 0 0 auto;
