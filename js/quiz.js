@@ -8,8 +8,19 @@
   var EXAM_LENGTH = 25;
   var EXAM_PASS = 20;
   var NORMAL_PASS_PERCENT = 80;
-  // Auto-play: seconds to think, then seconds with the answer shown.
+  // Auto-play: seconds to think, then seconds with the answer shown. Defaults and the choices on the setup screen.
   var AUTO = { q: 30, a: 10 };
+  var AUTO_Q_CHOICES = [10, 20, 30];
+  var AUTO_A_CHOICES = [5, 10, 15];
+
+  // The stored auto-play times, falling back to the defaults for anything missing or not one of the choices.
+  function autoTiming() {
+    var t = MBP.store.autoTiming() || {};
+    return {
+      q: AUTO_Q_CHOICES.indexOf(t.q) !== -1 ? t.q : AUTO.q,
+      a: AUTO_A_CHOICES.indexOf(t.a) !== -1 ? t.a : AUTO.a
+    };
+  }
   var MONTHS = ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"];
   var WAVES = '<svg class="waves" viewBox="0 0 180 60" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M0 10c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 30c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 50c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/></svg>';
 
@@ -153,6 +164,19 @@
     });
     lenInputs[0].checked = true;
 
+    // Auto-play times: question 10/20/30 s, answer 5/10/15 s. Remembered per viewer.
+    var timing = autoTiming();
+    var qSecInputs = AUTO_Q_CHOICES.map(function (sec) {
+      var input = h("input", { type: "radio", name: "qsec", value: String(sec), class: "sr" });
+      input.checked = sec === timing.q;
+      return input;
+    });
+    var aSecInputs = AUTO_A_CHOICES.map(function (sec) {
+      var input = h("input", { type: "radio", name: "asec", value: String(sec), class: "sr" });
+      input.checked = sec === timing.a;
+      return input;
+    });
+
     var freqBox = h("input", { type: "checkbox", class: "switch", id: "frequent" });
     freqBox.checked = params.get("frequent") === "1";
     var quizOpts = h("div", { class: "quiz-opts" });
@@ -177,11 +201,20 @@
       return on.value === "all" ? "all" : Number(on.value);
     }
 
+    function selectedTiming() {
+      return {
+        q: Number(qSecInputs.find(function (i) { return i.checked; }).value),
+        a: Number(aSecInputs.find(function (i) { return i.checked; }).value)
+      };
+    }
+
     // Keeps the counts, the start button and the quiz options in step with the choices.
     function refresh() {
       var exam = examInput.checked;
       var auto = autoInput.checked;
       quizOpts.hidden = exam;
+      qPicker.hidden = !auto;
+      aPicker.hidden = !auto;
       var allOn = stampBoxes.every(function (b) { return b.input.checked; });
       allBtn.setAttribute("aria-pressed", String(allOn));
       count.textContent = "";
@@ -228,16 +261,32 @@
     autoInput.addEventListener("change", refresh);
     lenInputs.forEach(function (i) { i.addEventListener("change", refresh); });
 
+    function secPicker(cls, legendDa, legendEn, values, inputs) {
+      return h("fieldset", { class: "time-picker " + cls },
+        h("legend", null, bi(legendDa, legendEn, "span")),
+        h("div", { class: "seg" }, values.map(function (sec, i) {
+          return h("label", { class: "seg-opt" }, inputs[i], String(sec));
+        })));
+    }
+    var qPicker = secPicker("q-picker", "Spørgsmål vises (sek.)", "Question shown (sec)", AUTO_Q_CHOICES, qSecInputs);
+    var aPicker = secPicker("a-picker", "Svaret vises (sek.)", "Answer shown (sec)", AUTO_A_CHOICES, aSecInputs);
+    qSecInputs.concat(aSecInputs).forEach(function (input) {
+      input.addEventListener("change", function () { MBP.store.setAutoTiming(selectedTiming()); });
+    });
+
     quizOpts.appendChild(h("fieldset", { class: "topic-picker" },
       h("legend", null, bi("Fakta-ark", "Fact sheets", "span")),
       allBtn,
       h("div", { class: "stamp-grid" }, stampBoxes.map(function (b) { return b.label; }))));
-    quizOpts.appendChild(h("fieldset", { class: "len-picker" },
-      h("legend", null, bi("Antal spørgsmål", "Number of questions", "span")),
-      h("div", { class: "seg" }, lenValues.map(function (value, i) {
-        var text = value === "all" ? "Alle" : value;
-        return h("label", { class: "seg-opt", title: value === "all" ? "All" : null }, lenInputs[i], text);
-      }))));
+    quizOpts.appendChild(h("div", { class: "pick-row" },
+      h("fieldset", { class: "len-picker" },
+        h("legend", null, bi("Antal spørgsmål", "Number of questions", "span")),
+        h("div", { class: "seg" }, lenValues.map(function (value, i) {
+          var text = value === "all" ? "Alle" : value;
+          return h("label", { class: "seg-opt", title: value === "all" ? "All" : null }, lenInputs[i], text);
+        }))),
+      qPicker,
+      aPicker));
 
     var form = h("form", { class: "quiz-setup" },
       h("fieldset", { class: "mode-picker" },
@@ -261,8 +310,8 @@
             MBP.icon("today", 28),
             bi("Auto-gennemgang", "Auto-play", "span"),
             bi(
-              "Spørgsmålene kører af sig selv: 30 sek. til at tænke, så vises svaret i 10 sek.",
-              "Questions play by themselves: 30 s to think, then the answer shows for 10 s.",
+              "Spørgsmålene kører af sig selv: først tid til at tænke, så vises svaret. Du vælger tiderne.",
+              "Questions play by themselves: time to think first, then the answer shows. You choose the times.",
               "span")))),
       quizOpts,
       h("label", { class: "filter", for: "frequent" }, freqBox,
@@ -275,11 +324,15 @@
       e.preventDefault();
       var exam = examInput.checked;
       var auto = autoInput.checked;
+      var timing = selectedTiming();
+      if (auto) MBP.store.setAutoTiming(timing);
       startRun(D, {
         mode: exam ? "exam" : auto ? "auto" : "normal",
         topics: selectedTopics(),
         length: exam ? EXAM_LENGTH : selectedLength(),
-        frequent: freqBox.checked
+        frequent: freqBox.checked,
+        questionSec: auto ? timing.q : undefined,
+        answerSec: auto ? timing.a : undefined
       });
     });
 
@@ -492,12 +545,14 @@
       renderResult(D, cfg, list, answers, score);
     }
 
-    // Auto-play: each question shows for AUTO.q seconds, the answer for AUTO.a seconds, then the next.
+    // Auto-play: each question shows for cfg.questionSec seconds (default 30), the answer for cfg.answerSec seconds (default 10), then the next.
     // Passive: nothing is recorded (no store.record, no addQuiz). One interval at a time, cleared on every phase change.
     function showAuto() {
+      var qSec = cfg.questionSec || AUTO.q;
+      var aSec = cfg.answerSec || AUTO.a;
       var ended = false;
       var phase = "question";
-      var phaseLen = AUTO.q;
+      var phaseLen = qSec;
       var phaseEnd = 0;     // performance.now() when the phase ends (while running)
       var leftMs = 0;       // ms left in the phase (while paused)
       var userPaused = false;
@@ -559,7 +614,7 @@
       function startPhase(kind) {
         clock(false);
         phase = kind;
-        phaseLen = kind === "question" ? AUTO.q : AUTO.a;
+        phaseLen = kind === "question" ? qSec : aSec;
         lastRem = phaseLen;
         timer.set(phaseLen, phaseLen, kind);
         if (isPaused) {

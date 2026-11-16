@@ -11,6 +11,7 @@
   var BOOK_MORE_KEY = "mbp.v1.bookMoreOpen";
   var BOOK_EN_KEY = "mbp.v1.bookEnOpen";
   var BOOK_POP_SIZE_KEY = "mbp.v1.bookPopSize";
+  var AUTO_TIMING_KEY = "mbp.v1.autoTiming";
   var RESET_KEY = "mbp.v1.resetAt";
   var GOAL = 25;
   var KEEP_DAYS = 60;
@@ -304,6 +305,20 @@
     setBookPopSize: function (size) {
       if (size) writeStorage(BOOK_POP_SIZE_KEY, JSON.stringify(size));
       else removeStorage(BOOK_POP_SIZE_KEY);
+    },
+
+    // Auto-play times the viewer last chose, {q, a} in seconds, or null. quiz.js checks the values.
+    autoTiming: function () {
+      try {
+        var t = JSON.parse(readStorage(AUTO_TIMING_KEY) || "null");
+        return t && typeof t.q === "number" && typeof t.a === "number" ? { q: t.q, a: t.a } : null;
+      } catch (e) {
+        return null;
+      }
+    },
+
+    setAutoTiming: function (t) {
+      writeStorage(AUTO_TIMING_KEY, JSON.stringify({ q: t.q, a: t.a }));
     },
 
     reset: function () {

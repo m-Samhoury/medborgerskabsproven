@@ -1513,6 +1513,11 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .mode-card .bi .en { font-size: var(--fs-s); }
 .quiz-opts[hidden] { display: none; }
 
+/* Length and auto-play time pickers share one row; they wrap and stack on phones. */
+.pick-row { display: flex; flex-wrap: wrap; align-items: flex-end; column-gap: var(--s-6); }
+.pick-row > fieldset { flex: 0 0 auto; }
+.quiz-setup fieldset[hidden] { display: none; }
+
 /* Auto-play (§5.4.3): the countdown is design B2 from tools/timer-designs.html.
    One yellow segment per second; the last 5 s pulse and turn amber; the answer phase fills the inner circle green. */
 .timer { position: relative; width: 112px; aspect-ratio: 1; flex: none; }

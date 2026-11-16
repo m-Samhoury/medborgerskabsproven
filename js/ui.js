@@ -988,7 +988,7 @@
   }
 
   // Countdown for auto-play (design B2, tools/timer-designs.html): one yellow segment per second,
-  // the last 5 s pulse and turn amber, and the answer phase fills the inner circle green.
+  // the last 5 s pulse and turn amber (phases longer than 5 s), and the answer phase fills the inner circle green.
   // Returns {el, set(remaining, total, phase)}; phase is "question" or "answer".
   function countdown() {
     var NS = "http://www.w3.org/2000/svg";
@@ -1034,7 +1034,8 @@
         segs[k].classList.toggle("off", k >= remaining);
       }
       num.textContent = String(remaining);
-      el.classList.toggle("low", remaining <= 5);
+      // Last 5 s pulse amber, but not in a phase that is only 5 s long (it would pulse from the start).
+      el.classList.toggle("low", total > 5 && remaining <= 5);
       el.classList.toggle("phase-answer", phase === "answer");
     }
 
