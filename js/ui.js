@@ -889,9 +889,9 @@
     }
 
     // Opens the explanation below the options, moves focus to "Næste" and scrolls it into view.
-    function showExplanation(verdict) {
+    function showExplanation(verdict, nextOverride) {
       explain.textContent = "";
-      var inner = h("div", { class: "explain-inner" }, explainPanel(q, verdict, opts.next || null));
+      var inner = h("div", { class: "explain-inner" }, explainPanel(q, verdict, nextOverride || opts.next || null));
       explain.appendChild(inner);
       void explain.offsetHeight;
       explain.classList.add("open");
@@ -973,10 +973,72 @@
 
     if (!feedback && chosen) refreshSelection();
 
+    // Auto-play: reveal the answer on a card that was not answered by feedback (the guess only highlights it).
+    function reveal(next) {
+      lock();
+      decorate(chosen, true);
+      showExplanation(chosen ? chosen === correctKey : null, next);
+    }
+
     return {
       el: el,
-      getChoice: function () { return chosen; }
+      getChoice: function () { return chosen; },
+      reveal: reveal
     };
+  }
+
+  // Countdown for auto-play (design B2, tools/timer-designs.html): one yellow segment per second,
+  // the last 5 s pulse and turn amber, and the answer phase fills the inner circle green.
+  // Returns {el, set(remaining, total, phase)}; phase is "question" or "answer".
+  function countdown() {
+    var NS = "http://www.w3.org/2000/svg";
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 120 120");
+    svg.setAttribute("aria-hidden", "true");
+    var ticks = document.createElementNS(NS, "g");
+    var inner = document.createElementNS(NS, "circle");
+    inner.setAttribute("class", "ring-inner");
+    inner.setAttribute("cx", "60");
+    inner.setAttribute("cy", "60");
+    inner.setAttribute("r", "40");
+    svg.appendChild(ticks);
+    svg.appendChild(inner);
+    var num = h("b", null, "0");
+    var el = h("div", { class: "timer", "aria-hidden": "true" },
+      svg,
+      h("div", { class: "num" }, h("span", null, num, h("span", { class: "unit" }, bi("sek", "sec", "span")))));
+
+    // One arc per second, with small gaps between them (the same geometry as option B).
+    function build(n) {
+      ticks.textContent = "";
+      var r = 50, gapDeg = n > 12 ? 3.2 : 6;
+      for (var k = 0; k < n; k++) {
+        var a0 = (k * 360 / n + gapDeg / 2 - 90) * Math.PI / 180;
+        var a1 = ((k + 1) * 360 / n - gapDeg / 2 - 90) * Math.PI / 180;
+        var p = document.createElementNS(NS, "path");
+        p.setAttribute("d", "M" + (60 + r * Math.cos(a0)) + " " + (60 + r * Math.sin(a0)) +
+          " A" + r + " " + r + " 0 0 1 " + (60 + r * Math.cos(a1)) + " " + (60 + r * Math.sin(a1)));
+        p.setAttribute("class", "tick");
+        ticks.appendChild(p);
+      }
+    }
+
+    var builtFor = null;
+    function set(remaining, total, phase) {
+      if (builtFor !== total) {
+        build(total);
+        builtFor = total;
+      }
+      var segs = ticks.children;
+      for (var k = 0; k < segs.length; k++) {
+        segs[k].classList.toggle("off", k >= remaining);
+      }
+      num.textContent = String(remaining);
+      el.classList.toggle("low", remaining <= 5);
+      el.classList.toggle("phase-answer", phase === "answer");
+    }
+
+    return { el: el, set: set };
   }
 
   // Shell: nav icons and the EN toggle. The toggle text stays "EN"; "off" strikes it through.
@@ -1162,6 +1224,7 @@
     postmark: postmark,
     explainPanel: explainPanel,
     questionCard: questionCard,
+    countdown: countdown,
     initShell: initShell,
     start: start
   };

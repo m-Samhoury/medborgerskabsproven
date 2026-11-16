@@ -8,6 +8,8 @@
   var EXAM_LENGTH = 25;
   var EXAM_PASS = 20;
   var NORMAL_PASS_PERCENT = 80;
+  // Auto-play: seconds to think, then seconds with the answer shown.
+  var AUTO = { q: 30, a: 10 };
   var MONTHS = ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"];
   var WAVES = '<svg class="waves" viewBox="0 0 180 60" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M0 10c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 30c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/><path d="M0 50c15-12 30 12 45 0s30 12 45 0 30 12 45 0 30 12 45 0"/></svg>';
 
@@ -124,12 +126,15 @@
     var preset = params.get("topics");
     var preChecked = preset ? preset.split(",").filter(function (id) { return allTopicIds.indexOf(id) !== -1; }) : allTopicIds;
 
-    // Mode: exam simulation (default) or quiz with answers. ?topics= preselects the quiz.
+    // Mode: exam simulation (default), quiz with answers, or auto-play. ?topics= preselects the quiz.
     var examInput = h("input", { type: "radio", name: "mode", value: "exam", class: "sr" });
     var quizInput = h("input", { type: "radio", name: "mode", value: "quiz", class: "sr" });
-    var wantQuiz = !!preset || params.get("mode") === "quiz";
-    examInput.checked = !wantQuiz;
+    var autoInput = h("input", { type: "radio", name: "mode", value: "auto", class: "sr" });
+    var wantAuto = params.get("mode") === "auto";
+    var wantQuiz = !wantAuto && (!!preset || params.get("mode") === "quiz");
+    examInput.checked = !wantQuiz && !wantAuto;
     quizInput.checked = wantQuiz;
+    autoInput.checked = wantAuto;
 
     // Topic toggles: a mini stamp per topic. Checked = printed, unchecked = blank.
     var stampBoxes = D.topics.map(function (t) {
@@ -175,6 +180,7 @@
     // Keeps the counts, the start button and the quiz options in step with the choices.
     function refresh() {
       var exam = examInput.checked;
+      var auto = autoInput.checked;
       quizOpts.hidden = exam;
       var allOn = stampBoxes.every(function (b) { return b.input.checked; });
       allBtn.setAttribute("aria-pressed", String(allOn));
@@ -193,8 +199,14 @@
         } else {
           count.appendChild(bi(n + " spørgsmål tilgængelige", n + " questions available", "span"));
         }
-        start.textContent = "Start quiz";
-        start.className = "btn btn-primary";
+        start.textContent = "";
+        if (auto) {
+          start.className = "btn btn-primary btn-stack";
+          start.appendChild(bi("Start auto-gennemgang", "Start auto-play", "span"));
+        } else {
+          start.className = "btn btn-primary";
+          start.textContent = "Start quiz";
+        }
       }
       start.disabled = n === 0;
     }
@@ -213,6 +225,7 @@
     freqBox.addEventListener("change", refresh);
     examInput.addEventListener("change", refresh);
     quizInput.addEventListener("change", refresh);
+    autoInput.addEventListener("change", refresh);
     lenInputs.forEach(function (i) { i.addEventListener("change", refresh); });
 
     quizOpts.appendChild(h("fieldset", { class: "topic-picker" },
@@ -243,6 +256,13 @@
             bi(
               "Du ser det rigtige svar efter hvert spørgsmål.",
               "You see the right answer after each question.",
+              "span")),
+          h("label", { class: "mode-card" }, autoInput,
+            MBP.icon("today", 28),
+            bi("Auto-gennemgang", "Auto-play", "span"),
+            bi(
+              "Spørgsmålene kører af sig selv: 30 sek. til at tænke, så vises svaret i 10 sek.",
+              "Questions play by themselves: 30 s to think, then the answer shows for 10 s.",
               "span")))),
       quizOpts,
       h("label", { class: "filter", for: "frequent" }, freqBox,
@@ -254,8 +274,9 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var exam = examInput.checked;
+      var auto = autoInput.checked;
       startRun(D, {
-        mode: exam ? "exam" : "normal",
+        mode: exam ? "exam" : auto ? "auto" : "normal",
         topics: selectedTopics(),
         length: exam ? EXAM_LENGTH : selectedLength(),
         frequent: freqBox.checked
@@ -471,6 +492,196 @@
       renderResult(D, cfg, list, answers, score);
     }
 
+    // Auto-play: each question shows for AUTO.q seconds, the answer for AUTO.a seconds, then the next.
+    // Passive: nothing is recorded (no store.record, no addQuiz). One interval at a time, cleared on every phase change.
+    function showAuto() {
+      var ended = false;
+      var phase = "question";
+      var phaseLen = AUTO.q;
+      var phaseEnd = 0;     // performance.now() when the phase ends (while running)
+      var leftMs = 0;       // ms left in the phase (while paused)
+      var userPaused = false;
+      var hiddenPaused = false;
+      var isPaused = false;
+      var tickId = null;
+      var lastRem = null;
+      var q = null;
+      var card = null;
+
+      var timer = MBP.ui.countdown();
+      var live = h("p", { class: "sr", "aria-live": "polite" });
+      var pauseBtn = h("button", { type: "button", class: "btn btn-secondary auto-btn", onclick: togglePause });
+      var skipBtn = h("button", { type: "button", class: "btn btn-secondary auto-btn", onclick: skip },
+        bi("Spring over", "Skip", "span"));
+      var slot = h("div", { class: "auto-slot" });
+      var stage = h("div", { class: "auto-stage" },
+        h("div", { class: "auto-top" }, timer.el, h("div", { class: "auto-controls" }, pauseBtn, skipBtn)));
+      content.appendChild(stage);
+      content.appendChild(live);
+      content.appendChild(slot);
+
+      function paintPause() {
+        pauseBtn.textContent = "";
+        pauseBtn.appendChild(isPaused
+          ? bi("Fortsæt", "Resume", "span")
+          : bi("Pause", "Pause", "span"));
+        pauseBtn.setAttribute("aria-pressed", String(isPaused));
+      }
+
+      function clock(on) {
+        if (tickId !== null) {
+          clearInterval(tickId);
+          tickId = null;
+        }
+        if (on) tickId = setInterval(tick, 220);
+      }
+
+      function tick() {
+        if (!content.isConnected) {
+          clock(false);
+          return;
+        }
+        var ms = phaseEnd - performance.now();
+        if (ms <= 0) {
+          clock(false);
+          if (phase === "question") toAnswer();
+          else advance();
+          return;
+        }
+        var rem = Math.ceil(ms / 1000);
+        if (rem !== lastRem) {
+          lastRem = rem;
+          timer.set(rem, phaseLen, phase);
+        }
+      }
+
+      // Starts a phase at its full length. While paused, the phase waits until resumed.
+      function startPhase(kind) {
+        clock(false);
+        phase = kind;
+        phaseLen = kind === "question" ? AUTO.q : AUTO.a;
+        lastRem = phaseLen;
+        timer.set(phaseLen, phaseLen, kind);
+        if (isPaused) {
+          leftMs = phaseLen * 1000;
+        } else {
+          phaseEnd = performance.now() + phaseLen * 1000;
+          clock(true);
+        }
+      }
+
+      // Pause state: the user's own pause, or the tab being hidden. Resume only when neither holds.
+      function applyPause() {
+        var want = userPaused || hiddenPaused;
+        if (want === isPaused) return;
+        if (want) {
+          leftMs = Math.max(0, phaseEnd - performance.now());
+          clock(false);
+        } else {
+          phaseEnd = performance.now() + leftMs;
+          clock(true);
+        }
+        isPaused = want;
+        timer.el.classList.toggle("paused", want);
+        paintPause();
+      }
+
+      function togglePause() {
+        if (ended) return;
+        userPaused = !userPaused;
+        applyPause();
+      }
+
+      function toAnswer() {
+        card.reveal({
+          da: i === n - 1 ? "Afslut" : "Næste",
+          en: i === n - 1 ? "Finish" : "Next",
+          onNext: function () { if (phase === "answer") advance(); }
+        });
+        startPhase("answer");
+        live.textContent = "Svaret vises – The answer is shown";
+      }
+
+      function advance() {
+        if (i < n - 1) {
+          i++;
+          showQuestion();
+        } else {
+          showEnd();
+        }
+      }
+
+      // Question phase: reveal now. Answer phase: go to the next question now.
+      function skip() {
+        if (ended) return;
+        if (phase === "question") toAnswer();
+        else advance();
+      }
+
+      function showQuestion() {
+        q = list[i];
+        MBP.ui.screenTop();
+        paintBar();
+        slot.textContent = "";
+        card = MBP.ui.questionCard(q, { sheets: cfg.topics, feedback: false });
+        slot.appendChild(card.el);
+        startPhase("question");
+        live.textContent = "Spørgsmål " + (i + 1) + " af " + n + " – Question " + (i + 1) + " of " + n;
+      }
+
+      function showEnd() {
+        ended = true;
+        clock(false);
+        document.body.classList.remove("focus-mode");
+        content.textContent = "";
+        MBP.ui.screenTop();
+        content.appendChild(h("section", { class: "auto-end" },
+          bi("Gennemgang færdig", "Run complete", "h2"),
+          bi(n + " spørgsmål vist", n + " questions shown", "p"),
+          h("div", { class: "btn-row" },
+            h("button", { type: "button", class: "btn btn-primary", onclick: function () { startRun(D, cfg); } },
+              bi("Kør igen", "Run again", "span")),
+            h("a", { class: "btn btn-secondary", href: "quiz.html" },
+              bi("Tilbage til Test", "Back to Test", "span")),
+            h("a", { class: "btn btn-secondary", href: "quiz.html?mode=quiz" },
+              bi("Quiz med svar", "Quiz with answers", "span")))));
+      }
+
+      // Space pauses or resumes; right arrow skips. Not while typing, not on a focused button (Space clicks it), not with a confirm open.
+      function onKey(e) {
+        if (!content.isConnected) {
+          document.removeEventListener("keydown", onKey);
+          return;
+        }
+        if (ended || e.altKey || e.ctrlKey || e.metaKey) return;
+        if (document.querySelector(".confirm")) return;
+        var t = e.target;
+        if (t && t.matches && t.matches("input, textarea, select")) return;
+        if (e.key === " " || e.key === "Spacebar") {
+          if (t && t.matches && t.matches("button, a, [role=button]")) return;
+          e.preventDefault();
+          togglePause();
+        } else if (e.key === "ArrowRight") {
+          e.preventDefault();
+          skip();
+        }
+      }
+
+      function onVisibility() {
+        if (!content.isConnected) {
+          document.removeEventListener("visibilitychange", onVisibility);
+          return;
+        }
+        hiddenPaused = document.hidden;
+        applyPause();
+      }
+
+      paintPause();
+      document.addEventListener("keydown", onKey);
+      document.addEventListener("visibilitychange", onVisibility);
+      showQuestion();
+    }
+
     // Arrow keys move through the exam (not while the confirm is open or focus is in a field).
     document.addEventListener("keydown", function onArrow(e) {
       if (!content.isConnected) {
@@ -491,6 +702,7 @@
     });
 
     if (isExam) showExam();
+    else if (cfg.mode === "auto") showAuto();
     else showNormal();
   }
 

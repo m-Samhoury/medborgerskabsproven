@@ -29,6 +29,8 @@
   --go-bg:   #E3F4EA;
   --stop:    #B3261E;
   --stop-bg: #FBE4E1;
+  --signal-deep: #E8930C;
+  --on-go: #FFFFFF;
   --caution-bg: #FFF1C2;
   --caution:    #FFC20E;
   --keyerr-bg:  #F2E0E8;
@@ -93,6 +95,8 @@
     --go-bg:   #10301F;
     --stop:    #FF9389;
     --stop-bg: #3A1A19;
+    --signal-deep: #FF9F1A;
+    --on-go: #0B1430;
     --caution-bg: #33290C;
     --keyerr-bg:  #401D3C;
     --keyerr-ink: #F2C4D9;
@@ -119,6 +123,8 @@
   --go-bg:   #10301F;
   --stop:    #FF9389;
   --stop-bg: #3A1A19;
+  --signal-deep: #FF9F1A;
+  --on-go: #0B1430;
   --caution-bg: #33290C;
   --keyerr-bg:  #401D3C;
   --keyerr-ink: #F2C4D9;
@@ -1490,7 +1496,7 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .quiz-setup legend { margin-bottom: var(--s-3); font: 700 var(--fs-body)/1.3 var(--f-body); }
 .quiz-setup .sr { position: absolute; }
 .mode-row { display: grid; gap: 12px; }
-@media (min-width: 560px) { .mode-row { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 760px) { .mode-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .mode-card {
   position: relative;
   display: grid;
@@ -1506,6 +1512,47 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .mode-card:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
 .mode-card .bi .en { font-size: var(--fs-s); }
 .quiz-opts[hidden] { display: none; }
+
+/* Auto-play (§5.4.3): the countdown is design B2 from tools/timer-designs.html.
+   One yellow segment per second; the last 5 s pulse and turn amber; the answer phase fills the inner circle green. */
+.timer { position: relative; width: 112px; aspect-ratio: 1; flex: none; }
+@media (min-width: 560px) { .timer { width: 128px; } }
+.timer svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.timer .num {
+  position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
+  font-variant-numeric: tabular-nums; line-height: 1; color: var(--ink);
+}
+.timer .num b { font: 400 3rem/1 var(--f-display); }
+.timer .unit { display: block; font: 700 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-top: 4px; }
+.timer .tick { fill: none; stroke-width: 15; stroke-linecap: butt; stroke: var(--signal); transition: stroke .25s, opacity .25s; }
+.timer .tick.off { stroke: var(--wash); }
+.timer.low .tick:not(.off) { stroke: var(--signal-deep); }
+.timer.low .num b { color: var(--stop); }
+.timer .ring-inner { fill: none; stroke: var(--line); stroke-width: 1.5; transition: fill .3s, stroke .3s; }
+.timer.phase-answer .ring-inner { fill: var(--go); stroke: var(--go); stroke-width: 2.5; }
+.timer.phase-answer .num b,
+.timer.phase-answer .num .unit,
+.timer.phase-answer.low .num b { color: var(--on-go); }
+.timer.low { animation: a-pulse 1s var(--ease-out) infinite; }
+.timer.paused { animation-play-state: paused; }
+@keyframes a-pulse { 0% { transform: scale(1); } 18% { transform: scale(1.05); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .timer.low { animation: none; }
+  .timer .tick { transition: none; }
+}
+
+.auto-stage {
+  position: sticky; top: 0; z-index: 2;
+  display: flex; justify-content: center;
+  padding: var(--s-2) 0 var(--s-3);
+  background: var(--paper);
+}
+.auto-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--s-4); }
+.auto-controls { display: flex; flex-direction: column; gap: var(--s-2); }
+.auto-btn { min-width: 128px; }
+.auto-end { display: grid; gap: var(--s-3); justify-items: start; padding-top: var(--s-4); }
+.auto-end h2 { margin: 0; font: 400 var(--fs-2xl)/1.15 var(--f-display); }
+.auto-end p { margin: 0; }
 .stamp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
