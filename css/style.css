@@ -1416,6 +1416,45 @@ main.only-frequent .fact-row:not(.freq) { display: none; }
 .today h2 { margin: 0 0 var(--s-2); font-size: var(--fs-xl); color: var(--on-panel); }
 .today .btn-stack.cta { width: 100%; }
 
+/* Øv: overall progress as a postmark ring inside the today panel. */
+.today-progress { display: flex; flex-direction: column; gap: 16px; }
+.progress-row { display: flex; align-items: center; gap: 18px; }
+.postmark-ring { position: relative; width: 124px; height: 124px; flex: 0 0 auto; }
+.postmark-ring svg { width: 100%; height: 100%; display: block; }
+.postmark-ring circle { fill: none; }
+.postmark-ring .pm-perf { stroke: color-mix(in srgb, var(--on-panel) 45%, transparent); stroke-width: 1.5; stroke-dasharray: 3 4; }
+.postmark-ring .pm-track { stroke: color-mix(in srgb, var(--on-panel) 16%, transparent); stroke-width: 10; }
+.postmark-ring .pm-arc { stroke: var(--signal); stroke-width: 10; stroke-linecap: round; }
+.postmark-ring.full .pm-arc { stroke: var(--go); }
+.postmark-ring .pm-text {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.postmark-ring .pm-text b { font: 400 1.75rem/1 var(--f-display); color: var(--on-panel); }
+.postmark-ring .pm-text span { font: 700 var(--fs-xs)/1 var(--f-body); color: var(--on-panel-2); }
+.progress-stats {
+  flex: 1 1 auto; min-width: 0; margin: 0;
+  display: grid; grid-template-columns: 1fr auto; row-gap: 8px; column-gap: 10px;
+  font-size: var(--fs-s); font-variant-numeric: tabular-nums;
+}
+.progress-stats dt { color: var(--on-panel-2); }
+.progress-stats dt .bi { display: flex; flex-direction: column; }
+.progress-stats dt .en { font-size: var(--fs-xs); }
+.progress-stats dd { margin: 0; font-weight: 700; text-align: right; color: var(--on-panel); }
+.progress-stats dt:nth-last-of-type(1),
+.progress-stats dd:nth-last-of-type(1) { border-top: 1px solid color-mix(in srgb, var(--on-panel) 20%, transparent); padding-top: 8px; }
+.today-body { border-top: 1px dashed color-mix(in srgb, var(--on-panel) 35%, transparent); padding-top: 14px; }
+@media (min-width: 760px) {
+  .today-progress { flex-direction: row; align-items: center; gap: 40px; padding: 28px 32px; }
+  .progress-row { flex: 0 0 auto; gap: 32px; }
+  .postmark-ring { width: 156px; height: 156px; }
+  .postmark-ring .pm-text b { font-size: 2.25rem; }
+  .progress-stats { flex: 0 0 auto; column-gap: 28px; font-size: var(--fs-body); }
+  .today-body { flex: 1 1 auto; min-width: 0; border-top: 0; padding-top: 0; border-left: 1px dashed color-mix(in srgb, var(--on-panel) 35%, transparent); padding-left: 40px; }
+  .today-progress .btn-stack.cta { width: auto; }
+}
+
 /* Explanation stage (§5.5.2) */
 .session { max-width: var(--read-max); margin: 0 auto; }
 .lesson-head { margin: 0 0 var(--s-4); font-size: var(--fs-l); }

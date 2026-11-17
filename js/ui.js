@@ -1217,6 +1217,7 @@
     stampLevel: stampLevel,
     stamp: stamp,
     topicChip: topicChip,
+    constSvg: constSvg,
     faceValue: faceValue,
     weekStamps: weekStamps,
     runBar: runBar,

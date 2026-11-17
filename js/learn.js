@@ -341,6 +341,55 @@
     renderExplain();
   }
 
+  // Overall progress for the Øv picker: a postmark ring with the share of all items mastered, then the counts.
+  // An item in several fact sheets is counted once.
+  function overallProgress(D) {
+    var ids = {};
+    D.topics.forEach(function (t) { t.cluster_ids.forEach(function (id) { ids[id] = true; }); });
+    var all = Object.keys(ids);
+    var mastered = 0, started = 0;
+    all.forEach(function (id) {
+      if (MBP.store.isMastered(id)) mastered++;
+      else if (MBP.store.isSeen(id)) started++;
+    });
+    var total = all.length;
+    var left = total - mastered - started;
+    var sheetsDone = D.topics.filter(function (t) {
+      var p = MBP.ui.topicProgress(D, t);
+      return p.total > 0 && p.mastered >= p.total;
+    }).length;
+    var pct = total ? Math.floor(mastered * 100 / total) : 0;
+
+    var r = 48, c = 2 * Math.PI * r;
+    var arc = total ? (c * mastered / total).toFixed(1) : 0;
+    var ring = MBP.ui.constSvg(
+      '<svg viewBox="0 0 124 124" aria-hidden="true">' +
+      '<circle class="pm-perf" cx="62" cy="62" r="60"/>' +
+      '<circle class="pm-track" cx="62" cy="62" r="' + r + '"/>' +
+      (mastered ? '<circle class="pm-arc" cx="62" cy="62" r="' + r + '" stroke-dasharray="' + arc + ' ' + c.toFixed(1) + '" transform="rotate(-90 62 62)"/>' : "") +
+      "</svg>");
+
+    function row(da, en, value) {
+      return [h("dt", null, bi(da, en, "span")), h("dd", null, value)];
+    }
+
+    return h("div", { class: "progress-row" },
+      h("div", {
+        class: "postmark-ring" + (mastered === total && total ? " full" : ""),
+        role: "img",
+        "aria-label": pct + " % – " + mastered + " af " + total + " emner mestret"
+      },
+        ring,
+        h("div", { class: "pm-text" },
+          h("b", null, pct + " %"),
+          h("span", null, mastered + " / " + total))),
+      h("dl", { class: "progress-stats" },
+        row("Mestret", "Mastered", mastered),
+        row("I gang", "In progress", started),
+        row("Mangler", "Not started", left),
+        row("Fakta-ark", "Fact sheets", sheetsDone + " / " + D.topics.length)));
+  }
+
   // Picker: today's stamps, then one stamp per topic with the number due for review.
   function renderPicker(main, D) {
     main.textContent = "";
@@ -350,14 +399,16 @@
       "First a short explanation, then questions. What you get wrong comes back later.",
       "p"));
 
-    main.appendChild(h("section", { class: "today" },
-      h("h2", null, bi("Dagens mærker", "Today's stamps", "span")),
-      bi(
-        "10 emner fra alle fakta-ark: først dem, der skal gentages, så nye.",
-        "10 items from all fact sheets: first the ones due for review, then new ones.",
-        "p"),
-      h("a", { class: "btn btn-stack cta", href: "learn.html?topic=all" },
-        bi("Saml dagens mærker", "Collect today's stamps", "span"))));
+    main.appendChild(h("section", { class: "today today-progress" },
+      overallProgress(D),
+      h("div", { class: "today-body" },
+        h("h2", null, bi("Dagens mærker", "Today's stamps", "span")),
+        bi(
+          "10 emner fra alle fakta-ark: først dem, der skal gentages, så nye.",
+          "10 items from all fact sheets: first the ones due for review, then new ones.",
+          "p"),
+        h("a", { class: "btn btn-stack cta", href: "learn.html?topic=all" },
+          bi("Saml dagens mærker", "Collect today's stamps", "span")))));
 
     main.appendChild(h("div", { class: "quick" },
       h("a", { class: "btn btn-secondary", href: "learn.html?topic=all&frequent=1", title: "Only frequently asked" },
